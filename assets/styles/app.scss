@@ -2,18 +2,22 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: hsl(0, 0%, 79%);
+    background-color: hsl(0, 0%, 14%);
     font-family: sans-serif;
 }
 //NAVBAR
 .Navbar {
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 1%, 24%);
     display: flex;
 }
 .navbar-brand, .navbar-logout {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.navbar-logout {
+    color: white;
+    text-decoration: none;
 }
 .navbar-brand {
     padding: 0px 10px;
@@ -47,11 +51,13 @@ body {
     .navbar-brand {
         margin-right: 0px;
     }
+    .Navbar {
+        font-size: 0.8rem;
+    }
 }
 
 //HOMEPAGE
 .containerHomePage {
-    background-color: hsl(0, 0%, 79%);
     height: calc(100vh - 56px);
     display: flex;
     justify-content: center;
@@ -60,19 +66,25 @@ body {
 .containerHomePage p {
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 //ALL PROGRAMS
 .containerProgramsPage {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 79%);
 }
 .itemAllProgram {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.itemAllProgram h1 {
+    color: red;
+}
+.itemAllProgram h2, .categoryShowInformation {
+    color: white;
 }
 .itemAllProgram p{
     text-align: center;
@@ -82,12 +94,12 @@ body {
     width: 320px;
 }
 .showProgramButton {
-    color: hsl(0, 0%, 0%);
+    color: white;
     text-decoration: none;
     margin: 20px;
 }
 .showProgramButton:hover {
-    color: rgb(27, 27, 147);
+    color: red;
     text-decoration: underline;
 }
 //SHOW
@@ -109,9 +121,11 @@ body {
 }
 .itemProgramShow p {
     text-align: center;
+    color: white;
 }
 .programTitleShow {
     font-size: 3rem;
+    color: red;
 }
 .categoryShowInformation {
     font-weight: bold;
