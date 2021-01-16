@@ -7,6 +7,10 @@ body {
 }
 //NAVBAR
 .Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     background-color: hsl(0, 1%, 24%);
     display: flex;
 }
@@ -76,6 +80,7 @@ body {
 .itemAllProgram {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .showProgramButton {
     color: HSL(2, 97%, 62%);;
@@ -109,12 +114,21 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.containerContentProgramShow {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 .itemProgramShow {
+    background-color: HSL(300, 0%, 23%);
+    margin-top: 100px;
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+/*     flex-direction: column; */
 }
 .itemProgramShow p {
     text-align: center;
@@ -124,13 +138,45 @@ body {
     font-size: 3rem;
     color: HSL(2, 97%, 62%);
 }
+.programShowSynopsisLabel {
+    font-size: 1.8rem;
+    margin: 0;
+}
+.programShowSynopsisContent {
+    width: 80%;
+}
+.categoryShowTitle {
+    color: HSL(2, 97%, 62%);
+}
 .categoryShowInformation {
     font-weight: bold;
 }
-@media (max-width: 411px) {
+.backToListProgramShow {
+    margin-top: 20px;
+    color: HSL(2, 97%, 62%);
+    text-decoration: none;
+}
+@media (max-width: 1190px) {
+    .programTitleShow {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 910px) {
     .programTitleShow {
         font-size: 1.6rem;
     }
+    .itemProgramShow {
+        flex-direction: column;
+    }
+    .programPosterShow {
+        margin-top: 40px;
+    }
+    .itemProgramShow {
+        width: 100%;
+    }
+}
+@media (max-width: 640px) {
+
 }
 
 //LOGIN & REGISTER
