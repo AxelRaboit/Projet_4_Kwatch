@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(201, 201, 201);
+    font-family: sans-serif;
+}
+
+//HOMEPAGE
+.containerHomePage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerHomePage p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+//LOGIN & REGISTER
+.homepageLogin, .homepageRegister {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLogin, .containerRegister {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLogin form, .containerRegister form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerRegistrationForm {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+}
+.home-logo {
+    width: 80%;
+    margin-bottom: 100px;
+}
+.containerLogin, .containerRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.containerAuthButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscriptionText {
+    text-decoration: none;
+}
+.submitConnexion, .submitRegistration {
+    padding: 15px 125px;
+    border: none;
+    background-color: hsl(132, 77%, 42%);
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    margin: 20px;
+}
+.submitConnexion a, .submitRegistration a {
+    text-decoration: none;
+    color: hsl(0, 0%, 96%);
+}
+.containerLoginInputEmail, .containerLoginInputPassword {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#inputPassword, #inputEmail, #registration_form_email, #registration_form_plainPassword_first, #registration_form_plainPassword_second {
+    margin: 10px;
+    text-align: center;
+    padding: 15px 100px;
+    border: none;
+}
