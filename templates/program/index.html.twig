@@ -9,8 +9,7 @@
             {% for program in programs %}
                 <div class="containerProgramItem">
                     <div class="programItem">
-                        {# <div class="categoryShowInformation">Catégorie : {{ program.category.name }}</div> #}
-                        <img class="allProgramsPosterShow" src="{{ program.poster }}" alt="poster program">
+                        <a href="{{ path("program_show", { id: program.id }) }}"><img class="allProgramsPosterShow" src="{{ program.poster }}" alt="poster program"></a>
                         <h2>{{ program.title }}</h2>
                         <a class="showProgramButton" href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
                     </div>
