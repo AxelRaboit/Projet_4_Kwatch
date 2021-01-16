@@ -23,10 +23,15 @@ body {
     padding: 0px 10px;
     margin-left: auto;
 }
-.containerNavbar ul{
+.containerItems {
     display: flex;
+    align-items:center;
 }
-.containerNavbar li{
+.containerItems .items {
+    margin: 10px;
+}
+.containerNavbar {
+    display: flex;
     list-style-type: none;
     margin: 10px;
 }
@@ -34,6 +39,16 @@ body {
     text-decoration: none;
     color: white;
 }
+.footer {
+    height: 40px;
+}
+
+@media (max-width: 411px) {
+    .navbar-brand {
+        margin-right: 0px;
+    }
+}
+
 //HOMEPAGE
 .containerHomePage {
     background-color: hsl(0, 0%, 79%);
@@ -45,6 +60,66 @@ body {
 .containerHomePage p {
     font-size: 2rem;
     font-weight: bold;
+}
+//ALL PROGRAMS
+.containerProgramsPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 79%);
+}
+.itemAllProgram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.itemAllProgram p{
+    text-align: center;
+    width: 80%;
+}
+.allProgramsPosterShow {
+    width: 320px;
+}
+.showProgramButton {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    margin: 20px;
+}
+.showProgramButton:hover {
+    color: rgb(27, 27, 147);
+    text-decoration: underline;
+}
+//SHOW
+.programPosterShow {
+    width: 320px;
+}
+.containerProgramShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.itemProgramShow {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.itemProgramShow p {
+    text-align: center;
+}
+.programTitleShow {
+    font-size: 3rem;
+}
+.categoryShowInformation {
+    font-weight: bold;
+}
+@media (max-width: 411px) {
+    .programTitleShow {
+        font-size: 1.7rem;
+    }
 }
 
 //LOGIN & REGISTER
@@ -74,8 +149,12 @@ body {
     width: 50%;
     text-align: center;
 }
-.home-logo {
+.home-logo-login {
     width: 80%;
+    margin-bottom: 100px;
+}
+.home-logo-register {
+    width: 40%;
     margin-bottom: 100px;
 }
 .containerLogin, .containerRegister {
@@ -118,9 +197,4 @@ body {
     text-align: center;
     padding: 15px 100px;
     border: none;
-}
-//ALL PROGRAMS
-.containerProgramsPage {
-    background-color: hsl(0, 0%, 79%);
-    height: calc(100vh - 56px);
 }

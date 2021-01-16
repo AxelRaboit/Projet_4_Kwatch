@@ -5,14 +5,15 @@
 {% block title %}Série #{{ program.id }}{% endblock %}
 
 {% block body %}
-<div class="media">
-    <div class="media-body">
-        <h1 class="mt-0">{{ program.title }}</h1>
+<div class="containerProgramShow">
+    <div class="itemProgramShow">
+        <h1 class="programTitleShow">{{ program.title }}</h1>
+        <img class="programPosterShow" src="{{ program.poster }}" alt="poster program">
         <p>{{ program.synopsis }}</p>
-        <p>Catégorie : {{ program.category.name }}</p>
+        <p class="categoryShowInformation">Catégorie : {{ program.category.name }}</p>
     </div>
-    </div>
-    <a href="{{ path('program_index') }}">
+    <a class="backToListProgramShow" href="{{ path('program_index') }}">
         Retour à la liste des programmes
     </a>
+</div>
 {% endblock %}

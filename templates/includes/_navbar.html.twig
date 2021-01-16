@@ -1,14 +1,14 @@
 <nav class="Navbar">
   <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/logo/code.svg') }}" alt="Logo SandBox" style="width: 50px;"/></a>
   <div class="containerNavbar">
-    <ul class="containerItems">
-      <li class="items">
+    <div class="containerItems">
+      <div class="items">
         <a class="itemPrograms" href="{{path('program_index') }}">Séries</a>
-      </li>
-      <li class="items">
+      </div>
+      <div class="items">
           <a class="itemCategory" href="">Catégorie</a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
   <a class="navbar-logout" href="{{ path('app_logout') }}">Se déconnecter</a>
 </nav>
