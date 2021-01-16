@@ -70,13 +70,15 @@ body {
 }
 //ALL PROGRAMS
 .containerProgramsPage {
-
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 .itemAllProgram {
-    display: flex;
+/*     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 .itemAllProgram h1 {
     color: red;
