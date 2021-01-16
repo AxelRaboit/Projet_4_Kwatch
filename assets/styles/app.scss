@@ -78,7 +78,7 @@ body {
     justify-content: center;
 }
 .showProgramButton {
-    color: red;
+    color: HSL(2, 97%, 62%);;
 }
 .allProgramsPosterShow {
     margin: 15px 15px 0px 15px;
@@ -122,14 +122,14 @@ body {
 }
 .programTitleShow {
     font-size: 3rem;
-    color: red;
+    color: HSL(2, 97%, 62%);
 }
 .categoryShowInformation {
     font-weight: bold;
 }
 @media (max-width: 411px) {
     .programTitleShow {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -160,6 +160,19 @@ body {
     width: 50%;
     text-align: center;
 }
+.loginConnectedTitle, .registerTitle {
+    color: white;
+}
+.containerLoginInputEmail label, .containerLoginInputPassword label {
+    color: white;
+}
+.containerRegistrationForm label {
+    color: white;
+}
+.registerBackButton {
+    text-decoration: none;
+    color: HSL(2, 97%, 62%);
+}
 .home-logo-login {
     width: 80%;
     margin-bottom: 100px;
@@ -182,11 +195,12 @@ body {
 }
 .subscriptionText {
     text-decoration: none;
+    color: HSL(2, 97%, 62%);
 }
 .submitConnexion, .submitRegistration {
     padding: 15px 125px;
     border: none;
-    background-color: hsl(132, 77%, 42%);
+    background-color: HSL(2, 97%, 62%);
     font-size: 1rem;
     text-decoration: none;
     color: rgb(245, 245, 245);
