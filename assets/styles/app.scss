@@ -6,13 +6,33 @@ body {
     font-family: sans-serif;
 }
 //NAVBAR
-.dropdown-item {
-    padding: 15px 0px !important;
-    text-align: center !important;
+.Navbar {
+    background-color: hsl(0, 0%, 0%);
+    display: flex;
 }
-.dropdown-item:hover {
-    background-color: HSL(214, 10%, 22%) !important;
-    color: hsl(0, 0%, 100%) !important;
+.navbar-brand, .navbar-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-brand {
+    padding: 0px 10px;
+    margin-right: 10px;
+}
+.navbar-logout {
+    padding: 0px 10px;
+    margin-left: auto;
+}
+.containerNavbar ul{
+    display: flex;
+}
+.containerNavbar li{
+    list-style-type: none;
+    margin: 10px;
+}
+.itemPrograms, .itemCategory {
+    text-decoration: none;
+    color: white;
 }
 //HOMEPAGE
 .containerHomePage {
