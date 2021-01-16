@@ -69,38 +69,35 @@ body {
     color: white;
 }
 //ALL PROGRAMS
-.containerProgramsPage {
-/*     display: flex;
-    justify-content: center;
-    align-items: center; */
+.containerProgramsPage h1 {
+    text-align: center;
+    color: white;
 }
 .itemAllProgram {
-/*     display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-}
-.itemAllProgram h1 {
-    color: red;
-}
-.itemAllProgram h2, .categoryShowInformation {
-    color: white;
-}
-.itemAllProgram p{
-    text-align: center;
-    width: 80%;
-}
-.allProgramsPosterShow {
-    width: 320px;
 }
 .showProgramButton {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-}
-.showProgramButton:hover {
     color: red;
-    text-decoration: underline;
+}
+.allProgramsPosterShow {
+    margin: 15px 15px 0px 15px;
+    width: 280px;
+    height: 400px;
+}
+.containerProgramItem {
+    margin: 10px;
+}
+.programItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 285px;
+}
+.programItem h2 {
+    color: white;
+    margin-bottom: 10px;
 }
 //SHOW
 .programPosterShow {
