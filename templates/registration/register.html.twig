@@ -18,7 +18,7 @@
                 {% endfor %}
                 <img class="home-logo-register" src="{{ asset('/build/images/logo/code.svg') }}" alt="Logo SandBox"/>
 
-                <h1>S'inscrire</h1>
+                <h1 class="registerTitle">S'inscrire</h1>
 
                 <div class="containerRegistrationForm">
                     {{ form_start(registrationForm) }}
@@ -31,7 +31,7 @@
                         <button type="submit" class="submitRegistration">Enregistrer</button>
                     {{ form_end(registrationForm) }}
                 </div>
-                <a href="/">Retour</a>
+                <a class="registerBackButton"href="/">Se connecter</a>
             </div>
         </div>
     {% endblock %}

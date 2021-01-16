@@ -163,6 +163,19 @@ body {
     width: 50%;
     text-align: center;
 }
+.loginConnectedTitle, .registerTitle {
+    color: white;
+}
+.containerLoginInputEmail label, .containerLoginInputPassword label {
+    color: white;
+}
+.containerRegistrationForm label {
+    color: white;
+}
+.registerBackButton {
+    text-decoration: none;
+    color: red;
+}
 .home-logo-login {
     width: 80%;
     margin-bottom: 100px;
@@ -185,6 +198,7 @@ body {
 }
 .subscriptionText {
     text-decoration: none;
+    color: red;
 }
 .submitConnexion, .submitRegistration {
     padding: 15px 125px;
