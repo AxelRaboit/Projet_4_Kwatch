@@ -7,10 +7,13 @@
 {% block body %}
 <div class="containerProgramShow">
     <div class="itemProgramShow">
-        <h1 class="programTitleShow">{{ program.title }}</h1>
         <img class="programPosterShow" src="{{ program.poster }}" alt="poster program">
-        <p>{{ program.synopsis }}</p>
-        <p class="categoryShowInformation">Catégorie : {{ program.category.name }}</p>
+            <div class="containerContentProgramShow">
+            <h1 class="programTitleShow">{{ program.title }}</h1>
+            <p class="programShowSynopsisLabel">Synopsis:</p>
+            <p class="programShowSynopsisContent">{{ program.synopsis }}</p>
+            <p class="categoryShowInformation"><span class="categoryShowTitle">Catégorie :</span> {{ program.category.name }}</p>
+        </div>
     </div>
     <a class="backToListProgramShow" href="{{ path('program_index') }}">
         Retour à la liste des programmes
