@@ -22,4 +22,25 @@ class ProgramController extends AbstractController
             'programs' => $programs,
         ]);
     }
+
+    /**
+     * Getting a program by his id
+     * @Route("/show/{id<^[0-9]+$>}", name="show")
+     * @param integer $id
+     * @return response
+     */
+    public function show(int $id, ProgramRepository $programRepository): response
+    {
+        $program = $programRepository->findOneBy(['id' => $id]);
+
+        if (!$program) {
+            throw $this->createNotFoundException(
+                'Aucune série avec l\'id: '.$id.' existe.'
+            );
+        }
+
+        return $this->render('program/show.html.twig', [
+            'program' => $program,
+        ]);
+    }
 }
