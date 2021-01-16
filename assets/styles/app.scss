@@ -81,7 +81,7 @@ body {
     flex-direction: column;
 }
 .itemAllProgram h1 {
-    color: red;
+    color: HSL(2, 97%, 62%);
 }
 .itemAllProgram h2, .categoryShowInformation {
     color: white;
@@ -99,7 +99,7 @@ body {
     margin: 20px;
 }
 .showProgramButton:hover {
-    color: red;
+    color: HSL(2, 97%, 62%);
     text-decoration: underline;
 }
 //SHOW
@@ -125,7 +125,7 @@ body {
 }
 .programTitleShow {
     font-size: 3rem;
-    color: red;
+    color: HSL(2, 97%, 62%);
 }
 .categoryShowInformation {
     font-weight: bold;
@@ -174,7 +174,7 @@ body {
 }
 .registerBackButton {
     text-decoration: none;
-    color: red;
+    color: HSL(2, 97%, 62%);
 }
 .home-logo-login {
     width: 80%;
@@ -198,12 +198,12 @@ body {
 }
 .subscriptionText {
     text-decoration: none;
-    color: red;
+    color: HSL(2, 97%, 62%);
 }
 .submitConnexion, .submitRegistration {
     padding: 15px 125px;
     border: none;
-    background-color: hsl(132, 77%, 42%);
+    background-color: HSL(2, 97%, 62%);
     font-size: 1rem;
     text-decoration: none;
     color: rgb(245, 245, 245);
