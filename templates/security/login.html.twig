@@ -1,45 +1,31 @@
-
-
-
-
-
-
-
-{% extends 'base.html.twig' %}
-
-{% block title %}Se connecter - {{ parent() }}{% endblock %}
-
-{% block body %}
-<div class="homepageLogin">
-    <div class="containerLogin">
-        <form method="post">
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
-
-            {% if app.user %}
-                <div class="homepageLogin">
-            <div class="containerLogin">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
+    <title>{% block title %}Se connecter - SandBox{% endblock %}</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="homepageLogin">
+        <div class="containerLogin">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
                 <img class="home-logo" src="{{ asset('/build/images/logo/code.svg') }}" alt="Logo SandBox"/>
                 {% if app.user %}
                     <div class="containerAuthButtons">
-                        <button class="submitConnexion" type="submit"><a href="{{ path('home') }}">Entrer</a></button>
+                        <button class="submitConnexion" type="submit"><a href="{{ path('home_index') }}">Entrer</a></button>
                     <div class="mb-3">
                         Tu es connecté entant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
                     </div>
                         <a class="loggedPageLogoutButton" href="{{ path('app_logout') }}">Se déconnecter</a>
                     </div>
-                {% else %}
-                    <div class="containerAuthButtons">
-                        <button class="submitConnexion" type="submit"><a href="{{ path('app_login') }}">S'identifier</a></button>
-                        <a class="subscriptionText" href="{{ path('app_register') }}">Pas encore inscrit ? Créez un compte !</a>
-                    </div>
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" name="_remember_me"> Remember me
-                        </label>
-                    </div>
-                {% endif %}
                 {% else %}
                     <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
                     <div class="containerLoginInputEmail">
@@ -57,10 +43,17 @@
                     <button class="submitConnexion" type="submit">
                         Connexion
                     </button>
-                {% endif %}
-            </div>
-        </form>
-    </div>
-</div>
+                    <a class="subscriptionText" href="{{ path('app_register') }}">Pas encore inscrit ? Créez un compte !</a>
 
-{% endblock %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</body>
+</html>
+
