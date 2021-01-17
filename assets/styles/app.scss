@@ -305,7 +305,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
 }
 .episodeNumberNumberAndTitle div {
     margin: 0px 5px 0px 5px;
@@ -313,6 +312,18 @@ body {
 .episodePosterSeasonShow {
     width: 420px;
     height: 280px;
+}
+.containerBackToListSeasonShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 280px;
+}
+.backToListSeasonShow {
+    margin: 20px;
+    color: HSL(0, 57%, 45%);
+    text-decoration: none;
 }
 @media (max-width: 900px) {
     .EpisodeItemSeasonShow {
@@ -342,6 +353,120 @@ body {
     .episodePosterSeasonShow {
         width: 320px;
         height: 200px;
+    }
+}
+
+//EPISODE SHOW
+.containerContentEpisodeShow {
+    background-color: hsla(0, 1%, 24%, 0.66);
+}
+.containerEpisodeTitleShow {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.episodeTitleShowEpisode {
+    font-size: 2.5rem;
+    color: HSL(0, 57%, 45%);
+}
+.containerEpisodeShowSynopsisLabel {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+}
+.containerPosterEpisodeShow {
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.episodeShowSynopsisLabel {
+    margin-top: 80px;
+    color: white;
+    font-size: 1.8rem;
+}
+.containerEpisodeShowSynopsisContent {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.episodeShowSynopsisContent {
+    color: white;
+    width: 80%;
+}
+.episodePosterShow {
+    margin-top: 20px;
+    width: 600px;
+}
+.containerBackToListEpisodeShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 280px;
+}
+.backToListEpisodeShow {
+    margin: 20px;
+    color: HSL(0, 57%, 45%);
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .containerContentEpisodeShow {
+        height: 100vh;
+/*         display: grid;
+        grid-template-areas: 
+            "photo photo photo"
+            "title title title"
+            "synopsisTitle synopsisTitle synopsisTitle"
+            "synopsisContent synopsisContent synopsisContent"
+            "backButton backButton backButton"; */
+    }
+    .containerEpisodeContent {
+        background-color: none;
+        width: 100vw;
+        margin-top: 0px;
+    }
+    .containerPosterEpisodeShow {
+        grid-column: 2;
+        display: flex;
+        grid-area: photo;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    .containerEpisodeTitleShow {
+        grid-area: title;
+    }
+    .episodeTitleShowEpisode {
+        margin-top: 40px;
+        font-size: 1.7rem;
+    }
+    .containerEpisodeShowSynopsisLabel {
+        grid-area: synopsisTitle;
+    }
+    .episodeShowSynopsisLabel {
+        margin-top: 20px;
+    }
+    .containerBackToListProgramShow {
+        grid-area: backButton;
+    }
+}
+@media (max-width: 768px) {
+    .episodePosterShow {
+        width: 420px;
+    }
+}
+@media (max-width: 500px) {
+    .episodePosterShow {
+        width:300px;
+    }
+}
+@media (max-width: 360px) {
+    .episodePosterShow {
+        width:250px;
     }
 }
 
