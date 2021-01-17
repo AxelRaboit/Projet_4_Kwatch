@@ -4,18 +4,28 @@
 
 {% block body %}
 
-    <div class="media">
-        <div>
-            <h2>{{ program.title }}: Saison {{ season.number }}</h2>
-            <h3>Episode {{ episode.number }}: {{ episode.title }}</h3>
-            <h4>Synopsis:</h4>
-            <p>{{ episode.synopsis }}</p>
+    <div class="containerEpisodeShow">
+        <div class="itemEpisodeShow">
+            <div class="containerContentEpisodeShow">
+                <div class="containerPosterEpisodeShow">
+                    <img class="episodePosterShow" src="{{ episode.poster }}" alt="poster episode">
+                </div>
+                <div class="containerEpisodeContent">
+                    <div class="containerEpisodeTitleShow">
+                        <h1 class="episodeTitleShowEpisode">{{ episode.title }}</h1>
+                    </div>
+                    <div class="containerEpisodeShowSynopsisLabel">
+                        <div class="episodeShowSynopsisLabel">Synopsis:</div>
+                    </div>
+                    <div class="containerEpisodeShowSynopsisContent">
+                        <div class="episodeShowSynopsisContent">{{ program.synopsis }}</div>
+                    </div>
+                    <div class="containerBackToListEpisodeShow">
+                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programId: program.id}) }}">Retour à la liste des episodes</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <br>
-
-    <a href="{{ path('program_index') }}">
-        Retour à la liste des programmes
-    </a>
-
+    {% include "/includes/_footer.html.twig" %}
 {% endblock %}
