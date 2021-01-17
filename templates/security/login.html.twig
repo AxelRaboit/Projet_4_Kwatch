@@ -17,7 +17,7 @@
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
-                <img class="home-logo-login" src="{{ asset('/build/images/logo/code.svg') }}" alt="Logo SandBox"/>
+                <img class="home-logo-login" src="{{ asset('/build/images/logo/moviebox.svg') }}" alt="Logo SandBox"/>
                 {% if app.user %}
                     <div class="containerAuthButtons">
                         <button class="submitConnexion" type="submit"><a href="{{ path('home_index') }}">Entrer</a></button>
