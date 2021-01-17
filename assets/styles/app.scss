@@ -184,6 +184,10 @@ body {
     color: white;
     font-weight: bold;
 }
+.containerSeasonShow a {
+    color: HSL(2, 97%, 62%);
+    text-decoration: none;
+}
 .containerBackToListProgramShow {
     display: flex;
     justify-content: center;
@@ -270,10 +274,27 @@ body {
 
 }
 .EpisodeItemSeasonShow {
-    width: 320px;
-    height: 400px;
+    width: 420px;
+    height: 320px;
     margin: 15px 15px 0px 15px;
     background-color: rgba(62, 61, 61, 0.66);
+}
+.EpisodeItemSeasonShow a {
+    text-decoration: none;
+}
+.episodeNumberNumberAndTitle {
+    color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.episodePosterSeasonShow {
+/*     margin: 15px 15px 0px 15px; */
+    width: 420px;
+    height: 280px;
 }
 
 

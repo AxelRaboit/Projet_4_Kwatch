@@ -7,8 +7,12 @@
     <div class="containerEpisodes">
         {% for episode in episodes %}
             <div class="EpisodeItemSeasonShow">
-                Titre:{{ episode.title }}
-                Episode: <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a>
+                <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}"><img class="episodePosterSeasonShow" src="{{ episode.poster }}" alt="episode poster">
+                    <div class="episodeNumberNumberAndTitle">
+                        #{{ episode.number ~ ' ' ~ episode.title }}
+                    </div>
+                </a>
+                {# Episode: <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a> #}
             </div>
         {% endfor %}
     </div>
