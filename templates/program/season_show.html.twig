@@ -7,8 +7,8 @@
 <div class="media">
     <div>
         {% for episode in episodes %} <br>
-            <h4><a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a></h4>
-            <b>Titre: </b>{{ episode.title }}<br>
+{#             <h4><a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a></h4>
+ #}            <b>Titre: </b>{{ episode.title }}<br>
 {#         {% if is_granted("ROLE_ADMIN") %}
                 <button class="btn btn-dark m-2" type="submit" value="delete"><a href="{{ path('episode_delete', {'id': episode.slug}) }}">Supprimer l'épisode</a></button>
         {%endif%} #}
