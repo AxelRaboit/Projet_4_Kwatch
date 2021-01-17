@@ -21,7 +21,7 @@
                         <div class="episodeShowSynopsisContent">{{ program.synopsis }}</div>
                     </div>
                     <div class="containerBackToListEpisodeShow">
-                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programId: program.id}) }}">Retour à la liste des episodes</a>
+                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des episodes</a>
                     </div>
                 </div>
             </div>
