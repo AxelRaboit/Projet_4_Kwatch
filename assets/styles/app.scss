@@ -10,8 +10,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-
-    background-color: hsl(0, 1%, 24%);
+    background-color: hsla(0, 1%, 24%, 0.66);
     display: flex;
 }
 .navbar-brand, .navbar-logout {
@@ -73,6 +72,9 @@ body {
     color: white;
 }
 //ALL PROGRAMS
+.containerProgramsPage {
+    margin-top: 100px;
+}
 .containerProgramsPage h1 {
     text-align: center;
     color: white;
@@ -105,78 +107,150 @@ body {
     margin-bottom: 10px;
 }
 //SHOW
-.programPosterShow {
-    width: 320px;
-}
-.containerProgramShow {
+.containerContentProgramShow {
+    height: 100vh;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    
 }
 .containerContentProgramShow {
-    height: 400px;
+    height: auto;
+}
+.containerProgramContent {
+    background-color: hsla(0, 1%, 24%, 0.66);
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-}
-.itemProgramShow {
-    background-color: HSL(300, 0%, 23%);
-    margin-top: 100px;
-    width: 70%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-/*     flex-direction: column; */
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 40px;
 }
-.itemProgramShow p {
-    text-align: center;
-    color: white;
+.containerPosterShow {
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.programPosterShow {
+    width: 600px;
+}
+.containerProgramTitleShow {
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
 .programTitleShow {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: HSL(2, 97%, 62%);
 }
+.containerProgramShowSynopsisLabel {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+}
 .programShowSynopsisLabel {
+    margin-top: 80px;
+    color: white;
     font-size: 1.8rem;
-    margin: 0;
+}
+.containerProgramShowSynopsisContent {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .programShowSynopsisContent {
+    color: white;
     width: 80%;
 }
 .categoryShowTitle {
     color: HSL(2, 97%, 62%);
 }
+.containerCategoryShowInformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .categoryShowInformation {
+    margin: 20px 0px 20px 0px;
+    color: white;
     font-weight: bold;
 }
+.containerBackToListProgramShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+}
 .backToListProgramShow {
-    margin-top: 20px;
+    margin: 20px;
     color: HSL(2, 97%, 62%);
     text-decoration: none;
 }
-@media (max-width: 1190px) {
-    .programTitleShow {
-        font-size: 1.8rem;
-    }
-}
-@media (max-width: 910px) {
-    .programTitleShow {
-        font-size: 1.6rem;
-    }
-    .itemProgramShow {
-        flex-direction: column;
-    }
-    .programPosterShow {
-        margin-top: 40px;
-    }
-    .itemProgramShow {
-        width: 100%;
-    }
-}
-@media (max-width: 640px) {
 
+@media (max-width: 900px) {
+    .containerContentProgramShow {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+            "photo photo photo"
+            "title title title"
+            "synopsisTitle synopsisTitle synopsisTitle"
+            "synopsisContent synopsisContent synopsisContent"
+            "category category category"
+            "backButton backButton backButton";
+    }
+    .containerProgramContent {
+        background-color: none;
+        width: 100vw;
+        margin-top: 0px;
+    }
+    .containerPosterShow {
+        grid-column: 2;
+        display: flex;
+        grid-area: photo;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    .containerProgramTitleShow {
+        grid-area: title;
+    }
+    .programTitleShow {
+        margin-top: 40px;
+        font-size: 1.7rem;
+    }
+    .containerProgramShowSynopsisLabel {
+        grid-area: synopsisTitle;
+    }
+    .programShowSynopsisLabel {
+        margin-top: 20px;
+    }
+    .containerProgramShowSynopsisContent {
+        grid-area: synopsisContent;
+    }
+    .containerCategoryShowInformation {
+        grid-area: category;
+    }
+    .containerBackToListProgramShow {
+        grid-area: backButton;
+    }
+}
+@media (max-width: 768px) {
+    .programPosterShow {
+        width: 420px;
+    }
+}
+@media (max-width: 500px) {
+    .programPosterShow {
+        width:300px;
+    }
+}
+@media (max-width: 360px) {
+    .programPosterShow {
+        width:250px;
+    }
 }
 
 //LOGIN & REGISTER
