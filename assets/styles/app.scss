@@ -5,7 +5,9 @@ body {
     background-color: hsl(0, 0%, 14%);
     font-family: sans-serif;
 }
+//==================================================//
 //NAVBAR
+//==================================================//
 .Navbar {
     position: fixed;
     top: 0;
@@ -71,7 +73,9 @@ body {
     }
 }
 
+//==================================================//
 //HOMEPAGE
+//==================================================//
 .containerHomePage {
     height: calc(100vh - 56px);
     display: flex;
@@ -85,7 +89,9 @@ body {
     color: white;
     text-align: center;
 }
+//==================================================//
 //ALL PROGRAMS
+//==================================================//
 .containerProgramsPage {
     margin-top: 100px;
 }
@@ -127,7 +133,9 @@ body {
     color: HSL(270, 4%, 91%);
     margin-bottom: 10px;
 }
+//==================================================//
 //PROGRAM SHOW
+//==================================================//
 .containerContentProgramShow {
     height: 100vh;
     padding: 0;
@@ -298,8 +306,9 @@ body {
         width:250px;
     }
 }
+//==================================================//
 //SEASON SHOW
-
+//==================================================//
 .containerSeasonTeaserVideo {
     margin-top: 100px;
     display: flex;
@@ -396,7 +405,9 @@ body {
     }
 }
 
+//==================================================//
 //EPISODE SHOW
+//==================================================//
 .containerContentEpisodeShow {
     background-color: hsla(0, 1%, 24%, 0.66);
 }
@@ -510,7 +521,9 @@ body {
     }
 }
 
+//==================================================//
 //LOGIN & REGISTER
+//==================================================//
 .homepageLogin, .homepageRegister {
     height: 100vh;
     display: flex;
