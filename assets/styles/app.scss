@@ -145,13 +145,14 @@ body {
     align-items: center;
     margin-top: 100px;
     padding-top: 40px;
+    margin-right: 20px; 
 }
 .containerPosterShow {
     margin-top: 100px;
     margin-left: 20px;
-    display: flex;
+/*     display: flex;
+    align-items:center; */
     justify-content:center;
-    align-items:center;
 }
 .programPosterShow {
     width: 600px;
@@ -287,6 +288,13 @@ body {
     }
 }
 //SEASON SHOW
+
+.containerSeasonTeaserVideo {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .containerEpisodes {
     margin-top: 100px;
 }
