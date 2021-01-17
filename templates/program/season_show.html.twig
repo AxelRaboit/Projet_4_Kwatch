@@ -16,6 +16,9 @@
             </div>
         {% endfor %}
     </div>
+    <div class="containerBackToListSeasonShow">
+        <a class="backToListSeasonShow" href="{{ path('program_show',{id: program.id}) }}">Retour à la liste des episodes</a>
+    </div>
 
 {# <a href="{{ path('episode_new') }}">Crée un nouvel episode</a>
 <a href="{{ path('program_index') }}">Retour à la liste des programmes</a> #}
