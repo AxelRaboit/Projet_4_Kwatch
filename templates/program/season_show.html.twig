@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Saison {{ seasons.number }}{% endblock %}
+
+{% block body %}
+
+<div class="media">
+    <div>
+        {% for episode in episodes %} <br>
+            <h4><a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a></h4>
+            <b>Titre: </b>{{ episode.title }}<br>
+{#         {% if is_granted("ROLE_ADMIN") %}
+                <button class="btn btn-dark m-2" type="submit" value="delete"><a href="{{ path('episode_delete', {'id': episode.slug}) }}">Supprimer l'épisode</a></button>
+        {%endif%} #}
+        {% endfor %}
+    </div>
+</div>
+
+{# <a href="{{ path('episode_new') }}">Crée un nouvel episode</a>
+<a href="{{ path('program_index') }}">Retour à la liste des programmes</a> #}
+
+{% endblock %}
