@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 .navbar-logout {
-    color: white;
+    color: HSL(2, 97%, 62%);
     text-decoration: none;
     padding: 0px 10px;
     margin-left: auto;
@@ -51,7 +51,7 @@ body {
     height: 40px;
 }
 
-@media (max-width: 411px) {
+@media (max-width: 438px) {
     .navbar-brand {
         margin-right: 0px;
     }
@@ -60,6 +60,14 @@ body {
     }
     .itemPrograms, .itemCategory {
         font-size: 12px;
+    }
+}
+@media (max-width: 380px) {
+    .navbar-logout {
+        font-size: 10px;
+    }
+    .itemPrograms, .itemCategory {
+        font-size: 10px;
     }
 }
 
@@ -292,11 +300,39 @@ body {
 
 }
 .episodePosterSeasonShow {
-/*     margin: 15px 15px 0px 15px; */
     width: 420px;
     height: 280px;
 }
-
+@media (max-width: 900px) {
+    .EpisodeItemSeasonShow {
+        width: 480px;
+        height: 380px;
+    }
+    .episodePosterSeasonShow {
+        width: 480px;
+        height: 340px;
+    }
+}
+@media (max-width: 530px) {
+    .EpisodeItemSeasonShow {
+        width: 340px;
+        height: 260px;
+    }
+    .episodePosterSeasonShow {
+        width: 340px;
+        height: 220px;
+    }
+}
+@media (max-width: 380px) {
+    .EpisodeItemSeasonShow {
+        width: 320px;
+        height: 240px;
+    }
+    .episodePosterSeasonShow {
+        width: 320px;
+        height: 200px;
+    }
+}
 
 //LOGIN & REGISTER
 .homepageLogin, .homepageRegister {
