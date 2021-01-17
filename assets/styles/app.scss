@@ -105,6 +105,13 @@ body {
     margin: 15px 15px 0px 15px;
     width: 280px;
     height: 400px;
+
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.allProgramsPosterShow:hover {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
 }
 .containerProgramItem {
     margin: 10px;
@@ -295,6 +302,13 @@ body {
     height: 320px;
     margin: 15px 15px 0px 15px;
     background-color: rgba(62, 61, 61, 0.66);
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.EpisodeItemSeasonShow:hover {
+    -webkit-transform: scale(1.04);
+	transform: scale(1.04);
 }
 .EpisodeItemSeasonShow a {
     text-decoration: none;
