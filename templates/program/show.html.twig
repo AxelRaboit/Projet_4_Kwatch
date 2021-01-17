@@ -7,17 +7,29 @@
 {% block body %}
 <div class="containerProgramShow">
     <div class="itemProgramShow">
-        <img class="programPosterShow" src="{{ program.poster }}" alt="poster program">
-            <div class="containerContentProgramShow">
-            <h1 class="programTitleShow">{{ program.title }}</h1>
-            <p class="programShowSynopsisLabel">Synopsis:</p>
-            <p class="programShowSynopsisContent">{{ program.synopsis }}</p>
-            <p class="categoryShowInformation"><span class="categoryShowTitle">Catégorie :</span> {{ program.category.name }}</p>
+        <div class="containerContentProgramShow">
+            <div class="containerPosterShow">
+                <img class="programPosterShow" src="{{ program.poster }}" alt="poster program">
+            </div>
+            <div class="containerProgramContent">
+                <div class="containerProgramTitleShow">
+                    <h1 class="programTitleShow">{{ program.title }}</h1>
+                </div>
+                <div class="containerProgramShowSynopsisLabel">
+                    <div class="programShowSynopsisLabel">Synopsis:</div>
+                </div>
+                <div class="containerProgramShowSynopsisContent">
+                    <div class="programShowSynopsisContent">{{ program.synopsis }}</div>
+                </div>
+                <div class="containerCategoryShowInformation">
+                    <div class="categoryShowInformation"><span class="categoryShowTitle">Catégorie :</span> {{ program.category.name }}</div>
+                </div>
+                <div class="containerBackToListProgramShow">
+                    <a class="backToListProgramShow" href="{{ path('program_index') }}">Retour à la liste des programmes</a>
+                </div>
+            </div>
         </div>
     </div>
-    <a class="backToListProgramShow" href="{{ path('program_index') }}">
-        Retour à la liste des programmes
-    </a>
 </div>
 {% include "/includes/_footer.html.twig" %}
 {% endblock %}
