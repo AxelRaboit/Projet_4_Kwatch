@@ -38,6 +38,11 @@ class Episode
      */
     private $season;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $poster;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,18 @@ class Episode
     public function setSeason(?Season $season): self
     {
         $this->season = $season;
+
+        return $this;
+    }
+
+    public function getPoster(): ?string
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(string $poster): self
+    {
+        $this->poster = $poster;
 
         return $this;
     }

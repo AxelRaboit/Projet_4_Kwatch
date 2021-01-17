@@ -112,7 +112,7 @@ body {
     color: white;
     margin-bottom: 10px;
 }
-//SHOW
+//PROGRAM SHOW
 .containerContentProgramShow {
     height: 100vh;
     padding: 0;
@@ -183,6 +183,10 @@ body {
     margin: 20px 0px 20px 0px;
     color: white;
     font-weight: bold;
+}
+.containerSeasonShow a {
+    color: HSL(2, 97%, 62%);
+    text-decoration: none;
 }
 .containerBackToListProgramShow {
     display: flex;
@@ -258,6 +262,41 @@ body {
         width:250px;
     }
 }
+//SEASON SHOW
+.containerEpisodes {
+    margin-top: 100px;
+}
+.containerEpisodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.EpisodeItemSeasonShow {
+    width: 420px;
+    height: 320px;
+    margin: 15px 15px 0px 15px;
+    background-color: rgba(62, 61, 61, 0.66);
+}
+.EpisodeItemSeasonShow a {
+    text-decoration: none;
+}
+.episodeNumberNumberAndTitle {
+    color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.episodePosterSeasonShow {
+/*     margin: 15px 15px 0px 15px; */
+    width: 420px;
+    height: 280px;
+}
+
 
 //LOGIN & REGISTER
 .homepageLogin, .homepageRegister {
