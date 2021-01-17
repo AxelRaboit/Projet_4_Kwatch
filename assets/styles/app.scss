@@ -177,6 +177,17 @@ body {
     color: HSL(270, 4%, 91%);
     font-size: 1.8rem;
 }
+.containerProgramShowActorLabel {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+}
+.programShowActorLabel {
+    margin-top: 80px;
+    color: HSL(270, 4%, 91%);
+    font-size: 1.8rem;
+}
 .containerProgramShowSynopsisContent {    
     display: flex;
     justify-content: center;
