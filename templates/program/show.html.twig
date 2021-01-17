@@ -2,7 +2,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Série #{{ program.id }}{% endblock %}
+{% block title %}{{ program.title }} - {{ parent()}}{% endblock %}
 
 {% block body %}
 <div class="containerProgramShow">
