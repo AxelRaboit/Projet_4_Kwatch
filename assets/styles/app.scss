@@ -192,9 +192,14 @@ body {
     color: white;
     font-weight: bold;
 }
+.containerSeasonShow {
+    display: flex;
+    flex-wrap: wrap;
+}
 .containerSeasonShow a {
     color: HSL(2, 97%, 62%);
     text-decoration: none;
+    margin: 10px;
 }
 .containerBackToListProgramShow {
     display: flex;
