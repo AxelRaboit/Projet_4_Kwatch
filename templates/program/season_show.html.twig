@@ -9,7 +9,7 @@
             <div class="EpisodeItemSeasonShow">
                 <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}"><img class="episodePosterSeasonShow" src="{{ episode.poster }}" alt="episode poster">
                     <div class="episodeNumberNumberAndTitle">
-                        #{{ episode.number ~ ' ' ~ episode.title }}
+                        <div class="seasonNumberShow">Saison {{ seasons.number }}:</div> <div class="episodeTitleShow">{{ episode.title }}</div>
                     </div>
                 </a>
                 {# Episode: <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a> #}
