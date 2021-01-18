@@ -318,7 +318,7 @@ body {
 }
 .seasonTeaserVideo {
     border-radius: 10px;
-    width: 800px;
+    width: 980px;
     height: 500px;
 /*     overflow: hidden;
     z-index: 1; */
@@ -377,6 +377,12 @@ body {
     color: HSL(0, 57%, 45%);
     text-decoration: none;
 }
+@media (max-width: 1000px) {
+    .seasonTeaserVideo {
+        width: 900px;
+        height: 520px;
+    }
+}
 @media (max-width: 900px) {
     .EpisodeItemSeasonShow {
         width: 480px;
@@ -387,8 +393,20 @@ body {
         height: 340px;
     }
     .seasonTeaserVideo {
-        width: 350px;
-        height: 300px;
+        width: 700px;
+        height: 420px;
+    }
+}
+@media (max-width: 730px) {
+    .seasonTeaserVideo {
+        width: 620px;
+        height: 420px;
+    }
+}
+@media (max-width: 650px) {
+    .seasonTeaserVideo {
+        width: 480px;
+        height: 380px;
     }
 }
 @media (max-width: 530px) {
@@ -397,8 +415,20 @@ body {
         height: 260px;
     }
     .episodePosterSeasonShow {
-        width: 340px;
+        width: 345px;
         height: 220px;
+    }
+}
+@media (max-width: 515px) {
+    .seasonTeaserVideo {
+        width: 345px;
+        height: 260px;
+    }
+}
+@media (max-width: 365px) {
+    .seasonTeaserVideo {
+        width: 320px;
+        height: 240px;
     }
 }
 @media (max-width: 380px) {
@@ -458,6 +488,7 @@ body {
 .episodePosterShow {
     margin-top: 20px;
     width: 600px;
+    border-radius: 10px;
 }
 .containerBackToListEpisodeShow {
     display: flex;
