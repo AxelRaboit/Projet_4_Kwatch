@@ -318,6 +318,8 @@ body {
 }
 .seasonTeaserVideo {
     border-radius: 10px;
+    width: 800px;
+    height: 500px;
 /*     overflow: hidden;
     z-index: 1; */
 }
@@ -383,6 +385,10 @@ body {
     .episodePosterSeasonShow {
         width: 480px;
         height: 340px;
+    }
+    .seasonTeaserVideo {
+        width: 350px;
+        height: 300px;
     }
 }
 @media (max-width: 530px) {
