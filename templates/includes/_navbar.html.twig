@@ -7,8 +7,14 @@
     </div>
   </div>
   <div class="navRightSide">
-    <input id="searchBar" type="text">
-    <button id="submitSearchButton" type="submit">Rechercher</button>
+    <form id="searchForm" action="{{ path('program_search') }}" method="get">
+        <ul id="autocomplete"></ul>
+        <div id="searchBox">
+            <input type="text" name="q" id="searchBar" autocomplete="off">
+        </div>
+        <button id="submitSearchButton">Chercher</button>
+    </form>
     <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a>
   </div>
 </nav>
+
