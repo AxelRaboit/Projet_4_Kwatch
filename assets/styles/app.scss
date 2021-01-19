@@ -39,10 +39,16 @@ body {
 }
 #searchBar {
     border: none;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     height: 30px;
     width: 270px;
     text-align: center;
+}
+#submitSearchButton {
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    background-color: HSL(0, 57%, 45%);
+    color: white;
 }
 .navbar-brand {
     padding: 0px 10px;
@@ -67,14 +73,22 @@ body {
 .footer {
     height: 40px;
 }
-@media (max-width: 780px) {
+@media (max-width: 835px) {
     #searchBar {
         border: none;
-        border-radius: 10px;
+        border-radius: 10px 0px 0px 10px;
         height: 30px;
         width: 200px;
         text-align: center;
     }
+    #submitSearchButton {
+        border-radius: 0px 10px 10px 0px;
+        border: none;
+        background-color: HSL(0, 57%, 45%);
+        color: white;
+    }
+}
+@media (max-width: 780px) {
     .navbar-logout {
         margin: 0px 0px 0px 10px;
     }
@@ -84,11 +98,26 @@ body {
     .itemPrograms, .itemCategory {
         font-size: 12px;
     }
-}
-@media (max-width: 608px) {
     #searchBar {
+        border: none;
+        border-radius: 10px 0px 0px 10px;
+        height: 30px;
+        width: 160px;
+        text-align: center;
+    }
+    #submitSearchButton {
+        border-radius: 0px 10px 10px 0px;
+        border: none;
+        background-color: HSL(0, 57%, 45%);
+        color: white;
+    }
+}
+@media (max-width: 670px) {
+    #searchBar, #submitSearchButton {
         display: none;
     }
+}
+@media (max-width: 608px) {
     .navbar-logout {
         font-size: 11px;
     }
