@@ -85,6 +85,11 @@ body {
         font-size: 12px;
     }
 }
+@media (max-width: 608px) {
+    #searchBar {
+        display: none;
+    }
+}
 @media (max-width: 438px) {
     .navbar-brand {
         margin-right: 0px;
