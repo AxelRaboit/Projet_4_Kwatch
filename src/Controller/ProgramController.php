@@ -6,6 +6,7 @@ use App\Entity\Season;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Repository\ProgramRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -74,5 +75,20 @@ class ProgramController extends AbstractController
             'season' => $season,
             'episode' => $episode,
         ]);
+    }
+
+    /**
+     * @Route("/autocomplete", name="autocomplete", methods={"GET"})
+     * @return Response
+     */
+    public function autocomplete(Request $request, ProgramRepository $programRepository): Response
+    {
+        $query = $request->query->get('q');
+
+        if (null !== $query) {
+            $programs = $programRepository->findByQuery($query);
+        }
+        
+        return $this->json($programs ?? [], 200);
     }
 }

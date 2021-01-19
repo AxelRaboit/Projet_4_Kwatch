@@ -19,6 +19,18 @@ class ProgramRepository extends ServiceEntityRepository
         parent::__construct($registry, Program::class);
     }
 
+    public function findByQuery($query)
+    {
+        $query = "%$query%";
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.title LIKE :query')
+            ->setParameter('query', $query)
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Program[] Returns an array of Program objects
     //  */
