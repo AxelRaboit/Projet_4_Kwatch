@@ -1,14 +1,13 @@
 <nav class="Navbar">
-  <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/logo/moviebox.svg') }}" alt="Logo SandBox" style="width: 120px;"/></a>
   <div class="containerNavbar">
-    <div class="containerItems">
-      <div class="items">
-        <a class="itemPrograms" href="{{path('program_index') }}">Séries</a>
-      </div>
-      <div class="items">
-          <a class="itemCategory" href="">Catégorie</a>
-      </div>
+    <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/logo/moviebox.svg') }}" alt="Logo SandBox" style="width: 120px;"/></a>
+  <div class="containerItems">
+    <a class="itemPrograms" href="{{path('program_index') }}">Séries</a>
+    <a class="itemCategory" href="">Catégorie</a>
     </div>
   </div>
-  <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a>
+  <div class="navRightSide">
+    <input id="searchBar" type="text">
+    <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a>
+  </div>
 </nav>
