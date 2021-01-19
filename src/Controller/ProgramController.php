@@ -78,6 +78,23 @@ class ProgramController extends AbstractController
     }
 
     /**
+     * @Route("/search", name="search", methods={"GET"})
+     * @return Response
+     */
+    public function search(Request $request, ProgramRepository $programRepository): Response
+    {
+        $query = $request->query->get('q');
+
+        if (null !== $query) {
+            $programs = $programRepository->findByQuery($query);
+        }
+
+        return $this->render('program/index.html.twig', [
+            'programs' => $programs ?? [],
+        ]);
+    }
+
+    /**
      * @Route("/autocomplete", name="autocomplete", methods={"GET"})
      * @return Response
      */
