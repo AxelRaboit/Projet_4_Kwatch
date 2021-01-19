@@ -89,16 +89,16 @@ body {
     #searchBar {
         display: none;
     }
+    .navbar-logout {
+        font-size: 11px;
+    }
+    .itemPrograms, .itemCategory {
+        font-size: 11px;
+    }
 }
 @media (max-width: 438px) {
     .navbar-brand {
         margin-right: 0px;
-    }
-    .navbar-logout {
-        font-size: 12px;
-    }
-    .itemPrograms, .itemCategory {
-        font-size: 12px;
     }
     .containerItems {
         margin-bottom: 4px; //Correct the alignement text when the size is for mobile
