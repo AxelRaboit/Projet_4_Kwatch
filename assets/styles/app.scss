@@ -69,12 +69,14 @@ body {
 }
 @media (max-width: 780px) {
     #searchBar {
-        display: none;
+        border: none;
+        border-radius: 10px;
+        height: 30px;
+        width: 200px;
+        text-align: center;
     }
-}
-@media (max-width: 780px) {
     .navbar-logout {
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 10px;
     }
     .navbar-logout {
         font-size: 12px;
@@ -92,6 +94,9 @@ body {
     }
     .itemPrograms, .itemCategory {
         font-size: 12px;
+    }
+    .containerItems {
+        margin-bottom: 4px; //Correct the alignement text when the size is for mobile
     }
 }
 @media (max-width: 380px) {
