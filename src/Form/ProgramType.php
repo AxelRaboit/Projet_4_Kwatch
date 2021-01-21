@@ -20,7 +20,6 @@ class ProgramType extends AbstractType
         $builder
             ->add('title', TextType::class, [
                 'label' => 'Titre',
-                'required' => false,
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez renseigner le titre de la série.',

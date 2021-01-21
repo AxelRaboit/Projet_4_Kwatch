@@ -18,7 +18,7 @@ class EpisodeType extends AbstractType
             ->add('number')
             ->add('summary')
             ->add('poster')
-            ->add('season', EntityType::class, [
+            ->add('season', EntityType::class, [ //TODO -> Complete the add to concaten and get an explicite select for the user
                 'class' => Season::class,
                 'choice_label' => 'number',
                 'label' => 'Saison'
