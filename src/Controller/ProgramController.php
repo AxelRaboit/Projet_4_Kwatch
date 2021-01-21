@@ -5,10 +5,16 @@ namespace App\Controller;
 use App\Entity\Season;
 use App\Entity\Episode;
 use App\Entity\Program;
+use App\Service\Slugify;
+use App\Form\ProgramType;
 use App\Repository\ProgramRepository;
+use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
@@ -61,7 +67,7 @@ class ProgramController extends AbstractController
         ]);
     }
 
-        /**
+    /**
      * @Route("/{programSlug}/seasons/{seasonId}/episodes/{episodeId}", name="season_episode_show")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programSlug": "slug"}})
      * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
@@ -101,11 +107,90 @@ class ProgramController extends AbstractController
     public function autocomplete(Request $request, ProgramRepository $programRepository): Response
     {
         $query = $request->query->get('q');
-
+        $encoder = new JsonEncoder();
         if (null !== $query) {
             $programs = $programRepository->findByQuery($query);
         }
-        
-        return $this->json($programs ?? [], 200);
+        $defaultContext = [
+            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
+                return $object->getId();
+            },
+        ];
+        $normalizer = new ObjectNormalizer(null, null, null, null, null, null, $defaultContext);
+        $serializer = new Serializer([$normalizer], [$encoder]);
+        $response = new Response($serializer->serialize($programs, 'json'));
+
+        return $response;
+        /* return $this->json($programs ?? [], 200); */
+    }
+
+    /**
+     * @Route("/new", name="new", methods={"GET","POST"})
+     */
+    public function new(Request $request, Slugify $slugify): Response
+    {
+        $program = new Program();
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $slug = $slugify->generate($program->getTitle());
+            $program->setSlug($slug);
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($program);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('program_index');
+        }
+
+        return $this->render('program/new.html.twig', [
+            'program' => $program,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
+     */
+    public function edit(Request $request, Program $program): Response
+    {
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('program_index');
+        }
+
+        return $this->render('program/edit.html.twig', [
+            'program' => $program,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Program $program): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$program->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($program);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('program_index');
+    }
+
+    /**
+     * User Panel
+     * @Route("/panel", name="panel")
+     * @return response
+     */
+    public function programPanel(): response
+    {
+        return $this->render('program/panel.html.twig');
     }
 }
