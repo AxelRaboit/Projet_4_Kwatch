@@ -30,7 +30,7 @@ class Episode
     /**
      * @ORM\Column(type="text")
      */
-    private $synopsis;
+    private $summary;
 
     /**
      * @ORM\ManyToOne(targetEntity=Season::class, inversedBy="episodes")
@@ -72,14 +72,14 @@ class Episode
         return $this;
     }
 
-    public function getSynopsis(): ?string
+    public function getSummary(): ?string
     {
-        return $this->synopsis;
+        return $this->summary;
     }
 
-    public function setSynopsis(string $synopsis): self
+    public function setSummary(string $summary): self
     {
-        $this->synopsis = $synopsis;
+        $this->summary = $summary;
 
         return $this;
     }

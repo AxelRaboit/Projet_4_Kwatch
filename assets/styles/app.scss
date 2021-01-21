@@ -14,6 +14,17 @@ body {
     width: 100%;
     background-color: hsla(0, 1%, 24%, 0.66);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-areas: 
+    "logo items searchNdeco";
+}
+.navRightSide {
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 20px;
+    grid-area: searchNdeco;
 }
 .navbar-brand, .navbar-logout {
     display: flex;
@@ -23,45 +34,121 @@ body {
 .navbar-logout {
     color: HSL(0, 57%, 45%);
     text-decoration: none;
-    padding: 0px 10px;
-    margin-left: auto;
-    margin-right: 20px;
+    margin: 0px 10px 0px 30px;
     font-size: 16px;
+}
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+#autocomplete {
+    margin-top: 100px;
+    background-color: white;
+    width: 217px;
+}
+#autocomplete a {
+    color: black;
+    
+}
+#autocomplete li {
+    list-style: none;
+    padding: 15px;
+}
+#searchBar {
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    height: 30px;
+    width: 270px;
+    text-align: center;
+}
+#submitSearchButton {
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    background-color: HSL(0, 57%, 45%);
+    color: white;
+    height: 32px;
 }
 .navbar-brand {
     padding: 0px 10px;
     margin-right: 10px;
-}
-.containerItems {
-    display: flex;
-    align-items:center;
-}
-.containerItems .items {
-    margin: 10px;
+    grid-area: logo;
 }
 .containerNavbar {
     display: flex;
+    align-items: center;
     list-style-type: none;
     margin: 10px;
 }
-.itemPrograms, .itemCategory {
+.containerItems {
+    grid-area: items;
+}
+.itemPrograms, .itemCategory, .itemAdd {
     text-decoration: none;
     color: white;
     font-size: 16px;
+    margin: 0px 10px 0px 10px;
 }
 .footer {
     height: 40px;
 }
-
-@media (max-width: 438px) {
-    .navbar-brand {
-        margin-right: 0px;
+@media (max-width: 835px) {
+    #searchBar {
+        border: none;
+        border-radius: 10px 0px 0px 10px;
+        height: 30px;
+        width: 200px;
+        text-align: center;
+    }
+    #submitSearchButton {
+        border-radius: 0px 10px 10px 0px;
+        border: none;
+        background-color: HSL(0, 57%, 45%);
+        color: white;
+    }
+}
+@media (max-width: 780px) {
+    .navbar-logout {
+        margin: 0px 0px 0px 10px;
     }
     .navbar-logout {
         font-size: 12px;
     }
     .itemPrograms, .itemCategory {
         font-size: 12px;
+    }
+    #searchBar {
+        border: none;
+        border-radius: 10px 0px 0px 10px;
+        height: 30px;
+        width: 160px;
+        text-align: center;
+    }
+    #submitSearchButton {
+        border-radius: 0px 10px 10px 0px;
+        border: none;
+        background-color: HSL(0, 57%, 45%);
+        color: white;
+    }
+}
+@media (max-width: 670px) {
+    #searchBar, #submitSearchButton {
+        display: none;
+    }
+}
+@media (max-width: 608px) {
+    .navbar-logout {
+        font-size: 11px;
+    }
+    .itemPrograms, .itemCategory {
+        font-size: 11px;
+    }
+}
+@media (max-width: 438px) {
+    .navbar-brand {
+        margin-right: 0px;
+    }
+    .containerItems {
+        margin-bottom: 4px; //Correct the alignement text when the size is for mobile
     }
 }
 @media (max-width: 380px) {
@@ -155,6 +242,7 @@ body {
     margin-top: 100px;
     padding-top: 40px;
     margin-right: 20px; 
+    min-width: 1137px;
 }
 .containerPosterShow {
     margin-top: 100px;
