@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panel Utilisateur  - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+<div class="test" style="margin-top: 150px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <a href="{{path('program_new')}}" style="margin-bottom: 20px;">Crée un nouveau programme</a>
+    <a href="{{path('season_new')}}" style="margin-bottom: 20px;">Crée une nouvelle saison</a>
+    <a href="{{path('episode_new')}}">Crée un nouvel épisode</a>
+</div>
+{% endblock %}
