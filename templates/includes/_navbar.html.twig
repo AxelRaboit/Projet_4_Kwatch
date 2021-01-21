@@ -4,11 +4,11 @@
   <div class="containerItems">
     <a class="itemPrograms" href="{{path('program_index') }}">Séries</a>
     <a class="itemCategory" href="">Catégorie</a>
+    <a class="itemAdd" href="{{path('program_panel')}}">Créer</a>
     </div>
   </div>
   <div class="navRightSide">
     <form id="searchForm" action="{{ path('program_search') }}" method="get">
-        <ul id="autocomplete"></ul>
         <div id="searchBox">
             <input type="text" name="q" id="searchBar" autocomplete="off">
         </div>
