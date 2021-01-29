@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Program;
 use Symfony\Component\Form\AbstractType;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -46,8 +47,13 @@ class ProgramType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('poster', TextType::class, [
+/*             ->add('poster', TextType::class, [
                 'label' => 'Poster'
+            ]) */
+            ->add('posterFile', VichFileType::class, [
+                'required'      => false,
+                'allow_delete'  => true, // not mandatory, default is true
+                'download_uri' => true, // not mandatory, default is true
             ])
             ->add('country', TextType::class, [
                 'label' => 'Pays',

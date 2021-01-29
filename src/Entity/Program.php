@@ -2,13 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\ProgramRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProgramRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
+ * //On précise à l’entité que nous utiliserons l’upload du package Vich uploader
+ * @Vich\Uploadable
  */
 class Program
 {
@@ -37,8 +42,24 @@ class Program
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string 
      */
     private $poster;
+
+    //On va créer un nouvel attribut à notre entité, qui ne sera pas lié à une colonne
+    // Tu peux d’ailleurs voir que l’annotation ORM column n’est pas spécifiée car
+    //On ne rajoute pas de données de type file en bdd
+    /**
+    * @Vich\UploadableField(mapping="poster_file", fileNameProperty="poster")
+    * @var File
+    */
+    private $posterFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var Datetime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -165,5 +186,19 @@ class Program
         $this->slug = $slug;
 
         return $this;
+    }
+
+    public function setPosterFile(File $posterFile = null):Program
+    {
+        $this->posterFile = $posterFile;
+        if ($posterFile) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getPosterFile(): ?File
+    {
+        return $this->posterFile;
     }
 }
