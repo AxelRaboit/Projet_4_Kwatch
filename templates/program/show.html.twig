@@ -34,13 +34,13 @@
                 </div>
                 <div class="containerProgramShowActorContent">
                     <ul class="containerProgramActors">
-                            {% for actor in program.actors %}
+                        {% for actor in program.actors %}
                             <div class="containerItemActors">
                                 <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: actor.id})}}"><li class"itemProgramActors">{{ actor.name }}</li></a>
                             </div>
-                            {% else %}
-                                <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
-                            {% endfor %}
+                        {% else %}
+                            <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="containerBackToListProgramShow">
