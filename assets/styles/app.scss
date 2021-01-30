@@ -5,6 +5,7 @@ body {
     background-color: hsl(0, 0%, 14%);
     font-family: sans-serif;
 }
+
 //==================================================//
 //NAVBAR
 //==================================================//
@@ -736,17 +737,36 @@ body {
 //==================================================//
 //ACTOR SHOW
 //==================================================//
+.actorNoImage {
+    width: 400px;
+    border-radius: 10px;
+}
 .containerShowActor {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 .ShowActorTitle {
     color: hsl(0, 57%, 45%);
 }
 .actorPicture {
     width: 400px;
+}
+.containerActorDescription {
+    width: 80%;
+    margin: 20px;
+}
+.actorDescriptionName {
+    color: hsl(0, 57%, 45%);
+    font-size: 1.4rem;
+}
+.actorDescriptionNationalityLabel {
+    font-weight: bold;
+}
+.actorDescription, .actorDescriptionNationality {
+    color: white;
 }
 @media (max-width: 460px) {
     .actorPicture {
