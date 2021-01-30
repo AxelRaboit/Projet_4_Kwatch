@@ -17,7 +17,8 @@ class ActorType extends AbstractType
             ->add('pictureFile', VichFileType::class, [
                 'required' => false,
                 'allow_delete' => true, // not mandatory, default is true
-                'download_uri' => true, // not mandatory, default is true
+                'download_uri' => false, // not mandatory, default is true
+                'delete_label' => 'Supprimer l\'image actuelle'
             ])
         ;
     }
