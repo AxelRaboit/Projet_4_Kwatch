@@ -343,11 +343,11 @@ body {
 .containerItemActors {
     margin: 5px;
     padding: 10px;
-    background-color: rgb(87, 87, 87);
+    background-color: hsl(0, 57%, 45%);
     border-radius: 10px;
 }
 .containerItemActors:hover {
-    background-color: hsl(0, 57%, 45%);
+    background-color: rgb(87, 87, 87);
 }
 .containerLinkItemProgramActors {
     color: hsl(270, 4%, 91%);
@@ -758,19 +758,32 @@ body {
 .actorPicture {
     width: 400px;
 }
+.containerDescriptionActor {
+    display: flex;
+    flex-direction: column;
+}
 .containerActorDescription {
     width: 80%;
     margin: 20px;
+}
+.actorDescriptionLabel {
+    color: hsl(0, 57%, 45%);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.actorDescription {
+    margin: 0;
 }
 .actorDescriptionName {
     color: hsl(0, 57%, 45%);
     font-size: 1.4rem;
 }
 .actorDescriptionNationalityLabel {
+    color: hsl(0, 57%, 45%);
     font-weight: bold;
 }
 .actorDescription, .actorDescriptionNationality {
-    color: white;
+    color: hsl(270, 4%, 91%);
 }
 @media (max-width: 460px) {
     .actorPicture {
@@ -828,13 +841,13 @@ body {
     width: 200px;
     border-radius: 10px;
     text-align: center;
-    background-color: hsl(0, 0%, 34%);
+    background-color: hsl(0, 57%, 45%);
     color: hsl(270, 4%, 91%);
     margin: 10px;
     text-decoration: none;
 }
 .adminItem:hover {
-    background-color: hsl(0, 57%, 45%);
+    background-color: hsl(0, 0%, 34%);
     text-decoration: underline;
 }
 @media (max-width: 520px) {
@@ -860,12 +873,6 @@ body {
     text-align: center;
     height: 10px;
     width:140px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.actorEdit {
     font-size: 0.7rem;
     color: hsl(270, 4%, 91%);
     text-decoration: none;
@@ -873,6 +880,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.actorEdit:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: underline;
 }
 @media (max-width: 460px) {
     .actorEdit {
@@ -903,19 +914,18 @@ body {
     text-align: center;
     height: 10px;
     width:140px;
-
+    font-size: 0.7rem;
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+    
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.programEdit {
-    font-size: 0.7rem;
-    color: hsl(270, 4%, 91%);
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.programEdit:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: underline;
+    cursor: pointer;
 }
 //We need it later
 /* .programDelete button {
@@ -945,5 +955,99 @@ body {
 @media (max-width: 360px) {
     .programEdit {
         width:60px;
+    }
+}
+
+//==================================================//
+//FORM CATEGORY
+//==================================================//
+.containerNewCategory {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px hsl(0, 57%, 45%);
+    border-radius: 10px;
+}
+.newCategoryTitle {
+    color: hsl(0, 57%, 45%);
+    text-align: center;
+
+}
+.containerNewCategoryForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.containerCategoryFormName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.itemCategoryFormName div {
+    display: flex;
+    flex-direction: column;
+}
+.itemCategoryFormName label {
+    color: hsl(270, 4%, 91%);
+    margin: 10px;
+}
+.itemCategoryFormName input {
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.containerNewCategoryButtons {
+    display: flex;
+    flex-direction: column;
+}
+.newCategorySubmitButton, .newCategoryBackButton {
+    margin: 10px;
+}
+.newCategorySubmitButton {
+    background-color:hsl(0, 57%, 45%);
+    color: hsl(270, 4%, 91%);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 100px;
+}
+.newCategorySubmitButton:hover, .newCategoryBackButton:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.newCategoryBackButton {
+    background-color:hsl(0, 57%, 45%);
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+@media (max-width: 470px) {
+    .newCategoryTitle {
+        font-size: 1.4rem;
+    }
+    .itemCategoryFormName input {
+        width: 320px;
+        height: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .newCategoryTitle {
+        font-size: 1.3rem;
+    }
+    .itemCategoryFormName input {
+        width: 280px;
+        height: 30px;
     }
 }
