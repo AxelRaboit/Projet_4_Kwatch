@@ -184,13 +184,4 @@ class ProgramController extends AbstractController
         return $this->redirectToRoute('program_index');
     }
 
-    /**
-     * User Panel
-     * @Route("/panel", name="panel")
-     * @return response
-     */
-    public function programPanel(): response
-    {
-        return $this->render('program/panel.html.twig');
-    }
 }
