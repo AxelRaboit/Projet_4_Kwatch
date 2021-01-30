@@ -74,16 +74,19 @@ body {
 .navbar-brand {
     padding: 0px 10px;
     margin-right: 10px;
-    grid-area: logo;
 }
 .containerNavbar {
     display: flex;
     align-items: center;
+    vertical-align: middle;
     list-style-type: none;
     margin: 10px;
 }
 .containerItems {
-    grid-area: items;
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
 }
 .itemPrograms, .itemCategory {
     text-decoration: none;
@@ -154,9 +157,6 @@ body {
 @media (max-width: 438px) {
     .navbar-brand {
         margin-right: 0px;
-    }
-    .containerItems {
-        margin-bottom: 4px; //Correct the alignement text when the size is for mobile
     }
 }
 
