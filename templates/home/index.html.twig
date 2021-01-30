@@ -4,6 +4,17 @@
 
 {% block body %}
     <div class="containerHomePage">
+      {% if is_granted("ROLE_ADMIN") %}
+        <div class="adminHomePannel">
+          <h2 class="adminHomePannelTitle">Panneau d'administration</h2>
+          <div class="containerAdminItem">
+            <a class="adminItem" href="{{path('category_new')}}">Nouvelle catégorie</a>
+            <a class="adminItem" href="{{path('program_new')}}">Nouveau programme</a>
+            <a class="adminItem" href="{{path('season_new')}}">Nouvelle saison</a>
+            <a class="adminItem" href="{{path('episode_new')}}">Nouvel épisode</a>
+          </div>
+        </div>
+      {% endif %}
         <p>/!\ Bienvenue sur MovieBox, le site est actuellement en construction. /!\</p>
     </div>
 
