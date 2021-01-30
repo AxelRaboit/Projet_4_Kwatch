@@ -346,12 +346,15 @@ body {
     background-color: rgb(87, 87, 87);
     border-radius: 10px;
 }
+.containerItemActors:hover {
+    background-color: hsl(0, 57%, 45%);
+}
 .containerLinkItemProgramActors {
     color: hsl(270, 4%, 91%);
     text-decoration: none;
 }
 .containerLinkItemProgramActors:hover {
-    color: hsl(0, 57%, 45%);
+    background-color: hsl(0, 57%, 45%);
     text-decoration: underline;
 }
 .containerBackToListProgramShow {
