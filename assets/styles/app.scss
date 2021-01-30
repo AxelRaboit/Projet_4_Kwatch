@@ -758,19 +758,32 @@ body {
 .actorPicture {
     width: 400px;
 }
+.containerDescriptionActor {
+    display: flex;
+    flex-direction: column;
+}
 .containerActorDescription {
     width: 80%;
     margin: 20px;
+}
+.actorDescriptionLabel {
+    color: hsl(0, 57%, 45%);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.actorDescription {
+    margin: 0;
 }
 .actorDescriptionName {
     color: hsl(0, 57%, 45%);
     font-size: 1.4rem;
 }
 .actorDescriptionNationalityLabel {
+    color: hsl(0, 57%, 45%);
     font-weight: bold;
 }
 .actorDescription, .actorDescriptionNationality {
-    color: white;
+    color: hsl(270, 4%, 91%);
 }
 @media (max-width: 460px) {
     .actorPicture {
