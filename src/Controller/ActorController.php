@@ -69,7 +69,7 @@ class ActorController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('actor_index');
+            return $this->redirectToRoute('actor_show', ['id' => $actor->getId()]);
         }
 
         return $this->render('actor/edit.html.twig', [
