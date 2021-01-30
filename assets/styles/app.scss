@@ -860,12 +860,6 @@ body {
     text-align: center;
     height: 10px;
     width:140px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.actorEdit {
     font-size: 0.7rem;
     color: hsl(270, 4%, 91%);
     text-decoration: none;
@@ -873,6 +867,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.actorEdit:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: underline;
 }
 @media (max-width: 460px) {
     .actorEdit {
