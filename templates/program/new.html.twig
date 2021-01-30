@@ -3,9 +3,9 @@
 {% block title %}New Program{% endblock %}
 
 {% block body %}
-    <h1>Create new Program</h1>
+    <div class="containerNewProgram">
+        <h1 class="newProgramTitle">Créer une nouvelle série</h1>
 
-    {{ include('program/_form.html.twig') }}
-
-    <a href="{{ path('program_index') }}">back to list</a>
+        {{ include('program/_form.html.twig') }}
+    </div>
 {% endblock %}

@@ -51,6 +51,7 @@ class ProgramType extends AbstractType
                 'label' => 'Poster'
             ]) */
             ->add('posterFile', VichFileType::class, [
+                'label' => 'Affiche de la série',
                 'required'      => false,
                 'allow_delete'  => true, // not mandatory, default is true
                 'download_uri' => false, // not mandatory, default is true
@@ -70,10 +71,9 @@ class ProgramType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('category', null, ['choice_label' => 'name'])
-            ->add('save', SubmitType::class, [
-                'label' => 'Sauvegarder'
-            ]);
+            ->add('category', null, [
+                'label' => 'Categorie',
+                'choice_label' => 'name'])
         ;
     }
 
