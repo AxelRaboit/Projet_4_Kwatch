@@ -1,16 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Actor{% endblock %}
+{% block title %}{{actor.name}}{% endblock %}
 
 {% block body %}
     <div class="containerShowActor">
         <h1 class="ShowActorTitle">{{ actor.name }}</h1>
-        <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture">
+        {% if actor.picture %}
+            <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture"/>
+        {% else %}
+            <img class="actorNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
+        {% endif %}
         <div class="containerActorAdmin">
             {% if is_granted("ROLE_ADMIN") %}
                 <a class="actorEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
-{#                 <div class="actorDelete">{{ include('actor/_delete_form.html.twig') }}</div> #}
             {% endif %}
+        </div>
+        <div class="containerActorDescription">
+            <p class="actorDescriptionName">{{actor.name}}</p>
+            <hr>
+            <p class="actorDescriptionNationality"><span class="actorDescriptionNationalityLabel">Nationalité:</span> {{actor.nationality}}</p>
+            <p class="actorDescription">{{actor.description}}</p>
         </div>
     </div>
 {% endblock %}
