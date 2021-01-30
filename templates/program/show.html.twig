@@ -30,10 +30,18 @@
                     <div class="categoryShowInformation"><span class="categoryShowTitle">Catégorie :</span> {{ program.category.name }}</div>
                 </div>
                 <div class="containerProgramShowActorLabel">
-                    <div class="programShowActorLabel">Acteurs:</div> //TODO -> DISPLAY ALL ACTORS RELATED TO THE PROGRAM
+                    <div class="programShowActorLabel">Acteurs:</div>
                 </div>
                 <div class="containerProgramShowActorContent">
-                    <div class="programShowActorContent">{{ actor.name }}</div>
+                    <ul class="containerProgramActors">
+                            {% for actor in program.actors %}
+                            <div class="containerItemActors">
+                                <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: actor.id})}}"><li class"itemProgramActors">{{ actor.name }}</li></a>
+                            </div>
+                            {% else %}
+                                <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
+                            {% endfor %}
+                    </ul>
                 </div>
                 <div class="containerBackToListProgramShow">
                     <a class="backToListProgramShow" href="{{ path('program_index') }}">Retour à la liste des programmes</a>
