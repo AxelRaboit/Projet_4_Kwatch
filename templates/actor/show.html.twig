@@ -9,7 +9,7 @@
         <div class="containerActorAdmin">
             {% if is_granted("ROLE_ADMIN") %}
                 <a class="actorEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
-                <div class="actorDelete">{{ include('actor/_delete_form.html.twig') }}</div>
+{#                 <div class="actorDelete">{{ include('actor/_delete_form.html.twig') }}</div> #}
             {% endif %}
         </div>
     </div>
