@@ -113,7 +113,7 @@ body {
     .navbar-logout {
         font-size: 12px;
     }
-    .itemPrograms, .itemCategory {
+    .itemPrograms, .itemCategory, .itemAdd {
         font-size: 12px;
     }
     #searchBar {
@@ -139,7 +139,7 @@ body {
     .navbar-logout {
         font-size: 11px;
     }
-    .itemPrograms, .itemCategory {
+    .itemPrograms, .itemCategory, .itemAdd {
         font-size: 11px;
     }
 }
@@ -155,7 +155,7 @@ body {
     .navbar-logout {
         font-size: 10px;
     }
-    .itemPrograms, .itemCategory {
+    .itemPrograms, .itemCategory, .itemAdd {
         font-size: 10px;
     }
 }
@@ -237,18 +237,13 @@ body {
     background-color: hsla(0, 1%, 24%, 0.66);
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    padding-top: 40px;
-    margin-right: 20px; 
-    min-width: 1137px;
 }
 .containerPosterShow {
     margin-top: 100px;
     margin-left: 20px;
-/*     display: flex;
-    align-items:center; */
     justify-content:center;
 }
 .programPosterShow {
@@ -333,7 +328,7 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .containerContentProgramShow {
         display: grid;
         height: 100vh;
@@ -348,7 +343,6 @@ body {
     .containerProgramContent {
         background-color: none;
         width: 100vw;
-        margin-top: 0px;
     }
     .containerPosterShow {
         grid-column: 2;
