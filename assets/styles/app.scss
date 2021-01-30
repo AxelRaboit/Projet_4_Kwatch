@@ -90,9 +90,14 @@ body {
 }
 .itemPrograms, .itemCategory {
     text-decoration: none;
-    color: white;
+    color: hsl(270, 4%, 91%);
     font-size: 16px;
     margin: 0px 10px 0px 10px;
+}
+.itemPrograms:hover, .itemCategory:hover {
+    color: hsl(0, 57%, 45%);
+    text-decoration: underline;
+
 }
 .footer {
     height: 40px;
@@ -117,7 +122,7 @@ body {
         border-radius: 0px 10px 10px 0px;
         border: none;
         background-color: HSL(0, 57%, 45%);
-        color: white;
+        color: hsl(270, 4%, 91%);
     }
 }
 @media (max-width: 780px) {
@@ -141,7 +146,7 @@ body {
         border-radius: 0px 10px 10px 0px;
         border: none;
         background-color: HSL(0, 57%, 45%);
-        color: white;
+        color: hsl(270, 4%, 91%);
     }
 }
 @media (max-width: 670px) {
@@ -175,7 +180,7 @@ body {
     margin: 20px;
     font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: hsl(270, 4%, 91%);
     text-align: center;
 }
 //==================================================//
