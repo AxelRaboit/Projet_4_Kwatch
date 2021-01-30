@@ -925,6 +925,7 @@ body {
 .programEdit:hover {
     background-color: rgb(87, 87, 87);
     text-decoration: underline;
+    cursor: pointer;
 }
 //We need it later
 /* .programDelete button {
@@ -955,4 +956,58 @@ body {
     .programEdit {
         width:60px;
     }
+}
+
+//==================================================//
+//FORM CATEGORY
+//==================================================//
+.containerNewCategory {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.NewCategoryTitle {
+    color: hsl(0, 57%, 45%);;
+    text-align: center;
+
+}
+.containerNewCategoryForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerCategoryFormName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.itemCategoryFormName div {
+    display: flex;
+    flex-direction: column;
+}
+.itemCategoryFormName label {
+    color: hsl(270, 4%, 91%);
+    margin: 10px;
+}
+.itemCategoryFormName input {
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.NewCategorySubmitButton {
+    background-color:hsl(0, 57%, 45%);
+    color: hsl(270, 4%, 91%);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 100px;
+}
+.NewCategorySubmitButton:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: underline;
+    cursor: pointer;
 }
