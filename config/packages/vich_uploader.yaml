@@ -7,3 +7,7 @@ vich_uploader:
             uri_prefix: /images/posters
             # Chemin vers le dossier de stockage
             upload_destination: '%upload_directory%'
+
+        picture_file:
+            uri_prefix: /images/pictures
+            upload_destination: '%upload_directory%'

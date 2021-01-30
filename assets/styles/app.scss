@@ -731,3 +731,70 @@ body {
 .ShowActorTitle {
     color: hsl(0, 57%, 45%);
 }
+.actorPicture {
+    width: 400px;
+}
+@media (max-width: 460px) {
+    .actorPicture {
+        width: 300px;
+    }
+}
+//==================================================//
+//ACTOR ADMIN
+//==================================================//
+.containerActorAdmin {
+    margin: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actorEdit, .actorDelete {
+    background-color: hsl(0, 57%, 45%);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    height: 10px;
+    width:140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actorEdit {
+    font-size: 0.7rem;
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actorDelete button {
+    background-color: hsl(0, 57%, 45%);
+    color: hsl(270, 4%, 91%);
+    border: none;
+    font-size: 0.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 460px) {
+    .containerActorAdmin {
+        height: 20px;
+    }
+    .actorEdit, .actorDelete {
+        margin: 20px;
+        padding: 10px 20px;
+        height: 10px;
+        width:90px;
+    }
+    .actorEdit {
+        font-size: 0.5rem;
+    }
+    .actorDelete button {
+        font-size: 0.5rem;
+    }
+}
