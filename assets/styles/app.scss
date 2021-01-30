@@ -7,6 +7,13 @@ body {
 }
 
 //==================================================//
+//VARIABLE
+//==================================================//
+$main-color: hsl(0, 57%, 45%);
+$secondary-color: hsl(0, 0%, 34%); 
+
+
+//==================================================//
 //NAVBAR
 //==================================================//
 .navbar-logo {
@@ -36,7 +43,7 @@ body {
     align-items: center;
 }
 .navbar-logout {
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
     text-decoration: none;
     margin: 0px 10px 0px 30px;
     font-size: 16px;
@@ -68,7 +75,7 @@ body {
 #submitSearchButton {
     border-radius: 0px 10px 10px 0px;
     border: none;
-    background-color: HSL(0, 57%, 45%);
+    background-color: $main-color;
     color: white;
     height: 32px;
 }
@@ -96,7 +103,7 @@ body {
     margin: 0px 10px 0px 10px;
 }
 .itemPrograms:hover, .itemCategory:hover {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     text-decoration: underline;
 
 }
@@ -192,7 +199,7 @@ body {
 }
 .containerProgramsPage h1 {
     text-align: center;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
 }
 .itemAllProgram {
     display: flex;
@@ -200,7 +207,7 @@ body {
     flex-wrap: wrap;
 }
 .showProgramButton {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
 }
 .allProgramsPosterShow {
     margin: 15px 15px 0px 15px;
@@ -225,7 +232,7 @@ body {
     width: 285px;
 }
 .programItem h2 {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     margin-bottom: 10px;
     font-size: 16px;
 }
@@ -270,7 +277,7 @@ body {
 }
 .programTitleShow {
     font-size: 2.5rem;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
 }
 .containerProgramShowSynopsisLabel {
     display: flex;
@@ -280,7 +287,7 @@ body {
 }
 .programShowSynopsisLabel {
     margin-top: 80px;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     font-size: 1.8rem;
 }
 .containerProgramShowActorLabel {
@@ -291,7 +298,7 @@ body {
 }
 .programShowActorLabel {
     margin-top: 80px;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     font-size: 1.8rem;
 }
 .containerProgramShowSynopsisContent {    
@@ -301,11 +308,11 @@ body {
     text-align: center;
 }
 .programShowSynopsisContent {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     width: 80%;
 }
 .categoryShowTitle {
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
 }
 .containerCategoryShowInformation {
     display: flex;
@@ -322,11 +329,11 @@ body {
     flex-wrap: wrap;
 }
 .seasonNumberShow {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     font-weight: bold;
 }
 .containerSeasonShow a {
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
     text-decoration: none;
     margin: 10px;
     font-size: 1.5rem;
@@ -334,8 +341,10 @@ body {
 .containerProgramActors {
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-right: 40px;
 }
 .containerItemActorsNone {
     color: hsl(270, 4%, 91%);
@@ -343,18 +352,18 @@ body {
 .containerItemActors {
     margin: 5px;
     padding: 10px;
-    background-color: hsl(0, 57%, 45%);
+    background-color: $main-color;
     border-radius: 10px;
 }
 .containerItemActors:hover {
-    background-color: rgb(87, 87, 87);
+    background-color: $secondary-color;
 }
 .containerLinkItemProgramActors {
     color: hsl(270, 4%, 91%);
     text-decoration: none;
 }
 .containerLinkItemProgramActors:hover {
-    background-color: hsl(0, 57%, 45%);
+    background-color: $main-color;
     text-decoration: underline;
 }
 .containerBackToListProgramShow {
@@ -365,7 +374,7 @@ body {
 }
 .backToListProgramShow {
     margin: 20px;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
     text-decoration: none;
 }
 
@@ -444,7 +453,7 @@ body {
     text-decoration: none;
 }
 .episodeNumberNumberAndTitle {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     margin-top: 9px;
     display: flex;
     justify-content: center;
@@ -467,7 +476,7 @@ body {
 }
 .backToListSeasonShow {
     margin: 20px;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
     text-decoration: none;
 }
 @media (max-width: 1000px) {
@@ -548,7 +557,7 @@ body {
 }
 .episodeTitleShowEpisode {
     font-size: 2.5rem;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
 }
 .containerEpisodeShowSynopsisLabel {
     display: flex;
@@ -565,7 +574,7 @@ body {
 }
 .episodeShowSynopsisLabel {
     margin-top: 80px;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     font-size: 1.8rem;
 }
 .containerEpisodeShowSynopsisContent {    
@@ -575,7 +584,7 @@ body {
     text-align: center;
 }
 .episodeShowSynopsisContent {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     width: 80%;
 }
 .episodePosterShow {
@@ -592,7 +601,7 @@ body {
 }
 .backToListEpisodeShow {
     margin: 20px;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
     text-decoration: none;
 }
 
@@ -675,17 +684,17 @@ body {
     text-align: center;
 }
 .loginConnectedTitle, .registerTitle {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
 }
 .containerLoginInputEmail label, .containerLoginInputPassword label {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
 }
 .containerRegistrationForm label {
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
 }
 .registerBackButton {
     text-decoration: none;
-    color: HSL(0, 57%, 45%);
+    color: $main-color;
 }
 .home-logo-login {
     width: 80%;
@@ -709,12 +718,12 @@ body {
 }
 .subscriptionText {
     text-decoration: none;
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
 }
 .submitConnexion, .submitRegistration {
     padding: 15px 125px;
     border: none;
-    background-color: HSL(0, 57%, 45%);
+    background-color: $main-color;
     font-size: 1rem;
     text-decoration: none;
     color: hsl(270, 4%, 91%);
@@ -723,7 +732,7 @@ body {
 }
 .submitConnexion a, .submitRegistration a {
     text-decoration: none;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
 }
 .containerLoginInputEmail, .containerLoginInputPassword {
     display: flex;
@@ -753,7 +762,7 @@ body {
     margin-bottom: 100px;
 }
 .ShowActorTitle {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
 }
 .actorPicture {
     width: 400px;
@@ -767,7 +776,7 @@ body {
     margin: 20px;
 }
 .actorDescriptionLabel {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -775,11 +784,11 @@ body {
     margin: 0;
 }
 .actorDescriptionName {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     font-size: 1.4rem;
 }
 .actorDescriptionNationalityLabel {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     font-weight: bold;
 }
 .actorDescription, .actorDescriptionNationality {
@@ -801,7 +810,7 @@ body {
 //==================================================/
 .adminHomePannel {
     background-color: hsl(300, 1%, 13%);
-    border: solid 1px hsl(0, 57%, 45%);
+    border: solid 1px $main-color;
     border-radius: 10px;
     padding: 20px;
     width: 90%;
@@ -817,7 +826,7 @@ body {
 }
 .adminHomePannelTitle {
     margin: 0;
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     text-align: center;
 }
 .adminHomePannel .adminHomePannelInfo {
@@ -841,13 +850,13 @@ body {
     width: 200px;
     border-radius: 10px;
     text-align: center;
-    background-color: hsl(0, 57%, 45%);
+    background-color: $main-color;
     color: hsl(270, 4%, 91%);
     margin: 10px;
     text-decoration: none;
 }
 .adminItem:hover {
-    background-color: hsl(0, 0%, 34%);
+    background-color: $secondary-color;
     text-decoration: underline;
 }
 @media (max-width: 520px) {
@@ -866,7 +875,7 @@ body {
     justify-content: center;
 }
 .actorEdit {
-    background-color: hsl(0, 57%, 45%);
+    background-color: $main-color;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -882,7 +891,7 @@ body {
     justify-content: center;
 }
 .actorEdit:hover {
-    background-color: rgb(87, 87, 87);
+    background-color: $secondary-color;
     text-decoration: underline;
 }
 @media (max-width: 460px) {
@@ -907,7 +916,7 @@ body {
     justify-content: center;
 }
 .programEdit {
-    background-color: hsl(0, 57%, 45%);
+    background-color: $main-color;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -923,7 +932,7 @@ body {
     justify-content: center;
 }
 .programEdit:hover {
-    background-color: rgb(87, 87, 87);
+    background-color: $secondary-color;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -969,11 +978,11 @@ body {
     
     margin-left: auto;
     margin-right: auto;
-    border: solid 1px hsl(0, 57%, 45%);
+    border: solid 1px $main-color;
     border-radius: 10px;
 }
 .newCategoryTitle {
-    color: hsl(0, 57%, 45%);
+    color: $main-color;
     text-align: center;
 
 }
@@ -1014,19 +1023,19 @@ body {
     margin: 10px;
 }
 .newCategorySubmitButton {
-    background-color:hsl(0, 57%, 45%);
+    background-color: $main-color;
     color: hsl(270, 4%, 91%);
     border: none;
     border-radius: 10px;
     padding: 10px 100px;
 }
 .newCategorySubmitButton:hover, .newCategoryBackButton:hover {
-    background-color: rgb(87, 87, 87);
+    background-color: $secondary-color;
     text-decoration: underline;
     cursor: pointer;
 }
 .newCategoryBackButton {
-    background-color:hsl(0, 57%, 45%);
+    background-color: $main-color;
     color: hsl(270, 4%, 91%);
     border-radius: 10px;
     padding: 10px 100px;
@@ -1051,3 +1060,24 @@ body {
         height: 30px;
     }
 }
+//==================================================//
+//FORM PROGRAM
+//==================================================//
+
+
+
+
+
+
+//==================================================//
+//FORM SEASON
+//==================================================//
+
+
+
+
+
+
+//==================================================//
+//FORM EPISODE
+//==================================================//
