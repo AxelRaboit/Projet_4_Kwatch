@@ -776,6 +776,7 @@ body {
 .adminHomePannelTitle {
     margin: 0;
     color: hsl(0, 57%, 45%);
+    text-align: center;
 }
 .adminHomePannel .adminHomePannelInfo {
     color: hsl(270, 4%, 91%);
@@ -806,6 +807,11 @@ body {
 .adminItem:hover {
     background-color: hsl(0, 57%, 45%);
     text-decoration: underline;
+}
+@media (max-width: 520px) {
+    .adminHomePannel {
+        width: 80%;
+    }
 }
 //==================================================//
 //ACTOR ADMIN
