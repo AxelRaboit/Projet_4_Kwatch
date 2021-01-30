@@ -245,7 +245,11 @@ body {
 .containerPosterShow {
     margin-top: 100px;
     margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
     justify-content:center;
+    align-items: center;
 }
 .programPosterShow {
     width: 600px;
@@ -749,11 +753,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-.actorEdit, .actorDelete {
+.actorEdit {
     background-color: hsl(0, 57%, 45%);
     border-radius: 10px;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     height: 10px;
     width:140px;
@@ -771,21 +775,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-.actorDelete button {
-    background-color: hsl(0, 57%, 45%);
-    color: hsl(270, 4%, 91%);
-    border: none;
-    font-size: 0.7rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 @media (max-width: 460px) {
-    .containerActorAdmin {
-        height: 20px;
-    }
-    .actorEdit, .actorDelete {
+    .actorEdit {
         margin: 20px;
         padding: 10px 20px;
         height: 10px;
@@ -794,7 +785,66 @@ body {
     .actorEdit {
         font-size: 0.5rem;
     }
-    .actorDelete button {
+}
+//==================================================//
+//PROGRAM ADMIN
+//==================================================//
+.containerProgramAdmin {
+    margin: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.programEdit {
+    background-color: hsl(0, 57%, 45%);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    height: 10px;
+    width:140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.programEdit {
+    font-size: 0.7rem;
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//We need it later
+/* .programDelete button {
+    background-color: hsl(0, 57%, 45%);
+    color: hsl(270, 4%, 91%);
+    border: none;
+    font-size: 0.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+@media (max-width: 500px) {
+    .containerProgramAdmin {
+        height: 50px;
+    }
+    .programEdit {
+        margin: 20px;
+        padding: 10px 20px;
+        height: 10px;
+        width:90px;
+    }
+    .programEdit {
         font-size: 0.5rem;
+    }
+}
+@media (max-width: 360px) {
+    .programEdit {
+        width:60px;
     }
 }
