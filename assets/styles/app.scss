@@ -178,7 +178,7 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 .containerHomePage {
    /*  height: calc(100vh - 56px); */
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,7 +195,7 @@ $secondary-color: hsl(0, 0%, 34%);
 //ALL PROGRAMS
 //==================================================//
 .containerProgramsPage {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .containerProgramsPage h1 {
     text-align: center;
@@ -258,7 +258,7 @@ $secondary-color: hsl(0, 0%, 34%);
     width: 100vw;
 }
 .containerPosterShow {
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 20px;
 
     display: flex;
@@ -415,7 +415,7 @@ $secondary-color: hsl(0, 0%, 34%);
 //SEASON SHOW
 //==================================================//
 .containerSeasonTeaserVideo {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,7 +426,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 500px;
 }
 .containerEpisodes {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 .containerEpisodes {
     display: flex;
@@ -566,7 +566,7 @@ $secondary-color: hsl(0, 0%, 34%);
     margin-bottom: 20px;
 }
 .containerPosterEpisodeShow {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 20px;
     display: flex;
     justify-content:center;
@@ -755,7 +755,7 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 10px;
 }
 .containerShowActor {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -968,7 +968,7 @@ $secondary-color: hsl(0, 0%, 34%);
 //FORM CATEGORY
 //==================================================//
 .containerNewCategory {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     width: 94%;
@@ -1003,7 +1003,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemCategoryFormName label {
     color: hsl(270, 4%, 91%);
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .itemCategoryFormName input {
     text-align: center;
@@ -1060,7 +1060,144 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //FORM PROGRAM
 //==================================================//
+.containerNewProgram {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px $main-color;
+        margin-bottom: 20px;
+}
+.newProgramTitle {
+    color: $main-color;
+    text-align: center;
 
+}
+.containerNewProgramForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.containerProgramFormTitle, .containerProgramFormCountry, .containerProgramFormSynopsis, .containerProgramFormCategory, .containerProgramFormPosterFile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.itemProgramFormTitle div, .itemProgramFormCountry div, .itemProgramFormSynopsis div, .itemProgramFormCategory div, .itemProgramFormPosterFile div {
+    display: flex;
+    flex-direction: column;
+}
+.itemProgramFormPosterFile div {
+    width: 400px;
+}
+.vich-file input {
+    color: hsl(270, 4%, 91%);
+    background-color: $main-color;
+    border-radius: 10px;
+
+}
+.itemProgramFormTitle label, .itemProgramFormCountry label, .itemProgramFormSynopsis label, .itemProgramFormCategory label, .itemProgramFormPosterFile label {
+    color: hsl(270, 4%, 91%);
+    margin-bottom: 10px;
+}
+.itemProgramFormTitle input, .itemProgramFormCountry input{
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.itemProgramFormCategory select {
+    width: 400px;
+    height: 30px;
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.itemProgramFormSynopsis textarea {
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+}
+.containerNewProgramButtons {
+    display: flex;
+    flex-direction: column;
+}
+.newProgramSubmitButton, .newProgramBackButton {
+    margin: 10px;
+}
+.newProgramSubmitButton {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 100px;
+}
+.newProgramSubmitButton:hover, .newProgramBackButton:hover {
+    background-color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.newProgramBackButton {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+@media (max-width: 470px) {
+    .newProgramTitle {
+        font-size: 1.4rem;
+    }
+    .itemProgramFormTitle input, .itemProgramFormCountry input {
+        width: 320px;
+        height: 30px;
+    }
+    .itemProgramFormCategory select {
+        width: 320px;
+        height: 30px;
+    }
+    .itemProgramFormSynopsis textarea {
+        width: 320px;
+        height: 200px;
+    }
+    .itemProgramFormPosterFile div {
+        width: 320px;
+    }
+}
+@media (max-width: 360px) {
+    .newProgramTitle {
+        font-size: 1.3rem;
+    }
+    .itemProgramFormTitle input, .itemProgramFormCountry input, .itemProgramFormSynopsis input {
+        width: 280px;
+        height: 30px;
+    }
+    .itemProgramFormCategory select {
+        width: 280px;
+        height: 30px;
+    }
+    .itemProgramFormSynopsis textarea {
+        width: 280px;
+        height: 200px;
+    }
+    .itemProgramFormPosterFile div {
+        width: 280px;
+    }
+}
 
 
 

@@ -1,3 +1,23 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    <div class="containerNewProgramForm">
+        <div class="containerProgramFormTitle">
+            <div class="itemProgramFormTitle">{{ form_row(form.title) }}</div>
+        </div>
+        <div class="containerProgramFormSynopsis">
+            <div class="itemProgramFormSynopsis">{{ form_row(form.synopsis) }}</div>
+        </div>
+        <div class="containerProgramFormPosterFile">
+            <div class="itemProgramFormPosterFile">{{ form_row(form.posterFile) }}</div>
+        </div>
+        <div class="containerProgramFormCountry">
+            <div class="itemProgramFormCountry">{{ form_row(form.country) }}</div>
+        </div>
+        <div class="containerProgramFormCategory">
+            <div class="itemProgramFormCategory">{{ form_row(form.category) }}</div>
+        </div>
+        <div class="containerNewProgramButtons">
+            <button class="newProgramSubmitButton">{{ button_label|default('Créer') }}</button>
+            <a class="newProgramBackButton" href="{{path('home_index')}}">Retour</a>
+        </div>
+    </div>
 {{ form_end(form) }}
