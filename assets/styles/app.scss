@@ -767,8 +767,20 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.containerAdminHomePannel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .adminHomePannelTitle {
+    margin: 0;
     color: hsl(0, 57%, 45%);
+}
+.adminHomePannel .adminHomePannelInfo {
+    color: hsl(270, 4%, 91%);
+    font-size: 0.8rem;
+    margin: 0 0 20px 0;
 }
 .containerAdminItem {
     display: flex;
