@@ -5,10 +5,12 @@
 {% block body %}
     <div class="containerShowActor">
         <h1 class="ShowActorTitle">{{ actor.name }}</h1>
-        <img src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture">
-        {% if is_granted("ROLE_ADMIN") %}
-            <a href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
-            {{ include('actor/_delete_form.html.twig') }}
-        {% endif %}
+        <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture">
+        <div class="containerActorAdmin">
+            {% if is_granted("ROLE_ADMIN") %}
+                <a class="actorEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
+                <div class="actorDelete">{{ include('actor/_delete_form.html.twig') }}</div>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
