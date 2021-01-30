@@ -240,6 +240,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 .containerPosterShow {
     margin-top: 100px;
@@ -329,49 +330,21 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .containerContentProgramShow {
-        display: grid;
-        height: 100vh;
-        grid-template-areas: 
-            "photo photo photo"
-            "title title title"
-            "synopsisTitle synopsisTitle synopsisTitle"
-            "synopsisContent synopsisContent synopsisContent"
-            "category category category"
-            "backButton backButton backButton";
-    }
     .containerProgramContent {
         background-color: none;
         width: 100vw;
     }
     .containerPosterShow {
-        grid-column: 2;
         display: flex;
-        grid-area: photo;
         margin-left: 0px;
         margin-bottom: 40px;
-    }
-    .containerProgramTitleShow {
-        grid-area: title;
     }
     .programTitleShow {
         margin-top: 40px;
         font-size: 1.7rem;
     }
-    .containerProgramShowSynopsisLabel {
-        grid-area: synopsisTitle;
-    }
     .programShowSynopsisLabel {
         margin-top: 20px;
-    }
-    .containerProgramShowSynopsisContent {
-        grid-area: synopsisContent;
-    }
-    .containerCategoryShowInformation {
-        grid-area: category;
-    }
-    .containerBackToListProgramShow {
-        grid-area: backButton;
     }
 }
 @media (max-width: 768px) {
