@@ -44,7 +44,9 @@
                                 <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: actor.id})}}"><li class"itemProgramActors">{{ actor.name }}</li></a>
                             </div>
                         {% else %}
-                            <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
+                            <div class="containerItemActorsNone">
+                                <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
+                            </div>
                         {% endfor %}
                     </ul>
                 </div>
