@@ -8,6 +8,9 @@ body {
 //==================================================//
 //NAVBAR
 //==================================================//
+.navbar-logo {
+    width: 120px;
+}
 .Navbar {
     position: fixed;
     top: 0;
@@ -91,6 +94,14 @@ body {
 .footer {
     height: 40px;
 }
+@media (max-width: 890px) {
+    .navbar-logo {
+        width: 80px;
+    }
+    #searchForm {
+        display: none;
+    }
+}
 @media (max-width: 835px) {
     #searchBar {
         border: none;
@@ -139,9 +150,6 @@ body {
     .navbar-logout {
         font-size: 11px;
     }
-    .itemPrograms, .itemCategory, .itemAdd {
-        font-size: 11px;
-    }
 }
 @media (max-width: 438px) {
     .navbar-brand {
@@ -149,14 +157,6 @@ body {
     }
     .containerItems {
         margin-bottom: 4px; //Correct the alignement text when the size is for mobile
-    }
-}
-@media (max-width: 380px) {
-    .navbar-logout {
-        font-size: 10px;
-    }
-    .itemPrograms, .itemCategory, .itemAdd {
-        font-size: 10px;
     }
 }
 
@@ -402,8 +402,6 @@ body {
     border-radius: 10px;
     width: 980px;
     height: 500px;
-/*     overflow: hidden;
-    z-index: 1; */
 }
 .containerEpisodes {
     margin-top: 100px;
@@ -588,13 +586,6 @@ body {
 @media (max-width: 900px) {
     .containerContentEpisodeShow {
         height: 100vh;
-/*         display: grid;
-        grid-template-areas: 
-            "photo photo photo"
-            "title title title"
-            "synopsisTitle synopsisTitle synopsisTitle"
-            "synopsisContent synopsisContent synopsisContent"
-            "backButton backButton backButton"; */
     }
     .containerEpisodeContent {
         background-color: none;
