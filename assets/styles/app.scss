@@ -192,7 +192,7 @@ body {
     flex-wrap: wrap;
 }
 .showProgramButton {
-    color: HSL(0, 57%, 45%);
+    color: hsl(0, 57%, 45%);
 }
 .allProgramsPosterShow {
     margin: 15px 15px 0px 15px;
@@ -690,7 +690,7 @@ body {
 }
 .subscriptionText {
     text-decoration: none;
-    color: HSL(2, 97%, 62%);
+    color: hsl(0, 57%, 45%);
 }
 .submitConnexion, .submitRegistration {
     padding: 15px 125px;
@@ -698,7 +698,7 @@ body {
     background-color: HSL(0, 57%, 45%);
     font-size: 1rem;
     text-decoration: none;
-    color: HSL(270, 4%, 91%);
+    color: hsl(270, 4%, 91%);
     margin: 20px;
     cursor: pointer;
 }
@@ -717,4 +717,17 @@ body {
     text-align: center;
     padding: 15px 100px;
     border: none;
+}
+
+//==================================================//
+//ACTOR SHOW
+//==================================================//
+.containerShowActor {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ShowActorTitle {
+    color: hsl(0, 57%, 45%);
 }

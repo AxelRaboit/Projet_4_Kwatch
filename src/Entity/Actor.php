@@ -29,6 +29,11 @@ class Actor
      */
     private $programs;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $poster;
+
     public function __construct()
     {
         $this->programs = new ArrayCollection();
@@ -71,6 +76,18 @@ class Actor
     public function removeProgram(Program $program): self
     {
         $this->programs->removeElement($program);
+
+        return $this;
+    }
+
+    public function getPoster(): ?string
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(?string $poster): self
+    {
+        $this->poster = $poster;
 
         return $this;
     }
