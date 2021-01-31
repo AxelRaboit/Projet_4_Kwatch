@@ -9,6 +9,3 @@ Ce dépot Github est à but d'entrainement, il me permet d'ameliorer mes compét
 Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "uploads" affichant toutes les affiches et images des séries, est ignoré dans les commits pour des raisons de droit d'auteur.
 
 <h2>AVANCEMENT DU PROJET</h2>
-
-https://github.com/AxelRaboit/Projet_4_MovieBox/files/5899983/registrationDesktop.pdf
-
