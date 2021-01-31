@@ -10,4 +10,4 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 <h2>AVANCEMENT DU PROJET</h2>
 
-<img width="1767" alt="registrationDesktop" src="https://github.com/AxelRaboit/Projet_4_MovieBox/files/5899987/registrationDesktop.pdf">
+![visual-reverse-image-search-v2_intro](https://user-images.githubusercontent.com/66420167/106388943-ffc72f00-63e0-11eb-8f99-195f60bd8b14.jpg)
