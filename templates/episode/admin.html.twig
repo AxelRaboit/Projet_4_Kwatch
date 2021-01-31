@@ -1,41 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Episode index{% endblock %}
+{% block title %}Episodes - Administration{% endblock %}
 
 {% block body %}
-    <h1>Episode index</h1>
+    <div class="containerEpisodesList">
+        <h1 class="episodesListAdminTitle">Liste des Episodes</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Number</th>
-                <th>Summary</th>
-                <th>Poster</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for episode in episodes %}
-            <tr>
-                <td>{{ episode.id }}</td>
-                <td>{{ episode.title }}</td>
-                <td>{{ episode.number }}</td>
-                <td>{{ episode.summary }}</td>
-                <td>{{ episode.poster }}</td>
-                <td>
-                    <a href="{{ path('episode_show', {'id': episode.id}) }}">show</a>
-                    <a href="{{ path('episode_edit', {'id': episode.id}) }}">edit</a>
-                </td>
-            </tr>
+            <div class="containerEpisodeListCards">
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Id</div>
+                    <div class="itemEpisodeListContent">{{episode.id}}</div>
+                </div>
+                <hr>
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Titre</div>
+                    <div class="itemEpisodeListContent">{{episode.title}}</div>
+                </div>
+                <hr>
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Numéro</div>
+                    <div class="itemEpisodeListContent">{{episode.number}}</div>
+                </div>
+                <hr>
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Sommaire</div>
+                    <div class="itemEpisodeListContent">{{episode.summary}}</div>
+                </div>
+                <hr>
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Affiche</div>
+                    <div class="itemEpisodeListContent">{{episode.poster}}</div>
+                </div>
+                <hr>
+                <div class="containerEpisodeListItem">
+                    <div class="itemEpisodeListLabel">Actions</div>
+                    <div class="containerEpisodeListItemButtons">
+                        <a class="itemEpisodeListContentButtons" href="{{ path('episode_show', {'id': episode.id}) }}">Voir</a>
+                        <a class="itemEpisodeListContentButtons" href="{{ path('episode_edit', {'id': episode.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
         {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
+            <p>Aucun résultat</p>        
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('episode_new') }}">Create new</a>
+    </div>
 {% endblock %}
