@@ -4,9 +4,10 @@ namespace App\Form;
 
 use App\Entity\Season;
 use App\Entity\Episode;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class EpisodeType extends AbstractType
@@ -17,7 +18,12 @@ class EpisodeType extends AbstractType
             ->add('title')
             ->add('number')
             ->add('summary')
-            ->add('poster')
+            ->add('imageFile', VichFileType::class, [
+                'required'      => false,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_uri'  => false, // not mandatory, default is true
+
+            ])
             ->add('season', EntityType::class, [ //TODO -> Complete the add to concaten and get an explicite select for the user
                 'class' => Season::class,
                 'choice_label' => 'number',

@@ -2,11 +2,17 @@
 
 namespace App\Entity;
 
-use App\Repository\EpisodeRepository;
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\EpisodeRepository;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=EpisodeRepository::class)
+ * @Vich\Uploadable
  */
 class Episode
 {
@@ -41,7 +47,23 @@ class Episode
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $poster;
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="image_file", fileNameProperty="image")
+     * @var File
+     * @Assert\File(
+     *     maxSize="2000000",
+     *     mimeTypes={"image/jpeg", "image/png", "image/jpg"},
+     *     mimeTypesMessage="Le fichier doit être au format .jpg, .png ou .jpeg."
+     * )
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updatedAt;
 
     public function getId(): ?int
     {
@@ -96,15 +118,42 @@ class Episode
         return $this;
     }
 
-    public function getPoster(): ?string
+    public function getImage(): ?string
     {
-        return $this->poster;
+        return $this->image;
     }
 
-    public function setPoster(string $poster): self
+    public function setImage(?string $image): self
     {
-        $this->poster = $poster;
+        $this->image = $image;
 
         return $this;
     }
+
+    public function setImageFile(File $imageFile = null): Episode
+    {
+        $this->imageFile = $imageFile;
+        if ($imageFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
 }
