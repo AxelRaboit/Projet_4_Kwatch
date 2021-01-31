@@ -97,6 +97,13 @@ class EpisodeController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($episode);
             $entityManager->flush();
+
+            if ($episode->getImage() == true) {
+                $fileToDelete = __DIR__ . '/../../public/uploads/' . $episode->getImage();
+                if (file_exists($fileToDelete)) {
+                    unlink($fileToDelete);
+                }
+            }
         }
 
         return $this->redirectToRoute('episode_index');
