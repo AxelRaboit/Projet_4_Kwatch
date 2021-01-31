@@ -26,6 +26,16 @@ class EpisodeController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="episode_admin")
+     */
+    public function admin(EpisodeRepository $episodeRepository): Response
+    {
+        return $this->render('episode/admin.html.twig', [
+            'episodes' => $episodeRepository->findAll(),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="episode_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
