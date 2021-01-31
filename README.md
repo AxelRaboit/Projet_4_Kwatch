@@ -10,5 +10,5 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 <h2>AVANCEMENT DU PROJET</h2>
 
-[registrationDesktop.pdf](https://github.com/AxelRaboit/Projet_4_MovieBox/files/5899983/registrationDesktop.pdf)
+https://github.com/AxelRaboit/Projet_4_MovieBox/files/5899983/registrationDesktop.pdf
 
