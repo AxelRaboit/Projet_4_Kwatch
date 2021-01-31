@@ -348,6 +348,10 @@ $secondary-color: hsl(0, 0%, 34%);
     flex-wrap: wrap;
     padding-right: 40px;
 }
+.programShowActorPicture {
+    height: 145px;
+    width: 120px;
+}
 .containerItemActorsNone {
     color: hsl(270, 4%, 91%);
 }
@@ -356,7 +360,14 @@ $secondary-color: hsl(0, 0%, 34%);
     padding: 10px;
     background-color: $main-color;
     border-radius: 10px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+.containerItemActors:hover {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
 .containerItemActors:hover {
     background-color: $secondary-color;
 }
