@@ -9,3 +9,7 @@ Ce dépot Github est à but d'entrainement, il me permet d'ameliorer mes compét
 Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "uploads" affichant toutes les affiches et images des séries, est ignoré dans les commits pour des raisons de droit d'auteur.
 
 <h2>AVANCEMENT DU PROJET</h2>
+
+<h4>Home: Desktop</h4>
+![homeDesktop-1](https://user-images.githubusercontent.com/66420167/106389047-95fb5500-63e1-11eb-9530-687d6161166d.png)
+
