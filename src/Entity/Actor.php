@@ -13,6 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ActorRepository::class)
+ * @UniqueEntity(fields={"name"}, message="Cet acteur existe déjà")
  * @Vich\Uploadable
  */
 class Actor
