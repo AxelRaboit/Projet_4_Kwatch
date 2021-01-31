@@ -53,7 +53,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="360" alt="episodeShowMobile" src="https://user-images.githubusercontent.com/66420167/106389980-77e42380-63e6-11eb-89f6-65a63565b8fa.jpg">
 
 <h4>createNewProgram / Crée une nouvelle série: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390072-efb24e00-63e6-11eb-96b5-5c34ca8b2ef1.jpg">
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390414-ac58df00-63e8-11eb-8d6f-f522ab8dd663.jpg">
 
 <h4>createNewProgram / Crée une nouvelle série: Mobile</h4>
 <img width="360" alt="createNewProgramMobile" src="https://user-images.githubusercontent.com/66420167/106390076-f8a31f80-63e6-11eb-8896-7497cd65ae73.jpg">
