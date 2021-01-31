@@ -10,6 +10,6 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 <h2>AVANCEMENT DU PROJET</h2>
 
-<h4>Home: Desktop</h4>
-<img>![homeDesktop-1](https://user-images.githubusercontent.com/66420167/106389047-95fb5500-63e1-11eb-9530-687d6161166d.png)</img>
+<h4>Login: Desktop</h4>
+![LoginDesktop](https://user-images.githubusercontent.com/66420167/106389290-e32bf680-63e2-11eb-9ad2-183f10cbc2bf.jpg)
 
