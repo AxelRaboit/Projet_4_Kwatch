@@ -12,7 +12,7 @@
     <div class="containerEpisodes">
         {% for episode in episodes %}
             <div class="EpisodeItemSeasonShow">
-                <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programSlug: program.slug, episodeId: episode.id}) }}"><img class="episodePosterSeasonShow" src="{{ episode.poster }}" alt="episode poster">
+                <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programSlug: program.slug, episodeId: episode.id}) }}"><img class="episodePosterSeasonShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="episode image">
                     <div class="episodeNumberNumberAndTitle">
                         <div class="seasonNumberShow">Saison {{ seasons.number }}:</div> <div class="episodeTitleShow">{{ episode.title }}</div>
                     </div>
