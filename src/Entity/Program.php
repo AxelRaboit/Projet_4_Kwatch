@@ -9,9 +9,11 @@ use Doctrine\Common\Collections\Collection;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
+ * @UniqueEntity(fields={"title"}, message="Cette série existe déjà")
  * //On précise à l’entité que nous utiliserons l’upload du package Vich uploader
  * @Vich\Uploadable
  */
