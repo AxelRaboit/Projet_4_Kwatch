@@ -956,6 +956,137 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 
 //==================================================//
+//CATEGORY ADMIN LIST
+//==================================================//
+.containerCategoriesList {
+    margin-top: 60px;
+}
+.categoriesListAdminTitle {
+    color: $main-color;
+    text-align: center;
+}
+.containerCategoryListCards {
+    background-color: $secondary-color;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 10px;
+}
+.itemCategoryListLabel {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: hsl(270, 4%, 91%);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.itemCategoryListContent {
+    padding: 5px;
+    text-align: center;
+}
+.itemCategoryListContentButtons {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.containerCategoryListItemButtons {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+//==================================================//
+//SEASON ADMIN LIST
+//==================================================//
+.containerSeasonsList {
+    margin-top: 60px;
+}
+.seasonsListAdminTitle {
+    color: $main-color;
+    text-align: center;
+}
+.containerSeasonListCards {
+    background-color: $secondary-color;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 10px;
+}
+.itemSeasonListLabel {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: hsl(270, 4%, 91%);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.itemSeasonListContent {
+    padding: 5px;
+    text-align: center;
+}
+.itemSeasonListContentButtons {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.containerSeasonListItemButtons {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+//==================================================//
+//EPISODE ADMIN LIST
+//==================================================//
+.containerEpisodesList {
+    margin-top: 60px;
+}
+.episodesListAdminTitle {
+    color: $main-color;
+    text-align: center;
+}
+.containerEpisodeListCards {
+    background-color: $secondary-color;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 10px;
+}
+.itemEpisodeListLabel {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: hsl(270, 4%, 91%);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.itemEpisodeListContent {
+    padding: 5px;
+    text-align: center;
+}
+.itemEpisodeListContentButtons {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.containerEpisodeListItemButtons {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+}
+//==================================================//
 //PROGRAM ADMIN
 //==================================================//
 .containerProgramAdmin {

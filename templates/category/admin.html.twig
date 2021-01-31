@@ -1,35 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Catégories - Administration{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <div class="containerCategoriesList">
+        <h1 class="categoriesListAdminTitle">Liste des Categories</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for category in categories %}
-            <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.name }}</td>
-                <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
-                </td>
-            </tr>
+            <div class="containerCategoryListCards">
+                <div class="containerCategoryListItem">
+                    <div class="itemCategoryListLabel">Id</div>
+                    <div class="itemCategoryListContent">{{category.id}}</div>
+                </div>
+                <hr>
+                <div class="containerCategoryListItem">
+                    <div class="itemCategoryListLabel">Nom</div>
+                    <div class="itemCategoryListContent">{{category.name}}</div>
+                </div>
+                <hr>
+                <div class="containerCategoryListItem">
+                    <div class="itemCategoryListLabel">Actions</div>
+                    <div class="containerCategoryListItemButtons">
+                        <a class="itemCategoryListContentButtons" href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
+                        <a class="itemCategoryListContentButtons" href="{{ path('category_edit', {'id': category.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
         {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
+            <p>Aucun résultat</p>        
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('category_new') }}">Create new</a>
+    </div>
 {% endblock %}

@@ -1,41 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Season index{% endblock %}
+{% block title %}Saisons - Administration{% endblock %}
 
 {% block body %}
-    <h1>Season index</h1>
+    <div class="containerSeasonsList">
+        <h1 class="seasonsListAdminTitle">Liste des Saisons</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Number</th>
-                <th>Year</th>
-                <th>Description</th>
-                <th>Video</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for season in seasons %}
-            <tr>
-                <td>{{ season.id }}</td>
-                <td>{{ season.number }}</td>
-                <td>{{ season.year }}</td>
-                <td>{{ season.description }}</td>
-                <td>{{ season.video }}</td>
-                <td>
-                    <a href="{{ path('season_show', {'id': season.id}) }}">show</a>
-                    <a href="{{ path('season_edit', {'id': season.id}) }}">edit</a>
-                </td>
-            </tr>
+            <div class="containerSeasonListCards">
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Id</div>
+                    <div class="itemSeasonListContent">{{season.id}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Numéro</div>
+                    <div class="itemSeasonListContent">{{season.number}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Année</div>
+                    <div class="itemSeasonListContent">{{season.year}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Description</div>
+                    <div class="itemSeasonListContent">{{season.description}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Video</div>
+                    <div class="itemSeasonListContent">{{season.video}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Actions</div>
+                    <div class="containerSeasonListItemButtons">
+                        <a class="itemSeasonListContentButtons" href="{{ path('season_show', {'id': season.id}) }}">Voir</a>
+                        <a class="itemSeasonListContentButtons" href="{{ path('season_edit', {'id': season.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
         {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
+            <p>Aucun résultat</p>        
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('season_new') }}">Create new</a>
+    </div>
 {% endblock %}
