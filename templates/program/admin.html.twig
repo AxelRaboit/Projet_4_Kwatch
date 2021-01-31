@@ -6,51 +6,53 @@
     <div class="containerProgramsList">
         <h1 class="programListAdminTitle">Liste des Séries</h1>
 
-            {% for program in programs %}
-                <div class="containerProgramListCards">
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Id</div>
-                        <div class="itemProgramListContent">{{program.id}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Titre</div>
-                        <div class="itemProgramListContent">{{program.title}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Categorie</div>
-                        <div class="itemProgramListContent">{{program.category}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Synopsis</div>
-                        <div class="itemProgramListContent">{{program.synopsis}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Pays</div>
-                        <div class="itemProgramListContent">{{program.country}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Affiche</div>
-                        <div class="itemProgramListContent">{{program.poster}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Slug</div>
-                        <div class="itemProgramListContent">{{program.slug}}</div>
-                    </div>
-                    <hr>
-                    <div class="containerProgramListItem">
-                        <div class="itemProgramListLabel">Actions</div>
-                        <div class="containerProgramListItemButtons">
-                            <a class="itemProgramListContentButtons" href="{{ path('program_show', {'slug': program.slug}) }}">Voir</a>
-                            <a class="itemProgramListContentButtons" href="{{ path('program_edit', {'id': program.id}) }}">Modifier</a>
-                        </div>
+        {% for program in programs %}
+            <div class="containerProgramListCards">
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Id</div>
+                    <div class="itemProgramListContent">{{program.id}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Titre</div>
+                    <div class="itemProgramListContent">{{program.title}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Categorie</div>
+                    <div class="itemProgramListContent">{{program.category}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Synopsis</div>
+                    <div class="itemProgramListContent">{{program.synopsis}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Pays</div>
+                    <div class="itemProgramListContent">{{program.country}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Affiche</div>
+                    <div class="itemProgramListContent">{{program.poster}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Slug</div>
+                    <div class="itemProgramListContent">{{program.slug}}</div>
+                </div>
+                <hr>
+                <div class="containerProgramListItem">
+                    <div class="itemProgramListLabel">Actions</div>
+                    <div class="containerProgramListItemButtons">
+                        <a class="itemProgramListContentButtons" href="{{ path('program_show', {'slug': program.slug}) }}">Voir</a>
+                        <a class="itemProgramListContentButtons" href="{{ path('program_edit', {'id': program.id}) }}">Modifier</a>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+        {% else %}
+            <p>Aucun résultat</p>        
+        {% endfor %}
     </div>
 {% endblock %}
