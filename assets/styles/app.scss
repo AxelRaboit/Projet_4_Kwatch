@@ -419,6 +419,16 @@ $secondary-color: hsl(0, 0%, 34%);
         width:300px;
     }
 }
+@media (max-width: 380px) {
+    .containerItemActors {
+        margin: 5px;
+        padding: 10px;
+    }
+    .programShowActorPicture {
+        height: 295px;
+        width: 270px;
+    }
+}
 @media (max-width: 360px) {
     .programPosterShow {
         width:250px;
