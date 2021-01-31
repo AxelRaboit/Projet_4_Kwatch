@@ -26,6 +26,16 @@ class ActorController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="actor_admin")
+     */
+    public function admin(ActorRepository $actorRepository): Response
+    {
+        return $this->render('actor/admin.html.twig', [
+            'actors' => $actorRepository->findAll(),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="actor_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

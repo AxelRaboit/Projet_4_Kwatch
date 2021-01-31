@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acteurs - Administration{% endblock %}
+
+{% block body %}
+    <div class="containerActorsList">
+        <h1 class="actorsListAdminTitle">Liste des Acteurs</h1>
+
+        {% for actor in actors %}
+            <div class="containerActorListCards">
+                <div class="containerActorsListItem">
+                    <div class="itemActorListLabel">Id</div>
+                    <div class="itemActorListContent">{{actor.id}}</div>
+                </div>
+                <hr>
+                <div class="containerActorListItem">
+                    <div class="itemActorListLabel">Nom</div>
+                    <div class="itemActorListContent">{{actor.name}}</div>
+                </div>
+                <hr>
+                <div class="containerActorListItem">
+                    <div class="itemActorListLabel">Actions</div>
+                    <div class="containerActorListItemButtons">
+                        <a class="itemActorListContentButtons" href="{{ path('actor_show', {'id': actor.id}) }}">Voir</a>
+                        <a class="itemActorListContentButtons" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p>Aucun résultat</p>        
+        {% endfor %}
+    </div>
+{% endblock %}
