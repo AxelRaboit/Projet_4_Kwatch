@@ -16,8 +16,7 @@
             <div class="itemProgramFormCategory">{{ form_row(form.category) }}</div>
         </div>
         <div class="containerNewProgramButtons">
-            <button class="newProgramSubmitButton">{{ button_label|default('Créer') }}</button>
-            <a class="newProgramBackButton" href="{{path('home_index')}}">Retour</a>
+            <button class="itemProgramSubmitButton">{{ button_label|default('Créer') }}</button>
         </div>
     </div>
 {{ form_end(form) }}

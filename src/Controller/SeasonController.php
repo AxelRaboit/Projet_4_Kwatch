@@ -26,6 +26,16 @@ class SeasonController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="season_admin")
+     */
+    public function admin(SeasonRepository $seasonRepository): Response
+    {
+        return $this->render('season/admin.html.twig', [
+            'seasons' => $seasonRepository->findAll(),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="season_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

@@ -26,6 +26,16 @@ class CategoryController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="category_admin")
+     */
+    public function admin(CategoryRepository $categoryRepository): Response
+    {
+        return $this->render('category/admin.html.twig', [
+            'categories' => $categoryRepository->findAll(),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="category_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

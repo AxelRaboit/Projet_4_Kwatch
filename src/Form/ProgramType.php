@@ -51,9 +51,9 @@ class ProgramType extends AbstractType
                 'label' => 'Poster'
             ]) */
             ->add('posterFile', VichFileType::class, [
-                'label' => 'Affiche de la série',
-                'required'      => false,
-                'allow_delete'  => true, // not mandatory, default is true
+                'label'        => 'Affiche de la série',
+                'required'     => false,
+                'allow_delete' => false, // not mandatory, default is true
                 'download_uri' => false, // not mandatory, default is true
                 'delete_label' => 'Supprimer l\'image actuelle'
             ])

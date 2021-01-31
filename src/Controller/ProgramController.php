@@ -35,6 +35,16 @@ class ProgramController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="admin")
+     */
+    public function admin(ProgramRepository $programRepository): Response
+    {
+        return $this->render('program/admin.html.twig', [
+            'programs' => $programRepository->findAll(),
+        ]);
+    }
+
+    /**
      * Getting a program by his slug
      * @Route("/show/{slug}", name="show")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"slug": "slug"}})

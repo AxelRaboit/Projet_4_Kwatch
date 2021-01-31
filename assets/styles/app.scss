@@ -834,7 +834,7 @@ $secondary-color: hsl(0, 0%, 34%);
     font-size: 0.8rem;
     margin: 0 0 20px 0;
 }
-.containerAdminItem {
+.containerAdminItemAdd, .containerAdminItemEdit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1057,33 +1057,123 @@ $secondary-color: hsl(0, 0%, 34%);
         height: 30px;
     }
 }
+
 //==================================================//
-//FORM PROGRAM
+//FORM PROGRAM EDIT
 //==================================================//
-.containerNewProgram {
+.containerEditProgram {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-    width: 94%;
+    width: 600px;
     
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     border-radius: 10px;
     border: solid 1px $main-color;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+.editionFormProgramTitle {
+    color: $main-color;
+    text-align: center;
+}
+.containerEditionProgramButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.editProgramDeleteButton {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editProgramDeleteButton .itemDeleteProgram {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: none;
+}
+.editProgramDeleteButton:hover {
+    background-color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.editProgramBackButton, .editProgramDeleteButton {
+    margin: 10px;
+    height: 14px;
+    width: 66.83px;
+    text-align: center;
+}
+.editProgramBackButton:hover {
+    background-color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.editProgramBackButton {
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+@media (max-width: 645px) {
+    .containerEditProgram {
+        width: 480px;
+    }
+}
+@media (max-width: 520px) {
+    .containerEditProgram {
+        width: 420px;
+    }
+}
+@media (max-width: 460px) {
+    .containerEditProgram {
+        width: 370px;
+    }
+}
+@media (max-width: 400px) {
+    .containerEditProgram {
+        width: 350px;
+    }
+}
+@media (max-width: 370px) {
+    .containerEditProgram {
+        width: 330px;
+    }
+}
+//==================================================//
+//FORM PROGRAM CREATE
+//==================================================//
+.containerNewProgram {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #b43131;
+    margin-bottom: 20px;
 }
 .newProgramTitle {
     color: $main-color;
     text-align: center;
-
 }
 .containerNewProgramForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
 }
 .containerProgramFormTitle, .containerProgramFormCountry, .containerProgramFormSynopsis, .containerProgramFormCategory, .containerProgramFormPosterFile {
     display: flex;
@@ -1103,13 +1193,12 @@ $secondary-color: hsl(0, 0%, 34%);
     color: hsl(270, 4%, 91%);
     background-color: $main-color;
     border-radius: 10px;
-
 }
 .itemProgramFormTitle label, .itemProgramFormCountry label, .itemProgramFormSynopsis label, .itemProgramFormCategory label, .itemProgramFormPosterFile label {
     color: hsl(270, 4%, 91%);
     margin-bottom: 10px;
 }
-.itemProgramFormTitle input, .itemProgramFormCountry input{
+.itemProgramFormTitle input, .itemProgramFormCountry input {
     text-align: center;
     width: 400px;
     height: 30px;
@@ -1134,29 +1223,49 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerNewProgramButtons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.newProgramSubmitButton, .newProgramBackButton {
-    margin: 10px;
-}
-.newProgramSubmitButton {
+.newProgramBackButton {
+    padding: 10px 100px;
+    width: 28.9px;
+    height: 14px;
+    text-align: center;
     background-color: $main-color;
     color: hsl(270, 4%, 91%);
-    border: none;
     border-radius: 10px;
-    padding: 10px 100px;
+    font-size: 0.7rem;
+    margin: 10px 0px 40px 0px;
+    text-decoration: none;
 }
-.newProgramSubmitButton:hover, .newProgramBackButton:hover {
+.newProgramBackButton:hover {
     background-color: $secondary-color;
     text-decoration: underline;
     cursor: pointer;
 }
-.newProgramBackButton {
+.itemProgramSubmitButton {
     background-color: $main-color;
     color: hsl(270, 4%, 91%);
+    border: none;
+    margin: 10px;
     border-radius: 10px;
     padding: 10px 100px;
-    font-size: 0.7rem;
-    text-decoration: none;
+}
+.itemProgramSubmitButton:hover, .newProgramBackButton:hover {
+    background-color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 645px) {
+    .containerNewProgram {
+        width: 480px;
+    }
+}
+@media (max-width: 520px) {
+    .containerNewProgram {
+        width: 420px;
+    }
 }
 @media (max-width: 470px) {
     .newProgramTitle {
@@ -1176,6 +1285,21 @@ $secondary-color: hsl(0, 0%, 34%);
     }
     .itemProgramFormPosterFile div {
         width: 320px;
+    }
+}
+@media (max-width: 460px) {
+    .containerNewProgram {
+        width: 370px;
+    }
+}
+@media (max-width: 400px) {
+    .containerNewProgram {
+        width: 350px;
+    }
+}
+@media (max-width: 370px) {
+    .containerNewProgram {
+        width: 330px;
     }
 }
 @media (max-width: 360px) {
