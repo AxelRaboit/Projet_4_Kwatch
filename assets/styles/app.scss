@@ -467,6 +467,11 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 280px;
     border-radius: 10px 10px 0px 0px;
 }
+.episodeNoImage {
+    width: 420px;
+    height: 280px;
+    border-radius: 10px 10px 0px 0px;
+}
 .containerBackToListSeasonShow {
     display: flex;
     justify-content: center;
@@ -588,6 +593,11 @@ $secondary-color: hsl(0, 0%, 34%);
     width: 80%;
 }
 .episodePosterShow {
+    margin-top: 20px;
+    width: 600px;
+    border-radius: 10px;
+}
+.episodeNoImageShow {
     margin-top: 20px;
     width: 600px;
     border-radius: 10px;

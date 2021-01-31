@@ -12,10 +12,15 @@
     <div class="containerEpisodes">
         {% for episode in episodes %}
             <div class="EpisodeItemSeasonShow">
-                <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programSlug: program.slug, episodeId: episode.id}) }}"><img class="episodePosterSeasonShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="episode image">
-                    <div class="episodeNumberNumberAndTitle">
-                        <div class="seasonNumberShow">Saison {{ seasons.number }}:</div> <div class="episodeTitleShow">{{ episode.title }}</div>
-                    </div>
+                <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programSlug: program.slug, episodeId: episode.id}) }}">
+                {% if episode.image %}
+                    <img class="episodePosterSeasonShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="Episode Image"/>
+                {% else %}
+                    <img class="episodeNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
+                {% endif %}
+                <div class="episodeNumberNumberAndTitle">
+                    <div class="seasonNumberShow">Saison {{ seasons.number }}:</div> <div class="episodeTitleShow">Episode {{ episode.number }}</div>
+                </div>
                 </a>
                 {# Episode: <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a> #}
             </div>
