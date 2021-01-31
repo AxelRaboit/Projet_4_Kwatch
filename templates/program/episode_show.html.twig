@@ -8,7 +8,7 @@
         <div class="itemEpisodeShow">
             <div class="containerContentEpisodeShow">
                 <div class="containerPosterEpisodeShow">
-                    <img class="episodePosterShow" src="{{ episode.poster }}" alt="poster episode">
+                    <img class="episodePosterShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="image episode">
                 </div>
                 <div class="containerEpisodeContent">
                     <div class="containerEpisodeTitleShow">
@@ -21,7 +21,7 @@
                         <div class="episodeShowSynopsisContent">{{ episode.summary }}</div>
                     </div>
                     <div class="containerBackToListEpisodeShow">
-                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des episodes</a>
+                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des épisodes</a>
                     </div>
                 </div>
             </div>
