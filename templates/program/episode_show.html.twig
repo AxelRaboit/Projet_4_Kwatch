@@ -8,7 +8,11 @@
         <div class="itemEpisodeShow">
             <div class="containerContentEpisodeShow">
                 <div class="containerPosterEpisodeShow">
-                    <img class="episodePosterShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="image episode">
+                    {% if episode.image %}
+                        <img class="episodePosterShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="image episode">
+                    {% else %}
+                        <img class="episodeNoImageShow" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
+                    {% endif %}
                 </div>
                 <div class="containerEpisodeContent">
                     <div class="containerEpisodeTitleShow">

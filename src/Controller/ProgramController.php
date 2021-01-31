@@ -189,6 +189,13 @@ class ProgramController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($program);
             $entityManager->flush();
+
+            if ($program->getPoster() == true) {
+                $fileToDelete = __DIR__ . '/../../public/uploads/' . $program->getPoster();
+                if (file_exists($fileToDelete)) {
+                    unlink($fileToDelete);
+                }
+            }
         }
 
         return $this->redirectToRoute('program_index');

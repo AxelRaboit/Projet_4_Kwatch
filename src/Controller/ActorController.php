@@ -87,6 +87,13 @@ class ActorController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($actor);
             $entityManager->flush();
+
+            if ($actor->getPicture() == true) {
+                $fileToDelete = __DIR__ . '/../../public/uploads/' . $actor->getPicture();
+                if (file_exists($fileToDelete)) {
+                    unlink($fileToDelete);
+                }
+            }
         }
 
         return $this->redirectToRoute('actor_index');
