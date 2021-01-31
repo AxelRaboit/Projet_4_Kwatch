@@ -14,5 +14,5 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="800" alt="loginDesktop" src="https://user-images.githubusercontent.com/66420167/106389290-e32bf680-63e2-11eb-9ad2-183f10cbc2bf.jpg">
 
 <h4>Login: Mobile</h4>
-<img width="500" alt="loginMobile" src="https://user-images.githubusercontent.com/66420167/106389355-2b4b1900-63e3-11eb-90fd-a1521ba3d860.jpg">
+<img width="360" alt="loginMobile" src="https://user-images.githubusercontent.com/66420167/106389355-2b4b1900-63e3-11eb-90fd-a1521ba3d860.jpg">
 
