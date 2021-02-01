@@ -35,16 +35,16 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="360" alt="programsMobile" src="https://user-images.githubusercontent.com/66420167/106389748-49b21400-63e5-11eb-996f-542393126266.jpg">
 
 <h4> ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Desktop</h4>
-<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106468690-8f7ee300-649e-11eb-875c-80eaa955ad4e.jpg">
+<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106517740-308a8f80-64d9-11eb-985f-fcb3e151790f.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106468741-a1f91c80-649e-11eb-9079-03e8fe782e24.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517808-45ffb980-64d9-11eb-8134-dc8d7ddf65ed.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106468784-ad4c4800-649e-11eb-865c-b87f28647ee4.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517846-52841200-64d9-11eb-94be-f22d5670158d.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106468827-b76e4680-649e-11eb-8555-d2ae405aec22.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517888-60399780-64d9-11eb-8a58-29a2e7a2d853.jpg">
 
 <h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Desktop</h4>
 <img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106389894-2176e500-63e6-11eb-8e3f-9ce639f5f1b9.jpg">
