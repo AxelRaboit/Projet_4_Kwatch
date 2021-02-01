@@ -349,8 +349,9 @@ $secondary-color: hsl(0, 0%, 34%);
     padding-right: 40px;
 }
 .programShowActorPicture {
-    height: 145px;
+    height: 120px;
     width: 120px;
+    border-radius: 50%;
 }
 .containerItemActorsNone {
     color: hsl(270, 4%, 91%);
@@ -358,7 +359,6 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerItemActors {
     margin: 5px;
     padding: 10px;
-    background-color: $main-color;
     border-radius: 10px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -374,6 +374,10 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerLinkItemProgramActors {
     color: hsl(270, 4%, 91%);
     text-decoration: none;
+}
+.containerLinkItemProgramActors li {
+    display: flex;
+    flex-direction: column;
 }
 .containerLinkItemProgramActors:hover {
     background-color: $main-color;
@@ -425,7 +429,7 @@ $secondary-color: hsl(0, 0%, 34%);
         padding: 10px;
     }
     .programShowActorPicture {
-        height: 295px;
+        height: 280px;
         width: 270px;
     }
 }
