@@ -349,8 +349,9 @@ $secondary-color: hsl(0, 0%, 34%);
     padding-right: 40px;
 }
 .programShowActorPicture {
-    height: 145px;
+    height: 140px;
     width: 120px;
+    border-radius: 10px;
 }
 .containerItemActorsNone {
     color: hsl(270, 4%, 91%);
@@ -374,6 +375,10 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerLinkItemProgramActors {
     color: hsl(270, 4%, 91%);
     text-decoration: none;
+}
+.containerLinkItemProgramActors li {
+    display: flex;
+    flex-direction: column;
 }
 .containerLinkItemProgramActors:hover {
     background-color: $main-color;
