@@ -35,7 +35,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="360" alt="programsMobile" src="https://user-images.githubusercontent.com/66420167/106389748-49b21400-63e5-11eb-996f-542393126266.jpg">
 
 <h4> ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Desktop</h4>
-<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106517740-308a8f80-64d9-11eb-985f-fcb3e151790f.jpg">
+<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106518045-96771700-64d9-11eb-8cf8-7623c7ce2481.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
 <img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517808-45ffb980-64d9-11eb-8134-dc8d7ddf65ed.jpg">
