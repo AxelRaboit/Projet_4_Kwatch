@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Program;
 
 use App\Entity\Season;
 use App\Entity\Episode;
