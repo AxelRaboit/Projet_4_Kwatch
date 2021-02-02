@@ -30,7 +30,7 @@ class CategoryController extends AbstractController
      */
     public function admin(CategoryRepository $categoryRepository): Response
     {
-        return $this->render('category/admin.html.twig', [
+        return $this->render('admin/crud/category.html.twig', [
             'categories' => $categoryRepository->findAll(),
         ]);
     }

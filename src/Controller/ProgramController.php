@@ -39,7 +39,7 @@ class ProgramController extends AbstractController
      */
     public function admin(ProgramRepository $programRepository): Response
     {
-        return $this->render('program/admin.html.twig', [
+        return $this->render('admin/crud/program.html.twig', [
             'programs' => $programRepository->findAll(),
         ]);
     }
