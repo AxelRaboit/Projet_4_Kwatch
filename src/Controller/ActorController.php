@@ -30,7 +30,7 @@ class ActorController extends AbstractController
      */
     public function admin(ActorRepository $actorRepository): Response
     {
-        return $this->render('actor/admin.html.twig', [
+        return $this->render('admin/crud/actor.html.twig', [
             'actors' => $actorRepository->findAll(),
         ]);
     }

@@ -76,6 +76,8 @@ easy_admin:
 
       Actor:
           class: App\Entity\Actor
+          teomplates:
+            edit: 'admin/easyadmin/actor/edit.html.twig'
           list:
               fields: ['name','programs','nationality','description','updatedAt', {property: 'picture', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
               actions:

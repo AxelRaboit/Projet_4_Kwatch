@@ -30,7 +30,7 @@ class EpisodeController extends AbstractController
      */
     public function admin(EpisodeRepository $episodeRepository): Response
     {
-        return $this->render('episode/admin.html.twig', [
+        return $this->render('admin/crud/episode.html.twig', [
             'episodes' => $episodeRepository->findAll(),
         ]);
     }
