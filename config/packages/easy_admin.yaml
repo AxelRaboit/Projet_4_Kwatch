@@ -8,7 +8,6 @@ easy_admin:
               fields:
                   - {property: 'email'}
                   - {property: 'password'}
-                  - {property: 'roles'}  
       Category:
           class: App\Entity\Category
           list:
@@ -20,41 +19,52 @@ easy_admin:
           class: App\Entity\Program
           list:
             item_permission: 'ROLE_ADMIN'
+            fields: ['title', 'category', 'synopsis', 'country', 'poster', {property: 'poster', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
           form:
               fields:
-                  - {property: 'title'}
-                  - {property: 'category'}
-                  - {property: 'synopsis'}
-                  - {property: 'country'}
-#                  - {property: 'poster'}
+                  - {property: 'title', label: 'Title'}
+                  - {property: 'category', label: 'Category'}
+                  - {property: 'synopsis', label: 'Synopsis'}
+                  - {property: 'country', label: 'Country'}
+                  - {property: 'posterFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Poster'}
+                  - {property: 'updatedAt', label: 'Updated at'}
       Season:
           class: App\Entity\Season
           list:
             item_permission: 'ROLE_ADMIN'
           form:
               fields:
-                  - {property: 'number'}
-                  - {property: 'year'}
-                  - {property: 'description'}
-                  - {property: 'program'}
+                  - {property: 'number',, label: 'Number'}
+                  - {property: 'year', label: 'Year'}
+                  - {property: 'description',, label: 'Description'}
+                  - {property: 'program', label: 'Program'}
                   - {property: 'video', label: 'Video (must be a url)'}
 
       Episode:
           class: App\Entity\Episode
           list:
             item_permission: 'ROLE_ADMIN'
+            fields: ['title', 'number', 'image', 'season', {property: 'image', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
           form:
               fields:
-                  - {property: 'title'}
-                  - {property: 'number'}
-                  - {property: 'summary'}
-                  - {property: 'season'}
-#                  - {property: 'image'}
+                  - {property: 'title', label: 'Title'}
+                  - {property: 'number', label: 'Number'}
+                  - {property: 'summary', label: 'Summary'}
+                  - {property: 'season', label: 'Season'}
+                  - {property: 'imageFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Image'}
+                  - {property: 'updatedAt', label: 'Updated at'}
+
       Actor:
           class: App\Entity\Actor
           list:
             item_permission: 'ROLE_ADMIN'
+            fields: ['name', 'picture', 'programs', {property: 'picture', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
           form:
               fields:
-                  - {property: 'name'}
-#                  - {property: 'picture', type: 'upload', base_path: '%upload_directory%'}
+                  - {property: 'name', label: 'Name'}
+                  - {property: 'programs', label: 'Programs'}
+                  - {property: 'nationality', label: 'Nationality'}
+                  - {property: 'description', label: 'Description'}
+                  - {property: 'pictureFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Picture'}
+                  - {property: 'updatedAt', label: 'Updated at'}
+
