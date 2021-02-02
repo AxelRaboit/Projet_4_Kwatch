@@ -156,4 +156,8 @@ class Episode
         return $this->updatedAt;
     }
 
+    public function __toString()
+    {
+        return (string) ' Program: ' . $this->season->getProgram() . ' - Episode: ' . $this->number . ' - Title: ' . $this->title;
+    }
 }
