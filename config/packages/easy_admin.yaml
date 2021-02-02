@@ -1,8 +1,60 @@
 easy_admin:
     entities:
-        - App\Entity\User
-        - App\Entity\Category
-        - App\Entity\Program
-        - App\Entity\Season
-        - App\Entity\Episode
-        - App\Entity\Actor
+      User:
+          class: App\Entity\User
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'email'}
+                  - {property: 'password'}
+                  - {property: 'roles'}  
+      Category:
+          class: App\Entity\Category
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'name'}
+      Program:
+          class: App\Entity\Program
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'title'}
+                  - {property: 'category'}
+                  - {property: 'synopsis'}
+                  - {property: 'country'}
+#                  - {property: 'poster'}
+      Season:
+          class: App\Entity\Season
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'number'}
+                  - {property: 'year'}
+                  - {property: 'description'}
+                  - {property: 'program'}
+                  - {property: 'video', label: 'Video (must be a url)'}
+
+      Episode:
+          class: App\Entity\Episode
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'title'}
+                  - {property: 'number'}
+                  - {property: 'summary'}
+                  - {property: 'season'}
+#                  - {property: 'image'}
+      Actor:
+          class: App\Entity\Actor
+          list:
+            item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'name'}
+#                  - {property: 'picture', type: 'upload', base_path: '%upload_directory%'}
