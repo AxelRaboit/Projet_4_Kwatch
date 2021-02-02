@@ -1,0 +1,8 @@
+easy_admin:
+    entities:
+        - App\Entity\User
+        - App\Entity\Category
+        - App\Entity\Program
+        - App\Entity\Season
+        - App\Entity\Episode
+        - App\Entity\Actor
