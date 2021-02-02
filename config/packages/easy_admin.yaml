@@ -4,6 +4,7 @@ easy_admin:
           class: App\Entity\User
           list:
             actions:
+              - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
               - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
               - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
             item_permission: 'ROLE_ADMIN'
@@ -15,6 +16,7 @@ easy_admin:
           class: App\Entity\Category
           list:
             actions:
+              - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
               - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
               - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
             item_permission: 'ROLE_ADMIN'
@@ -25,6 +27,7 @@ easy_admin:
           class: App\Entity\Program
           list:
             actions:
+              - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
               - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
               - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
             item_permission: 'ROLE_ADMIN'
@@ -41,6 +44,7 @@ easy_admin:
           class: App\Entity\Season
           list:
             actions:
+              - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
               - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
               - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
             item_permission: 'ROLE_ADMIN'
@@ -56,6 +60,7 @@ easy_admin:
           class: App\Entity\Episode
           list:
               actions:
+                - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
                 - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
                 - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
               item_permission: 'ROLE_ADMIN'
@@ -71,9 +76,12 @@ easy_admin:
 
       Actor:
           class: App\Entity\Actor
+          teomplates:
+            edit: 'admin/easyadmin/actor/edit.html.twig'
           list:
               fields: ['name','programs','nationality','description','updatedAt', {property: 'picture', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
               actions:
+                  - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
                   - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
                   - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
               item_permission: 'ROLE_ADMIN'
