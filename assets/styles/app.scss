@@ -16,7 +16,82 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //NAVBAR
 //==================================================//
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgba(62, 61, 61, 0);
+    color: hsl(270, 4%, 91%);
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.dropbtnArrowInactive, .dropbtnArrowActive {
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+}
+.dropbtnArrowActive {
+    display: none;
+}
+.dropbtn:hover {
+    color: $main-color;
+
+    .dropbtnArrowActive {
+        display: block;
+    }
+    .dropbtnArrowInactive {
+        display: none;
+    }
+}
+/* The container needed to position the dropdown content */
+.navDropdown {
+    position: relative;
+    display: none;
+}
+/* Dropdown Content (Hidden by Default) */
+.navDropdown-content {
+    display: none;
+    position: absolute;
+    top: 31px;
+    background-color: hsla(0, 1%, 24%, 0.66);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.navDropdown-content a {
+    color: hsl(270, 4%, 91%);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.navDropdown-content a:hover {
+    background-color: $main-color;
+}
+/* Show the dropdown menu on hover */
+.navDropdown:hover .navDropdown-content {
+    display: block;
+}
+.navDropdown .navDropdown-content {
+	visibility: hidden;
+	transition: all 0.5s;
+}
+.dropbtn:hover .navDropdown-content {
+	visibility: visible;
+	transition-delay: 0s;
+}
+.navDropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar-logo {
+    margin-bottom: 4px;
     width: 120px;
 }
 .Navbar {
@@ -99,15 +174,13 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerItems a {
     text-decoration: none;
 }
-.itemPrograms, .itemCategory {
+.itemNav {
     color: hsl(270, 4%, 91%);
     font-size: 16px;
     margin: 0px 10px 0px 10px;
 }
-.itemPrograms:hover, .itemCategory:hover {
+.itemNav:hover {
     color: $main-color;
-    text-decoration: underline;
-
 }
 .footer {
     height: 40px;
@@ -116,7 +189,10 @@ $secondary-color: hsl(0, 0%, 34%);
     .navbar-logo {
         width: 80px;
     }
-    #searchForm {
+    .navDropdown {
+        display: block;
+    }
+    .containerItems {
         display: none;
     }
 }
@@ -142,9 +218,14 @@ $secondary-color: hsl(0, 0%, 34%);
     .navbar-logout {
         font-size: 12px;
     }
-    .itemPrograms, .itemCategory {
+    .itemNav .dropbtn {
         font-size: 12px;
     }
+}
+@media (max-width: 670px) {
+
+}
+@media (max-width: 608px) {
     #searchBar {
         border: none;
         border-radius: 10px 0px 0px 10px;
@@ -158,15 +239,16 @@ $secondary-color: hsl(0, 0%, 34%);
         background-color: HSL(0, 57%, 45%);
         color: hsl(270, 4%, 91%);
     }
+    .navbar-logout {
+        font-size: 11px;
+    }
 }
-@media (max-width: 670px) {
+@media (max-width: 530px) {
     #searchBar, #submitSearchButton {
         display: none;
     }
-}
-@media (max-width: 608px) {
-    .navbar-logout {
-        font-size: 11px;
+    #searchForm {
+        display: none;
     }
 }
 @media (max-width: 438px) {
@@ -381,7 +463,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .containerLinkItemProgramActors:hover {
     background-color: $main-color;
-    text-decoration: underline;
 }
 .containerBackToListProgramShow {
     display: flex;
@@ -900,7 +981,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .adminItem:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
 }
 @media (max-width: 520px) {
     .adminHomePannel {
@@ -935,7 +1015,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .actorEdit:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
 }
 @media (max-width: 460px) {
     .actorEdit {
@@ -1194,7 +1273,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .programEdit:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 //We need it later
@@ -1289,7 +1367,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .newCategorySubmitButton:hover, .newCategoryBackButton:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 .newCategoryBackButton {
@@ -1363,7 +1440,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .editProgramDeleteButton:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 .editProgramBackButton, .editProgramDeleteButton {
@@ -1374,7 +1450,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .editProgramBackButton:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 .editProgramBackButton {
@@ -1501,7 +1576,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .newProgramBackButton:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 .itemProgramSubmitButton {
@@ -1514,7 +1588,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemProgramSubmitButton:hover, .newProgramBackButton:hover {
     background-color: $secondary-color;
-    text-decoration: underline;
     cursor: pointer;
 }
 

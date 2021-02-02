@@ -2,10 +2,23 @@
   <div class="containerNavbar">
     <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/logo/moviebox.png') }}" alt="Logo SandBox"/></a>
 
-    <ul class="containerItems">
-      <a href="{{path('program_index') }}"><li class="itemPrograms">Séries</li></a>
-{#       <a href=""><li class="itemCategory">Catégories</li></a> #}
-    </ul>
+    <div class="navDropdown">
+      <div class="dropbtn">Parcourir
+        <img class="dropbtnArrowInactive" src="{{ asset('/build/images/nav/dropDownArrowInactive.png') }}"/>
+        <img class="dropbtnArrowActive" src="{{ asset('/build/images/nav/dropDownArrowActive.png') }}"/>
+        <div class="navDropdown-content">
+          <a href="{{path('home_index') }}">Accueil</a>
+          <a href="{{path('program_index') }}">Séries</a>
+          <a href="#">Catégories</a>
+        </div>
+      </div>
+    </div> 
+
+    <div class="containerItems">
+      <a href="{{path('home_index') }}" class="itemNav">Accueil</a>
+      <a href="{{path('program_index') }}" class="itemNav">Séries</a>
+      <a href="" class="itemNav">Catégories</a>
+    </div>
     
   </div>
   <div class="navRightSide">
