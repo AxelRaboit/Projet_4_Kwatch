@@ -7,11 +7,14 @@ vich_uploader:
             uri_prefix: /images/posters  # Affiches de film
             # Chemin vers le dossier de stockage
             upload_destination: '%upload_directory%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
 
         picture_file:
             uri_prefix: /images/pictures  # Photos de d'acteur
             upload_destination: '%upload_directory%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
 
         image_file:
             uri_prefix: /images/images  # Images de film
             upload_destination: '%upload_directory%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
