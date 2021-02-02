@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Actor;
 
 use App\Entity\Actor;
 use App\Form\ActorType;

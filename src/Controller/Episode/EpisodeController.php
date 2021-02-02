@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Episode;
 
 use App\Entity\Episode;
 use App\Form\EpisodeType;
