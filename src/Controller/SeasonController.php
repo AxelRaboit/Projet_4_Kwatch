@@ -30,7 +30,7 @@ class SeasonController extends AbstractController
      */
     public function admin(SeasonRepository $seasonRepository): Response
     {
-        return $this->render('season/admin.html.twig', [
+        return $this->render('admin/crud/season.html.twig', [
             'seasons' => $seasonRepository->findAll(),
         ]);
     }
