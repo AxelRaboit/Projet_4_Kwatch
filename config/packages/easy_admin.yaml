@@ -78,22 +78,31 @@ easy_admin:
 
       Actor:
           class: App\Entity\Actor
-          teomplates:
-            edit: 'admin/easyadmin/actor/edit.html.twig'
           list:
-              fields: ['name','programs','nationality','description','updatedAt', {property: 'picture', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
               actions:
                   - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
                   - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
                   - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
               item_permission: 'ROLE_ADMIN'
-            
+              fields: ['name','roles','nationality','description','updatedAt', {property: 'picture', type: 'image', base_path: '%upload_directory%'}] #This line is to display the image but fix needed
           form:
               fields:
                   - {property: 'name', label: 'Name'}
-                  - {property: 'programs', label: 'Programs'}
+                  - {property: 'roles', label: 'Roles'}
                   - {property: 'nationality', label: 'Nationality'}
                   - {property: 'description', label: 'Description'}
                   - {property: 'pictureFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Picture'}
                   - {property: 'updatedAt', label: 'Updated at'}
-
+      Role:
+          class: App\Entity\Role
+          list:
+              actions:
+                  - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
+                  - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                  - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+              item_permission: 'ROLE_ADMIN'
+          form:
+              fields:
+                  - {property: 'name', label: 'Name'}
+                  - {property: 'actor', label: 'Actor'}
+                  - {property: 'program', label: 'Program'}

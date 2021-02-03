@@ -896,31 +896,28 @@ $secondary-color: hsl(0, 0%, 34%);
     width: 400px;
     border-radius: 10px;
 }
-.containerDescriptionActor {
-    display: flex;
-    flex-direction: column;
-}
 .containerActorDescription {
     width: 80%;
     margin: 20px;
 }
-.actorDescriptionLabel {
+.actorDescriptionLabel, .actorRoleLabel {
     color: $main-color;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-.actorDescription {
-    margin: 0;
+    font-size: 1.5rem;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 .actorDescriptionName {
     color: $main-color;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    margin: 0;
 }
-.actorDescriptionNationalityLabel {
+.actorDescriptionNationalityLabel, .actorDescriptionRoleLabel {
     color: $main-color;
     font-weight: bold;
+    font-size: 1.2rem;
 }
-.actorDescription, .actorDescriptionNationality {
+.actorDescription, .actorDescriptionNationality, .actorRoleProgramTitle {
     color: hsl(270, 4%, 91%);
 }
 @media (max-width: 460px) {
