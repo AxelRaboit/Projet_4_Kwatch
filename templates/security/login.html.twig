@@ -20,7 +20,7 @@
                 <img class="home-logo-login" src="{{ asset('/build/images/logo/moviebox.png') }}" alt="Logo SandBox"/>
                 {% if app.user %}
                     <div class="containerAuthButtons">
-                        <button class="submitConnexion" type="submit"><a href="{{ path('home_index') }}">Entrer</a></button>
+                        <button class="submitConnexion" type="submit"><a href="{{ path('program_index') }}">Entrer</a></button>
                     <div class="mb-3">
                         Tu es connecté entant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
                     </div>
