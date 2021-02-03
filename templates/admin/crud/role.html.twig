@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Roles - Administration{% endblock %}
+
+{% block body %}
+    <div class="containerRolesList">
+        <h1 class="roleListAdminTitle">Liste des Roles</h1>
+
+        {% for role in roles %}
+            <div class="containerRoleListCards">
+                <div class="containerRoleListItem">
+                    <div class="itemRoleListLabel">Id</div>
+                    <div class="itemRoleListContent">{{role.id}}</div>
+                </div>
+                <hr>
+                <div class="containerRoleListItem">
+                    <div class="itemRoleListLabel">Nom</div>
+                    <div class="itemRoleListContent">{{role.name}}</div>
+                </div>
+                <hr>
+                <div class="containerSeasonListItem">
+                    <div class="itemSeasonListLabel">Actions</div>
+                    <div class="containerSeasonListItemButtons">
+                        <a class="itemSeasonListContentButtons" href="{{ path('role_show', {'id': role.id}) }}">Voir</a>
+                        <a class="itemSeasonListContentButtons" href="{{ path('role_edit', {'id': role.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p>Aucun résultat</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{# 
+{% extends 'base.html.twig' %}
+
+{% block title %}Role index{% endblock %}
+
+{% block body %}
+    <h1>Role index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for role in roles %}
+            <tr>
+                <td>{{ role.id }}</td>
+                <td>{{ role.name }}</td>
+                <td>
+                    <a href="{{ path('role_show', {'id': role.id}) }}">show</a>
+                    <a href="{{ path('role_edit', {'id': role.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('role_new') }}">Create new</a>
+{% endblock %}
+ #}
