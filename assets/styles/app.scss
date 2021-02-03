@@ -182,6 +182,14 @@ $secondary-color: hsl(0, 0%, 34%);
 .itemNav:hover {
     color: $main-color;
 }
+.itemNavAdmin {
+    font-size: 16px;
+    margin: 0px 10px 0px 10px;
+    color: $main-color;
+}
+.itemNavAdmin:hover {
+    color: hsl(270, 4%, 91%);
+}
 .footer {
     height: 40px;
 }
@@ -989,6 +997,24 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .adminItem:hover {
     background-color: $secondary-color;
+}
+.adminItemEasyAdmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    height: 10px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $secondary-color;
+    color: hsl(270, 4%, 91%);
+    margin: 10px;
+    text-decoration: none;
+}
+.adminItemEasyAdmin:hover {
+    background-color: $main-color;
 }
 @media (max-width: 520px) {
     .adminHomePannel {
