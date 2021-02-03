@@ -44,8 +44,10 @@
                                 <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: role.actor.id})}}">
                                     <li class"itemProgramActors">
                                         <img class="programShowActorPicture" src="{{ asset('uploads/' ~ role.actor.picture) }}" alt="Actor Picture"/>
-                                        <p>{{ role.actor.name }}</p>
-                                        <p>{{ role.name }}</p>
+                                        <div class="containerActorNameProgramShow">
+                                            <p><span class="realNameItemActor">Nom: </span>{{ role.actor.name }}</p>
+                                            <p><span class="roleItemActor">Rôle: </span>{{ role.name }}</p>
+                                        </div>
                                     </li>
                                 </a>
                             </div>
