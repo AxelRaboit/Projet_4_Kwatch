@@ -1,0 +1,34 @@
+{{ form_start(form) }}
+    <div class="containerNewRoleForm">
+        <div class="containerRoleFormName">
+            <div class="itemRoleFormName">{{ form_row(form.name) }}</div>
+        </div>
+        <div class="containerRoleFormActor">
+            <div class="itemRoleFormActor">{{ form_row(form.actor) }}</div>
+        </div>
+        <div class="containerRoleFormProgram">
+            <div class="itemRoleFormProgram">{{ form_row(form.program) }}</div>
+        </div>
+        <div class="containerNewRoleButtons">
+            <button class="itemRoleSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+    </div>
+{{ form_end(form) }}
+
+
+
+
+{# {{ form_start(form) }}
+    <div class="containerNewProgramForm">
+        <div class="containerProgramFormTitle">
+            <div class="itemProgramFormTitle">{{ form_row(form.name) }}</div>
+        </div>
+        <div class="containerProgramFormCategory">
+            <div class="itemProgramFormCategory">{{ form_row(form.actor) }}</div>
+        </div>
+        <div class="containerProgramFormPosterFile">
+            <div class="itemProgramFormPosterFile">{{ form_row(form.program) }}</div>
+        </div>
+    </div>
+{{ form_end(form) }}
+ #}
