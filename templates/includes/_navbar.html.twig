@@ -10,6 +10,9 @@
           <a href="{{path('home_index') }}">Accueil</a>
           <a href="{{path('program_index') }}">Séries</a>
           <a href="#">Catégories</a>
+        {% if is_granted("ROLE_ADMIN") %}
+          <a href="{{path('home_index') }}">Admin</a>
+        {% endif %}
         </div>
       </div>
     </div>
@@ -18,6 +21,9 @@
       <a href="{{path('home_index') }}" class="itemNav">Accueil</a>
       <a href="{{path('program_index') }}" class="itemNav">Séries</a>
       <a href="" class="itemNav">Catégories</a>
+      {% if is_granted("ROLE_ADMIN") %}
+        <a href="{{path('administration_index') }}" class="itemNavAdmin">Admin</a>
+      {% endif %}
     </div>
     
   </div>
