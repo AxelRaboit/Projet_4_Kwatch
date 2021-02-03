@@ -55,7 +55,6 @@ class ProgramController extends AbstractController
     {
         $seasons = $program->getSeasons();
         $roles = $roleRepository->findBy(['program' => $program->getId()]);
-/*         dd($roles); */
 
         return $this->render('program/show.html.twig', [
             'program' => $program,
