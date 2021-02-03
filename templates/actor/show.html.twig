@@ -20,12 +20,14 @@
             <hr>
             <p class="actorDescriptionNationality"><span class="actorDescriptionNationalityLabel">Nationalité:</span> {{actor.nationality}}</p>
 
-            <p class="actorDescriptionNationality"><span class="actorDescriptionNationalityLabel">Rôle:</span> {{role.name}}</p>
-
-            <div class="containerDescriptionActor">
-                <p class="actorDescriptionLabel">À propos:</p>
-                <p class="actorDescription">{{actor.description}}</p>
-            </div>
+            <p class="actorDescriptionLabel">À propos:</p>
+            <hr>
+            <p class="actorDescription">{{actor.description}}</p>
+            <p class="actorRoleLabel">Rôles:</p>
+            <hr>
+            {% for role in roles %}
+                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> {{ role.program.title }}</p>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

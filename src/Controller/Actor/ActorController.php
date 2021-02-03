@@ -64,11 +64,12 @@ class ActorController extends AbstractController
      */
     public function show(Actor $actor, RoleRepository $roleRepository): Response
     {
-        $role = $roleRepository->findOneBy(['actor' => $actor->getId()]);
+        $roles = $actor->getRoles();
 
         return $this->render('actor/show.html.twig', [
             'actor' => $actor,
-            'role' => $role
+            'roles' => $roles,
+          /*   'programs' => $programs */
         ]);
     }
 
