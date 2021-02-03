@@ -39,12 +39,13 @@
                 </div>
                 <div class="containerProgramShowActorContent">
                     <ul class="containerProgramActors">
-                        {% for actor in program.actors %}
+                        {% for role in roles %}
                             <div class="containerItemActors">
-                                <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: actor.id})}}">
+                                <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: role.actor.id})}}">
                                     <li class"itemProgramActors">
-                                        <img class="programShowActorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture"/>
-                                        <p>{{ actor.name }}</p>
+                                        <img class="programShowActorPicture" src="{{ asset('uploads/' ~ role.actor.picture) }}" alt="Actor Picture"/>
+                                        <p>{{ role.actor.name }}</p>
+                                        <p>{{ role.name }}</p>
                                     </li>
                                 </a>
                             </div>
