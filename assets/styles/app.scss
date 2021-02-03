@@ -434,6 +434,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 120px;
     width: 120px;
     border-radius: 50%;
+    align-self: center;
 }
 .containerItemActorsNone {
     color: hsl(270, 4%, 91%);
@@ -463,6 +464,16 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .containerLinkItemProgramActors:hover {
     background-color: $main-color;
+}
+.containerActorNameProgramShow {
+    margin-top: 10px;
+    line-height: 10px;
+    padding: 5px;
+    background-color: hsla(0, 0%, 13%, 0.4);
+    border-radius: 10px;
+}
+.roleItemActor, .realNameItemActor {
+    color: $main-color;
 }
 .containerBackToListProgramShow {
     display: flex;

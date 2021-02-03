@@ -79,14 +79,15 @@ class Program
     private $slug;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Actor::class, mappedBy="programs")
+     * @ORM\OneToMany(targetEntity=Role::class, mappedBy="program", orphanRemoval=true)
      */
-    private $actors;
+    private $role;
 
     public function __construct()
     {
         $this->seasons = new ArrayCollection();
         $this->actors = new ArrayCollection();
+        $this->role = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -221,36 +222,40 @@ class Program
     {
         return $this->posterFile;
     }
-
-    /**
-     * @return Collection|Actor[]
-     */
-    public function getActors(): Collection
-    {
-        return $this->actors;
-    }
-
-    public function addActor(Actor $actor): self
-    {
-        if (!$this->actors->contains($actor)) {
-            $this->actors[] = $actor;
-            $actor->addProgram($this);
-        }
-
-        return $this;
-    }
-
-    public function removeActor(Actor $actor): self
-    {
-        if ($this->actors->removeElement($actor)) {
-            $actor->removeProgram($this);
-        }
-
-        return $this;
-    }
     
     public function __toString()
     {
         return $this->title;
     }
+
+    /**
+     * @return Collection|Role[]
+     */
+    public function getRole(): Collection
+    {
+        return $this->role;
+    }
+
+    public function addRole(Role $role): self
+    {
+        if (!$this->role->contains($role)) {
+            $this->role[] = $role;
+            $role->setProgram($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRole(Role $role): self
+    {
+        if ($this->role->removeElement($role)) {
+            // set the owning side to null (unless already changed)
+            if ($role->getProgram() === $this) {
+                $role->setProgram(null);
+            }
+        }
+
+        return $this;
+    }
+
 }
