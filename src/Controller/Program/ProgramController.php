@@ -7,6 +7,7 @@ use App\Entity\Episode;
 use App\Entity\Program;
 use App\Service\Slugify;
 use App\Form\ProgramType;
+use App\Repository\RoleRepository;
 use App\Repository\ProgramRepository;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\Request;
@@ -50,13 +51,15 @@ class ProgramController extends AbstractController
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"slug": "slug"}})
      * @return response
      */
-    public function show(Program $program): response    /* to get by id -> ("/show/{id<^[0-9]+$>}", name="show") */
+    public function show(Program $program, RoleRepository $roleRepository): response    /* to get by id -> ("/show/{id<^[0-9]+$>}", name="show") */
     {
         $seasons = $program->getSeasons();
+        $roles = $roleRepository->findBy(['program' => $program->getId()]);
 
         return $this->render('program/show.html.twig', [
             'program' => $program,
-            'seasons' => $seasons
+            'seasons' => $seasons,
+            'roles' => $roles
         ]);
     }
 

@@ -32,11 +32,6 @@ class Actor
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Program::class, inversedBy="actors")
-     */
-    private $programs;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $picture;
@@ -62,9 +57,15 @@ class Actor
      */
     private $description;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Role::class, mappedBy="actor")
+     */
+    private $roles;
+
     public function __construct()
     {
         $this->programs = new ArrayCollection();
+        $this->roles = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -80,30 +81,6 @@ class Actor
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Program[]
-     */
-    public function getPrograms(): Collection
-    {
-        return $this->programs;
-    }
-
-    public function addProgram(Program $program): self
-    {
-        if (!$this->programs->contains($program)) {
-            $this->programs[] = $program;
-        }
-
-        return $this;
-    }
-
-    public function removeProgram(Program $program): self
-    {
-        $this->programs->removeElement($program);
 
         return $this;
     }
@@ -173,6 +150,36 @@ class Actor
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * @return Collection|Role[]
+     */
+    public function getRoles(): Collection
+    {
+        return $this->roles;
+    }
+
+    public function addRole(Role $role): self
+    {
+        if (!$this->roles->contains($role)) {
+            $this->roles[] = $role;
+            $role->setActor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRole(Role $role): self
+    {
+        if ($this->roles->removeElement($role)) {
+            // set the owning side to null (unless already changed)
+            if ($role->getActor() === $this) {
+                $role->setActor(null);
+            }
+        }
+
+        return $this;
     }
 
 }
