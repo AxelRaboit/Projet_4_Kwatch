@@ -10,7 +10,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 <h2>PROJECT RESOURCES</h2>
 There is a folder in the project nammed 'ressources' a folder with every steps of the project like (mcd/mld/wireframe, etc...)
-https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/ressources
+https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 
 <h2>HOW TO INSTALL THE PROJECT</h2>
 
