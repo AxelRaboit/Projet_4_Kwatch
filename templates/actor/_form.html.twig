@@ -1,4 +1,19 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="containerNewActorForm">
+        <div class="containerActorFormName">
+            <div class="itemActorFormName">{{ form_row(form.name) }}</div>
+        </div>
+        <div class="containerActorFormPictureFile">
+            <div class="itemActorFormActorPictureFile">{{ form_row(form.pictureFile) }}</div>
+        </div>
+        <div class="containerActorFormNationality">
+            <div class="itemActorFormNationality">{{ form_row(form.nationality) }}</div>
+        </div>
+        <div class="containerActorFormDescription">
+            <div class="itemActorFormDescription">{{ form_row(form.description) }}</div>
+        </div>
+        <div class="containerNewActorButtons">
+            <button class="itemActorSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+    </div>
 {{ form_end(form) }}
