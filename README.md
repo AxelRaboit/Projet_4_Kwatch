@@ -11,40 +11,40 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <h2>AVANCEMENT DU PROJET</h2>
 
 <h4>Login / Se connecter: Desktop</h4>
-<img width="800" alt="loginDesktop" src="https://user-images.githubusercontent.com/66420167/106389290-e32bf680-63e2-11eb-9ad2-183f10cbc2bf.jpg">
+<img width="800" alt="loginDesktop" src="https://user-images.githubusercontent.com/66420167/106919150-28fdfd00-670a-11eb-917d-c95420bc3a5b.jpg">
 
 <h4>Login / Se connecter: Mobile</h4>
-<img width="360" alt="loginMobile" src="https://user-images.githubusercontent.com/66420167/106389355-2b4b1900-63e3-11eb-90fd-a1521ba3d860.jpg">
+<img width="360" alt="loginMobile" src="https://user-images.githubusercontent.com/66420167/106919260-459a3500-670a-11eb-9dbc-0e6e4ddac14e.jpg">
 
 <h4>Registration / Inscription: Desktop</h4>
-<img width="800" alt="registrationDesktop" src="https://user-images.githubusercontent.com/66420167/106389442-a14f8000-63e3-11eb-8121-47bf88b35fdd.jpg">
+<img width="800" alt="registrationDesktop" src="https://user-images.githubusercontent.com/66420167/106919329-58ad0500-670a-11eb-987a-8167843fe076.jpg">
 
 <h4>Registration / Inscription: Mobile</h4>
-<img width="360" alt="registrationMobile" src="https://user-images.githubusercontent.com/66420167/106389451-aa405180-63e3-11eb-9ad6-4716e78582d8.jpg">
+<img width="360" alt="registrationMobile" src="https://user-images.githubusercontent.com/66420167/106919413-6a8ea800-670a-11eb-8d18-17c584f96633.jpg">
 
 <h4>Home: Desktop</h4>
-<img width="800" alt="homeDesktop" src="https://user-images.githubusercontent.com/66420167/106400938-b6e39a80-6421-11eb-8f64-51a80e2acb53.jpg">
+<img width="800" alt="homeDesktop" src="https://user-images.githubusercontent.com/66420167/106919515-8134ff00-670a-11eb-86f4-30480e74beb8.jpg">
 
 <h4>Home: Mobile</h4>
-<img width="360" alt="homeMobile" src="https://user-images.githubusercontent.com/66420167/106400950-c19e2f80-6421-11eb-97b9-bbc107551406.jpg">
+<img width="360" alt="homeMobile" src="https://user-images.githubusercontent.com/66420167/106919557-8e51ee00-670a-11eb-9575-2924bde4f0eb.jpg">
 
 <h4>Programs / Toutes les séries: Desktop</h4>
-<img width="800" alt="programsDesktop" src="https://user-images.githubusercontent.com/66420167/106389740-4028ac00-63e5-11eb-8404-04f1f8f815f0.jpg">
+<img width="800" alt="programsDesktop" src="https://user-images.githubusercontent.com/66420167/106919685-a7f33580-670a-11eb-98f9-0c662f898f95.jpg">
 
 <h4>Programs / Toutes les séries: Mobile</h4>
-<img width="360" alt="programsMobile" src="https://user-images.githubusercontent.com/66420167/106389748-49b21400-63e5-11eb-996f-542393126266.jpg">
+<img width="360" alt="programsMobile" src="https://user-images.githubusercontent.com/66420167/106919807-c48f6d80-670a-11eb-9676-c344d7157ee1.jpg">
 
 <h4> ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Desktop</h4>
-<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106518045-96771700-64d9-11eb-8cf8-7623c7ce2481.jpg">
+<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106919916-da049780-670a-11eb-92f0-422c97e2f807.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517808-45ffb980-64d9-11eb-8134-dc8d7ddf65ed.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920064-fef90a80-670a-11eb-973d-c770a0450682.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517846-52841200-64d9-11eb-94be-f22d5670158d.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920107-0c15f980-670b-11eb-9169-92be3bc55796.jpg">
 
 <h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106517888-60399780-64d9-11eb-8a58-29a2e7a2d853.jpg">
+<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920175-1e903300-670b-11eb-8bf8-00080c3065f4.jpg">
 
 <h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Desktop</h4>
 <img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106389894-2176e500-63e6-11eb-8e3f-9ce639f5f1b9.jpg">
