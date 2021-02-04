@@ -25,13 +25,13 @@
             <p class="actorDescription">{{actor.description}}</p>
             
             {% for role in roles %}
-                {% if actor.roles != null %}
-                    <p class="actorRoleLabel">Rôles:</p>
-                    <hr>
-                        <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
-                {% else %}
-                    <p class="actorDescriptionRoleLabel">Cet acteur n'a pas de rôle</p>
-                {% endif %}
+                <p class="actorRoleLabel">Rôles:</p>
+                <hr>
+                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
+            {% else %}
+                <p class="actorRoleLabel">Rôles:</p>
+                <hr>
+                <p class="alertMessageNoRoles">Cet acteur n'a pas de rôle</p>
             {% endfor %}
         </div>
     </div>

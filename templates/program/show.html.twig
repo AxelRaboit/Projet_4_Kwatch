@@ -28,9 +28,11 @@
                     <div class="programShowSynopsisContent">{{ program.synopsis }}</div>
                 </div>
                 <div class="containerSeasonShow">
-                {% for season in seasons %}
-                    <h4><a href="{{ path('program_season_show', {seasonId: season.id, programSlug: program.slug}) }}">Saison {{ season.number }}</a></h4>
-                {% endfor %}
+                    {% for season in seasons %}
+                            <h4><a href="{{ path('program_season_show', {seasonId: season.id, programSlug: program.slug}) }}">Saison {{ season.number }}</a></h4>
+                        {% else %}
+                            <p class="alertMessageNoSeason">Aucune saisons pour cette série</p>
+                    {% endfor %}
                 </div>
                 <div class="containerProgramShowActorLabel">
                     <div class="programShowActorLabel">Acteurs:</div>
