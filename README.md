@@ -50,10 +50,10 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106921997-dbcf5a80-670c-11eb-9b8e-866466b8d04c.jpg">
 
 <h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Desktop</h4>
-<img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106389894-2176e500-63e6-11eb-8e3f-9ce639f5f1b9.jpg">
+<img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106922282-2ea91200-670d-11eb-9499-90a21674945c.jpg">
 
 <h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Mobile</h4>
-<img width="360" alt="seasonShowMobile" src="https://user-images.githubusercontent.com/66420167/106389906-2b004d00-63e6-11eb-9e59-da4868736acf.jpg">
+<img width="360" alt="seasonShowMobile" src="https://user-images.githubusercontent.com/66420167/106922450-5ef0b080-670d-11eb-81fb-714cff6b6da5.jpg">
 
 <h4>EpisodeShow / Episode: Desktop</h4>
 <img width="800" alt="episodeShowDesktop" src="https://user-images.githubusercontent.com/66420167/106389946-571bce00-63e6-11eb-870a-20943a6cc7af.jpg">
