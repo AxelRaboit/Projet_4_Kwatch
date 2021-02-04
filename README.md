@@ -8,6 +8,22 @@ Ce dépot Github est à but d'entrainement, il me permet d'ameliorer mes compét
 
 Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "uploads" affichant toutes les affiches et images des séries, est ignoré dans les commits pour des raisons de droit d'auteur.
 
+<h2>PROJECT INSTALL</h2>
+
+- Git Clone this link: https://github.com/AxelRaboit/Projet_4_MovieBox.git
+- Open the project with an IDE
+- (The database is not available because of copyright. (but if you have the .sql use it.))
+- Create an .env.local based to the .env file, use the line 30' and comment the 31' tu only use the mysql line, put your id to connect to your mysql, and use the database called "moviebox"
+- Run composer install
+- Run yarn install
+- Run symfony console d:d:c (to create the database)
+- Run symfony console d:m:m (to load the migrations)
+- Run symfony console d:f:l (to load the fixtures) (user fixtures)
+- Run yarn encore dev
+- Run yarn encore dev --watch
+- Run symfony console cache:clear (to clean the symfony cache)// Optional
+- Run symfony serve (to start the server)
+
 <h2>AVANCEMENT DU PROJET</h2>
 
 <h4>Login / Se connecter: Desktop</h4>
