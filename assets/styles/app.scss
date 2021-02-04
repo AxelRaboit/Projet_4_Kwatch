@@ -1,9 +1,22 @@
+@font-face {
+    font-family: "GoboldBold";
+    src:url("../Fonts/GoboldBold.woff") format("opentype");
+}
+@font-face {
+    font-family: "GoboldRegular";
+    src:url("../Fonts/GoboldRegular.woff") format("opentype");
+}
+@font-face {
+    font-family: "PoppinsRegular";
+    src:url("../Fonts/PoppinsRegular.woff") format("opentype");
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: hsl(0, 0%, 14%);
-    font-family: sans-serif;
+    font-family: "PoppinsRegular";
+    
 }
 
 //==================================================//
@@ -104,6 +117,7 @@ $secondary-color: hsl(0, 0%, 34%);
     display: grid;
     grid-template-areas: 
     "logo items searchNdeco";
+    font-family: 'GoboldBold';
 }
 .navRightSide {
     display: flex;
@@ -278,6 +292,15 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //HOMEPAGE
 //==================================================//
+
+.homeWallpaper {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/wallpaper/wallpaperKorea1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .containerHomePage {
    /*  height: calc(100vh - 56px); */
     margin-top: 100px;
@@ -302,6 +325,7 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerProgramsPage h1 {
     text-align: center;
     color: hsl(270, 4%, 91%);
+    font-family: "GoboldBold";
 }
 .itemAllProgram {
     display: flex;
@@ -337,6 +361,7 @@ $secondary-color: hsl(0, 0%, 34%);
     color: hsl(270, 4%, 91%);
     margin-bottom: 10px;
     font-size: 16px;
+    font-family: 'GoboldBold';
 }
 //==================================================//
 //ALL ACTORS
@@ -352,6 +377,7 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerActorsPage h1 {
     text-align: center;
     color: hsl(270, 4%, 91%);
+    font-family: 'GoboldBold';
 }
 .itemAllActors {
     display: flex;
@@ -383,6 +409,7 @@ $secondary-color: hsl(0, 0%, 34%);
     color: hsl(270, 4%, 91%);
     margin-bottom: 10px;
     font-size: 16px;
+    font-family: 'GoboldBold';
 }
 //==================================================//
 //PROGRAM SHOW
@@ -432,6 +459,7 @@ $secondary-color: hsl(0, 0%, 34%);
     display: flex;
     justify-content:center;
     align-items:center;
+    font-family: 'GoboldRegular';
 }
 .programTitleShow {
     font-size: 2.5rem;
@@ -442,6 +470,7 @@ $secondary-color: hsl(0, 0%, 34%);
     justify-content:center;
     align-items:center;
     margin-bottom: 20px;
+    font-family: 'GoboldBold';
 }
 .programShowSynopsisLabel {
     margin-top: 80px;
@@ -458,6 +487,7 @@ $secondary-color: hsl(0, 0%, 34%);
     margin-top: 80px;
     color: hsl(270, 4%, 91%);
     font-size: 1.8rem;
+    font-family: 'GoboldBold';
 }
 .containerProgramShowSynopsisContent {    
     display: flex;
@@ -996,6 +1026,9 @@ $secondary-color: hsl(0, 0%, 34%);
     align-items: center;
     margin-bottom: 100px;
 }
+.containerShowActor h1 {
+    font-family: 'GoboldBold';
+}
 .ShowActorTitle {
     color: $main-color;
 }
@@ -1013,11 +1046,13 @@ $secondary-color: hsl(0, 0%, 34%);
     font-size: 1.5rem;
     margin-top: 80px;
     margin-bottom: 10px;
+    font-family: 'GoboldBold';
 }
 .actorDescriptionName {
     color: $main-color;
     font-size: 2rem;
     margin: 0;
+    font-family: 'GoboldBold';
 }
 .actorDescriptionNationalityLabel, .actorDescriptionRoleLabel {
     color: $main-color;
