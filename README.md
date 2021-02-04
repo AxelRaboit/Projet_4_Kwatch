@@ -12,7 +12,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 - Git Clone this link: https://github.com/AxelRaboit/Projet_4_MovieBox.git
 - Open the project with an IDE
-- (The database is not available because of copyright. (but if you have the .sql use it.))
+- (The database is not available because of copyright. (if you don't have the .sql, ask to the github owner, and load it in your database))
 - Create an .env.local based to the .env file, use the line 30' and comment the 31' tu only use the mysql line, put your id to connect to your mysql, and use the database called "moviebox"
 - Run composer install
 - Run yarn install
