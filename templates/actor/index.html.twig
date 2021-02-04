@@ -3,13 +3,19 @@
 {% block title %}Actor index{% endblock %}
 
 {% block body %}
-    <h1>Actor index</h1>
-
-        <tbody>
+<div class="containerActorsPage">
+    <h1>Tout les acteurs</h1>
+    <div class="itemAllActors">
         {% for actor in actors %}
-            <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture"/>
-            <p>{{ actor.name }}</p>
+        <div class="containerActorItem">
+            <div class="actorItem">
+                <a href="{{ path("actor_show", { id: actor.id }) }}"><img class="allActorsPictureShow" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/></a>
+                <h2>{{ actor.name }}</h2>
+            </div>
+        </div>
         {% else %}
-            <td colspan="3">no records found</td>
+            <p>Pas de resultats trouvé</p>
         {% endfor %}
+    </div>
+</div>
 {% endblock %}

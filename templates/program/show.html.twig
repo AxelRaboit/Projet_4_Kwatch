@@ -1,5 +1,3 @@
-{# templates/program/show.html.twig #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}{{ program.title }} - {{ parent()}}{% endblock %}
@@ -10,7 +8,7 @@
         <div class="containerContentProgramShow">
             <div class="containerProgramContent">
                 <div class="containerPosterShow">
-                    <img class="programPosterShow" src="{{ asset('uploads/' ~ program.poster) }}" alt="poster program">
+                    <img class="programPosterShow" src="{{ '/uploads/' ~ program.poster }}" alt="poster program">
                     <div class="containerProgramAdmin">
                         {% if is_granted("ROLE_ADMIN") %}
                             <a class="programEdit" href="{{ path('program_edit', {'id': program.id}) }}">Modifier la série</a>
@@ -43,7 +41,7 @@
                             <div class="containerItemActors">
                                 <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: role.actor.id})}}">
                                     <li class"itemProgramActors">
-                                        <img class="programShowActorPicture" src="{{ asset('uploads/' ~ role.actor.picture) }}" alt="Actor Picture"/>
+                                        <img class="programShowActorPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
                                         <div class="containerActorNameProgramShow">
                                             <p><span class="realNameItemActor">Nom: </span>{{ role.actor.name }}</p>
                                             <p><span class="roleItemActor">Rôle: </span>{{ role.name }}</p>

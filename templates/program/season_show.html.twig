@@ -14,7 +14,7 @@
             <div class="EpisodeItemSeasonShow">
                 <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programSlug: program.slug, episodeId: episode.id}) }}">
                 {% if episode.image %}
-                    <img class="episodePosterSeasonShow" src="{{ asset('uploads/' ~ episode.image) }}" alt="Episode Image"/>
+                    <img class="episodePosterSeasonShow" src="{{ '/uploads/' ~ episode.image }}" alt="Episode Image"/>
                 {% else %}
                     <img class="episodeNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
                 {% endif %}
@@ -22,15 +22,11 @@
                     <div class="seasonNumberShow">Saison {{ seasons.number }}:</div> <div class="episodeTitleShow">Episode {{ episode.number }}</div>
                 </div>
                 </a>
-                {# Episode: <a href="{{ path('program_season_episode_show', {seasonId: seasons.id, programId: program.id, episodeId: episode.id}) }}">Episode {{ episode.number }}</a> #}
             </div>
         {% endfor %}
     </div>
     <div class="containerBackToListSeasonShow">
         <a class="backToListSeasonShow" href="{{ path('program_show',{slug: program.slug}) }}">Retour à la liste des saisons</a>
     </div>
-
-{# <a href="{{ path('episode_new') }}">Crée un nouvel episode</a>
-<a href="{{ path('program_index') }}">Retour à la liste des programmes</a> #}
     {% include "/includes/_footer.html.twig" %}
 {% endblock %}
