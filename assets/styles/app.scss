@@ -813,6 +813,13 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 10px;
     margin-top: 10px;
 }
+.containerMessageIsConnectedLogin a {
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+}
+.messageIsConnectedLogin {
+    color: $main-color;
+}
 .homepageLogin, .homepageRegister {
     height: 100vh;
     display: flex;

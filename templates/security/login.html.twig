@@ -18,10 +18,9 @@
                 {% if app.user %}
                     <div class="containerAuthButtons">
                         <button class="submitConnexion" type="submit"><a href="{{ path('program_index') }}">Entrer</a></button>
-                    <div class="mb-3">
-                        Tu es connecté entant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
-                    </div>
-                        <a class="loggedPageLogoutButton" href="{{ path('app_logout') }}">Se déconnecter</a>
+                        <div class="containerMessageIsConnectedLogin">
+                            <p class="messageIsConnectedLogin">Tu es connecté entant que {{ app.user.username }},<a href="{{ path('app_logout') }}"> Se déconnecter</a></p>
+                        </div>
                     </div>
                 {% else %}
                 <h1 class="loginConnectedTitle">Se connecter</h1>
