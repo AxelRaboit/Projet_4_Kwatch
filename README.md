@@ -16,9 +16,9 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 - Create an .env.local based to the .env file, use the line 30' and comment the 31' tu only use the mysql line, put your id to connect to your mysql, and use the database called "moviebox"
 - Run composer install
 - Run yarn install
-- Run symfony console d:d:c (to create the database)
-- Run symfony console d:m:m (to load the migrations)
-- Run symfony console d:f:l (to load the fixtures) (user fixtures)
+- Run symfony console 'd : d : c' (to create the database)
+- Run symfony console 'd : m : m' (to load the migrations)
+- Run symfony console 'd : f : l' (to load the fixtures) (user fixtures)
 - Run yarn encore dev
 - Run yarn encore dev --watch
 - Run symfony console cache:clear (to clean the symfony cache)// Optional
