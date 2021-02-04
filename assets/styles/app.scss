@@ -1672,6 +1672,11 @@ $secondary-color: hsl(0, 0%, 34%);
 .editProgramDeleteButton:hover {
     background-color: $secondary-color;
     cursor: pointer;
+
+    .itemDeleteProgram {
+        background-color: $secondary-color;
+        cursor: pointer;
+    }
 }
 .editProgramBackButton, .editProgramDeleteButton {
     margin: 10px;
