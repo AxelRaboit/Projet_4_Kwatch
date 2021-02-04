@@ -53,19 +53,39 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106922282-2ea91200-670d-11eb-9499-90a21674945c.jpg">
 
 <h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Mobile</h4>
-<img width="360" alt="seasonShowMobile" src="https://user-images.githubusercontent.com/66420167/106922450-5ef0b080-670d-11eb-81fb-714cff6b6da5.jpg">
+<img width="360" alt="seasonShowMobile" src="https://user-images.githubusercontent.com/66420167/106922951-dcb4bc00-670d-11eb-9fbb-9e4a01b01a47.jpg">
 
 <h4>EpisodeShow / Episode: Desktop</h4>
-<img width="800" alt="episodeShowDesktop" src="https://user-images.githubusercontent.com/66420167/106389946-571bce00-63e6-11eb-870a-20943a6cc7af.jpg">
+<img width="800" alt="episodeShowDesktop" src="https://user-images.githubusercontent.com/66420167/106923171-184f8600-670e-11eb-9aa2-2ae9c76bde7e.jpg">
 
 <h4>EpisodeShow / Episode: Mobile</h4>
-<img width="360" alt="episodeShowMobile" src="https://user-images.githubusercontent.com/66420167/106389980-77e42380-63e6-11eb-89f6-65a63565b8fa.jpg">
+<img width="360" alt="episodeShowMobile" src="https://user-images.githubusercontent.com/66420167/106923256-2c938300-670e-11eb-90ed-60e31811a4fb.jpg">
+
+<h4>All Actors displayed / Tout les acteurs affichés: Desktop</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923480-66648980-670e-11eb-9038-5061ba7e2fee.jpg">
+
+<h4>All Actors displayed / Tout les acteurs affichés: Mobile</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923585-85631b80-670e-11eb-88d8-058840a8f9da.jpg">
+
+<h4>adminPannel / Panneau d'administration: Desktop</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924055-faceec00-670e-11eb-8cb5-3a6386123d98.jpg">
+
+<h4>adminPannel / Panneau d'administration: Mobile</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924149-13d79d00-670f-11eb-93aa-712983797815.jpg">
+
+<h4>EasyAdmin Pannel / Panneau EasyAdmin: Desktop</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924281-35d11f80-670f-11eb-96e4-357d0b65760a.jpg">
 
 <h4>createNewProgram / Crée une nouvelle série: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390414-ac58df00-63e8-11eb-8d6f-f522ab8dd663.jpg">
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923771-b6dbe700-670e-11eb-8b2c-b7d9c9e4abbb.jpg">
 
 <h4>createNewProgram / Crée une nouvelle série: Mobile</h4>
-<img width="360" alt="createNewProgramMobile" src="https://user-images.githubusercontent.com/66420167/106390076-f8a31f80-63e6-11eb-8896-7497cd65ae73.jpg">
+<img width="360" alt="createNewProgramMobile" src="https://user-images.githubusercontent.com/66420167/106923851-c8bd8a00-670e-11eb-9328-86cc27a85d27.jpg">
+
+
+
+
+
 
 <h4>editProgram / Éditer une série: Desktop</h4>
 <img width="800" alt="editProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390184-72d3a400-63e7-11eb-8d2f-ba9912258cd6.jpg">
