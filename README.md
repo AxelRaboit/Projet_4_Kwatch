@@ -67,6 +67,17 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <h4>All Actors displayed / Tout les acteurs affichés: Mobile</h4>
 <img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923585-85631b80-670e-11eb-88d8-058840a8f9da.jpg">
 
+<h4>Show Actor / Affichage de l'acteur: Desktop</h4>
+<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106925326-4766f700-6710-11eb-99cf-f6ece2123514.jpg">
+
+<h4>Show Actor / Affichage de l'acteur: Mobile</h4>
+<img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106925400-59489a00-6710-11eb-991c-1e4380dd04c8.jpg">
+
+
+
+
+
+
 <h4>adminPannel / Panneau d'administration: Desktop</h4>
 <img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924055-faceec00-670e-11eb-8cb5-3a6386123d98.jpg">
 
