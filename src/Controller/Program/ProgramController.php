@@ -114,30 +114,6 @@ class ProgramController extends AbstractController
     }
 
     /**
-     * @Route("/autocomplete", name="autocomplete", methods={"GET"})
-     * @return Response
-     */
-    public function autocomplete(Request $request, ProgramRepository $programRepository): Response
-    {
-        $query = $request->query->get('q');
-        $encoder = new JsonEncoder();
-        if (null !== $query) {
-            $programs = $programRepository->findByQuery($query);
-        }
-        $defaultContext = [
-            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
-                return $object->getId();
-            },
-        ];
-        $normalizer = new ObjectNormalizer(null, null, null, null, null, null, $defaultContext);
-        $serializer = new Serializer([$normalizer], [$encoder]);
-        $response = new Response($serializer->serialize($programs, 'json'));
-
-        return $response;
-        /* return $this->json($programs ?? [], 200); */
-    }
-
-    /**
      * @Route("/new", name="new", methods={"GET","POST"})
      */
     public function new(Request $request, Slugify $slugify): Response
