@@ -945,8 +945,15 @@ $secondary-color: hsl(0, 0%, 34%);
     font-weight: bold;
     font-size: 1.2rem;
 }
-.actorDescription, .actorDescriptionNationality, .actorRoleProgramTitle {
+.actorDescription, .actorDescriptionNationality {
     color: hsl(270, 4%, 91%);
+}
+.actorRoleProgramTitle a {
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+}
+.actorRoleProgramTitle:hover a {
+    color: $main-color;
 }
 @media (max-width: 460px) {
     .actorPicture {

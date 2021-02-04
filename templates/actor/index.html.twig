@@ -5,31 +5,11 @@
 {% block body %}
     <h1>Actor index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
         <tbody>
         {% for actor in actors %}
-            <tr>
-                <td>{{ actor.id }}</td>
-                <td>{{ actor.name }}</td>
-                <td>
-                    <a href="{{ path('actor_show', {'id': actor.id}) }}">show</a>
-                    <a href="{{ path('actor_edit', {'id': actor.id}) }}">edit</a>
-                </td>
-            </tr>
+            <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture"/>
+            <p>{{ actor.name }}</p>
         {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
+            <td colspan="3">no records found</td>
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('actor_new') }}">Create new</a>
 {% endblock %}

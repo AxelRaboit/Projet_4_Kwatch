@@ -9,7 +9,7 @@
         <div class="navDropdown-content">
           <a class="itemNavMobile" href="{{path('home_index') }}">Accueil</a>
           <a class="itemNavMobile" href="{{path('program_index') }}">Séries</a>
-          <a class="itemNavMobile" href="#">Catégories</a>
+          <a class="itemNavMobile" href="{{path('actor_index') }}">Acteurs</a>
         {% if is_granted("ROLE_ADMIN") %}
           <a class="itemNavAdminMobile" href="{{path('administration_index') }}">Admin</a>
         {% endif %}
@@ -20,7 +20,7 @@
     <div class="containerItems">
       <a href="{{path('home_index') }}" class="itemNav">Accueil</a>
       <a href="{{path('program_index') }}" class="itemNav">Séries</a>
-      <a href="" class="itemNav">Catégories</a>
+      <a  href="{{path('actor_index') }}" class="itemNav">Acteurs</a>
       {% if is_granted("ROLE_ADMIN") %}
         <a href="{{path('administration_index') }}" class="itemNavAdmin">Admin</a>
       {% endif %}
