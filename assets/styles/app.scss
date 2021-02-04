@@ -341,6 +341,11 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //ALL ACTORS
 //==================================================//
+.containerSearchActorsForm {
+    margin: 100px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+}
 .containerActorsPage {
     margin-top: 80px;
 }
@@ -2005,3 +2010,7 @@ $secondary-color: hsl(0, 0%, 34%);
         width: 280px;
     }
 }
+//==================================================//
+//FORM ACTOR CREATE
+//==================================================//
+
