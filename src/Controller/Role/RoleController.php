@@ -49,7 +49,7 @@ class RoleController extends AbstractController
             $entityManager->persist($role);
             $entityManager->flush();
 
-            return $this->redirectToRoute('role_index');
+            return $this->redirectToRoute('program_index');
         }
 
         return $this->render('role/new.html.twig', [

@@ -50,7 +50,7 @@ class ActorController extends AbstractController
             $entityManager->persist($actor);
             $entityManager->flush();
 
-            return $this->redirectToRoute('actor_index');
+            return $this->redirectToRoute('program_index');
         }
 
         return $this->render('actor/new.html.twig', [

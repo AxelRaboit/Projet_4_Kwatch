@@ -49,7 +49,7 @@ class CategoryController extends AbstractController
             $entityManager->persist($category);
             $entityManager->flush();
 
-            return $this->redirectToRoute('category_index');
+            return $this->redirectToRoute('program_index');
         }
 
         return $this->render('category/new.html.twig', [
