@@ -79,7 +79,7 @@ class RoleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('role_index');
+            return $this->redirectToRoute('program_index');
         }
 
         return $this->render('role/edit.html.twig', [
