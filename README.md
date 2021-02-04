@@ -39,10 +39,10 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="360" alt="registrationMobile" src="https://user-images.githubusercontent.com/66420167/106919413-6a8ea800-670a-11eb-8d18-17c584f96633.jpg">
 
 <h4>Home: Desktop</h4>
-<img width="800" alt="homeDesktop" src="https://user-images.githubusercontent.com/66420167/106919515-8134ff00-670a-11eb-86f4-30480e74beb8.jpg">
+<img width="800" alt="homeDesktop" src="https://user-images.githubusercontent.com/66420167/106936043-61a6d200-671c-11eb-9739-745a8996b613.jpg">
 
 <h4>Home: Mobile</h4>
-<img width="360" alt="homeMobile" src="https://user-images.githubusercontent.com/66420167/106919557-8e51ee00-670a-11eb-9575-2924bde4f0eb.jpg">
+<img width="360" alt="homeMobile" src="https://user-images.githubusercontent.com/66420167/106936004-5653a680-671c-11eb-8b0a-5ab769e07469.jpg">
 
 <h4>Programs / Toutes les séries: Desktop</h4>
 <img width="800" alt="programsDesktop" src="https://user-images.githubusercontent.com/66420167/106919685-a7f33580-670a-11eb-98f9-0c662f898f95.jpg">
@@ -108,11 +108,6 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 
 <h4>createNewProgram / Crée une nouvelle série: Mobile</h4>
 <img width="360" alt="createNewProgramMobile" src="https://user-images.githubusercontent.com/66420167/106923851-c8bd8a00-670e-11eb-9328-86cc27a85d27.jpg">
-
-
-
-
-
 
 <h4>editProgram / Éditer une série: Desktop</h4>
 <img width="800" alt="editProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390184-72d3a400-63e7-11eb-8d2f-ba9912258cd6.jpg">
