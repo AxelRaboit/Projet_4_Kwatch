@@ -6,6 +6,7 @@ use App\Entity\Season;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
@@ -22,6 +23,9 @@ class SeasonType extends AbstractType
             ])
             ->add('description', TextType::class, [
                 'label' => 'Synopsis de la saison'
+            ])
+            ->add('video', UrlType::class, [
+                'label' => 'Video'
             ])
             ->add('program', null, ['choice_label' => 'title'])
         ;
