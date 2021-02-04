@@ -1102,6 +1102,7 @@ $secondary-color: hsl(0, 0%, 34%);
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 .containerAdminHomePannel {
     display: flex;
@@ -1118,6 +1119,9 @@ $secondary-color: hsl(0, 0%, 34%);
     color: hsl(270, 4%, 91%);
     font-size: 0.8rem;
     margin: 0 0 20px 0;
+}
+.containerAdminHomePannel p {
+    text-align: center;
 }
 .containerAdminItemAdd, .containerAdminItemEdit {
     display: flex;
