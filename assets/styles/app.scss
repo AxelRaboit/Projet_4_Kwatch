@@ -632,6 +632,16 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //SEASON SHOW
 //==================================================//
+.containerAlertMessageNoEpisodes p {
+    text-align: center;
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: solid hsl(270, 4%, 91%);
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
 .containerSeasonTeaserVideo {
     margin-top: 100px;
     display: flex;
