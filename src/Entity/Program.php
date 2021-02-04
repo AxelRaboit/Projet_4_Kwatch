@@ -213,7 +213,7 @@ class Program
     {
         $this->posterFile = $posterFile;
         if ($posterFile) {
-            $this->updatedAt = new DateTime('now');
+            $this->updatedAt = new \DateTime('now');
         }
         return $this;
     }
