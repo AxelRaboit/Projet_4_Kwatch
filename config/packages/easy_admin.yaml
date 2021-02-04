@@ -42,6 +42,7 @@ easy_admin:
                   - {property: 'country', label: 'Country'}
                   - {property: 'posterFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Poster'}
                   - {property: 'updatedAt', label: 'Updated at'}
+                  - {property: 'slug', label: 'Slug'}
       Season:
           class: App\Entity\Season
           list:
