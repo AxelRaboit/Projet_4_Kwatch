@@ -803,6 +803,16 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //LOGIN & REGISTER
 //==================================================//
+.alertMessageLogin {
+    text-align: center;
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: solid hsl(270, 4%, 91%);
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 .homepageLogin, .homepageRegister {
     height: 100vh;
     display: flex;
