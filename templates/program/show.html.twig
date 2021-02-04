@@ -38,25 +38,25 @@
                     <div class="programShowActorLabel">Acteurs:</div>
                 </div>
                 <div class="containerProgramShowActorContent">
-                    <ul class="containerProgramActors">
+                    <div class="containerProgramActors">
                         {% for role in roles %}
                             <div class="containerItemActors">
                                 <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: role.actor.id})}}">
-                                    <li class"itemProgramActors">
+                                    <div class"itemProgramActors">
                                         <img class="programShowActorPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
                                         <div class="containerActorNameProgramShow">
                                             <p><span class="realNameItemActor">Nom: </span>{{ role.actor.name }}</p>
                                             <p><span class="roleItemActor">Rôle: </span>{{ role.name }}</p>
                                         </div>
-                                    </li>
+                                    </div>
                                 </a>
                             </div>
                         {% else %}
-                            <div class="containerItemActorsNone">
-                                <li class"itemProgramActorsNone">Aucun acteur pour cette série</li>
-                            </div>
+                        <div class="containerAlertMessageNoActors">
+                            <p class"alertMessageNoActors">Aucun acteurs pour cette série</p>
+                        </div>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </div>
                 <div class="containerBackToListProgramShow">
                     <a class="backToListProgramShow" href="{{ path('program_index') }}">Retour à la liste des programmes</a>
