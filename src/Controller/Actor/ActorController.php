@@ -12,12 +12,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/actor")
+ * @Route("/actor", name="actor_")
  */
 class ActorController extends AbstractController
 {
     /**
-     * @Route("/", name="actor_index", methods={"GET"})
+     * @Route("/", name="index", methods={"GET"})
      */
     public function index(ActorRepository $actorRepository): Response
     {
@@ -27,7 +27,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/admin", name="actor_admin")
+     * @Route("/admin", name="admin")
      */
     public function admin(ActorRepository $actorRepository): Response
     {
@@ -37,7 +37,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="actor_new", methods={"GET","POST"})
+     * @Route("/new", name="new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -60,7 +60,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="actor_show", methods={"GET"})
+     * @Route("/{id}", name="show", methods={"GET"}, requirements={"id": "\d+"})
      */
     public function show(Actor $actor, RoleRepository $roleRepository): Response
     {
@@ -74,7 +74,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="actor_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Actor $actor): Response
     {
@@ -94,7 +94,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="actor_delete", methods={"DELETE"})
+     * @Route("/{id}", name="delete", methods={"DELETE"})
      */
     public function delete(Request $request, Actor $actor): Response
     {
@@ -112,5 +112,22 @@ class ActorController extends AbstractController
         }
 
         return $this->redirectToRoute('actor_index');
+    }
+
+    /**
+     * @Route("/search", name="search", methods={"GET"})
+     * @return Response
+     */
+    public function search(Request $request, ActorRepository $actorRepository): Response
+    {
+        $query = $request->query->get('q');
+
+        if (null !== $query) {
+            $actors = $actorRepository->findByQuery($query);
+        }
+
+        return $this->render('actor/index.html.twig', [
+            'actors' => $actors ?? [],
+        ]);
     }
 }
