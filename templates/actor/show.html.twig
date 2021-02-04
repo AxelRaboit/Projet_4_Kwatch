@@ -6,7 +6,7 @@
     <div class="containerShowActor">
         <h1 class="ShowActorTitle">{{ actor.name }}</h1>
         {% if actor.picture %}
-            <img class="actorPicture" src="{{ asset('uploads/' ~ actor.picture) }}" alt="Actor Picture"/>
+            <img class="actorPicture" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/>
         {% else %}
             <img class="actorNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
         {% endif %}
@@ -23,10 +23,15 @@
             <p class="actorDescriptionLabel">À propos:</p>
             <hr>
             <p class="actorDescription">{{actor.description}}</p>
-            <p class="actorRoleLabel">Rôles:</p>
-            <hr>
+            
             {% for role in roles %}
-                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
+                {% if actor.roles != null %}
+                    <p class="actorRoleLabel">Rôles:</p>
+                    <hr>
+                        <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
+                {% else %}
+                    <p class="actorDescriptionRoleLabel">Cet acteur n'a pas de rôle</p>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

@@ -9,7 +9,7 @@
             {% for program in programs %}
                 <div class="containerProgramItem">
                     <div class="programItem">
-                        <a href="{{ path("program_show", { slug: program.slug }) }}"><img class="allProgramsPosterShow" src="{{ asset('uploads/' ~ program.poster) }}" alt="poster program"></a>
+                        <a href="{{ path("program_show", { slug: program.slug }) }}"><img class="allProgramsPosterShow" src="{{ '/uploads/' ~ program.poster }}" alt="poster program"></a>
                         <h2>{{ program.title }}</h2>
                     </div>
                 </div>
