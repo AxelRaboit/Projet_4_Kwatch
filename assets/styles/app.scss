@@ -22,7 +22,7 @@ $secondary-color: hsl(0, 0%, 34%);
     color: hsl(270, 4%, 91%);
     padding: 0;
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
     border: none;
     display: flex;
     flex-direction: row;
@@ -64,7 +64,6 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 /* Links inside the dropdown */
 .navDropdown-content a {
-    color: hsl(270, 4%, 91%);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -181,6 +180,25 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemNav:hover {
     color: $main-color;
+}
+.navDropdown a {
+    font-size: 12px;
+}
+.itemNavMobile {
+    color: hsl(270, 4%, 91%);
+}
+.itemNavAdminMobile {
+    color: $main-color;
+}
+.itemNavAdminMobile:hover {
+    color: hsl(270, 4%, 91%);
+}
+.itemNavAdmin {
+    margin: 0px 10px 0px 10px;
+    color: $main-color;
+}
+.itemNavAdmin:hover {
+    color: hsl(270, 4%, 91%);
 }
 .footer {
     height: 40px;
@@ -785,6 +803,16 @@ $secondary-color: hsl(0, 0%, 34%);
 //==================================================//
 //LOGIN & REGISTER
 //==================================================//
+.alertMessageLogin {
+    text-align: center;
+    background-color: $main-color;
+    color: hsl(270, 4%, 91%);
+    border: solid hsl(270, 4%, 91%);
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 .homepageLogin, .homepageRegister {
     height: 100vh;
     display: flex;
@@ -917,8 +945,15 @@ $secondary-color: hsl(0, 0%, 34%);
     font-weight: bold;
     font-size: 1.2rem;
 }
-.actorDescription, .actorDescriptionNationality, .actorRoleProgramTitle {
+.actorDescription, .actorDescriptionNationality {
     color: hsl(270, 4%, 91%);
+}
+.actorRoleProgramTitle a {
+    color: hsl(270, 4%, 91%);
+    text-decoration: none;
+}
+.actorRoleProgramTitle:hover a {
+    color: $main-color;
 }
 @media (max-width: 460px) {
     .actorPicture {
@@ -989,6 +1024,24 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .adminItem:hover {
     background-color: $secondary-color;
+}
+.adminItemEasyAdmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    height: 10px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $secondary-color;
+    color: hsl(270, 4%, 91%);
+    margin: 10px;
+    text-decoration: none;
+}
+.adminItemEasyAdmin:hover {
+    background-color: $main-color;
 }
 @media (max-width: 520px) {
     .adminHomePannel {

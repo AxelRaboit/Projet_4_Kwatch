@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="containerHomePage">
+    {% if is_granted("ROLE_ADMIN") %}
+        <div class="adminHomePannel">
+            <div class="containerAdminHomePannel">
+                <h2 class="adminHomePannelTitle">Panneau d'administration</h2>
+                <p class="adminHomePannelInfo">( Ce panneau est uniquement vu par les administrateurs )</p>
+            </div>
+            <div class="containerAdminItemAdd">
+                <a class="adminItem" href="{{path('category_new')}}">Nouvelle catégorie</a>
+                <a class="adminItem" href="{{path('program_new')}}">Nouvelle série</a>
+                <a class="adminItem" href="{{path('season_new')}}">Nouvelle saison</a>
+                <a class="adminItem" href="{{path('episode_new')}}">Nouvel épisode</a>
+                <a class="adminItem" href="{{path('actor_new')}}">Nouvel acteur</a>
+                <a class="adminItem" href="{{path('role_new')}}">Nouveau Rôle</a>
+            </div>
+            <div class="containerAdminItemEdit">
+                <a class="adminItem" href="{{path('category_admin')}}">Editer une categorie</a>
+                <a class="adminItem" href="{{path('program_admin')}}">Editer une série</a>
+                <a class="adminItem" href="{{path('season_admin')}}">Editer une saison</a>
+                <a class="adminItem" href="{{path('episode_admin')}}">Editer un episode</a>
+                <a class="adminItem" href="{{path('actor_admin')}}">Editer un acteur</a>
+                <a class="adminItem" href="{{path('role_admin')}}">Editer un rôle</a>
+            </div>
+            <div>
+                <a class="adminItemEasyAdmin" href="{{path('easyadmin')}}">EasyAdmin</a>   
+            </div>
+        </div>
+      {% endif %}
+    </div>
+{% endblock %}
