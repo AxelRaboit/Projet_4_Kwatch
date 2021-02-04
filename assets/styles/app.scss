@@ -497,7 +497,6 @@ $secondary-color: hsl(0, 0%, 34%);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-right: 40px;
 }
 .programShowActorPicture {
     height: 120px;
@@ -505,8 +504,15 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 50%;
     align-self: center;
 }
-.containerItemActorsNone {
+.containerAlertMessageNoActors p {
+    text-align: center;
+    background-color: $main-color;
     color: hsl(270, 4%, 91%);
+    border: solid hsl(270, 4%, 91%);
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 .containerItemActors {
     margin: 5px;
