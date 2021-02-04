@@ -71,7 +71,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924055-faceec00-670e-11eb-8cb5-3a6386123d98.jpg">
 
 <h4>adminPannel / Panneau d'administration: Mobile</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924149-13d79d00-670f-11eb-93aa-712983797815.jpg">
+<img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924149-13d79d00-670f-11eb-93aa-712983797815.jpg">
 
 <h4>EasyAdmin Pannel / Panneau EasyAdmin: Desktop</h4>
 <img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924281-35d11f80-670f-11eb-96e4-357d0b65760a.jpg">
