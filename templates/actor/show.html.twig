@@ -26,7 +26,7 @@
             <p class="actorRoleLabel">Rôles:</p>
             <hr>
             {% for role in roles %}
-                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> {{ role.program.title }}</p>
+                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
             {% endfor %}
         </div>
     </div>
