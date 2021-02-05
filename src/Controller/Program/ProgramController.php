@@ -53,13 +53,15 @@ class ProgramController extends AbstractController
      */
     public function show(Program $program, RoleRepository $roleRepository): response    /* to get by id -> ("/show/{id<^[0-9]+$>}", name="show") */
     {
+        $directors = $program->getDirectors();
         $seasons = $program->getSeasons();
         $roles = $roleRepository->findBy(['program' => $program->getId()]);
 
         return $this->render('program/show.html.twig', [
             'program' => $program,
             'seasons' => $seasons,
-            'roles' => $roles
+            'roles' => $roles,
+            'directors' => $directors
         ]);
     }
 
