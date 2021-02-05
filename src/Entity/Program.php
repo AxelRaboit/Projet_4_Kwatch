@@ -83,11 +83,17 @@ class Program
      */
     private $role;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Director::class, mappedBy="program")
+     */
+    private $directors;
+
     public function __construct()
     {
         $this->seasons = new ArrayCollection();
         $this->actors = new ArrayCollection();
         $this->role = new ArrayCollection();
+        $this->directors = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -253,6 +259,33 @@ class Program
             if ($role->getProgram() === $this) {
                 $role->setProgram(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Director[]
+     */
+    public function getDirectors(): Collection
+    {
+        return $this->directors;
+    }
+
+    public function addDirector(Director $director): self
+    {
+        if (!$this->directors->contains($director)) {
+            $this->directors[] = $director;
+            $director->addProgram($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDirector(Director $director): self
+    {
+        if ($this->directors->removeElement($director)) {
+            $director->removeProgram($this);
         }
 
         return $this;
