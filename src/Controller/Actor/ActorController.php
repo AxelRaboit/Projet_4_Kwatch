@@ -111,7 +111,7 @@ class ActorController extends AbstractController
             }
         }
 
-        return $this->redirectToRoute('actor_index');
+        return $this->redirectToRoute('program_index');
     }
 
     /**

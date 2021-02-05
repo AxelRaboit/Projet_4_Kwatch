@@ -24,6 +24,7 @@ body {
 //==================================================//
 $main-color: hsl(0, 57%, 45%);
 $secondary-color: hsl(0, 0%, 34%); 
+$third-color: $third-color;
 
 //==================================================//
 //NAVBAR
@@ -31,7 +32,7 @@ $secondary-color: hsl(0, 0%, 34%);
 /* Dropdown Button */
 .dropbtn {
     background-color: rgba(62, 61, 61, 0);
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     padding: 0;
     margin: 0;
     font-size: 12px;
@@ -139,19 +140,6 @@ $secondary-color: hsl(0, 0%, 34%);
     display: flex;
     align-items: center;
 }
-#autocomplete {
-    margin-top: 100px;
-    background-color: white;
-    width: 217px;
-}
-#autocomplete a {
-    color: black;
-    
-}
-#autocomplete li {
-    list-style: none;
-    padding: 15px;
-}
 #searchBar {
     border: none;
     border-radius: 10px 0px 0px 10px;
@@ -163,7 +151,7 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 0px 10px 10px 0px;
     border: none;
     background-color: $main-color;
-    color: white;
+    color: $third-color;
     height: 32px;
 }
 .navbar-brand {
@@ -187,7 +175,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-decoration: none;
 }
 .itemNav {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-size: 16px;
     margin: 0px 10px 0px 10px;
 }
@@ -198,20 +186,20 @@ $secondary-color: hsl(0, 0%, 34%);
     font-size: 12px;
 }
 .itemNavMobile {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .itemNavAdminMobile {
     color: $main-color;
 }
 .itemNavAdminMobile:hover {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .itemNavAdmin {
     margin: 0px 10px 0px 10px;
     color: $main-color;
 }
 .itemNavAdmin:hover {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .footer {
     height: 40px;
@@ -239,7 +227,7 @@ $secondary-color: hsl(0, 0%, 34%);
         border-radius: 0px 10px 10px 0px;
         border: none;
         background-color: HSL(0, 57%, 45%);
-        color: hsl(270, 4%, 91%);
+        color: $third-color;
     }
 }
 @media (max-width: 780px) {
@@ -268,7 +256,7 @@ $secondary-color: hsl(0, 0%, 34%);
         border-radius: 0px 10px 10px 0px;
         border: none;
         background-color: HSL(0, 57%, 45%);
-        color: hsl(270, 4%, 91%);
+        color: $third-color;
     }
     .navbar-logout {
         font-size: 11px;
@@ -298,7 +286,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .welcomeMessageHomePage {
     text-align: center;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-family: 'GoboldBold';
     font-size: 3rem;
 }
@@ -313,7 +301,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .containerProgramsPage h1 {
     text-align: center;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-family: "GoboldBold";
 }
 .itemAllProgram {
@@ -347,7 +335,7 @@ $secondary-color: hsl(0, 0%, 34%);
     width: 285px;
 }
 .programItem h2 {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin-bottom: 10px;
     font-size: 16px;
     font-family: 'GoboldBold';
@@ -365,7 +353,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .containerActorsPage h1 {
     text-align: center;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-family: 'GoboldBold';
 }
 .itemAllActors {
@@ -395,7 +383,7 @@ $secondary-color: hsl(0, 0%, 34%);
     align-items: center;
 }
 .actorItem h2 {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin-bottom: 10px;
     font-size: 16px;
     font-family: 'GoboldBold';
@@ -406,8 +394,8 @@ $secondary-color: hsl(0, 0%, 34%);
 .alertMessageNoSeason {
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
-    border: solid hsl(270, 4%, 91%);
+    color: $third-color;
+    border: solid $third-color;
     padding: 10px;
     width: 300px;
     border-radius: 10px;
@@ -463,7 +451,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .programShowSynopsisLabel {
     margin-top: 80px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-size: 1.8rem;
 }
 .containerProgramShowActorLabel {
@@ -474,7 +462,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .programShowActorLabel {
     margin-top: 80px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-size: 1.8rem;
     font-family: 'GoboldBold';
 }
@@ -485,7 +473,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
 }
 .programShowSynopsisContent {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     width: 80%;
 }
 .categoryShowTitle {
@@ -498,7 +486,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .categoryShowInformation {
     margin: 20px 0px 20px 0px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
 }
 .containerSeasonShow {
@@ -531,8 +519,8 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerAlertMessageNoActors p {
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
-    border: solid hsl(270, 4%, 91%);
+    color: $third-color;
+    border: solid $third-color;
     padding: 10px;
     width: 300px;
     border-radius: 10px;
@@ -554,7 +542,7 @@ $secondary-color: hsl(0, 0%, 34%);
     background-color: $secondary-color;
 }
 .containerLinkItemProgramActors {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     text-decoration: none;
 }
 .containerLinkItemProgramActors li {
@@ -635,8 +623,8 @@ $secondary-color: hsl(0, 0%, 34%);
 .containerAlertMessageNoEpisodes p {
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
-    border: solid hsl(270, 4%, 91%);
+    color: $third-color;
+    border: solid $third-color;
     padding: 10px;
     width: 300px;
     border-radius: 10px;
@@ -681,7 +669,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-decoration: none;
 }
 .episodeNumberNumberAndTitle {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 /*     margin-top: 9px; */
     display: flex;
     justify-content: center;
@@ -807,7 +795,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .episodeShowSynopsisLabel {
     margin-top: 80px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-size: 1.8rem;
 }
 .containerEpisodeShowSynopsisContent {    
@@ -817,7 +805,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
 }
 .episodeShowSynopsisContent {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     width: 80%;
 }
 .episodePosterShow {
@@ -897,15 +885,15 @@ $secondary-color: hsl(0, 0%, 34%);
 .alertMessageLogin {
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
-    border: solid hsl(270, 4%, 91%);
+    color: $third-color;
+    border: solid $third-color;
     padding: 10px;
     width: 300px;
     border-radius: 10px;
     margin-top: 10px;
 }
 .containerMessageIsConnectedLogin a {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     text-decoration: none;
 }
 .messageIsConnectedLogin {
@@ -938,13 +926,13 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
 }
 .loginConnectedTitle, .registerTitle {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .containerLoginInputEmail label, .containerLoginInputPassword label {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .containerRegistrationForm label {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .registerBackButton {
     text-decoration: none;
@@ -980,13 +968,13 @@ $secondary-color: hsl(0, 0%, 34%);
     background-color: $main-color;
     font-size: 1rem;
     text-decoration: none;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin: 20px;
     cursor: pointer;
 }
 .submitConnexion a, .submitRegistration a {
     text-decoration: none;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .containerLoginInputEmail, .containerLoginInputPassword {
     display: flex;
@@ -1007,8 +995,8 @@ $secondary-color: hsl(0, 0%, 34%);
 .alertMessageNoRoles {
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
-    border: solid hsl(270, 4%, 91%);
+    color: $third-color;
+    border: solid $third-color;
     padding: 10px;
     width: 300px;
     border-radius: 10px;
@@ -1059,10 +1047,10 @@ $secondary-color: hsl(0, 0%, 34%);
     font-size: 1.2rem;
 }
 .actorDescription, .actorDescriptionNationality {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
 }
 .actorRoleProgramTitle a {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     text-decoration: none;
 }
 .actorRoleProgramTitle:hover a {
@@ -1095,7 +1083,7 @@ $secondary-color: hsl(0, 0%, 34%);
      margin: 20px;
      font-size: 2rem;
      font-weight: bold;
-     color: hsl(270, 4%, 91%);
+     color: $third-color;
      text-align: center;
  }
 .adminHomePannel {
@@ -1121,7 +1109,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
 }
 .adminHomePannel .adminHomePannelInfo {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-size: 0.8rem;
     margin: 0 0 20px 0;
 }
@@ -1145,7 +1133,7 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 10px;
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin: 10px;
     text-decoration: none;
 }
@@ -1163,7 +1151,7 @@ $secondary-color: hsl(0, 0%, 34%);
     border-radius: 10px;
     text-align: center;
     background-color: $secondary-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin: 10px;
     text-decoration: none;
 }
@@ -1194,7 +1182,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 10px;
     width:140px;
     font-size: 0.7rem;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     text-decoration: none;
 
     display: flex;
@@ -1235,7 +1223,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1245,7 +1233,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemProgramListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1278,7 +1266,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1288,7 +1276,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemRoleListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1321,7 +1309,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1331,7 +1319,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemActorListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1365,7 +1353,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1375,7 +1363,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemCategoryListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1409,7 +1397,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1419,7 +1407,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemSeasonListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1453,7 +1441,7 @@ $secondary-color: hsl(0, 0%, 34%);
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -1463,7 +1451,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemEpisodeListContentButtons {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1495,7 +1483,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 10px;
     width:140px;
     font-size: 0.7rem;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     text-decoration: none;
     
     display: flex;
@@ -1509,7 +1497,7 @@ $secondary-color: hsl(0, 0%, 34%);
 //We need it later
 /* .programDelete button {
     background-color: hsl(0, 57%, 45%);
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
     font-size: 0.7rem;
 
@@ -1572,7 +1560,7 @@ $secondary-color: hsl(0, 0%, 34%);
     flex-direction: column;
 }
 .itemCategoryFormName label {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin-bottom: 10px;
 }
 .itemCategoryFormName input {
@@ -1591,7 +1579,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .newCategorySubmitButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
     border-radius: 10px;
     padding: 10px 100px;
@@ -1602,7 +1590,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .newCategoryBackButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1656,7 +1644,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .editProgramDeleteButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
     border-radius: 10px;
     padding: 10px 100px;
@@ -1666,7 +1654,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .editProgramDeleteButton .itemDeleteProgram {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
 }
 .editProgramDeleteButton:hover {
@@ -1690,7 +1678,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .editProgramBackButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     padding: 10px 100px;
     font-size: 0.7rem;
@@ -1762,12 +1750,12 @@ $secondary-color: hsl(0, 0%, 34%);
     width: 400px;
 }
 .vich-file input {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     background-color: $main-color;
     border-radius: 10px;
 }
 .itemProgramFormTitle label, .itemProgramFormCountry label, .itemProgramFormSynopsis label, .itemProgramFormCategory label, .itemProgramFormPosterFile label {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin-bottom: 10px;
 }
 .itemProgramFormTitle input, .itemProgramFormCountry input {
@@ -1804,7 +1792,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 14px;
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     font-size: 0.7rem;
     margin: 10px 0px 40px 0px;
@@ -1816,7 +1804,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemProgramSubmitButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
     margin: 10px;
     border-radius: 10px;
@@ -1952,7 +1940,7 @@ $secondary-color: hsl(0, 0%, 34%);
     flex-direction: column;
 }
 .itemRoleFormName label, .itemRoleFormActor label, .itemRoleFormProgram label {
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     margin-bottom: 10px;
 }
 .itemRoleFormName input {
@@ -1982,7 +1970,7 @@ $secondary-color: hsl(0, 0%, 34%);
     height: 14px;
     text-align: center;
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border-radius: 10px;
     font-size: 0.7rem;
     margin: 10px 0px 40px 0px;
@@ -1994,7 +1982,7 @@ $secondary-color: hsl(0, 0%, 34%);
 }
 .itemRoleSubmitButton {
     background-color: $main-color;
-    color: hsl(270, 4%, 91%);
+    color: $third-color;
     border: none;
     margin: 10px;
     border-radius: 10px;
