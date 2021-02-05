@@ -19,7 +19,7 @@ class EpisodeType extends AbstractType
             ->add('number')
             ->add('summary')
             ->add('imageFile', VichFileType::class, [
-                'required'      => true,
+                'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_uri'  => false, // not mandatory, default is true
 
