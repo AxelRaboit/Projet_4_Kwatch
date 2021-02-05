@@ -17,7 +17,7 @@ class DirectorType extends AbstractType
         $builder
             ->add('name')
             ->add('pictureFile', VichFileType::class, [
-                'required'      => true,
+                'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_uri' => false, // not mandatory, default is true
     ])
