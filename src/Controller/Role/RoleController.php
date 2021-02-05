@@ -99,6 +99,6 @@ class RoleController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('role_index');
+        return $this->redirectToRoute('program_index');
     }
 }

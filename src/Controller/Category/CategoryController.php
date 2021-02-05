@@ -99,6 +99,6 @@ class CategoryController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('category_index');
+        return $this->redirectToRoute('program_index');
     }
 }

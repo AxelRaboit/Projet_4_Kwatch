@@ -106,6 +106,6 @@ class EpisodeController extends AbstractController
             }
         }
 
-        return $this->redirectToRoute('episode_index');
+        return $this->redirectToRoute('program_index');
     }
 }
