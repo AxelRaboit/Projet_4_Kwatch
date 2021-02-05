@@ -45,6 +45,15 @@ class SeasonController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+/*             $video = $form['video'];
+            $videoReplaced = preg_replace('@embed/([^"&]*)@', 'embed/$1&showinfo=0', $video);
+            
+            array_replace($form['video'], $$videoReplaced);
+            dd($form); */
+
+            //TODO -> REGEX TO TRANSFORM THE YOUTUBE VIDEO WITH THE PREFIX EMBED
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($season);
             $entityManager->flush();
@@ -77,6 +86,10 @@ class SeasonController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            //TODO -> REGEX TO TRANSFORM THE YOUTUBE VIDEO WITH THE PREFIX EMBED
+
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('program_index');
