@@ -45,6 +45,13 @@ class SeasonController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+/*             $video = $form['video'];
+            $videoReplaced = preg_replace('@embed/([^"&]*)@', 'embed/$1&showinfo=0', $video);
+            
+            array_replace($form['video'], $$videoReplaced);
+            dd($form); */
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($season);
             $entityManager->flush();
