@@ -11,7 +11,13 @@ vich_uploader:
             delete_on_remove: true
 
         picture_file:
-            uri_prefix: /images/pictures  # Photos de d'acteur
+            uri_prefix: /images/pictures  # Photos d'acteurs
+            upload_destination: '%upload_directory%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+            delete_on_remove: true
+
+        picture_director_file:
+            uri_prefix: /images/director_pictures  # Photos de réalisateurs
             upload_destination: '%upload_directory%'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
             delete_on_remove: true
