@@ -2,13 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\DirectorRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\DirectorRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=DirectorRepository::class)
+ * @Vich\Uploadable
  */
 class Director
 {
@@ -25,9 +30,26 @@ class Director
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $picture;
+
+    /**
+     * @Vich\UploadableField(mapping="picture_director_file", fileNameProperty="picture")
+     * @var File
+     * @Assert\File(
+     *     maxSize="2000000",
+     *     mimeTypes={"image/jpeg", "image/png", "image/jpg"},
+     *     mimeTypesMessage="Le fichier doit être au format .jpg, .png ou .jpeg."
+     * )
+     */
+    private $pictureFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var Datetime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -76,6 +98,20 @@ class Director
         $this->picture = $picture;
 
         return $this;
+    }
+
+    public function setPictureFile(File $pictureFile = null): Director
+    {
+        $this->pictureFile = $pictureFile;
+        if ($pictureFile) {
+          $this->updatedAt = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getPictureFile(): ?File
+    {
+        return $this->pictureFile;
     }
 
     public function getNationality(): ?string
