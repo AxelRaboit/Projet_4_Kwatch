@@ -35,6 +35,30 @@
                     {% endfor %}
                 </div>
                 <div class="containerProgramShowActorLabel">
+                    <div class="programShowActorLabel">Réalisateur(s):</div>
+                </div>
+                <div class="containerProgramShowActorContent">
+                    <div class="containerProgramActors">
+                        {% for director in directors %}
+                            <div class="containerItemActors">
+                                <a class="containerLinkItemProgramActors" href="{{ path('director_show', {id: director.id})}}">
+                                    <div class"itemProgramActors">
+                                        {# <img class="programShowActorPicture" src="{{ '/uploads/' ~ director.picture }}" alt="Actor Picture"/> #}
+                                        <div class="containerActorNameProgramShow">
+                                            <p><span class="realNameItemActor">Nom: </span>{{ director.name }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="containerAlertMessageNoActors">
+                                <p class"alertMessageNoActors">Aucun directeurs pour cette série</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="containerProgramShowActorLabel">
                     <div class="programShowActorLabel">Acteurs:</div>
                 </div>
                 <div class="containerProgramShowActorContent">
@@ -52,9 +76,9 @@
                                 </a>
                             </div>
                         {% else %}
-                        <div class="containerAlertMessageNoActors">
-                            <p class"alertMessageNoActors">Aucun acteurs pour cette série</p>
-                        </div>
+                            <div class="containerAlertMessageNoActors">
+                                <p class"alertMessageNoActors">Aucun acteurs pour cette série</p>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
