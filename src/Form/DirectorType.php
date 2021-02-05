@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Program;
 use App\Entity\Director;
 use Symfony\Component\Form\AbstractType;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,7 +16,11 @@ class DirectorType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('picture')
+            ->add('pictureFile', VichFileType::class, [
+                'required'      => true,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_uri' => false, // not mandatory, default is true
+    ])
             ->add('nationality')
             ->add('description')
             ->add('program', EntityType::class, [
