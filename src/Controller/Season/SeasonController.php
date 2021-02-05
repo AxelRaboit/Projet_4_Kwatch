@@ -46,13 +46,20 @@ class SeasonController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-/*             $video = $form['video'];
-            $videoReplaced = preg_replace('@embed/([^"&]*)@', 'embed/$1&showinfo=0', $video);
+            $video = $form->get('video')->getData();            
+            $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
+            $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';
             
-            array_replace($form['video'], $$videoReplaced);
-            dd($form); */
+            if (preg_match($longUrlRegex, $video, $matches)) {
+                $youtube_id = $matches[count($matches) - 1];
+            }
+            
+            if (preg_match($shortUrlRegex, $video, $matches)) {
+                $youtube_id = $matches[count($matches) - 1];
+            }
+            $videoReplaced = 'https://www.youtube.com/embed/' . $youtube_id ;
+            $season->setVideo($videoReplaced);
 
-            //TODO -> REGEX TO TRANSFORM THE YOUTUBE VIDEO WITH THE PREFIX EMBED
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($season);
