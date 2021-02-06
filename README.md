@@ -31,10 +31,10 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <h2>AVANCEMENT DE LA BASE DE DONNÉE</h2>
 
 <h4>MCD</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107121793-9b024d80-6894-11eb-894e-3655c621a358.png">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129187-e4b65c80-68c3-11eb-8ef6-85013a9ca1b5.png">
 
 <h4>MLD</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107121792-9a69b700-6894-11eb-8f79-b410a381a00a.png">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129186-e41dc600-68c3-11eb-948e-36eca60c9b40.png">
 
 <h4>ARBORESCENCE</h4>
 <img width="800" src="https://user-images.githubusercontent.com/66420167/107122604-e9b1e680-6898-11eb-8850-9e5f8c77a1c0.png">
