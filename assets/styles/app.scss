@@ -1576,6 +1576,18 @@ body {
 .itemFormNewSelect select {
     text-align: center;
 }
+.containerFormNewElementsMultipleSelect {
+    display: flex;
+    justify-content: center;
+}
+.itemFormNewMultipleSelect {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+.itemFormNewMultipleSelect div {
+    line-height: 50px;
+}
 .itemFormNewTextArea textarea {
     height: 200px;
 }
