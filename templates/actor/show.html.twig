@@ -27,7 +27,9 @@
             {% for role in roles %}
                 <p class="actorRoleLabel">Rôles:</p>
                 <hr>
-                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span> <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a></p>
+                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span>
+                    <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a>
+                </p>
             {% else %}
                 <p class="actorRoleLabel">Rôles:</p>
                 <hr>
