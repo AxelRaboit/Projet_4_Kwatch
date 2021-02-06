@@ -1,3 +1,10 @@
+//==================================================//
+//VARIABLE
+//==================================================//
+$main-color: hsl(0, 57%, 45%);
+$secondary-color: hsl(0, 0%, 34%); 
+$third-color: hsl(270, 4%, 91%);
+
 @font-face {
     font-family: "GoboldBold";
     src:url("../Fonts/GoboldBold.woff") format("opentype");
@@ -17,14 +24,10 @@ body {
     background-color: hsl(0, 0%, 14%);
     font-family: "PoppinsRegular";
     
+    color: $third-color;
+    
 }
 
-//==================================================//
-//VARIABLE
-//==================================================//
-$main-color: hsl(0, 57%, 45%);
-$secondary-color: hsl(0, 0%, 34%); 
-$third-color: hsl(270, 4%, 91%);
 
 //==================================================//
 //NAVBAR

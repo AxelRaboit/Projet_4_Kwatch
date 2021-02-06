@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>Paramètres de mon compte</h1>
+
+    <div>
+        <div>{{ user.email }}</div>
+        <div>{{ user.firstname }} {{ user.lastname }}</div>
+        <div>{{ user.pseudo }}</div>
+    </div>
+
+    <div class="myProfileEdition">
+        <a class="myProfileEditButton" href="{{ path('user_update_password', {'id': user.id}) }}">Modifier mon mot de passe</a>
+    </div>
+
+    <a href="{{ path('user_edit', {'id': user.id}) }}">Modifier mes informations</a>  
+{% endblock %}

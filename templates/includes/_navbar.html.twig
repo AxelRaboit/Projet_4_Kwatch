@@ -35,7 +35,7 @@
         <button id="submitSearchButton">Chercher</button>
     </form>
 {#     <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a> #}
-    <a href=""><img class="accountLogo" src="{{ asset('/build/images/img/account/account.png') }}" alt="account logo"></a>
+    <a href="{{path('user_profile', {id: app.user.id})}}"><img class="accountLogo" src="{{ asset('/build/images/img/account/account.png') }}" alt="account logo"></a>
   </div>
 </nav>
 
