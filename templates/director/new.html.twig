@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Director{% endblock %}
+{% block title %}Nouveau réalisateur | {{ parent() }}{% endblock %}
 
 {% block body %}
-    <h1>Create new Director</h1>
+    <div class="containerFormNew">
+        <h1 class="newFormNewTitle">Créer une nouveau réalisateur</h1>
 
-    {{ include('director/_form.html.twig') }}
-
-    <a href="{{ path('director_index') }}">back to list</a>
+        {{ include('director/_form.html.twig') }}
+    </div>
 {% endblock %}

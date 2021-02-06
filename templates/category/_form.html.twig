@@ -1,11 +1,13 @@
 {{ form_start(form) }}
-    <div class="containerNewCategoryForm">
-        <div class="containerCategoryFormName">
-            <div class="itemCategoryFormName">{{ form_row(form.name) }}</div>
+    <div class="containerFormNewElements">
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.name) }}</div>
         </div>
-        <div class="containerNewCategoryButtons">
-            <button class="newCategorySubmitButton">{{ button_label|default('Créer') }}</button>
-            <a class="newCategoryBackButton" href="{{path('home_index')}}">Retour</a>
+        <div class="containerFormNewElementButtons">
+            <button class="itemFormNewSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+        <div class="containerFormNewButtons">
+            <a class="formNewBackButton" href="{{path('home_index')}}">Retour</a>
         </div>
     </div>
 {{ form_end(form) }}

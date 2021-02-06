@@ -1,4 +1,25 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="containerFormNewElements">
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.title) }}</div>
+        </div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.number) }}</div>
+        </div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewTextArea">{{ form_row(form.summary) }}</div>
+        </div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewUpload">{{ form_row(form.imageFile) }}</div>
+        </div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSelect">{{ form_row(form.season) }}</div>
+        </div>
+        <div class="containerFormNewElementButtons">
+            <button class="itemFormNewSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+        <div class="containerFormNewButtons">
+            <a class="formNewBackButton" href="{{path('home_index')}}">Retour</a>
+        </div>
+    </div>
 {{ form_end(form) }}

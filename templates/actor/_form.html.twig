@@ -1,19 +1,23 @@
 {{ form_start(form) }}
-    <div class="containerNewActorForm">
-        <div class="containerActorFormName">
-            <div class="itemActorFormName">{{ form_row(form.name) }}</div>
+
+    <div class="containerFormNewElements">
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.name) }}</div>
         </div>
-        <div class="containerActorFormPictureFile">
-            <div class="itemActorFormActorPictureFile">{{ form_row(form.pictureFile) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewTextArea">{{ form_row(form.description) }}</div>
         </div>
-        <div class="containerActorFormNationality">
-            <div class="itemActorFormNationality">{{ form_row(form.nationality) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewUpload">{{ form_row(form.pictureFile) }}</div>
         </div>
-        <div class="containerActorFormDescription">
-            <div class="itemActorFormDescription">{{ form_row(form.description) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.nationality) }}</div>
         </div>
-        <div class="containerNewActorButtons">
-            <button class="itemActorSubmitButton">{{ button_label|default('Créer') }}</button>
+        <div class="containerFormNewElementButtons">
+            <button class="itemFormNewSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+        <div class="containerFormNewButtons">
+            <a class="formNewBackButton" href="{{path('home_index')}}">Retour</a>
         </div>
     </div>
 {{ form_end(form) }}
