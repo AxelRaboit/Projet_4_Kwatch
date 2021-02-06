@@ -55,7 +55,7 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107115500-64fda300-686d-11eb-8e09-df1fd6f83094.jpg">
 
 <h4>HomePage / Page d'accueil: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107129787-555f7800-68c8-11eb-884d-f2a5c4b49146.jpg)">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129858-d1f25680-68c8-11eb-81be-5e931ffbee9d.jpg">
 
 <h4>HomePage / Page d'accueil: Mobile</h4>
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107129789-5690a500-68c8-11eb-8989-61d0d273d0b6.jpg">
@@ -67,58 +67,58 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107129803-7627cd80-68c8-11eb-8922-18be81bb8603.jpg">
 
 <h4>Program Show / Page de la série: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115859-bf97fe80-686f-11eb-85bd-7946871f0d3e.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129817-8fc91500-68c8-11eb-85ad-361b5bf5a1ca.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115597-0be23f00-686e-11eb-9c41-4b08f19695a6.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129819-9192d880-68c8-11eb-8aa2-35a416d67a3e.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115599-100e5c80-686e-11eb-9fd5-21f924ff5f12.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129821-92c40580-68c8-11eb-89be-62520562a746.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115876-d76f8280-686f-11eb-900c-3f9336bccf90.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129823-948dc900-68c8-11eb-960e-9f37c41c2370.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115604-18ff2e00-686e-11eb-83f0-1b04678757a0.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129825-96578c80-68c8-11eb-8ef0-27cb6509c597.jpg">
 
 <h4>Season Show / Page de la saison: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115639-5a8fd900-686e-11eb-9688-b4ee29e4944a.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129906-18e04c00-68c9-11eb-8c4b-4736bdce0e27.jpg">
 
 <h4>Season Show / Page de la saison: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115646-5fed2380-686e-11eb-8c6c-03cec2356648.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129907-1a117900-68c9-11eb-9623-f54bbca797a2.jpg">
 
 <h4>Episode Show / Page des episodes: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115672-8e6afe80-686e-11eb-811c-44d3d602a91e.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129924-50e78f00-68c9-11eb-9448-c3e704f367a2.jpg">
 
 <h4>Episode Show / Page des episodes: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115673-91fe8580-686e-11eb-853e-fab429ab85d9.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129926-5218bc00-68c9-11eb-9c85-8e6eb5342a19.jpg">
 
 <h4>All Actors / Tout les acteurs: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115700-beb29d00-686e-11eb-986c-037b078fdbad.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129935-63fa5f00-68c9-11eb-9c35-4b08776e8386.jpg">
 
 <h4>All Actors / Tout les acteurs: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115703-c1ad8d80-686e-11eb-89f3-680c49f17524.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129936-652b8c00-68c9-11eb-906b-80f749560b5c.jpg">
 
 <h4>Actors Show / Page de l'acteur: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115723-e6096a00-686e-11eb-87a9-5cc0d3dc241d.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129945-76749880-68c9-11eb-95b6-9be282515d72.jpg">
 
 <h4>Actors Show / Page de l'acteur: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115727-e9045a80-686e-11eb-9c9a-b32670ae3e1b.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129946-77a5c580-68c9-11eb-8c63-0151fc9bb7b4.jpg">
 
 <h4>Admin Panel / Panneau d'administration: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115757-236df780-686f-11eb-971c-1884ba929a26.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129997-e2570100-68c9-11eb-8692-52135b1275cf.jpg">
 
 <h4>Admin Panel / Panneau d'administration: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115761-25d05180-686f-11eb-911e-179cda529277.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129995-e1be6a80-68c9-11eb-9a72-554e5d0182c6.jpg">
 
 <h4>Easy Admin / Panneau d'administration Easy Admin: Desktop</h4>
 <img width="800" src="https://user-images.githubusercontent.com/66420167/107115766-2832ab80-686f-11eb-973b-f15fd70b1bd4.jpg">
 
 <h4>Form / Formulaire: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107117864-7cdd2300-687d-11eb-961b-f9893897e0bb.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107129961-97d58480-68c9-11eb-9224-45b4b8606d33.jpg">
 
 <h4>Form / Formulaire: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107117865-7d75b980-687d-11eb-80cb-5730df07bf03.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107129962-9906b180-68c9-11eb-98dc-ec6c23172182.jpg">
 
 
 
