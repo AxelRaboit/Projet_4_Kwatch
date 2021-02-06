@@ -33,11 +33,14 @@ class Role
      */
     private $program;
 
+<<<<<<< HEAD
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $role;
 
+=======
+>>>>>>> 37217bd6a603581c5c849a49234afe60dc9ee62c
     public function getId(): ?int
     {
         return $this->id;
@@ -83,6 +86,7 @@ class Role
     {
         return $this->name;
     }
+<<<<<<< HEAD
 
     public function getRole(): ?string
     {
@@ -95,4 +99,6 @@ class Role
 
         return $this;
     }
+=======
+>>>>>>> 37217bd6a603581c5c849a49234afe60dc9ee62c
 }
