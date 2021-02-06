@@ -391,7 +391,7 @@ $third-color: hsl(270, 4%, 91%);
 //==================================================//
 //PROGRAM SHOW
 //==================================================//
-.alertMessageNoSeason {
+.alertMessageNoItem {
     text-align: center;
     background-color: $main-color;
     color: $third-color;
@@ -454,13 +454,13 @@ $third-color: hsl(270, 4%, 91%);
     color: $third-color;
     font-size: 1.8rem;
 }
-.containerProgramShowActorLabel {
+.containerProgramShowPersonLabel {
     display: flex;
     justify-content:center;
     align-items:center;
     margin-bottom: 20px;
 }
-.programShowActorLabel {
+.programShowPersonLabel {
     margin-top: 80px;
     color: $third-color;
     font-size: 1.8rem;
@@ -503,20 +503,20 @@ $third-color: hsl(270, 4%, 91%);
     margin: 10px;
     font-size: 1.5rem;
 }
-.containerProgramActors {
+.containerProgramPerson {
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-.programShowActorPicture {
+.programShowPersonPicture {
     height: 120px;
     width: 120px;
     border-radius: 50%;
     align-self: center;
 }
-.containerAlertMessageNoActors p {
+.containerAlertMessageNoItem p {
     text-align: center;
     background-color: $main-color;
     color: $third-color;
@@ -526,40 +526,40 @@ $third-color: hsl(270, 4%, 91%);
     border-radius: 10px;
     margin-top: 50px;
 }
-.containerItemActors {
+.containerItemPerson {
     margin: 5px;
     padding: 10px;
     border-radius: 10px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-.containerItemActors:hover {
+.containerItemPerson:hover {
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
 }
 
-.containerItemActors:hover {
+.containerItemPerson:hover {
     background-color: $secondary-color;
 }
-.containerLinkItemProgramActors {
+.containerLinkItemProgramPerson {
     color: $third-color;
     text-decoration: none;
 }
-.containerLinkItemProgramActors li {
+.containerLinkItemProgramPerson li {
     display: flex;
     flex-direction: column;
 }
-.containerLinkItemProgramActors:hover {
+.containerLinkItemProgramPerson:hover {
     background-color: $main-color;
 }
-.containerActorNameProgramShow {
+.containerPersonNameProgramShow {
     margin-top: 10px;
     line-height: 10px;
     padding: 5px;
     background-color: hsla(0, 0%, 13%, 0.4);
     border-radius: 10px;
 }
-.roleItemActor, .realNameItemActor {
+.roleItemPerson, .realNameItemPerson {
     color: $main-color;
 }
 .containerBackToListProgramShow {
@@ -603,11 +603,11 @@ $third-color: hsl(270, 4%, 91%);
     }
 }
 @media (max-width: 380px) {
-    .containerItemActors {
+    .containerItemPerson {
         margin: 5px;
         padding: 10px;
     }
-    .programShowActorPicture {
+    .programShowPersonPicture {
         height: 280px;
         width: 270px;
     }
@@ -620,7 +620,7 @@ $third-color: hsl(270, 4%, 91%);
 //==================================================//
 //SEASON SHOW
 //==================================================//
-.containerAlertMessageNoEpisodes p {
+.containerAlertMessageNoItem p {
     text-align: center;
     background-color: $main-color;
     color: $third-color;
@@ -1494,17 +1494,6 @@ $third-color: hsl(270, 4%, 91%);
     background-color: $secondary-color;
     cursor: pointer;
 }
-//We need it later
-/* .programDelete button {
-    background-color: hsl(0, 57%, 45%);
-    color: $third-color;
-    border: none;
-    font-size: 0.7rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 @media (max-width: 500px) {
     .containerProgramAdmin {
         height: 50px;
@@ -1525,532 +1514,117 @@ $third-color: hsl(270, 4%, 91%);
 //==================================================//
 //FORM CATEGORY
 //==================================================//
-.containerNewCategory {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    width: 94%;
-    
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 1px $main-color;
-    border-radius: 10px;
-}
-.newCategoryTitle {
-    color: $main-color;
-    text-align: center;
 
-}
-.containerNewCategoryForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-.containerCategoryFormName {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-.itemCategoryFormName div {
-    display: flex;
-    flex-direction: column;
-}
-.itemCategoryFormName label {
-    color: $third-color;
-    margin-bottom: 10px;
-}
-.itemCategoryFormName input {
-    text-align: center;
-    width: 400px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-}
-.containerNewCategoryButtons {
-    display: flex;
-    flex-direction: column;
-}
-.newCategorySubmitButton, .newCategoryBackButton {
-    margin: 10px;
-}
-.newCategorySubmitButton {
-    background-color: $main-color;
-    color: $third-color;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 100px;
-}
-.newCategorySubmitButton:hover, .newCategoryBackButton:hover {
-    background-color: $secondary-color;
-    cursor: pointer;
-}
-.newCategoryBackButton {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    text-decoration: none;
-}
-@media (max-width: 470px) {
-    .newCategoryTitle {
-        font-size: 1.4rem;
-    }
-    .itemCategoryFormName input {
-        width: 320px;
-        height: 30px;
-    }
-}
-@media (max-width: 360px) {
-    .newCategoryTitle {
-        font-size: 1.3rem;
-    }
-    .itemCategoryFormName input {
-        width: 280px;
-        height: 30px;
-    }
-}
 
 //==================================================//
 //FORM PROGRAM EDIT
 //==================================================//
-.containerEditProgram {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    border-radius: 10px;
-    border: solid 1px $main-color;
-    margin-bottom: 20px;
-}
-.editionFormProgramTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerEditionProgramButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.editProgramDeleteButton {
-    background-color: $main-color;
-    color: $third-color;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.editProgramDeleteButton .itemDeleteProgram {
-    background-color: $main-color;
-    color: $third-color;
-    border: none;
-}
-.editProgramDeleteButton:hover {
-    background-color: $secondary-color;
-    cursor: pointer;
 
-    .itemDeleteProgram {
-        background-color: $secondary-color;
-        cursor: pointer;
-    }
-}
-.editProgramBackButton, .editProgramDeleteButton {
-    margin: 10px;
-    height: 14px;
-    width: 66.83px;
-    text-align: center;
-}
-.editProgramBackButton:hover {
-    background-color: $secondary-color;
-    cursor: pointer;
-}
-.editProgramBackButton {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    text-decoration: none;
-}
-@media (max-width: 645px) {
-    .containerEditProgram {
-        width: 480px;
-    }
-}
-@media (max-width: 520px) {
-    .containerEditProgram {
-        width: 420px;
-    }
-}
-@media (max-width: 460px) {
-    .containerEditProgram {
-        width: 370px;
-    }
-}
-@media (max-width: 400px) {
-    .containerEditProgram {
-        width: 350px;
-    }
-}
-@media (max-width: 370px) {
-    .containerEditProgram {
-        width: 330px;
-    }
-}
+
+
+
 //==================================================//
 //FORM PROGRAM CREATE
 //==================================================//
-.containerNewProgram {
+.containerFormNew {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    width: 94%;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    border-radius: 10px;
-    border: solid 1px #b43131;
     margin-bottom: 20px;
 }
-.newProgramTitle {
+.newFormNewTitle {
     color: $main-color;
     text-align: center;
 }
-.containerNewProgramForm {
+.itemFormNewSimpleInput input, .itemFormNewTextArea textarea, .itemFormNewSelect select, .itemFormNewSubmitButton {    
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    appearance: none;
+}
+.itemFormNewSelect select {
+    text-align: center;
+}
+.itemFormNewTextArea textarea {
+    height: 200px;
+}
+.itemFormNewSimpleInput, .itemFormNewTextArea, .itemFormNewSelect, .itemFormNewUpload {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
-.containerProgramFormTitle, .containerProgramFormCountry, .containerProgramFormSynopsis, .containerProgramFormCategory, .containerProgramFormPosterFile {
+.itemFormNewSimpleInput div, .itemFormNewTextArea div, .itemFormNewSelect div, .containerFormNewElementButtons button, .itemFormNewUpload div {
     display: flex;
     flex-direction: column;
+    width: 700px;
+}
+.containerFormNewButtons a {
+    max-width: 700px;
+}
+.containerFormNewElementButtons, .containerFormNewButtons {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 20px;
 }
-.itemProgramFormTitle div, .itemProgramFormCountry div, .itemProgramFormSynopsis div, .itemProgramFormCategory div, .itemProgramFormPosterFile div {
-    display: flex;
-    flex-direction: column;
+.itemFormNewUpload div {
+    width: 100%;
+    max-width: 700px;
 }
-.itemProgramFormPosterFile div {
-    width: 400px;
-}
-.vich-file input {
-    color: $third-color;
-    background-color: $main-color;
+.itemFormNewUpload input[type='file'] {
+    padding:10px;
+    background-color: $third-color;
     border-radius: 10px;
 }
-.itemProgramFormTitle label, .itemProgramFormCountry label, .itemProgramFormSynopsis label, .itemProgramFormCategory label, .itemProgramFormPosterFile label {
+.itemFormNewSimpleInput label, .itemFormNewTextArea label, .itemFormNewSelect label, .itemFormNewUpload label {
     color: $third-color;
     margin-bottom: 10px;
 }
-.itemProgramFormTitle input, .itemProgramFormCountry input {
-    text-align: center;
-    width: 400px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-}
-.itemProgramFormCategory select {
-    width: 400px;
-    height: 30px;
-    appearance: none;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-}
-.itemProgramFormSynopsis textarea {
-    border: none;
-    text-align: center;
-    border-radius: 10px;
-    width: 400px;
-    height: 200px;
-}
-.containerNewProgramButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.newProgramBackButton {
-    padding: 10px 100px;
-    width: 28.9px;
-    height: 14px;
+.formNewBackButton {
+    padding: 10px 0px;
+    width: 100%;
     text-align: center;
     background-color: $main-color;
     color: $third-color;
     border-radius: 10px;
     font-size: 0.7rem;
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 10px 0px;
     text-decoration: none;
 }
 .newProgramBackButton:hover {
     background-color: $secondary-color;
     cursor: pointer;
 }
-.itemProgramSubmitButton {
+.itemFormNewSubmitButton {
     background-color: $main-color;
     color: $third-color;
-    border: none;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px 100px;
+    margin-top: 50px;
+    padding: 10px 0px;
 }
-.itemProgramSubmitButton:hover, .newProgramBackButton:hover {
+.itemFormNewSubmitButton:hover, .formNewBackButton:hover {
     background-color: $secondary-color;
     cursor: pointer;
 }
-
-@media (max-width: 645px) {
-    .containerNewProgram {
-        width: 480px;
+@media (max-width: 768px) {
+    .containerFormNew {
+        padding: 20px;
     }
 }
-@media (max-width: 520px) {
-    .containerNewProgram {
-        width: 420px;
-    }
-}
-@media (max-width: 470px) {
-    .newProgramTitle {
+@media (max-width: 445px) {
+    .newFormNewTitle {
         font-size: 1.4rem;
     }
-    .itemProgramFormTitle input, .itemProgramFormCountry input {
-        width: 320px;
-        height: 30px;
-    }
-    .itemProgramFormCategory select {
-        width: 320px;
-        height: 30px;
-    }
-    .itemProgramFormSynopsis textarea {
-        width: 320px;
-        height: 200px;
-    }
-    .itemProgramFormPosterFile div {
-        width: 320px;
-    }
 }
-@media (max-width: 460px) {
-    .containerNewProgram {
-        width: 370px;
-    }
-}
-@media (max-width: 400px) {
-    .containerNewProgram {
-        width: 350px;
-    }
-}
-@media (max-width: 370px) {
-    .containerNewProgram {
-        width: 330px;
-    }
-}
-@media (max-width: 360px) {
-    .newProgramTitle {
-        font-size: 1.3rem;
-    }
-    .itemProgramFormTitle input, .itemProgramFormCountry input, .itemProgramFormSynopsis input {
-        width: 280px;
-        height: 30px;
-    }
-    .itemProgramFormCategory select {
-        width: 280px;
-        height: 30px;
-    }
-    .itemProgramFormSynopsis textarea {
-        width: 280px;
-        height: 200px;
-    }
-    .itemProgramFormPosterFile div {
-        width: 280px;
-    }
-}
-
-
-
-
-
 //==================================================//
 //FORM SEASON
 //==================================================//
-
-
-
-
-
 
 //==================================================//
 //FORM EPISODE
 //==================================================//
 
-
-
-
-
 //==================================================//
 //FORM ROLE CREATE
 //==================================================//
-.containerNewRole {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    width: 94%;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    border-radius: 10px;
-    border: solid 1px #b43131;
-    margin-bottom: 20px;
-}
-.newRoleTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerNewProgramForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.containerRoleFormName, .containerRoleFormActor, .containerRoleFormProgram {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-.itemRoleFormName div, .itemRoleFormActor div, .itemRoleFormProgram div {
-    display: flex;
-    flex-direction: column;
-}
-.itemRoleFormName label, .itemRoleFormActor label, .itemRoleFormProgram label {
-    color: $third-color;
-    margin-bottom: 10px;
-}
-.itemRoleFormName input {
-    text-align: center;
-    width: 400px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-}
-.itemRoleFormActor select, .itemRoleFormProgram select {
-    width: 400px;
-    height: 30px;
-    appearance: none;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-}
-.containerNewRoleButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.newRoleBackButton {
-    padding: 10px 100px;
-    width: 28.9px;
-    height: 14px;
-    text-align: center;
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    font-size: 0.7rem;
-    margin: 10px 0px 40px 0px;
-    text-decoration: none;
-}
-.newRoleBackButton:hover {
-    background-color: $secondary-color;
-    cursor: pointer;
-}
-.itemRoleSubmitButton {
-    background-color: $main-color;
-    color: $third-color;
-    border: none;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px 100px;
-}
-.itemRoleSubmitButton:hover, .newRoleBackButton:hover {
-    background-color: $secondary-color;
-    cursor: pointer;
-}
 
-@media (max-width: 645px) {
-    .containerNewRole {
-        width: 480px;
-    }
-}
-@media (max-width: 520px) {
-    .containerNewRole {
-        width: 420px;
-    }
-}
-@media (max-width: 470px) {
-    .newRoleTitle {
-        font-size: 1.4rem;
-    }
-    .itemRoleFormName input, .itemProgramFormName input {
-        width: 320px;
-        height: 30px;
-    }
-    .itemRoleFormActor select, .itemRoleFormProgram select {
-        width: 320px;
-        height: 30px;
-    }
-    .itemRoleFormName div {
-        width: 320px;
-    }
-}
-@media (max-width: 460px) {
-    .containerNewRole {
-        width: 370px;
-    }
-}
-@media (max-width: 400px) {
-    .containerNewRole {
-        width: 350px;
-    }
-}
-@media (max-width: 370px) {
-    .containerNewRole {
-        width: 330px;
-    }
-    
-}
-@media (max-width: 360px) {
-    .newRoleTitle {
-        font-size: 1.3rem;
-    }
-    .itemRoleFormName input, .itemProgramFormName input {
-        width: 280px;
-        height: 30px;
-    }
-    .itemRoleFormActor select, .itemRoleFormProgram select {
-        width: 280px;
-        height: 30px;
-    }
-    .itemRoleFormName div {
-        width: 280px;
-    }
-}
 //==================================================//
 //FORM ACTOR CREATE
 //==================================================//

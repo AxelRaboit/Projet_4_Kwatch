@@ -1,22 +1,25 @@
 {{ form_start(form) }}
-    <div class="containerNewProgramForm">
-        <div class="containerProgramFormTitle">
-            <div class="itemProgramFormTitle">{{ form_row(form.title) }}</div>
+    <div class="containerFormNewElements">
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.title) }}</div>
         </div>
-        <div class="containerProgramFormSynopsis">
-            <div class="itemProgramFormSynopsis">{{ form_row(form.synopsis) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewTextArea">{{ form_row(form.synopsis) }}</div>
         </div>
-        <div class="containerProgramFormPosterFile">
-            <div class="itemProgramFormPosterFile">{{ form_row(form.posterFile) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewUpload">{{ form_row(form.posterFile) }}</div>
         </div>
-        <div class="containerProgramFormCountry">
-            <div class="itemProgramFormCountry">{{ form_row(form.country) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSimpleInput">{{ form_row(form.country) }}</div>
         </div>
-        <div class="containerProgramFormCategory">
-            <div class="itemProgramFormCategory">{{ form_row(form.category) }}</div>
+        <div class="containerFormNewElement">
+            <div class="itemFormNewSelect">{{ form_row(form.category) }}</div>
         </div>
-        <div class="containerNewProgramButtons">
-            <button class="itemProgramSubmitButton">{{ button_label|default('Créer') }}</button>
+        <div class="containerFormNewElementButtons">
+            <button class="itemFormNewSubmitButton">{{ button_label|default('Créer') }}</button>
+        </div>
+        <div class="containerFormNewButtons">
+            <a class="formNewBackButton" href="{{path('home_index')}}">Retour</a>
         </div>
     </div>
 {{ form_end(form) }}
