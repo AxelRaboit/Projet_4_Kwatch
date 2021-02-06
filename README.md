@@ -102,6 +102,13 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <h4>Easy Admin / Panneau d'administration Easy Admin: Desktop</h4>
 <img width="800" src="https://user-images.githubusercontent.com/66420167/107115766-2832ab80-686f-11eb-973b-f15fd70b1bd4.jpg">
 
+<h4>Form / Formulaire: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107117864-7cdd2300-687d-11eb-961b-f9893897e0bb.jpg">
+
+<h4>Form / Formulaire: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107117865-7d75b980-687d-11eb-80cb-5730df07bf03.jpg">
+
+
 
 
 
