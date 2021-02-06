@@ -5,12 +5,12 @@
 {% block body %}
 <div class="containerActorsPage">
     <h1>Tout les acteurs</h1>
-    <div class="containerSearchActorsForm">
-        <form id="searchForm" action="{{ path('actor_search') }}" method="get">
+    <div class="containerSearchFormMobile">
+        <form id="searchFormMobile" action="{{ path('actor_search') }}" method="get">
             <div id="searchBox">
-                <input type="text" name="q" id="searchBar" autocomplete="off" placeholder="Trouver un(e) acteur(trice)">
+                <input type="text" name="q" id="searchBarMobile" autocomplete="off" placeholder="Trouver un(e) acteur(trice)">
             </div>
-            <button id="submitSearchButton">Chercher</button>
+            <button id="submitSearchMobileButton">Chercher</button>
         </form>
     </div>
     <div class="itemAllActors">

@@ -154,6 +154,27 @@ $third-color: hsl(270, 4%, 91%);
     color: $third-color;
     height: 32px;
 }
+.containerSearchFormMobile {
+    display: none;
+}
+#searchFormMobile {
+    display: flex;
+    justify-content: center;    
+}
+#searchBarMobile {
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    height: 30px;
+    width: 210px;
+    text-align: center;
+}
+#submitSearchMobileButton {
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    background-color: $main-color;
+    color: $third-color;
+    height: 32px;
+}
 .navbar-brand {
     padding: 0px 10px;
     margin-right: 10px;
@@ -268,6 +289,9 @@ $third-color: hsl(270, 4%, 91%);
     }
     #searchForm {
         display: none;
+    }
+    .containerSearchFormMobile {
+        display: block;
     }
 }
 @media (max-width: 438px) {
@@ -670,7 +694,6 @@ $third-color: hsl(270, 4%, 91%);
 }
 .episodeNumberNumberAndTitle {
     color: $third-color;
-/*     margin-top: 9px; */
     display: flex;
     justify-content: center;
     align-items: center;
