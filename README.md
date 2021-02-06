@@ -55,8 +55,7 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107115564-c1f95900-686d-11eb-984a-a414ac3fffb3.jpg">
 
 <h4>Program Show / Page de la série: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107115588-fa009c00-686d-11eb-9490-d7341be88347.jpg">
-
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115859-bf97fe80-686f-11eb-85bd-7946871f0d3e.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107115597-0be23f00-686e-11eb-9c41-4b08f19695a6.jpg">
@@ -65,7 +64,7 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107115599-100e5c80-686e-11eb-9fd5-21f924ff5f12.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="https://user-images.githubusercontent.com/66420167/107115602-143a7a00-686e-11eb-9980-1db98a817ba4.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115876-d76f8280-686f-11eb-900c-3f9336bccf90.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107115604-18ff2e00-686e-11eb-83f0-1b04678757a0.jpg">
