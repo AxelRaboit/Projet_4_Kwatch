@@ -1,6 +1,6 @@
 <nav class="Navbar">
   <div class="containerNavbar">
-    <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/logo/moviebox.png') }}" alt="Logo SandBox"/></a>
+    <a class="navbar-brand" href="{{ path('home_index') }}"><img class="navbar-logo" src="{{ asset('/build/images/img/logo/moviebox.png') }}" alt="Logo SandBox"/></a>
 
     <div class="navDropdown">
       <div class="dropbtn">Parcourir
@@ -25,8 +25,8 @@
         <a href="{{path('administration_index') }}" class="itemNavAdmin">Admin</a>
       {% endif %}
     </div>
-    
   </div>
+  
   <div class="navRightSide">
     <form id="searchForm" action="{{ path('program_search') }}" method="get">
         <div id="searchBox">
@@ -34,7 +34,8 @@
         </div>
         <button id="submitSearchButton">Chercher</button>
     </form>
-    <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a>
+{#     <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a> #}
+    <a href=""><img class="accountLogo" src="{{ asset('/build/images/img/account/account.png') }}" alt="account logo"></a>
   </div>
 </nav>
 

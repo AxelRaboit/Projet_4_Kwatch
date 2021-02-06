@@ -30,6 +30,10 @@ $third-color: hsl(270, 4%, 91%);
 //NAVBAR
 //==================================================//
 /* Dropdown Button */
+.accountLogo {
+    width: 30px;
+    margin: 10px;
+}
 .dropbtn {
     background-color: rgba(62, 61, 61, 0);
     color: $third-color;
