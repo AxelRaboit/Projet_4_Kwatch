@@ -161,10 +161,10 @@ body {
     color: $third-color;
     height: 32px;
 }
-.containerSearchFormMobile {
+.containerSearchProgramFormMobile {
     display: none;
 }
-#searchFormMobile {
+#searchFormActorMobile, #searchFormProgramMobile {
     display: flex;
     justify-content: center;    
 }
@@ -297,7 +297,7 @@ body {
     #searchForm {
         display: none;
     }
-    .containerSearchFormMobile {
+    .containerSearchProgramFormMobile {
         display: block;
     }
 }
@@ -1121,7 +1121,7 @@ body {
     border: solid 1px $main-color;
     border-radius: 10px;
     padding: 20px;
-    width: 60%;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: column;
