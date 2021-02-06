@@ -31,91 +31,81 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 <h2>AVANCEMENT DU PROJET</h2>
 
 <h4>Login / Se connecter: Desktop</h4>
-<img width="800" alt="loginDesktop" src="https://user-images.githubusercontent.com/66420167/106919150-28fdfd00-670a-11eb-917d-c95420bc3a5b.jpg">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115435-046e6600-686d-11eb-8e6b-446138db4ff0.jpg">
 
 <h4>Login / Se connecter: Mobile</h4>
-<img width="360" alt="loginMobile" src="https://user-images.githubusercontent.com/66420167/106919260-459a3500-670a-11eb-9dbc-0e6e4ddac14e.jpg">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115457-1e0fad80-686d-11eb-8369-bb1a5370f37a.jpg">
 
-<h4>Registration / Inscription: Desktop</h4>
-<img width="800" alt="registrationDesktop" src="https://user-images.githubusercontent.com/66420167/106919329-58ad0500-670a-11eb-987a-8167843fe076.jpg">
+<h4>Registration / S'enregistrer: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115481-4bf4f200-686d-11eb-83b0-15e7f5b183e7.jpg">
 
-<h4>Registration / Inscription: Mobile</h4>
-<img width="360" alt="registrationMobile" src="https://user-images.githubusercontent.com/66420167/106919413-6a8ea800-670a-11eb-8d18-17c584f96633.jpg">
+<h4>Registration / S'enregistrer: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115500-64fda300-686d-11eb-8e09-df1fd6f83094.jpg">
 
-<h4>Home: Desktop</h4>
-<img width="800" alt="homeDesktop" src="https://user-images.githubusercontent.com/66420167/106936043-61a6d200-671c-11eb-9739-745a8996b613.jpg">
+<h4>HomePage / Page d'accueil: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115518-7e065400-686d-11eb-9608-2b4365a7551e.jpg">
 
-<h4>Home: Mobile</h4>
-<img width="360" alt="homeMobile" src="https://user-images.githubusercontent.com/66420167/106936004-5653a680-671c-11eb-8b0a-5ab769e07469.jpg">
+<h4>HomePage / Page d'accueil: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115532-91192400-686d-11eb-8d52-1ef645adf3e6.jpg">
 
-<h4>Programs / Toutes les séries: Desktop</h4>
-<img width="800" alt="programsDesktop" src="https://user-images.githubusercontent.com/66420167/106919685-a7f33580-670a-11eb-98f9-0c662f898f95.jpg">
+<h4>All Programs / Toutes les séries: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115555-ae4df280-686d-11eb-83bd-ce14a56c6007.jpg">
 
-<h4>Programs / Toutes les séries: Mobile</h4>
-<img width="360" alt="programsMobile" src="https://user-images.githubusercontent.com/66420167/106919807-c48f6d80-670a-11eb-9676-c344d7157ee1.jpg">
+<h4>All Programs / Toutes les séries: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115564-c1f95900-686d-11eb-984a-a414ac3fffb3.jpg">
 
-<h4> ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Desktop</h4>
-<img width="800" alt="programsShowDesktop" src="https://user-images.githubusercontent.com/66420167/106919916-da049780-670a-11eb-92f0-422c97e2f807.jpg">
+<h4>Program Show / Page de la série: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115859-bf97fe80-686f-11eb-85bd-7946871f0d3e.jpg">
 
-<h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920064-fef90a80-670a-11eb-973d-c770a0450682.jpg">
+<h4>Program Show / Page de la série: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115597-0be23f00-686e-11eb-9c41-4b08f19695a6.jpg">
 
-<h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920107-0c15f980-670b-11eb-9169-92be3bc55796.jpg">
+<h4>Program Show / Page de la série: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115599-100e5c80-686e-11eb-9fd5-21f924ff5f12.jpg">
 
-<h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106920175-1e903300-670b-11eb-8bf8-00080c3065f4.jpg">
+<h4>Program Show / Page de la série: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115876-d76f8280-686f-11eb-900c-3f9336bccf90.jpg">
 
-<h4>ProgramShow (with seasons displayed) / Série avec les saisons d'affichées: Mobile</h4>
-<img width="360" alt="programsShowMobile" src="https://user-images.githubusercontent.com/66420167/106921997-dbcf5a80-670c-11eb-9b8e-866466b8d04c.jpg">
+<h4>Program Show / Page de la série: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115604-18ff2e00-686e-11eb-83f0-1b04678757a0.jpg">
 
-<h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Desktop</h4>
-<img width="800" alt="seasonShowDesktop" src="https://user-images.githubusercontent.com/66420167/106922282-2ea91200-670d-11eb-9499-90a21674945c.jpg">
+<h4>Season Show / Page de la saison: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115639-5a8fd900-686e-11eb-9688-b4ee29e4944a.jpg">
 
-<h4>SeasonShow (with episodes displayed) / Saison avec les episodes d'affichés: Mobile</h4>
-<img width="360" alt="seasonShowMobile" src="https://user-images.githubusercontent.com/66420167/106922951-dcb4bc00-670d-11eb-9fbb-9e4a01b01a47.jpg">
+<h4>Season Show / Page de la saison: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115646-5fed2380-686e-11eb-8c6c-03cec2356648.jpg">
 
-<h4>EpisodeShow / Episode: Desktop</h4>
-<img width="800" alt="episodeShowDesktop" src="https://user-images.githubusercontent.com/66420167/106923171-184f8600-670e-11eb-9aa2-2ae9c76bde7e.jpg">
+<h4>Episode Show / Page des episodes: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115672-8e6afe80-686e-11eb-811c-44d3d602a91e.jpg">
 
-<h4>EpisodeShow / Episode: Mobile</h4>
-<img width="360" alt="episodeShowMobile" src="https://user-images.githubusercontent.com/66420167/106923256-2c938300-670e-11eb-90ed-60e31811a4fb.jpg">
+<h4>Episode Show / Page des episodes: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115673-91fe8580-686e-11eb-853e-fab429ab85d9.jpg">
 
-<h4>All Actors displayed / Tout les acteurs affichés: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923480-66648980-670e-11eb-9038-5061ba7e2fee.jpg">
+<h4>All Actors / Tout les acteurs: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115700-beb29d00-686e-11eb-986c-037b078fdbad.jpg">
 
-<h4>All Actors displayed / Tout les acteurs affichés: Mobile</h4>
-<img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923585-85631b80-670e-11eb-88d8-058840a8f9da.jpg">
+<h4>All Actors / Tout les acteurs: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115703-c1ad8d80-686e-11eb-89f3-680c49f17524.jpg">
 
-<h4>Show Actor / Affichage de l'acteur: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106925326-4766f700-6710-11eb-99cf-f6ece2123514.jpg">
+<h4>Actors Show / Page de l'acteur: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115723-e6096a00-686e-11eb-87a9-5cc0d3dc241d.jpg">
 
-<h4>Show Actor / Affichage de l'acteur: Mobile</h4>
-<img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106925400-59489a00-6710-11eb-991c-1e4380dd04c8.jpg">
+<h4>Actors Show / Page de l'acteur: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115727-e9045a80-686e-11eb-9c9a-b32670ae3e1b.jpg">
+
+<h4>Admin Panel / Panneau d'administration: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115757-236df780-686f-11eb-971c-1884ba929a26.jpg">
+
+<h4>Admin Panel / Panneau d'administration: Mobile</h4>
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107115761-25d05180-686f-11eb-911e-179cda529277.jpg">
+
+<h4>Easy Admin / Panneau d'administration Easy Admin: Desktop</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107115766-2832ab80-686f-11eb-973b-f15fd70b1bd4.jpg">
 
 
 
 
 
 
-<h4>adminPannel / Panneau d'administration: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924055-faceec00-670e-11eb-8cb5-3a6386123d98.jpg">
 
-<h4>adminPannel / Panneau d'administration: Mobile</h4>
-<img width="360" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924149-13d79d00-670f-11eb-93aa-712983797815.jpg">
-
-<h4>EasyAdmin Pannel / Panneau EasyAdmin: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106924281-35d11f80-670f-11eb-96e4-357d0b65760a.jpg">
-
-<h4>createNewProgram / Crée une nouvelle série: Desktop</h4>
-<img width="800" alt="createNewProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106923771-b6dbe700-670e-11eb-8b2c-b7d9c9e4abbb.jpg">
-
-<h4>createNewProgram / Crée une nouvelle série: Mobile</h4>
-<img width="360" alt="createNewProgramMobile" src="https://user-images.githubusercontent.com/66420167/106923851-c8bd8a00-670e-11eb-9328-86cc27a85d27.jpg">
-
-<h4>editProgram / Éditer une série: Desktop</h4>
-<img width="800" alt="editProgramDesktop" src="https://user-images.githubusercontent.com/66420167/106390184-72d3a400-63e7-11eb-8d2f-ba9912258cd6.jpg">
-
-<h4>editProgram / Éditer une série: Mobile</h4>
-<img width="360" alt="editProgramMobile" src="https://user-images.githubusercontent.com/66420167/106390195-7e26cf80-63e7-11eb-98ad-e6daf7e110cb.jpg">
 
