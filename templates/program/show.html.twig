@@ -31,53 +31,53 @@
                     {% for season in seasons %}
                             <h4><a href="{{ path('program_season_show', {seasonId: season.id, programSlug: program.slug}) }}">Saison {{ season.number }}</a></h4>
                         {% else %}
-                            <p class="alertMessageNoSeason">Aucune saisons pour cette série</p>
+                            <p class="alertMessageNoItem">Aucune saisons pour cette série</p>
                     {% endfor %}
                 </div>
-                <div class="containerProgramShowActorLabel">
-                    <div class="programShowActorLabel">Réalisateur(s):</div>
+                <div class="containerProgramShowPersonLabel">
+                    <div class="programShowPersonLabel">Réalisateur(s):</div>
                 </div>
-                <div class="containerProgramShowActorContent">
-                    <div class="containerProgramActors">
+                <div class="containerProgramShowPersonContent">
+                    <div class="containerProgramPerson">
                         {% for director in directors %}
-                            <div class="containerItemActors">
-                                <a class="containerLinkItemProgramActors" href="{{ path('director_show', {id: director.id})}}">
-                                    <div class"itemProgramActors">
-                                        <img class="programShowActorPicture" src="{{ '/uploads/' ~ director.picture }}" alt="Actor Picture"/>
-                                        <div class="containerActorNameProgramShow">
-                                            <p><span class="realNameItemActor">Nom: </span>{{ director.name }}</p>
+                            <div class="containerItemPerson">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('director_show', {id: director.id})}}">
+                                    <div class"itemProgramPerson">
+                                        <img class="programShowPersonPicture" src="{{ '/uploads/' ~ director.picture }}" alt="Actor Picture"/>
+                                        <div class="containerPersonNameProgramShow">
+                                            <p><span class="realNameItemPerson">Nom: </span>{{ director.name }}</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         {% else %}
-                            <div class="containerAlertMessageNoActors">
-                                <p class"alertMessageNoActors">Aucun directeurs pour cette série</p>
+                            <div class="containerAlertMessageNoItem">
+                                <p class"alertMessageNoItem">Aucun directeurs pour cette série</p>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
 
-                <div class="containerProgramShowActorLabel">
-                    <div class="programShowActorLabel">Acteurs:</div>
+                <div class="containerProgramShowPersonLabel">
+                    <div class="programShowPersonLabel">Acteurs:</div>
                 </div>
-                <div class="containerProgramShowActorContent">
-                    <div class="containerProgramActors">
+                <div class="containerProgramShowPersonContent">
+                    <div class="containerProgramPerson">
                         {% for role in roles %}
-                            <div class="containerItemActors">
-                                <a class="containerLinkItemProgramActors" href="{{ path('actor_show', {id: role.actor.id})}}">
-                                    <div class"itemProgramActors">
-                                        <img class="programShowActorPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
-                                        <div class="containerActorNameProgramShow">
-                                            <p><span class="realNameItemActor">Nom: </span>{{ role.actor.name }}</p>
-                                            <p><span class="roleItemActor">Rôle: </span>{{ role.name }}</p>
+                            <div class="containerItemPerson">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {id: role.actor.id})}}">
+                                    <div class"itemProgramPerson">
+                                        <img class="programShowPersonPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
+                                        <div class="containerPersonNameProgramShow">
+                                            <p><span class="realNameItemPerson">Nom: </span>{{ role.actor.name }}</p>
+                                            <p><span class="roleItemPerson">Rôle: </span>{{ role.name }}</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         {% else %}
-                            <div class="containerAlertMessageNoActors">
-                                <p class"alertMessageNoActors">Aucun acteurs pour cette série</p>
+                            <div class="containerAlertMessageNoItem">
+                                <p class"alertMessageNoItem">Aucun acteurs pour cette série</p>
                             </div>
                         {% endfor %}
                     </div>
