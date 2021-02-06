@@ -28,6 +28,15 @@ https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
 - Run symfony console cache:clear (to clean the symfony cache)// Optional
 - Run symfony serve (to start the server)
 
+<h2>AVANCEMENT DE LA BASE DE DONNÉE</h2>
+
+<h4>MCD</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107121793-9b024d80-6894-11eb-894e-3655c621a358.png">
+
+<h4>MLD</h4>
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107121792-9a69b700-6894-11eb-8f79-b410a381a00a.png">
+
+
 <h2>AVANCEMENT DU PROJET</h2>
 
 <h4>Login / Se connecter: Desktop</h4>
