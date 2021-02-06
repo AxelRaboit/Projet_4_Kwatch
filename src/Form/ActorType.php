@@ -3,9 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Actor;
+use App\Entity\Country;
+use App\Repository\CountryRepository;
 use Symfony\Component\Form\AbstractType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -20,8 +23,14 @@ class ActorType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => 'Nom',
                 ])
-            ->add('nationality', TextType::class, [
-                'label' => 'Nationalité'
+            ->add('nationality', EntityType::class, [
+                'label' => 'Nationalité',
+                'class' => Country::class,
+                'choice_label' => 'nom_fr_fr',
+                'query_builder' => function (CountryRepository $query) {
+                    return $query->createQueryBuilder('c')
+                            ->orderBy('c.nom_fr_fr', 'ASC');
+                },
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Description',
