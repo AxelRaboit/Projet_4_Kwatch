@@ -1383,6 +1383,9 @@ body {
     justify-content: center;
     
 }
+.containerFormNewElementButtons {
+    margin-top: 10px;
+}
 .itemFormNewUpload div {
     width: 100%;
     max-width: 700px;
@@ -1414,24 +1417,26 @@ body {
 .itemFormNewSubmitButton {
     background-color: $main-color;
     color: $third-color;
-    margin-top: 50px;
     padding: 10px 0px;
 }
 .itemFormNewSubmitButton:hover, .formNewBackButton:hover {
     background-color: $secondary-color;
     cursor: pointer;
 
+}
+.itemFormDelete:hover {
+    background-color: $secondary-color;
+
     .deleteButton {
         background-color: $secondary-color;
     }
 }
-.itemFormNewSubmitButton .deleteButton {
+.itemFormDelete .deleteButton {
     background-color: $main-color;
     border: none;
     color: $third-color;
-}
-.deleteButton {
     width:100%;
+    cursor: pointer;
 }
 .itemFormNewSubmitButton .btn {
     width:100%;
@@ -1442,6 +1447,12 @@ body {
     align-items: center;
     max-width: 700px;
     height:20px;
+    cursor: pointer;
+    padding: 11px 0px;
+    width: 100%;
+    background-color: $main-color;
+    color: $third-color;
+    border-radius: 10px;
 }
 @media (max-width: 768px) {
     .containerFormNew, .containerFormEdit {
