@@ -34,6 +34,10 @@ class DirectorType extends AbstractType
                 'label' => 'Pays',
                 'class' => Country::class,
                 'choice_label' => 'nom_fr_fr',
+                'query_builder' => function (CountryRepository $er) {
+                    return $er->createQueryBuilder('c')
+                        ->orderBy('c.nom_fr_fr', 'ASC');
+                },
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Description',

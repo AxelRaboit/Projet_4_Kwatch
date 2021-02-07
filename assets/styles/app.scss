@@ -28,6 +28,133 @@ body {
     
 }
 
+//==================================================//
+//LOGIN & REGISTER
+//==================================================//
+.alertMessageLogin {
+    text-align: center;
+    background-color: $main-color;
+    color: $third-color;
+    border: solid $third-color;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.containerMessageIsConnectedLogin a {
+    color: $third-color;
+    text-decoration: none;
+}
+.messageIsConnectedLogin {
+    color: $main-color;
+}
+.homepageLogin, .homepageRegister {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLogin, .containerRegister {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLogin form, .containerRegister form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerRegistrationForm {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+}
+.loginConnectedTitle, .registerTitle {
+    color: $third-color;
+}
+.containerLoginInputEmail label, .containerLoginInputPassword label {
+    color: $third-color;
+}
+.containerRegistrationForm label {
+    color: $third-color;
+}
+.registerBackButton {
+    text-decoration: none;
+    color: $main-color;
+}
+.home-logo-login {
+    width: 80%;
+    margin-bottom: 100px;
+}
+.home-logo-register {
+    width: 40%;
+    margin-bottom: 100px;
+}
+.containerLogin, .containerRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.containerAuthButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscriptionText {
+    text-decoration: none;
+    color: $main-color;
+}
+.submitConnexion, .submitRegistration {
+    padding: 15px 125px;
+    border: none;
+    background-color: $main-color;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $third-color;
+    margin: 20px;
+    cursor: pointer;
+}
+.submitConnexion a, .submitRegistration a {
+    text-decoration: none;
+    color: $third-color;
+}
+.containerLoginInputEmail, .containerLoginInputPassword {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#inputPassword, #inputEmail, #registration_form_email, #registration_form_plainPassword_first, #registration_form_plainPassword_second {
+    margin: 10px;
+    text-align: center;
+    padding: 15px 100px;
+    border: none;
+}
+
+//==================================================//
+//HOMEPAGE
+//==================================================//
+
+.homeWallpaper {
+    width: 100%;
+    height: 60vh;
+}
+.welcomeMessageHomePage {
+    text-align: center;
+    color: $third-color;
+    font-family: 'GoboldBold';
+    font-size: 3rem;
+}
+.movieBoxWelcomMessageHomePage {
+    color: $main-color;
+}
 
 //==================================================//
 //NAVBAR
@@ -307,23 +434,6 @@ body {
     }
 }
 
-//==================================================//
-//HOMEPAGE
-//==================================================//
-
-.homeWallpaper {
-    width: 100%;
-    height: 60vh;
-}
-.welcomeMessageHomePage {
-    text-align: center;
-    color: $third-color;
-    font-family: 'GoboldBold';
-    font-size: 3rem;
-}
-.movieBoxWelcomMessageHomePage {
-    color: $main-color;
-}
 //==================================================//
 //ALL PROGRAMS
 //==================================================//
@@ -910,116 +1020,6 @@ body {
 }
 
 //==================================================//
-//LOGIN & REGISTER
-//==================================================//
-.alertMessageLogin {
-    text-align: center;
-    background-color: $main-color;
-    color: $third-color;
-    border: solid $third-color;
-    padding: 10px;
-    width: 300px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-.containerMessageIsConnectedLogin a {
-    color: $third-color;
-    text-decoration: none;
-}
-.messageIsConnectedLogin {
-    color: $main-color;
-}
-.homepageLogin, .homepageRegister {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.containerLogin, .containerRegister {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.containerLogin form, .containerRegister form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.containerRegistrationForm {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    text-align: center;
-}
-.loginConnectedTitle, .registerTitle {
-    color: $third-color;
-}
-.containerLoginInputEmail label, .containerLoginInputPassword label {
-    color: $third-color;
-}
-.containerRegistrationForm label {
-    color: $third-color;
-}
-.registerBackButton {
-    text-decoration: none;
-    color: $main-color;
-}
-.home-logo-login {
-    width: 80%;
-    margin-bottom: 100px;
-}
-.home-logo-register {
-    width: 40%;
-    margin-bottom: 100px;
-}
-.containerLogin, .containerRegister {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-.containerAuthButtons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.subscriptionText {
-    text-decoration: none;
-    color: $main-color;
-}
-.submitConnexion, .submitRegistration {
-    padding: 15px 125px;
-    border: none;
-    background-color: $main-color;
-    font-size: 1rem;
-    text-decoration: none;
-    color: $third-color;
-    margin: 20px;
-    cursor: pointer;
-}
-.submitConnexion a, .submitRegistration a {
-    text-decoration: none;
-    color: $third-color;
-}
-.containerLoginInputEmail, .containerLoginInputPassword {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-#inputPassword, #inputEmail, #registration_form_email, #registration_form_plainPassword_first, #registration_form_plainPassword_second {
-    margin: 10px;
-    text-align: center;
-    padding: 15px 100px;
-    border: none;
-}
-
-//==================================================//
 //ACTOR SHOW
 //==================================================//
 .alertMessageNoRoles {
@@ -1043,7 +1043,7 @@ body {
     align-items: center;
     margin-bottom: 100px;
 }
-.containerShowActor h1 {
+.containerShowPerson h1 {
     font-family: 'GoboldBold';
 }
 .ShowPersonTitle {
@@ -1087,19 +1087,19 @@ body {
     color: $main-color;
 }
 @media (max-width: 460px) {
-    .actorPicture {
+    .personPicture {
         width: 300px;
     }
 }
 
 
-//==================================================//
+//=========================================================================================================//
 //ADMIN
-//==================================================//
+//=========================================================================================================//
 
 
 //==================================================//
-//HOME ADMIN
+//HOME ADMIN (Admin Panel displayed in the homePage)
 //==================================================/
 .containerAdminPage {
      margin-top: 100px;
@@ -1192,8 +1192,9 @@ body {
         width: 80%;
     }
 }
+
 //==================================================//
-//ACTOR ADMIN
+//ACTOR ADMIN (Actor edit through the actor show page)
 //==================================================//
 .containerPersonAdmin {
     margin: 10px;
@@ -1218,65 +1219,22 @@ body {
     align-items: center;
     justify-content: center;
 }
-.actorEdit:hover {
+.personEdit:hover {
     background-color: $secondary-color;
 }
 @media (max-width: 460px) {
-    .actorEdit {
+    .personEdit {
         margin: 20px;
         padding: 10px 20px;
         height: 10px;
         width:90px;
     }
-    .actorEdit {
+    .personEdit {
         font-size: 0.5rem;
     }
 }
 //==================================================//
-//ADMIN LIST
-//==================================================//
-.containerItemList {
-    margin-top: 100px;
-}
-.listAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-//==================================================//
-//PROGRAM ADMIN
+//PROGRAM ADMIN (Porgram edit through the program show page)
 //==================================================//
 .containerProgramAdmin {
     margin: 10px;
@@ -1321,9 +1279,52 @@ body {
         width:60px;
     }
 }
+//==================================================//
+//ADMIN LIST (All Cruds)
+//==================================================//
+.containerItemList {
+    margin-top: 100px;
+}
+.listAdminTitle {
+    color: $main-color;
+    text-align: center;
+}
+.containerListCards {
+    background-color: $secondary-color;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 10px;
+}
+.itemListLabel {
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: $third-color;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.itemListContent {
+    padding: 5px;
+    text-align: center;
+}
+.itemListContentButtons {
+    background-color: $main-color;
+    color: $third-color;
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 0.7rem;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.containerListItemButtons {
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+}
 
 //==================================================//
-//FORM
+//FORM (Every form to create and edit an entity)
 //==================================================//
 .containerFormNew, .containerFormEdit {
     margin-top: 100px;
@@ -1364,6 +1365,7 @@ body {
     line-height: 50px;
 }
 .itemFormNewTextArea textarea {
+    padding: 10px 0px;
     height: 200px;
 }
 .itemFormNewSimpleInput, .itemFormNewTextArea, .itemFormNewSelect, .itemFormNewUpload {
