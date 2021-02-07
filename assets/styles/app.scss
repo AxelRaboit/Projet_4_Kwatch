@@ -1043,7 +1043,7 @@ body {
     align-items: center;
     margin-bottom: 100px;
 }
-.containerShowActor h1 {
+.containerShowPerson h1 {
     font-family: 'GoboldBold';
 }
 .ShowPersonTitle {
@@ -1365,6 +1365,7 @@ body {
     line-height: 50px;
 }
 .itemFormNewTextArea textarea {
+    padding: 10px 0px;
     height: 200px;
 }
 .itemFormNewSimpleInput, .itemFormNewTextArea, .itemFormNewSelect, .itemFormNewUpload {
