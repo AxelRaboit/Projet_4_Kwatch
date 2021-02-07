@@ -1032,11 +1032,11 @@ body {
     border-radius: 10px;
     margin-top: 50px;
 }
-.actorNoImage {
+.personNoImage {
     width: 400px;
     border-radius: 10px;
 }
-.containerShowActor {
+.containerShowPerson {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -1046,18 +1046,18 @@ body {
 .containerShowActor h1 {
     font-family: 'GoboldBold';
 }
-.ShowActorTitle {
+.ShowPersonTitle {
     color: $main-color;
 }
-.actorPicture {
+.personPicture {
     width: 400px;
     border-radius: 10px;
 }
-.containerActorDescription {
+.containerPersonDescription {
     width: 80%;
     margin: 20px;
 }
-.actorDescriptionLabel, .actorRoleLabel {
+.personDescriptionLabel, .personRoleLabel {
     color: $main-color;
     font-weight: bold;
     font-size: 1.5rem;
@@ -1065,25 +1065,25 @@ body {
     margin-bottom: 10px;
     font-family: 'GoboldBold';
 }
-.actorDescriptionName {
+.personDescriptionName {
     color: $main-color;
     font-size: 2rem;
     margin: 0;
     font-family: 'GoboldBold';
 }
-.actorDescriptionNationalityLabel, .actorDescriptionRoleLabel {
+.personDescriptionNationalityLabel, .personDescriptionRoleLabel {
     color: $main-color;
     font-weight: bold;
     font-size: 1.2rem;
 }
-.actorDescription, .actorDescriptionNationality {
+.personDescription, .personDescriptionNationality {
     color: $third-color;
 }
-.actorRoleProgramTitle a {
+.personRoleProgramTitle a {
     color: $third-color;
     text-decoration: none;
 }
-.actorRoleProgramTitle:hover a {
+.personRoleProgramTitle:hover a {
     color: $main-color;
 }
 @media (max-width: 460px) {
@@ -1164,7 +1164,7 @@ body {
     text-align: center;
     background-color: $main-color;
     color: $third-color;
-    margin: 10px;
+    margin: 10px 5px;
     text-decoration: none;
 }
 .adminItem:hover {
@@ -1196,14 +1196,14 @@ body {
 //==================================================//
 //ACTOR ADMIN
 //==================================================//
-.containerActorAdmin {
+.containerPersonAdmin {
     margin: 10px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.actorEdit {
+.personEdit {
     background-color: $main-color;
     border-radius: 10px;
     margin: 20px;
@@ -1542,21 +1542,9 @@ body {
 }
 
 //==================================================//
-//FORM CATEGORY
+//FORM
 //==================================================//
-
-
-//==================================================//
-//FORM PROGRAM EDIT
-//==================================================//
-
-
-
-
-//==================================================//
-//FORM PROGRAM CREATE
-//==================================================//
-.containerFormNew {
+.containerFormNew, .containerFormEdit {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -1655,19 +1643,3 @@ body {
         font-size: 1.4rem;
     }
 }
-//==================================================//
-//FORM SEASON
-//==================================================//
-
-//==================================================//
-//FORM EPISODE
-//==================================================//
-
-//==================================================//
-//FORM ROLE CREATE
-//==================================================//
-
-//==================================================//
-//FORM ACTOR CREATE
-//==================================================//
-
