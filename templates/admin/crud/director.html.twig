@@ -1,41 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Director index{% endblock %}
+{% block title %}Réalisateurs - Administration{% endblock %}
 
 {% block body %}
-    <h1>Director index</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des réalisateurs</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Picture</th>
-                <th>Nationality</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for director in directors %}
-            <tr>
-                <td>{{ director.id }}</td>
-                <td>{{ director.name }}</td>
-                <td>{{ director.picture }}</td>
-                <td>{{ director.nationality }}</td>
-                <td>{{ director.description }}</td>
-                <td>
-                    <a href="{{ path('director_show', {'id': director.id}) }}">show</a>
-                    <a href="{{ path('director_edit', {'id': director.id}) }}">edit</a>
-                </td>
-            </tr>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{director.id}}</div>
+                </div>
+                <hr>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Nom</div>
+                    <div class="itemListContent">{{director.name}}</div>
+                </div>
+                <hr>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Image</div>
+                    <div class="itemListContent">{{director.picture}}</div>
+                </div>
+                <hr>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Nationalité</div>
+                    <div class="itemListContent">{{director.nationality}}</div>
+                </div>
+                <hr>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Description</div>
+                    <div class="itemListContent">{{director.description}}</div>
+                </div>
+                <hr>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('director_show', {'id': director.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('director_edit', {'id': director.id}) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
         {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
+            <p>Aucun résultat</p>        
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('director_new') }}">Create new</a>
+    </div>
 {% endblock %}

@@ -3,41 +3,41 @@
 {% block title %}Episodes - Administration{% endblock %}
 
 {% block body %}
-    <div class="containerEpisodesList">
-        <h1 class="episodesListAdminTitle">Liste des Episodes</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des Episodes</h1>
 
         {% for episode in episodes %}
-            <div class="containerEpisodeListCards">
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Id</div>
-                    <div class="itemEpisodeListContent">{{episode.id}}</div>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{episode.id}}</div>
                 </div>
                 <hr>
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Titre</div>
-                    <div class="itemEpisodeListContent">{{episode.title}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Titre</div>
+                    <div class="itemListContent">{{episode.title}}</div>
                 </div>
                 <hr>
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Numéro</div>
-                    <div class="itemEpisodeListContent">{{episode.number}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Numéro</div>
+                    <div class="itemListContent">{{episode.number}}</div>
                 </div>
                 <hr>
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Sommaire</div>
-                    <div class="itemEpisodeListContent">{{episode.summary}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Sommaire</div>
+                    <div class="itemListContent">{{episode.summary}}</div>
                 </div>
                 <hr>
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Affiche</div>
-                    <div class="itemEpisodeListContent">{{ asset('uploads/' ~ episode.image) }}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Affiche</div>
+                    <div class="itemListContent">{{ asset('uploads/' ~ episode.image) }}</div>
                 </div>
                 <hr>
-                <div class="containerEpisodeListItem">
-                    <div class="itemEpisodeListLabel">Actions</div>
-                    <div class="containerEpisodeListItemButtons">
-                        <a class="itemEpisodeListContentButtons" href="{{ path('episode_show', {'id': episode.id}) }}">Voir</a>
-                        <a class="itemEpisodeListContentButtons" href="{{ path('episode_edit', {'id': episode.id}) }}">Modifier</a>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('episode_show', {'id': episode.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('episode_edit', {'id': episode.id}) }}">Modifier</a>
                     </div>
                 </div>
             </div>

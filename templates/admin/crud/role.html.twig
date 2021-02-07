@@ -3,26 +3,26 @@
 {% block title %}Roles - Administration{% endblock %}
 
 {% block body %}
-    <div class="containerRolesList">
-        <h1 class="roleListAdminTitle">Liste des Roles</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des Roles</h1>
 
         {% for role in roles %}
-            <div class="containerRoleListCards">
-                <div class="containerRoleListItem">
-                    <div class="itemRoleListLabel">Id</div>
-                    <div class="itemRoleListContent">{{role.id}}</div>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{role.id}}</div>
                 </div>
                 <hr>
-                <div class="containerRoleListItem">
-                    <div class="itemRoleListLabel">Nom</div>
-                    <div class="itemRoleListContent">{{role.name}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Nom</div>
+                    <div class="itemListContent">{{role.name}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Actions</div>
-                    <div class="containerSeasonListItemButtons">
-                        <a class="itemSeasonListContentButtons" href="{{ path('role_show', {'id': role.id}) }}">Voir</a>
-                        <a class="itemSeasonListContentButtons" href="{{ path('role_edit', {'id': role.id}) }}">Modifier</a>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('role_show', {'id': role.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('role_edit', {'id': role.id}) }}">Modifier</a>
                     </div>
                 </div>
             </div>

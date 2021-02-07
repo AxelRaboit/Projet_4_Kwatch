@@ -3,41 +3,41 @@
 {% block title %}Saisons - Administration{% endblock %}
 
 {% block body %}
-    <div class="containerSeasonsList">
-        <h1 class="seasonsListAdminTitle">Liste des Saisons</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des Saisons</h1>
 
         {% for season in seasons %}
-            <div class="containerSeasonListCards">
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Id</div>
-                    <div class="itemSeasonListContent">{{season.id}}</div>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{season.id}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Numéro</div>
-                    <div class="itemSeasonListContent">{{season.number}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Numéro</div>
+                    <div class="itemListContent">{{season.number}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Année</div>
-                    <div class="itemSeasonListContent">{{season.year}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Année</div>
+                    <div class="itemListContent">{{season.year}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Description</div>
-                    <div class="itemSeasonListContent">{{season.description}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Description</div>
+                    <div class="itemListContent">{{season.description}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Video</div>
-                    <div class="itemSeasonListContent">{{season.video}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Video</div>
+                    <div class="itemListContent">{{season.video}}</div>
                 </div>
                 <hr>
-                <div class="containerSeasonListItem">
-                    <div class="itemSeasonListLabel">Actions</div>
-                    <div class="containerSeasonListItemButtons">
-                        <a class="itemSeasonListContentButtons" href="{{ path('season_show', {'id': season.id}) }}">Voir</a>
-                        <a class="itemSeasonListContentButtons" href="{{ path('season_edit', {'id': season.id}) }}">Modifier</a>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('season_show', {'id': season.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('season_edit', {'id': season.id}) }}">Modifier</a>
                     </div>
                 </div>
             </div>
