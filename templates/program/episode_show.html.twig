@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ program.title }} | Episode {{ episode.number }} | Saison {{ season.number }} - {{ parent() }}{% endblock %}
+{% block title %}{{ program.title }} | Episode {{ episode.number }} | Saison {{ season.number }} | {{ parent() }}{% endblock %}
 
 {% block body %}
 
@@ -24,6 +24,24 @@
                     <div class="containerEpisodeShowSynopsisContent">
                         <div class="episodeShowSynopsisContent">{{ episode.summary }}</div>
                     </div>
+
+                    {% for comment in episode.comments %}
+                        <p>Auteur: {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}</p>
+                        <p>Note: {{ comment.rate }}/5</p>
+                        <p>Commentaire: {{ comment.comment }}</p>
+
+                        {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
+                            {{ include('comment/_delete_form.html.twig') }}
+                        {%endif%}
+                    {% endfor %}
+
+                    {% if app.user %}
+                        <div class="containerFormNew">
+                            <h1 class="newFormNewTitle">Commentaire(s)</h1>
+                        {{ include('comment/_form.html.twig') }}
+                        </div>
+                    {% endif %}
+
                     <div class="containerBackToListEpisodeShow">
                         <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des épisodes</a>
                     </div>
