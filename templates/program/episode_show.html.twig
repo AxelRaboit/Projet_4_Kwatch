@@ -26,6 +26,9 @@
                     </div>
 
                     {% for comment in episode.comments %}
+                        <div class="containerCommentSection">
+
+                        </div>
                         <p>Auteur: {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}</p>
                         <p>Note: {{ comment.rate }}/5</p>
                         <p>Commentaire: {{ comment.comment }}</p>
