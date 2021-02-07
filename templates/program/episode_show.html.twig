@@ -18,29 +18,32 @@
                     <div class="containerEpisodeTitleShow">
                         <h1 class="episodeTitleShowEpisode">{{ episode.title }}</h1>
                     </div>
-                    <div class="containerEpisodeShowSynopsisLabel">
-                        <div class="episodeShowSynopsisLabel">Sommaire:</div>
+                    <div class="containerEpisodeShowLabel">
+                        <div class="episodeShowLabel">Sommaire:</div>
                     </div>
-                    <div class="containerEpisodeShowSynopsisContent">
-                        <div class="episodeShowSynopsisContent">{{ episode.summary }}</div>
+                    <div class="containerEpisodeShowContent">
+                        <div class="episodeShowContent">{{ episode.summary }}</div>
+                    </div>
+
+                    <div class="containerEpisodeShowLabel">
+                        <div class="episodeShowLabel">Commentaire(s):</div>
                     </div>
 
                     {% for comment in episode.comments %}
                         <div class="containerCommentSection">
-
+                            <p>Auteur: {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}</p>
+                            <p>Note: {{ comment.rate }}/5</p>
+                            <p>Commentaire: {{ comment.comment }}</p>
+                            
+                            {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
+                                {{ include('comment/_delete_form.html.twig') }}
+                            {%endif%}
                         </div>
-                        <p>Auteur: {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}</p>
-                        <p>Note: {{ comment.rate }}/5</p>
-                        <p>Commentaire: {{ comment.comment }}</p>
 
-                        {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
-                            {{ include('comment/_delete_form.html.twig') }}
-                        {%endif%}
                     {% endfor %}
 
                     {% if app.user %}
                         <div class="containerFormNew">
-                            <h1 class="newFormNewTitle">Commentaire(s)</h1>
                         {{ include('comment/_form.html.twig') }}
                         </div>
                     {% endif %}

@@ -794,6 +794,18 @@ body {
         height: 200px;
     }
 }
+//==================================================//
+//COMMENT SECTION
+//==================================================//
+.containerCommentSection {
+    border: solid red ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 //==================================================//
 //EPISODE SHOW
@@ -810,7 +822,7 @@ body {
     font-size: 2.5rem;
     color: $main-color;
 }
-.containerEpisodeShowSynopsisLabel {
+.containerEpisodeShowLabel {
     display: flex;
     justify-content:center;
     align-items:center;
@@ -823,18 +835,18 @@ body {
     justify-content:center;
     align-items:center;
 }
-.episodeShowSynopsisLabel {
+.episodeShowLabel {
     margin-top: 80px;
     color: $third-color;
     font-size: 1.8rem;
 }
-.containerEpisodeShowSynopsisContent {    
+.containerEpisodeShowContent {    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.episodeShowSynopsisContent {
+.episodeShowContent {
     color: $third-color;
     width: 80%;
 }
@@ -883,10 +895,10 @@ body {
         margin-top: 40px;
         font-size: 1.7rem;
     }
-    .containerEpisodeShowSynopsisLabel {
+/*     .containerEpisodeShowLabel {
         grid-area: synopsisTitle;
-    }
-    .episodeShowSynopsisLabel {
+    } */
+    .episodeShowLabel {
         margin-top: 20px;
     }
     .containerBackToListProgramShow {
@@ -1342,6 +1354,7 @@ body {
     height: 40px;
     appearance: none;
     text-align: center;
+    padding: 10px 0px;
 }
 .itemFormNewSubmitButton {
     display: flex;
