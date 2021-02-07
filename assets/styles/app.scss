@@ -1032,11 +1032,11 @@ body {
     border-radius: 10px;
     margin-top: 50px;
 }
-.actorNoImage {
+.personNoImage {
     width: 400px;
     border-radius: 10px;
 }
-.containerShowActor {
+.containerShowPerson {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -1046,18 +1046,18 @@ body {
 .containerShowActor h1 {
     font-family: 'GoboldBold';
 }
-.ShowActorTitle {
+.ShowPersonTitle {
     color: $main-color;
 }
-.actorPicture {
+.personPicture {
     width: 400px;
     border-radius: 10px;
 }
-.containerActorDescription {
+.containerPersonDescription {
     width: 80%;
     margin: 20px;
 }
-.actorDescriptionLabel, .actorRoleLabel {
+.personDescriptionLabel, .personRoleLabel {
     color: $main-color;
     font-weight: bold;
     font-size: 1.5rem;
@@ -1065,25 +1065,25 @@ body {
     margin-bottom: 10px;
     font-family: 'GoboldBold';
 }
-.actorDescriptionName {
+.personDescriptionName {
     color: $main-color;
     font-size: 2rem;
     margin: 0;
     font-family: 'GoboldBold';
 }
-.actorDescriptionNationalityLabel, .actorDescriptionRoleLabel {
+.personDescriptionNationalityLabel, .personDescriptionRoleLabel {
     color: $main-color;
     font-weight: bold;
     font-size: 1.2rem;
 }
-.actorDescription, .actorDescriptionNationality {
+.personDescription, .personDescriptionNationality {
     color: $third-color;
 }
-.actorRoleProgramTitle a {
+.personRoleProgramTitle a {
     color: $third-color;
     text-decoration: none;
 }
-.actorRoleProgramTitle:hover a {
+.personRoleProgramTitle:hover a {
     color: $main-color;
 }
 @media (max-width: 460px) {
@@ -1102,7 +1102,6 @@ body {
 //HOME ADMIN
 //==================================================/
 .containerAdminPage {
-    /*  height: calc(100vh - 56px); */
      margin-top: 100px;
      display: flex;
      flex-direction: column;
@@ -1164,7 +1163,7 @@ body {
     text-align: center;
     background-color: $main-color;
     color: $third-color;
-    margin: 10px;
+    margin: 10px 5px;
     text-decoration: none;
 }
 .adminItem:hover {
@@ -1196,14 +1195,14 @@ body {
 //==================================================//
 //ACTOR ADMIN
 //==================================================//
-.containerActorAdmin {
+.containerPersonAdmin {
     margin: 10px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.actorEdit {
+.personEdit {
     background-color: $main-color;
     border-radius: 10px;
     margin: 20px;
@@ -1234,22 +1233,22 @@ body {
     }
 }
 //==================================================//
-//PROGRAM ADMIN LIST
+//ADMIN LIST
 //==================================================//
-.containerProgramsList {
+.containerItemList {
     margin-top: 100px;
 }
-.programListAdminTitle {
+.listAdminTitle {
     color: $main-color;
     text-align: center;
 }
-.containerProgramListCards {
+.containerListCards {
     background-color: $secondary-color;
     padding: 10px;
     margin: 40px;
     border-radius: 10px;
 }
-.itemProgramListLabel {
+.itemListLabel {
     text-align: center;
     padding: 5px;
     border-radius: 10px;
@@ -1257,11 +1256,11 @@ body {
     font-weight: bold;
     font-size: 1.3rem;
 }
-.itemProgramListContent {
+.itemListContent {
     padding: 5px;
     text-align: center;
 }
-.itemProgramListContentButtons {
+.itemListContentButtons {
     background-color: $main-color;
     color: $third-color;
     border-radius: 10px;
@@ -1270,225 +1269,7 @@ body {
     margin: 0px 10px;
     text-decoration: none;
 }
-.containerProgramListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-//==================================================//
-//ROLE ADMIN LIST
-//==================================================//
-.containerRolesList {
-    margin-top: 100px;
-}
-.roleListAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerRoleListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemRoleListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemRoleListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemRoleListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerRoleListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-//==================================================//
-//ACTOR ADMIN LIST
-//==================================================//
-.containerActorsList {
-    margin-top: 100px;
-}
-.actorListAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerActorListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemActorListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemActorListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemActorListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerActorListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-
-//==================================================//
-//CATEGORY ADMIN LIST
-//==================================================//
-.containerCategoriesList {
-    margin-top: 100px;
-}
-.categoriesListAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerCategoryListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemCategoryListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemCategoryListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemCategoryListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerCategoryListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-
-//==================================================//
-//SEASON ADMIN LIST
-//==================================================//
-.containerSeasonsList {
-    margin-top: 100px;
-}
-.seasonsListAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerSeasonListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemSeasonListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemSeasonListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemSeasonListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerSeasonListItemButtons {
-    display: flex;
-    padding: 10px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-}
-
-//==================================================//
-//EPISODE ADMIN LIST
-//==================================================//
-.containerEpisodesList {
-    margin-top: 100px;
-}
-.episodesListAdminTitle {
-    color: $main-color;
-    text-align: center;
-}
-.containerEpisodeListCards {
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 40px;
-    border-radius: 10px;
-}
-.itemEpisodeListLabel {
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    color: $third-color;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.itemEpisodeListContent {
-    padding: 5px;
-    text-align: center;
-}
-.itemEpisodeListContentButtons {
-    background-color: $main-color;
-    color: $third-color;
-    border-radius: 10px;
-    padding: 10px 100px;
-    font-size: 0.7rem;
-    margin: 0px 10px;
-    text-decoration: none;
-}
-.containerEpisodeListItemButtons {
+.containerListItemButtons {
     display: flex;
     padding: 10px 0px 0px 0px;
     align-items: center;
@@ -1542,27 +1323,15 @@ body {
 }
 
 //==================================================//
-//FORM CATEGORY
+//FORM
 //==================================================//
-
-
-//==================================================//
-//FORM PROGRAM EDIT
-//==================================================//
-
-
-
-
-//==================================================//
-//FORM PROGRAM CREATE
-//==================================================//
-.containerFormNew {
+.containerFormNew, .containerFormEdit {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-.newFormNewTitle {
+.newFormNewTitle, .newFormEditTitle {
     color: $main-color;
     text-align: center;
 }
@@ -1572,6 +1341,12 @@ body {
     border-radius: 10px;
     height: 40px;
     appearance: none;
+    text-align: center;
+}
+.itemFormNewSubmitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .itemFormNewSelect select {
     text-align: center;
@@ -1606,6 +1381,7 @@ body {
 .containerFormNewElementButtons, .containerFormNewButtons {
     display: flex;
     justify-content: center;
+    
 }
 .itemFormNewUpload div {
     width: 100%;
@@ -1621,7 +1397,7 @@ body {
     margin: 10px 0px;
 }
 .formNewBackButton {
-    padding: 10px 0px;
+    padding: 11px 0px;
     width: 100%;
     text-align: center;
     background-color: $main-color;
@@ -1644,30 +1420,33 @@ body {
 .itemFormNewSubmitButton:hover, .formNewBackButton:hover {
     background-color: $secondary-color;
     cursor: pointer;
+
+    .deleteButton {
+        background-color: $secondary-color;
+    }
+}
+.itemFormNewSubmitButton .deleteButton {
+    background-color: $main-color;
+    border: none;
+    color: $third-color;
+}
+.itemFormNewSubmitButton .btn {
+    width:100%;
+}
+.itemFormDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    height:20px;
 }
 @media (max-width: 768px) {
-    .containerFormNew {
+    .containerFormNew, .containerFormEdit {
         padding: 20px;
     }
 }
 @media (max-width: 445px) {
-    .newFormNewTitle {
+    .newFormNewTitle, .newFormEditTitle {
         font-size: 1.4rem;
     }
 }
-//==================================================//
-//FORM SEASON
-//==================================================//
-
-//==================================================//
-//FORM EPISODE
-//==================================================//
-
-//==================================================//
-//FORM ROLE CREATE
-//==================================================//
-
-//==================================================//
-//FORM ACTOR CREATE
-//==================================================//
-

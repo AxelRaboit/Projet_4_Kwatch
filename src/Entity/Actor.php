@@ -62,6 +62,11 @@ class Actor
      */
     private $roles;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="actors")
+     */
+    private $country;
+
     public function __construct()
     {
         $this->programs = new ArrayCollection();
@@ -182,4 +187,15 @@ class Actor
         return $this;
     }
 
+    public function getCountry(): ?Country
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?Country $country): self
+    {
+        $this->country = $country;
+
+        return $this;
+    }
 }

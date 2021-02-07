@@ -66,6 +66,11 @@ class Director
      */
     private $program;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="directors")
+     */
+    private $country;
+
     public function __construct()
     {
         $this->program = new ArrayCollection();
@@ -165,5 +170,17 @@ class Director
     public function __toString(): string
     {
         return $this->name;
+    }
+
+    public function getCountry(): ?Country
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?Country $country): self
+    {
+        $this->country = $country;
+
+        return $this;
     }
 }

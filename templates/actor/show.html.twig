@@ -3,35 +3,36 @@
 {% block title %}{{actor.name}}{% endblock %}
 
 {% block body %}
-    <div class="containerShowActor">
-        <h1 class="ShowActorTitle">{{ actor.name }}</h1>
+    <div class="containerShowPerson">
+        <h1 class="ShowPersonTitle">{{ actor.name }}</h1>
         {% if actor.picture %}
-            <img class="actorPicture" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/>
+            <img class="personPicture" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/>
         {% else %}
-            <img class="actorNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
+            <img class="personNoImage" src="{{ asset('build/images/user/noImage.png') }}"alt="No Picture"/>        
         {% endif %}
-        <div class="containerActorAdmin">
+        <div class="containerPersonAdmin">
             {% if is_granted("ROLE_ADMIN") %}
-                <a class="actorEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
+                <a class="personEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
             {% endif %}
         </div>
-        <div class="containerActorDescription">
-            <p class="actorDescriptionName">{{actor.name}}</p>
+        <div class="containerPersonDescription">
+            <p class="personDescriptionName">{{actor.name}}</p>
             <hr>
-            <p class="actorDescriptionNationality"><span class="actorDescriptionNationalityLabel">Nationalité:</span> {{actor.nationality}}</p>
+            <p class="personDescriptionNationality"><span class="personDescriptionNationalityLabel">Pays:</span> {{actor.country}}</p>
+            <p class="personDescriptionNationality"><span class="personDescriptionNationalityLabel">Nationalité:</span> {{actor.nationality}}</p>
 
-            <p class="actorDescriptionLabel">À propos:</p>
+            <p class="personDescriptionLabel">À propos:</p>
             <hr>
-            <p class="actorDescription">{{actor.description}}</p>
-            
+            <p class="personDescription">{{actor.description}}</p>
+
             {% for role in roles %}
-                <p class="actorRoleLabel">Rôles:</p>
+                <p class="personRoleLabel">Rôles:</p>
                 <hr>
-                <p class="actorRoleProgramTitle"><span class="actorDescriptionRoleLabel">{{role.name}}:</span>
+                <p class="personRoleProgramTitle"><span class="personDescriptionRoleLabel">{{role.name}}:</span>
                     <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a>
                 </p>
             {% else %}
-                <p class="actorRoleLabel">Rôles:</p>
+                <p class="personRoleLabel">Rôles:</p>
                 <hr>
                 <p class="alertMessageNoRoles">Cet acteur n'a pas de rôle</p>
             {% endfor %}

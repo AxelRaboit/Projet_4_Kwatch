@@ -3,26 +3,26 @@
 {% block title %}Catégories - Administration{% endblock %}
 
 {% block body %}
-    <div class="containerCategoriesList">
-        <h1 class="categoriesListAdminTitle">Liste des Categories</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des Categories</h1>
 
         {% for category in categories %}
-            <div class="containerCategoryListCards">
-                <div class="containerCategoryListItem">
-                    <div class="itemCategoryListLabel">Id</div>
-                    <div class="itemCategoryListContent">{{category.id}}</div>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{category.id}}</div>
                 </div>
                 <hr>
-                <div class="containerCategoryListItem">
-                    <div class="itemCategoryListLabel">Nom</div>
-                    <div class="itemCategoryListContent">{{category.name}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Nom</div>
+                    <div class="itemListContent">{{category.name}}</div>
                 </div>
                 <hr>
-                <div class="containerCategoryListItem">
-                    <div class="itemCategoryListLabel">Actions</div>
-                    <div class="containerCategoryListItemButtons">
-                        <a class="itemCategoryListContentButtons" href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
-                        <a class="itemCategoryListContentButtons" href="{{ path('category_edit', {'id': category.id}) }}">Modifier</a>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('category_edit', {'id': category.id}) }}">Modifier</a>
                     </div>
                 </div>
             </div>

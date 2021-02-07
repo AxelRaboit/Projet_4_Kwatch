@@ -10,7 +10,11 @@ use Symfony\Component\Form\AbstractType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class DirectorType extends AbstractType
 {
@@ -23,16 +27,28 @@ class DirectorType extends AbstractType
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_uri' => false, // not mandatory, default is true
             ])
-            ->add('nationality', EntityType::class, [
+            ->add('nationality', TextType::class, [
                 'label' => 'Nationalité',
+            ])
+            ->add('country', EntityType::class, [
+                'label' => 'Pays',
                 'class' => Country::class,
                 'choice_label' => 'nom_fr_fr',
-                'query_builder' => function (CountryRepository $query) {
-                    return $query->createQueryBuilder('c')
-                            ->orderBy('c.nom_fr_fr', 'ASC');
-                },
             ])
-            ->add('description')
+            ->add('description', TextareaType::class, [
+                'label' => 'Description',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Veuillez renseigner la description du réalisateur(trice).',
+                    ]),
+                    new Length([
+                        'min' => 20,
+                        'minMessage' => 'Écrire {{ limit }} caractères minimum.',
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4000,
+                    ]),
+                ],
+            ])
             ->add('program', EntityType::class, [
                 'required' => false,
                 'label' => 'Série',
@@ -40,7 +56,6 @@ class DirectorType extends AbstractType
                 'choice_label' => 'title',
                 'multiple' => true,
                 'expanded' => true,
-                'by_reference' => false
                 
             ])
         ;

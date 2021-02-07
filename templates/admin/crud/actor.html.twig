@@ -3,26 +3,26 @@
 {% block title %}Acteurs - Administration{% endblock %}
 
 {% block body %}
-    <div class="containerActorsList">
-        <h1 class="actorListAdminTitle">Liste des Acteurs</h1>
+    <div class="containerItemList">
+        <h1 class="listAdminTitle">Liste des Acteurs</h1>
 
         {% for actor in actors %}
-            <div class="containerActorListCards">
-                <div class="containerActorsListItem">
-                    <div class="itemActorListLabel">Id</div>
-                    <div class="itemActorListContent">{{actor.id}}</div>
+            <div class="containerListCards">
+                <div class="containerListItem">
+                    <div class="itemListLabel">Id</div>
+                    <div class="itemListContent">{{actor.id}}</div>
                 </div>
                 <hr>
-                <div class="containerActorListItem">
-                    <div class="itemActorListLabel">Nom</div>
-                    <div class="itemActorListContent">{{actor.name}}</div>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Nom</div>
+                    <div class="itemListContent">{{actor.name}}</div>
                 </div>
                 <hr>
-                <div class="containerActorListItem">
-                    <div class="itemActorListLabel">Actions</div>
-                    <div class="containerActorListItemButtons">
-                        <a class="itemActorListContentButtons" href="{{ path('actor_show', {'id': actor.id}) }}">Voir</a>
-                        <a class="itemActorListContentButtons" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier</a>
+                <div class="containerListItem">
+                    <div class="itemListLabel">Actions</div>
+                    <div class="containerListItemButtons">
+                        <a class="itemListContentButtons" href="{{ path('actor_show', {'id': actor.id}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier</a>
                     </div>
                 </div>
             </div>

@@ -20,22 +20,14 @@ class RoleType extends AbstractType
                 'label' => 'Nom',
             ])
             ->add('actor', EntityType::class, [
-                'required' => false,
                 'label' => 'Acteur',
                 'class' => Actor::class,
                 'choice_label' => 'name',
-                'multiple' => false,
-                'expanded' => false,
-                'by_reference' => false
             ])
             ->add('program', EntityType::class, [
-                'required' => false,
                 'label' => 'Série',
                 'class' => Program::class,
                 'choice_label' => 'title',
-                'multiple' => false,
-                'expanded' => false,
-                'by_reference' => false
             ])
         ;
     }

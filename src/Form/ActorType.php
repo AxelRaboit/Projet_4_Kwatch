@@ -22,15 +22,14 @@ class ActorType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'Nom',
-                ])
-            ->add('nationality', EntityType::class, [
+            ])
+            ->add('nationality', TextType::class, [
                 'label' => 'Nationalité',
+            ])
+            ->add('country', EntityType::class, [
+                'label' => 'Pays',
                 'class' => Country::class,
                 'choice_label' => 'nom_fr_fr',
-                'query_builder' => function (CountryRepository $query) {
-                    return $query->createQueryBuilder('c')
-                            ->orderBy('c.nom_fr_fr', 'ASC');
-                },
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Description',
@@ -47,7 +46,8 @@ class ActorType extends AbstractType
                 ],
             ])
             ->add('pictureFile', VichFileType::class, [
-                'required' => true,
+                'label' => 'Image',
+                'required' => false,
                 'allow_delete' => false, // not mandatory, default is true
                 'download_uri' => false, // not mandatory, default is true
                 'delete_label' => 'Supprimer l\'image actuelle'

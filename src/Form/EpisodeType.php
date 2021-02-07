@@ -34,7 +34,7 @@ class EpisodeType extends AbstractType
                 'download_uri'  => false, // not mandatory, default is true
 
             ])
-            ->add('season', EntityType::class, [ //TODO -> Complete the add to concaten and get an explicite select for the user
+            ->add('season', EntityType::class, [
                 'class' => Season::class,
                 'label' => 'Saison'
             ]);
