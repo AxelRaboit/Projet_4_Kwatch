@@ -153,6 +153,6 @@ class Season
 
     public function __toString()
     {
-        return (string) ' Program: ' . $this->program->getTitle() . ' - Season: ' . $this->number;
+        return (string) ' Série: ' . $this->program->getTitle() . ' - Saison: ' . $this->number;
     }
 }

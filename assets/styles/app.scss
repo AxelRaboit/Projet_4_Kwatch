@@ -1408,11 +1408,20 @@ body {
     color: $main-color;
     text-align: center;
 }
-.itemFormNewSimpleInput input, .itemFormNewTextArea textarea, .itemFormNewSelect select, .itemFormNewSubmitButton {    
+.itemFormNewTextArea textarea, .itemFormNewSelect select, .itemFormNewSubmitButton {    
     width: 100%;
     border: none;
     border-radius: 10px;
     height: 40px;
+    appearance: none;
+    text-align: center;
+    padding: 10px 0px;
+}
+.itemFormNewSimpleInput input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 20px;
     appearance: none;
     text-align: center;
     padding: 10px 0px;
