@@ -73,7 +73,7 @@ class CommentController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit/{programSlug}/seasons/{seasonId}/episodes/{episodeId}", name="comment_edit")
+     * @Route("/{programSlug}/seasons/{seasonId}/episodes/{episodeId}/{id}/edit", name="comment_edit")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programSlug": "slug"}})
      * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
      * @ParamConverter("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
