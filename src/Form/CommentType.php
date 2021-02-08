@@ -19,12 +19,14 @@ class CommentType extends AbstractType
             ])
             ->add('rate', ChoiceType::class, [
                 'label' => 'Note',
+                'placeholder' => '-- Choisir une note --',
+                'required' => false,
                 'choices' => [
-                    '1/5' => 1,
-                    '2/5' => 2,
-                    '3/5' => 3,
-                    '4/5' => 4,
-                    '5/5' => 5,
+                    '1' => 1,
+                    '2' => 2,
+                    '3' => 3,
+                    '4' => 4,
+                    '5' => 5,
                 ]
             ]);
         ;

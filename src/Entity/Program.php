@@ -52,9 +52,9 @@ class Program
     // Tu peux d’ailleurs voir que l’annotation ORM column n’est pas spécifiée car
     //On ne rajoute pas de données de type file en bdd
     /**
-    * @Vich\UploadableField(mapping="poster_file", fileNameProperty="poster")
-    * @var File
-    */
+     * @Vich\UploadableField(mapping="poster_file", fileNameProperty="poster")
+     * @var File
+     */
     private $posterFile;
 
     /**

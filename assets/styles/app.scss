@@ -798,14 +798,75 @@ body {
 //COMMENT SECTION
 //==================================================//
 .containerCommentSection {
-    border: solid red ;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.containerComment div {
+    display: flex;
     flex-direction: column;
 }
-
-
+.containerCommentManager {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.containerAvatar {
+    display: flex;
+    justify-content: flex-end;
+    height: 160px;
+    margin-right: 25px;
+}
+.accountLogoComment {
+    width: 80px;
+}
+.containerHeader {
+    display: flex;
+}
+.containerContent p {
+    margin: 0 0 10px 0;
+}
+.containerHeaderComment {
+    display: flex;
+    margin-right: 10px;
+}
+.containerHeaderComment div {
+    width: 560px;
+    display: flex;
+    flex-direction: row;
+}
+.commentHeaderContent {
+    font-weight: bold;
+    color: $main-color;
+}
+.itemCommentManagerEdit, .itemCommentManagerDelete {
+    margin-right: 15px;
+    font-size: 0.8rem;
+}
+.itemCommentManagerEdit {
+    text-decoration: none;
+    color: $third-color;
+}
+.itemCommentManagerDelete button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+    color: $main-color;
+    font-size: inherit;
+}
+.commentLabel {
+    color: $third-color;
+}
+.test {
+    display: flex;
+    justify-content: flex-start;
+    width: 670px;
+    background-color: $secondary-color;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
 
 //==================================================//
 //EPISODE SHOW

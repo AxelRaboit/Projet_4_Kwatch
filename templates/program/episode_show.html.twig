@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ program.title }} | Episode {{ episode.number }} | Saison {{ season.number }} | {{ parent() }}{% endblock %}
+{% block title %}{{ program.title }} | Saison {{ season.number }} | Episode {{ episode.number }} | {{ parent() }}{% endblock %}
 
 {% block body %}
 
@@ -30,16 +30,34 @@
                     </div>
 
                     {% for comment in episode.comments %}
-                        <div class="containerCommentSection">
-                            <p>Auteur: {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}</p>
-                            <p>Note: {{ comment.rate }}/5</p>
-                            <p>Commentaire: {{ comment.comment }}</p>
-                            
-                            {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
-                                {{ include('comment/_delete_form.html.twig') }}
-                            {%endif%}
+                    <div class="containerCommentSection">
+                        <div class="test">
+                            <div class="containerAvatar">
+                                <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+                            </div>
+                            <div class="containerComment">
+                                <div class="containerHeader">
+                                    <div class="containerHeaderComment">
+                                        <p class="commentHeaderContent">
+                                            {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}
+                                        </p>
+                                        {% if comment.rate %}
+                                            <p class="commentHeaderContent">Note: <span class="commentLabel">{{ comment.rate }}/5</span></p>
+                                        {% endif %}
+                                        {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
+                                        <div class="containerCommentManager">
+                                            <a class="itemCommentManagerEdit" href="{{ path('comment_edit', {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier</a>
+                                            <div class="itemCommentManagerDelete">{{ include('comment/_delete_form.html.twig') }}</div>
+                                        </div>
+                                        {%endif%}
+                                    </div>
+                                </div>
+                                <div class="containerContent">
+                                    <p>{{ comment.comment }}</p>
+                                </div>
+                            </div>
                         </div>
-
+                    </div>
                     {% endfor %}
 
                     {% if app.user %}
@@ -57,3 +75,5 @@
     </div>
     {% include "/includes/_footer.html.twig" %}
 {% endblock %}
+
+

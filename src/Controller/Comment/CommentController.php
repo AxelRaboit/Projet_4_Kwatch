@@ -2,13 +2,17 @@
 
 namespace App\Controller\Comment;
 
+use App\Entity\Season;
 use App\Entity\Comment;
+use App\Entity\Episode;
+use App\Entity\Program;
 use App\Form\CommentType;
 use App\Repository\CommentRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * @Route("/comment")
@@ -69,9 +73,13 @@ class CommentController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="comment_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit/{programSlug}/seasons/{seasonId}/episodes/{episodeId}", name="comment_edit")
+     * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programSlug": "slug"}})
+     * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
+     * @ParamConverter("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
+     * 
      */
-    public function edit(Request $request, Comment $comment): Response
+    public function edit(Request $request, Comment $comment, Program $program, Season $season, Episode $episode): Response
     {
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
@@ -79,7 +87,11 @@ class CommentController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('comment_index');
+            return $this->redirectToRoute('program_season_episode_show', [
+                'programSlug' => $program->getSlug(),
+                'seasonId' => $season->getId(),
+                'episodeId' => $episode->getId(),
+            ]);
         }
 
         return $this->render('comment/edit.html.twig', [
