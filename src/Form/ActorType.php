@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Role;
 use App\Entity\Actor;
 use App\Entity\Country;
 use App\Repository\CountryRepository;
