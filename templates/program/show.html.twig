@@ -63,7 +63,6 @@
                     <h2 class="programShowPersonLabel">Rôles principaux:</h2>
                     <div class="containerProgramPerson">
                         {% for role in roles %}
-                            {% if role.role == 'Principal' %}
                                 <div class="containerItemPerson">
                                     <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {id: role.actor.id})}}">
                                         <div class"itemProgramPerson">
@@ -75,11 +74,10 @@
                                         </div>
                                     </a>
                                 </div>
-                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
-
+                
                 <div class="containerProgramShowPersonContent">
                     <h2 class="programShowPersonLabel">Rôles secondaires:</h2>
                     <div class="containerProgramPerson">
