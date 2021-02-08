@@ -2,6 +2,7 @@
 
 namespace App\Controller\Actor;
 
+use Exception;
 use App\Entity\Actor;
 use App\Form\ActorType;
 use App\Repository\RoleRepository;
@@ -99,16 +100,26 @@ class ActorController extends AbstractController
     public function delete(Request $request, Actor $actor): Response
     {
         if ($this->isCsrfTokenValid('delete'.$actor->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($actor);
-            $entityManager->flush();
 
-            if ($actor->getPicture() == true) {
-                $fileToDelete = __DIR__ . '/../../public/uploads/' . $actor->getPicture();
-                if (file_exists($fileToDelete)) {
-                    unlink($fileToDelete);
+            try
+            {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($actor);
+                $entityManager->flush();
+
+                if ($actor->getPicture() == true) {
+                    $fileToDelete = __DIR__ . '/../../public/uploads/' . $actor->getPicture();
+                    if (file_exists($fileToDelete)) {
+                        unlink($fileToDelete);
+                    }
                 }
             }
+            catch (Exception $e) 
+            {
+                throw new Exception('A role is assigned to this actor, so it is not possible to delete it.');
+            }
+
+
         }
 
         return $this->redirectToRoute('program_index');
