@@ -35,7 +35,13 @@
         <button id="submitSearchButton">Chercher</button>
     </form>
 {#     <a class="navbar-logout" href="{{ path('app_logout') }}">Déconnexion</a> #}
-    <a href="{{path('user_profile', {id: app.user.id})}}"><img class="accountLogo" src="{{ asset('/build/images/img/account/account.png') }}" alt="account logo"></a>
+    <a href="{{path('user_profile', {id: app.user.id})}}">
+{#     {% if app.user.avatar %}
+      <img class="accountLogo" src="{{ asset('/build/images/img/account/account.png') }}" alt="account logo">
+    {% else %} #}
+        <img class="accountLogo" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+{#     {% endif %} #}
+    </a>
   </div>
 </nav>
 
