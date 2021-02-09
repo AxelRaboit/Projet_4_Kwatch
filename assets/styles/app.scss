@@ -816,7 +816,8 @@ body {
     justify-content: flex-end;
     height: 160px;
     margin-right: 25px;
-    align-self: flex-start;
+    position: relative;
+    bottom: 40px;
 }
 .accountLogoComment {
     width: 80px;

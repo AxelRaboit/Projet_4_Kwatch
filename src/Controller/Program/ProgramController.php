@@ -141,8 +141,8 @@ class ProgramController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $slug = $slugify->generate($program->getTitle());
-            $program->setSlug($slug);
+/*             $slug = $slugify->generate($program->getTitle());
+            $program->setSlug($slug); */
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($program);
             $entityManager->flush();
