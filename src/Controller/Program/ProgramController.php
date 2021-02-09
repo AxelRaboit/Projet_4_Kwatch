@@ -6,7 +6,6 @@ use App\Entity\Season;
 use App\Entity\Comment;
 use App\Entity\Episode;
 use App\Entity\Program;
-use App\Service\Slugify;
 use App\Form\CommentType;
 use App\Form\ProgramType;
 use App\Repository\RoleRepository;
@@ -133,7 +132,7 @@ class ProgramController extends AbstractController
     /**
      * @Route("/new", name="new", methods={"GET","POST"})
      */
-    public function new(Request $request, Slugify $slugify): Response
+    public function new(Request $request): Response
     {
         $program = new Program();
         $form = $this->createForm(ProgramType::class, $program);
@@ -164,7 +163,7 @@ class ProgramController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('program_index');
+            return $this->redirectToRoute('program_show', ['slug' => $program->getSlug()]);
         }
 
         return $this->render('program/edit.html.twig', [
