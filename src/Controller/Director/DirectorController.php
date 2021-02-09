@@ -5,10 +5,11 @@ namespace App\Controller\Director;
 use App\Entity\Director;
 use App\Form\DirectorType;
 use App\Repository\DirectorRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * @Route("/director")
@@ -59,7 +60,8 @@ class DirectorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="director_show", methods={"GET"})
+     * @Route("/{directorSlug}", name="director_show", methods={"GET"}, requirements={"actorSlug"="[a-z\-_]+"})
+     * @ParamConverter("director", class="App\Entity\Director", options={"mapping": {"directorSlug": "slug"}})
      */
     public function show(Director $director): Response
     {
@@ -69,7 +71,8 @@ class DirectorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="director_edit", methods={"GET","POST"})
+     * @Route("/{directorSlug}/edit", name="director_edit", methods={"GET","POST"})
+     * @ParamConverter("director", class="App\Entity\Director", options={"mapping": {"directorSlug": "slug"}})
      */
     public function edit(Request $request, Director $director): Response
     {
@@ -79,7 +82,7 @@ class DirectorController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('program_index');
+            return $this->redirectToRoute('director_show', ['directorSlug' => $director->getSlug()]);
         }
 
         return $this->render('director/edit.html.twig', [
