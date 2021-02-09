@@ -39,7 +39,7 @@
                                 <div class="containerHeader">
                                     <div class="containerHeaderComment">
                                         <p class="commentHeaderContent">
-                                            {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}}
+                                            {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}} <span style="margin-left: 10px;color:white; font-size: 0.8rem">Le {{ comment.createdAt|date('d-m-Y H:i', "Europe/Paris") }}</span>
                                         </p>
                                         {% if comment.rate %}
                                             <p class="commentHeaderContent">Note: <span class="commentLabel">{{ comment.rate }}/5</span></p>

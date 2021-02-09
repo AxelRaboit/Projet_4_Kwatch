@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
@@ -74,6 +75,7 @@ class Program
     private $seasons;
 
     /**
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
@@ -208,12 +210,12 @@ class Program
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+/*     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
 
         return $this;
-    }
+    } */
 
     public function setPosterFile(File $posterFile = null):Program
     {
