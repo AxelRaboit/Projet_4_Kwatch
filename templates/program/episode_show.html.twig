@@ -29,6 +29,12 @@
                         <div class="episodeShowLabel">Commentaire(s):</div>
                     </div>
 
+                    {% if app.user %}
+                        <div class="containerFormNew">
+                        {{ include('comment/_form.html.twig') }}
+                        </div>
+                    {% endif %}
+
                     {% for comment in episode.comments|reverse %}
                     <div class="containerCommentSection">
                         <div class="test">
@@ -66,12 +72,6 @@
                         </div>
                     </div>
                     {% endfor %}
-
-                    {% if app.user %}
-                        <div class="containerFormNew">
-                        {{ include('comment/_form.html.twig') }}
-                        </div>
-                    {% endif %}
 
                     <div class="containerBackToListEpisodeShow">
                         <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des épisodes</a>
