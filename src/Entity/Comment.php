@@ -112,23 +112,9 @@ class Comment
         return $this->createdAt;
     }
 
-/*     public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    } */
-
-public function getUpdatedAt(): ?\DateTimeInterface
-{
-    return $this->updatedAt;
-}
-
-/* public function setUpdatedAt(\DateTimeInterface $updatedAt): self
-{
-    $this->updatedAt = $updatedAt;
-
-    return $this;
-} */
+        return $this->updatedAt;
+    }
     
 }

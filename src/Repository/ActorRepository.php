@@ -25,7 +25,7 @@ class ActorRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('a')
             ->andWhere('a.name LIKE :query')
             ->setParameter('query', $query)
-            ->orderBy('a.id', 'ASC')
+            ->orderBy('a.slug', 'ASC')
             ->setMaxResults(20)
             ->getQuery()
             ->getResult();

@@ -63,7 +63,7 @@
                     <div class="containerProgramPerson">
                         {% for role in roles|filter( role => role.role == 'Primary') %}
                             <div class="containerItemPerson">
-                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {id: role.actor.id})}}">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {actorSlug: role.actor.slug})}}">
                                     <div class"itemProgramPerson">
                                         <img class="programShowPersonPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
                                         <div class="containerPersonNameProgramShow">
@@ -86,7 +86,7 @@
                     <div class="containerProgramPerson">
                         {% for role in roles|filter( role => role.role == 'Secondary') %}
                             <div class="containerItemPerson">
-                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {id: role.actor.id})}}">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {actorSlug: role.actor.slug})}}">
                                     <div class"itemProgramPerson">
                                         <img class="programShowPersonPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
                                         <div class="containerPersonNameProgramShow">
@@ -109,7 +109,7 @@
                     <div class="containerProgramPerson">
                         {% for role in roles|filter( role => role.role == 'Tertiary') %}
                             <div class="containerItemPerson">
-                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {id: role.actor.id})}}">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('actor_show', {actorSlug: role.actor.slug})}}">
                                     <div class"itemProgramPerson">
                                         <img class="programShowPersonPicture" src="{{ '/uploads/' ~ role.actor.picture }}" alt="Actor Picture"/>
                                         <div class="containerPersonNameProgramShow">

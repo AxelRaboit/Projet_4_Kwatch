@@ -17,7 +17,7 @@
         {% for actor in actors %}
         <div class="containerActorItem">
             <div class="actorItem">
-                <a href="{{ path("actor_show", { id: actor.id }) }}"><img class="allActorsPictureShow" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/></a>
+                <a href="{{ path("actor_show", { actorSlug: actor.slug }) }}"><img class="allActorsPictureShow" src="{{ '/uploads/' ~ actor.picture }}" alt="Actor Picture"/></a>
                 <h2>{{ actor.name }}</h2>
             </div>
         </div>

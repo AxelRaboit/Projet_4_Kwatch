@@ -21,8 +21,8 @@
                 <div class="containerListItem">
                     <div class="itemListLabel">Actions</div>
                     <div class="containerListItemButtons">
-                        <a class="itemListContentButtons" href="{{ path('actor_show', {'id': actor.id}) }}">Voir</a>
-                        <a class="itemListContentButtons" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier</a>
+                        <a class="itemListContentButtons" href="{{ path('actor_show', {'actorSlug': actor.slug}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('actor_edit', {'actorSlug': actor.slug}) }}">Modifier</a>
                     </div>
                 </div>
             </div>
