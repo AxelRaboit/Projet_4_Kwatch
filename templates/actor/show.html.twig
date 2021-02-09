@@ -12,7 +12,7 @@
         {% endif %}
         <div class="containerPersonAdmin">
             {% if is_granted("ROLE_ADMIN") %}
-                <a class="personEdit" href="{{ path('actor_edit', {'id': actor.id}) }}">Modifier l'acteur</a>
+                <a class="personEdit" href="{{ path('actor_edit', {'actorSlug': actor.slug}) }}">Modifier l'acteur</a>
             {% endif %}
         </div>
         <div class="containerPersonDescription">

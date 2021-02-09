@@ -210,13 +210,6 @@ class Program
         return $this->slug;
     }
 
-/*     public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    } */
-
     public function setPosterFile(File $posterFile = null):Program
     {
         $this->posterFile = $posterFile;

@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * @Route("/actor", name="actor_")
@@ -61,7 +62,8 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="show", methods={"GET"}, requirements={"id": "\d+"})
+     * @Route("/{actorSlug}", name="show", methods={"GET"}, requirements={"actorSlug"="[a-z\-_]+"})
+     * @ParamConverter("actor", class="App\Entity\Actor", options={"mapping": {"actorSlug": "slug"}})
      */
     public function show(Actor $actor, RoleRepository $roleRepository): Response
     {
@@ -75,7 +77,8 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
+     * @Route("/{actorSlug}/edit", name="edit", methods={"GET","POST"})
+     * @ParamConverter("actor", class="App\Entity\Actor", options={"mapping": {"actorSlug": "slug"}})
      */
     public function edit(Request $request, Actor $actor): Response
     {
@@ -85,7 +88,7 @@ class ActorController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('actor_show', ['id' => $actor->getId()]);
+            return $this->redirectToRoute('actor_show', ['actorSlug' => $actor->getSlug()]);
         }
 
         return $this->render('actor/edit.html.twig', [
@@ -126,7 +129,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/search", name="search", methods={"GET"})
+     * @Route("/search", name="search", methods={"GET"}, priority=10)
      * @return Response
      */
     public function search(Request $request, ActorRepository $actorRepository): Response
