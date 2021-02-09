@@ -41,7 +41,7 @@
                     <div class="containerProgramPerson">
                         {% for director in directors %}
                             <div class="containerItemPerson">
-                                <a class="containerLinkItemProgramPerson" href="{{ path('director_show', {id: director.id})}}">
+                                <a class="containerLinkItemProgramPerson" href="{{ path('director_show', {directorSlug: director.slug})}}">
                                     <div class"itemProgramPerson">
                                         <img class="programShowPersonPicture" src="{{ '/uploads/' ~ director.picture }}" alt="Actor Picture"/>
                                         <div class="containerPersonNameProgramShow">
