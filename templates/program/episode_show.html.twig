@@ -29,7 +29,7 @@
                         <div class="episodeShowLabel">Commentaire(s):</div>
                     </div>
 
-                    {% for comment in episode.comments %}
+                    {% for comment in episode.comments|reverse %}
                     <div class="containerCommentSection">
                         <div class="test">
                             <div class="containerAvatar">
@@ -39,7 +39,13 @@
                                 <div class="containerHeader">
                                     <div class="containerHeaderComment">
                                         <p class="commentHeaderContent">
-                                            {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}} <span style="margin-left: 10px;color:white; font-size: 0.8rem">Le {{ comment.createdAt|date('d-m-Y H:i', "Europe/Paris") }}</span>
+                                            {{comment.author.pseudo ? comment.author.pseudo : comment.author.email}} 
+                                            {% if comment.createdAt %}
+                                                <span class="commentCreatedDate">Le {{ comment.createdAt|date('d-m-Y H:i', "Europe/Paris") }}</span>
+                                            {% endif %}
+                                            {% if comment.updatedAt != comment.createdAt %}
+                                                <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
+                                            {% endif %}
                                         </p>
                                         {% if comment.rate %}
                                             <p class="commentHeaderContent">Note: <span class="commentLabel">{{ comment.rate }}/5</span></p>

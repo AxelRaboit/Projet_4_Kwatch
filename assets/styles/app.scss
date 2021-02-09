@@ -871,6 +871,16 @@ body {
     margin: 10px;
     border-radius: 10px;
 }
+.commentCreatedDate, .commentUpdatedDate {
+    margin-left: 10px;
+    color: $third-color;
+}
+.commentCreatedDate {
+    font-size: 0.8rem
+}
+.commentUpdatedDate {
+    font-size: 0.6rem
+}
 
 //==================================================//
 //EPISODE SHOW
