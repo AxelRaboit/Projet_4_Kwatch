@@ -44,9 +44,16 @@ class Actor
     private $pictureFile;
 
     /**
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
+
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -73,6 +80,7 @@ class Actor
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $slug;
+
 
     public function __construct()
     {
@@ -123,12 +131,12 @@ class Actor
         return $this->pictureFile;
     }
     
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+/*     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
 
         return $this;
-    }
+    } */
 
     public function getUpdatedAt(): ?\DateTimeInterface
     {
@@ -210,4 +218,16 @@ class Actor
     {
         return $this->slug;
     }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+/*     public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    } */
 }

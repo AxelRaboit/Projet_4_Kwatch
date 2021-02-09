@@ -47,10 +47,16 @@ class Director
     private $pictureFile;
 
     /**
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime", nullable=true)
-     * @var Datetime
      */
     private $updatedAt;
+
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $createdAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -194,5 +200,15 @@ class Director
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
     }
 }

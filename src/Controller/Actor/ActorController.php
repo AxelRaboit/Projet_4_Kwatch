@@ -24,7 +24,7 @@ class ActorController extends AbstractController
     public function index(ActorRepository $actorRepository): Response
     {
         return $this->render('actor/index.html.twig', [
-            'actors' => $actorRepository->findAll(),
+            'actors' => $actorRepository->findBy(array(), array('name' => 'ASC')),
         ]);
     }
 
@@ -65,7 +65,7 @@ class ActorController extends AbstractController
      * @Route("/{actorSlug}", name="show", methods={"GET"}, requirements={"actorSlug"="[a-z\-_]+"})
      * @ParamConverter("actor", class="App\Entity\Actor", options={"mapping": {"actorSlug": "slug"}})
      */
-    public function show(Actor $actor, RoleRepository $roleRepository): Response
+    public function show(Actor $actor/* , RoleRepository $roleRepository */): Response
     {
         $roles = $actor->getRoles();
 
