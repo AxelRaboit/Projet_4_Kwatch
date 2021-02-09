@@ -25,15 +25,15 @@
                         <div class="episodeShowContent">{{ episode.summary }}</div>
                     </div>
 
-                    <div class="containerEpisodeShowLabel">
-                        <div class="episodeShowLabel">Commentaire(s):</div>
-                    </div>
-
                     {% if app.user %}
                         <div class="containerFormNew">
                         {{ include('comment/_form.html.twig') }}
                         </div>
                     {% endif %}
+
+                    <div class="containerEpisodeShowLabel">
+                        <div class="episodeShowLabel">Commentaire(s):</div>
+                    </div>
 
                     {% for comment in episode.comments|reverse %}
                     <div class="containerCommentSection">
@@ -71,6 +71,10 @@
                             </div>
                         </div>
                     </div>
+                    {% else %}
+                        <div class="containerCommentSection">
+                            <p>Aucun commentaire pour cet épisode</p>
+                        </div>
                     {% endfor %}
 
                     <div class="containerBackToListEpisodeShow">
