@@ -73,11 +73,10 @@ class CommentController extends AbstractController
     }
 
     /**
-     * @Route("/{programSlug}/seasons/{seasonId}/episodes/{episodeId}/{id}/edit", name="comment_edit")
+     * @Route("/{programSlug}/seasons/{seasonId}/episodes/{episodeId}/{id}/edit", name="comment_edit", methods={"GET","POST"})
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programSlug": "slug"}})
      * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
      * @ParamConverter("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
-     * 
      */
     public function edit(Request $request, Comment $comment, Program $program, Season $season, Episode $episode): Response
     {
@@ -95,22 +94,34 @@ class CommentController extends AbstractController
         }
 
         return $this->render('comment/edit.html.twig', [
+            'program' => $program,
+            'season' => $season,
+            'episode' => $episode,
             'comment' => $comment,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="comment_delete", methods={"DELETE"})
+     * @Route("/{programSlug}/seasons/{seasonId}/episodes/{episodeId}/{id}", name="comment_delete", methods={"DELETE"})
+     * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programSlug": "slug"}})
+     * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
+     * @ParamConverter("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
      */
-    public function delete(Request $request, Comment $comment): Response
+    public function delete(Request $request, Comment $comment, Program $program, Season $season, Episode $episode): Response
     {
         if ($this->isCsrfTokenValid('delete'.$comment->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($comment);
             $entityManager->flush();
+
+            return $this->redirectToRoute('program_season_episode_show', [
+                'programSlug' => $program->getSlug(),
+                'seasonId' => $season->getId(),
+                'episodeId' => $episode->getId(),
+            ]);
         }
 
-        return $this->redirectToRoute('comment_index');
+        return $this->redirectToRoute('program_index');
     }
 }

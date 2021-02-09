@@ -47,9 +47,6 @@ class ProgramType extends AbstractType
                     ]),
                 ],
             ])
-/*             ->add('poster', TextType::class, [
-                'label' => 'Poster'
-            ]) */
             ->add('posterFile', VichFileType::class, [
                 'label'        => 'Affiche de la série',
                 'required'     => false,

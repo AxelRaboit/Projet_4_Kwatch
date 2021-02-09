@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\CommentRepository;
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CommentRepository;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
@@ -38,6 +40,11 @@ class Comment
      * @ORM\JoinColumn(nullable=false)
      */
     private $episode;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $createdAt;
 
     public function getId(): ?int
     {
@@ -89,6 +96,20 @@ class Comment
     {
         $this->episode = $episode;
 
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+        if ($createdAt) {
+            $this->createdAt = new \DateTime('now');
+        }
         return $this;
     }
 }

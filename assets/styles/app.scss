@@ -836,16 +836,18 @@ body {
     flex-direction: row;
 }
 .commentHeaderContent {
+    margin: 0 0 10px 0;
     font-weight: bold;
     color: $main-color;
 }
-.itemCommentManagerEdit, .itemCommentManagerDelete {
-    margin-right: 15px;
-    font-size: 0.8rem;
-}
 .itemCommentManagerEdit {
+    margin-right: 15px;
+    font-size: 0.5rem;
     text-decoration: none;
     color: $third-color;
+    background-color: $main-color;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 .itemCommentManagerDelete button {
     cursor: pointer;

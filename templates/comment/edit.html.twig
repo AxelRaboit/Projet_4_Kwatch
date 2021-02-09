@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Comment{% endblock %}
+{% block title %}Modifier le commentaire | {{ parent() }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Comment</h1>
-
-    {{ include('comment/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
-
-    <a href="{{ path('comment_index') }}">back to list</a>
-
-    {{ include('comment/_delete_form.html.twig') }}
+    <div class="containerFormEdit">
+        <h1 class="newFormEditTitle">Modifier le commentaire</h1>
+        {{ include('comment/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        <div class="containerFormNewElementButtons">
+            <div class="itemFormNewSubmitButton itemFormDelete">{{ include('comment/_delete_form.html.twig') }}</div>
+        </div>
+        <div class="containerFormNewButtons">
+            <a class="formNewBackButton" href="{{ path('program_season_episode_show', {'programSlug': program.slug, 'seasonId': season.id, 'episodeId': episode.id}) }}">Retour</a>
+        </div>
+    </div>
 {% endblock %}
+
