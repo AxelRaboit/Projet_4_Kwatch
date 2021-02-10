@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Actor;
+namespace App\Controller;
 
 use Exception;
 use App\Entity\Actor;
@@ -23,6 +23,11 @@ class ActorController extends AbstractController
      */
     public function index(ActorRepository $actorRepository): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         return $this->render('actor/index.html.twig', [
             'actors' => $actorRepository->findBy(array(), array('name' => 'ASC')),
         ]);

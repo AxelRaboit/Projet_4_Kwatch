@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Season;
+namespace App\Controller;
 
 use App\Entity\Season;
 use App\Form\SeasonType;

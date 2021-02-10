@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,6 +16,13 @@ class AdminController extends AbstractController
      */
     public function index(): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('program_index');
+            }
+        }
+
         return $this->render('admin/index.html.twig');
     }
 
