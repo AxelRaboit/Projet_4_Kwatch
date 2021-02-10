@@ -73,7 +73,7 @@ class UserController extends AbstractController
      */
     public function myProfile(User $user): Response
     {
-        if(!$this->isGranted('ROLE_ADMIN'))
+        if(!$this->isGranted('ROLE_USER'))
         {
             return $this->redirectToRoute('program_index');
         }

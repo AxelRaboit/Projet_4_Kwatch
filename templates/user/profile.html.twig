@@ -15,5 +15,7 @@
         <a class="myProfileEditButton" href="{{ path('user_update_password', {'id': user.id}) }}">Modifier mon mot de passe</a>
     </div>
 
-    <a href="{{ path('user_edit', {'id': user.id}) }}">Modifier mes informations</a>  
+    <a href="{{ path('user_edit', {'id': user.id}) }}">Modifier mes informations</a>
+    <hr>
+    <a href="{{ path('app_logout')}}">Se déconnecter</a>
 {% endblock %}
