@@ -43,7 +43,12 @@ class CommentController extends AbstractController
      * @Route("/new", name="comment_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
-    {        
+    {   
+/*         if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        } */
+        
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
