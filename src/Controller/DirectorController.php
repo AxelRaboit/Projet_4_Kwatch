@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Director;
+namespace App\Controller;
 
 use App\Entity\Director;
 use App\Form\DirectorType;

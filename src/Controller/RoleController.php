@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Role;
+namespace App\Controller;
 
 use App\Entity\Role;
 use App\Form\RoleType;

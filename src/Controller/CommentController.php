@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Comment;
+namespace App\Controller;
 
 use App\Entity\Season;
 use App\Entity\Comment;

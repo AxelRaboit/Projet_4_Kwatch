@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Program;
+namespace App\Controller;
 
 use App\Entity\Season;
 use App\Entity\Comment;
@@ -19,6 +19,8 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/program", name="program_")
@@ -30,6 +32,11 @@ class ProgramController extends AbstractController
      */
     public function index(ProgramRepository $programRepository): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $programs = $programRepository->findAll();
         return $this->render('program/index.html.twig', [
             'programs' => $programs,
