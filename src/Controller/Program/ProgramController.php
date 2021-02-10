@@ -41,6 +41,11 @@ class ProgramController extends AbstractController
      */
     public function admin(ProgramRepository $programRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/program.html.twig', [
             'programs' => $programRepository->findAll(),
         ]);

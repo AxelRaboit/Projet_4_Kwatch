@@ -35,6 +35,11 @@ class UserController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -68,6 +73,11 @@ class UserController extends AbstractController
      */
     public function myProfile(User $user): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('user/profile.html.twig', [
             'user' => $user,
         ]);
@@ -82,6 +92,11 @@ class UserController extends AbstractController
         UserPasswordEncoderInterface $passwordEncoder,
         User $user
     ): Response {
+
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
 
         $form = $this->createForm(UpdatePasswordType::class, $user);
         $form->handleRequest($request);
@@ -114,6 +129,11 @@ class UserController extends AbstractController
      */
     public function edit(Request $request, User $user): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
@@ -134,6 +154,11 @@ class UserController extends AbstractController
      */
     public function delete(Request $request, User $user): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($user);

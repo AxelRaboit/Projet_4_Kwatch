@@ -30,11 +30,6 @@ class RoleController extends AbstractController
      */
     public function admin(RoleRepository $roleRepository): Response
     {
-        if(!$this->isGranted('ROLE_ADMIN'))
-        {
-            return $this->redirectToRoute('program_index');
-        }
-
         return $this->render('admin/crud/role.html.twig', [
             'roles' => $roleRepository->findAll(),
         ]);
