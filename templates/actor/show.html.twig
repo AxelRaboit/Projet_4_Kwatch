@@ -25,12 +25,19 @@
             <hr>
             <p class="personDescription">{{actor.description}}</p>
 
+            <p class="personRoleLabel">Rôles:</p>
+            <hr>
             {% for role in roles %}
-                <p class="personRoleLabel">Rôles:</p>
-                <hr>
-                <p class="personRoleProgramTitle"><span class="personDescriptionRoleLabel">{{role.name}}:</span>
-                    <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a>
-                </p>
+            <div class="{{ roles|length <= 1 ? "containerMoviesRoleOnlyOne" : "containerMoviesRole" }}">
+                <div class="itemMoviesRole">
+                    <div class="personRoleProgramTitle"><span class="personDescriptionRoleLabel">{{role.name}}:</span>
+                        <a href="{{path('program_show', {slug: role.program.slug}) }}">{{ role.program.title }}</a>
+                    </div>
+                    <a href="{{path('program_show', {slug: role.program.slug}) }}">
+                        <img class="allProgramsPosterShow" src="{{ '/uploads/' ~ role.program.poster }}" alt="poster program">
+                    </a>
+                </div>
+            </div>
             {% else %}
                 <p class="personRoleLabel">Rôles:</p>
                 <hr>

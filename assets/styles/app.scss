@@ -1173,8 +1173,21 @@ body {
 .personRoleProgramTitle:hover a {
     color: $main-color;
 }
+.containerMoviesRole {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.containerMoviesRoleOnlyOne {
+    display: flex;
+    flex-wrap: wrap;
+}
+.itemMoviesRole {
+    margin: 10px;
+}
+
 @media (max-width: 460px) {
-    .actorPicture {
+    .personPicture {
         width: 300px;
     }
 }
