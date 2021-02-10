@@ -798,95 +798,75 @@ body {
 //COMMENT SECTION
 //==================================================//
 .containerCommentSection {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerComment {
+    width: 700px;
+}
+.commentContent {
+    margin: 20px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    padding: 10px;
+}
+.containerAvatar {
+    padding:10px;
+    background-color: hsl(0, 0%, 14%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.commentHeaderContent {
+    margin-left: 50px;
+}
+.accountLogoComment {
+    width:60px;
+    position: relative;
+    bottom: 5px;
+}
+.itemCommentManagerEdit {
+    font-size: 0.7rem;
+    color: $main-color;
+    text-decoration: none;
+}
+.commentRateLabel {
+    margin-right: 10px;
+    color: $main-color;
+}
+.containerCommentManager {
+    background-color: $main-color;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 180px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.containerComment div {
-    display: flex;
-    flex-direction: column;
-}
-.containerCommentManager {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-.containerAvatar {
-    display: flex;
-    justify-content: flex-end;
-    height: 160px;
-    margin-right: 25px;
-    position: relative;
-    bottom: 40px;
-}
-.accountLogoComment {
-    width: 80px;
-}
-.containerHeader {
-    display: flex;
-}
-.containerContent p {
-    margin: 0 0 10px 0;
-}
-.containerHeaderComment {
-    display: flex;
-    margin-right: 10px;
-}
-.containerHeaderComment div {
-    width: 560px;
-    display: flex;
-    flex-direction: row;
-}
-.commentHeaderContent {
-    margin: 0 0 10px 0;
-    font-weight: bold;
-    color: $main-color;
-}
 .itemCommentManagerEdit {
-    margin-right: 15px;
-    font-size: 0.5rem;
-    text-decoration: none;
     color: $third-color;
-    background-color: $main-color;
-    padding: 5px 10px;
-    border-radius: 10px;
 }
-.itemCommentManagerDelete button {
-    cursor: pointer;
-    padding: 0;
-    border: none;
-    background: none;
+.authorComment {
+    margin: 0;
     color: $main-color;
-    font-size: inherit;
-}
-.commentLabel {
-    color: $third-color;
-}
-.test {
-    display: flex;
-    justify-content: flex-start;
-    width: 670px;
-    background-color: $secondary-color;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-}
-.commentCreatedDate, .commentUpdatedDate {
-    margin-left: 10px;
-    color: $third-color;
-}
-.commentCreatedDate {
-    font-size: 0.8rem
 }
 .commentUpdatedDate {
-    font-size: 0.6rem
+    font-size: 0.7rem;
 }
+
+
 
 //==================================================//
 //EPISODE SHOW
 //==================================================//
 .containerContentEpisodeShow {
     background-color: hsla(0, 1%, 24%, 0.66);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .containerEpisodeTitleShow {
     display: flex;
