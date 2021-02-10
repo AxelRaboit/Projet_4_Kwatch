@@ -133,7 +133,7 @@ class ProgramController extends AbstractController
      * @Route("/new", name="new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
-    {
+    {   
         $program = new Program();
         $form = $this->createForm(ProgramType::class, $program);
         $form->handleRequest($request);

@@ -43,7 +43,7 @@ class CommentController extends AbstractController
      * @Route("/new", name="comment_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
-    {
+    {        
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);

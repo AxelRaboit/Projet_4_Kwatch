@@ -36,8 +36,8 @@
                 <div class="containerListItem">
                     <div class="itemListLabel">Actions</div>
                     <div class="containerListItemButtons">
-                        <a class="itemListContentButtons" href="{{ path('director_show', {'id': director.id}) }}">Voir</a>
-                        <a class="itemListContentButtons" href="{{ path('director_edit', {'id': director.id}) }}">Modifier</a>
+                        <a class="itemListContentButtons" href="{{ path('director_show', {'directorSlug': director.slug}) }}">Voir</a>
+                        <a class="itemListContentButtons" href="{{ path('director_edit', {'directorSlug': director.slug}) }}">Modifier</a>
                     </div>
                 </div>
             </div>

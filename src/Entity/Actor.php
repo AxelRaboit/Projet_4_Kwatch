@@ -130,13 +130,6 @@ class Actor
     {
         return $this->pictureFile;
     }
-    
-/*     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    } */
 
     public function getUpdatedAt(): ?\DateTimeInterface
     {
