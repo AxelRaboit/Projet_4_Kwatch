@@ -66,6 +66,11 @@ class ProgramController extends AbstractController
      */
     public function show(Program $program, RoleRepository $roleRepository): response    /* to get by id -> ("/show/{id<^[0-9]+$>}", name="show") */
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $directors = $program->getDirectors();
         $seasons = $program->getSeasons();
         $roles = $roleRepository->findBy(['program' => $program->getId()]);
@@ -86,6 +91,11 @@ class ProgramController extends AbstractController
      */
     public function showSeason(Program $program, Season $season): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $episodes = $season->getEpisodes();
 
         return $this->render('program/season_show.html.twig', [
@@ -103,6 +113,11 @@ class ProgramController extends AbstractController
      */
     public function showEpisode(Request $request, Program $program, Season $season, Episode $episode): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
@@ -130,6 +145,11 @@ class ProgramController extends AbstractController
      */
     public function search(Request $request, ProgramRepository $programRepository): Response
     {
+        if(!$this->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $query = $request->query->get('q');
 
         if (null !== $query) {
@@ -146,6 +166,11 @@ class ProgramController extends AbstractController
      */
     public function new(Request $request): Response
     {   
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $program = new Program();
         $form = $this->createForm(ProgramType::class, $program);
         $form->handleRequest($request);
@@ -169,6 +194,11 @@ class ProgramController extends AbstractController
      */
     public function edit(Request $request, Program $program): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         $form = $this->createForm(ProgramType::class, $program);
         $form->handleRequest($request);
 
@@ -189,6 +219,11 @@ class ProgramController extends AbstractController
      */
     public function delete(Request $request, Program $program): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('app_login');
+        }
+
         if ($this->isCsrfTokenValid('delete'.$program->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($program);
