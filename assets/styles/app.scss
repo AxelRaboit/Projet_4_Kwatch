@@ -798,13 +798,27 @@ body {
 //COMMENT SECTION
 //==================================================//
 .containerCommentSection {
-    padding: 50px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .containerComment {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
+}
+.authorComment {
+    font-size: 1rem;
+}
+.containerCommentDate {
+    display: flex;
+    flex-wrap: wrap;
+}
+.commentCreatedDate, .commentUpdatedDate {
+    font-size: 0.6rem;
+}
+.commentCreatedDate {
+    margin-right: 10px;
 }
 .commentContent {
     margin: 20px;
@@ -818,6 +832,13 @@ body {
     border-radius: 10px;
     display: flex;
     align-items: center;
+}
+.containerAvatar:hover {
+    background-color: $main-color;
+
+    .authorComment {
+        color: $third-color;
+    }
 }
 .commentHeaderContent {
     margin-left: 50px;
@@ -846,6 +867,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+.containerCommentManager:hover {
+    background-color: $secondary-color;
+    border: solid $main-color 1px;
+}
 .itemCommentManagerEdit {
     color: $third-color;
 }
@@ -853,8 +878,8 @@ body {
     margin: 0;
     color: $main-color;
 }
-.commentUpdatedDate {
-    font-size: 0.7rem;
+.contentComment {
+    font-size: 0.8rem;
 }
 
 
@@ -862,118 +887,55 @@ body {
 //==================================================//
 //EPISODE SHOW
 //==================================================//
-.containerContentEpisodeShow {
-    background-color: hsla(0, 1%, 24%, 0.66);
+.containerEpisodeShow {
+    margin-top: 100px;
+}
+.containerPosterEpisodeShow {
     display: flex;
     justify-content: center;
+}
+.episodePosterShow, .episodeNoImageShow {
+    width: 90%;
+    max-width: 650px;
+    border-radius: 10px;
+}
+.episodeTitleShowEpisode {
+    color: $main-color;
+    font-size: 1.8rem;
+}
+.containerEpisodeContent {
+    margin-top: 20px;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .containerEpisodeTitleShow {
     display: flex;
-    justify-content:center;
-    align-items:center;
-}
-.episodeTitleShowEpisode {
-    font-size: 2.5rem;
-    color: $main-color;
-}
-.containerEpisodeShowLabel {
-    display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
     margin-bottom: 20px;
 }
-.containerPosterEpisodeShow {
-    margin-top: 100px;
-    margin-left: 20px;
+.containerEpisodeShowLabel {
+    margin-top: 50px;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
 }
 .episodeShowLabel {
-    margin-top: 80px;
-    color: $third-color;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
-.containerEpisodeShowContent {    
+.containerEpisodeShowContent {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    padding: 20px;
 }
-.episodeShowContent {
-    color: $third-color;
-    width: 80%;
-}
-.episodePosterShow {
-    margin-top: 20px;
-    width: 600px;
-    border-radius: 10px;
-}
-.episodeNoImageShow {
-    margin-top: 20px;
-    width: 600px;
-    border-radius: 10px;
-}
-.containerBackToListEpisodeShow {
+.containerFormComment {
+    margin-top: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 280px;
-}
-.backToListEpisodeShow {
-    margin: 20px;
-    color: $main-color;
-    text-decoration: none;
-}
-@media (max-width: 900px) {
-    .containerContentEpisodeShow {
-        height: 100vh;
-    }
-    .containerEpisodeContent {
-        background-color: none;
-        width: 100vw;
-        margin-top: 0px;
-    }
-    .containerPosterEpisodeShow {
-        grid-column: 2;
-        display: flex;
-        grid-area: photo;
-        margin-left: 0px;
-        margin-bottom: 40px;
-    }
-    .containerEpisodeTitleShow {
-        grid-area: title;
-    }
-    .episodeTitleShowEpisode {
-        margin-top: 40px;
-        font-size: 1.7rem;
-    }
-/*     .containerEpisodeShowLabel {
-        grid-area: synopsisTitle;
-    } */
-    .episodeShowLabel {
-        margin-top: 20px;
-    }
-    .containerBackToListProgramShow {
-        grid-area: backButton;
-    }
-}
-@media (max-width: 768px) {
-    .episodePosterShow {
-        width: 420px;
-    }
-}
-@media (max-width: 500px) {
-    .episodePosterShow {
-        width:300px;
-    }
-}
-@media (max-width: 360px) {
-    .episodePosterShow {
-        width:250px;
-    }
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 0;
+    width: 90%;
 }
 
 //==================================================//

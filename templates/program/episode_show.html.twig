@@ -24,9 +24,8 @@
                     <div class="containerEpisodeShowContent">
                         <div class="episodeShowContent">{{ episode.summary }}</div>
                     </div>
-
                     {% if app.user %}
-                        <div class="containerFormNew">
+                        <div class="containerFormComment">
                         {{ include('comment/_form.html.twig') }}
                         </div>
                     {% endif %}
@@ -34,45 +33,47 @@
                 <div class="containerEpisodeShowLabel">
                     <div class="episodeShowLabel">Commentaire(s):</div>
                 </div>
-            </div>
-            <div class="containerCommentSection">
-                <div class="containerComment">
-                    {% for comment in episode.comments|reverse %}
-                    <div class="commentContent">
-                        <div class="containerAvatar">
-                            <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
-                            <div class="commentHeaderContent">
-                                <p class="authorComment">{{comment.author.pseudo ? comment.author.pseudo : comment.author.email}} </p>
-                                {% if comment.createdAt %}
-                                    <span class="commentCreatedDate">Le {{ comment.createdAt|date('d-m-Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
-                                {% endif %}
-                                {% if comment.updatedAt != comment.createdAt %}
-                                    <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
-                                {% endif %}
+                <div class="containerCommentSection">
+                    <div class="containerComment">
+                        {% for comment in episode.comments|reverse %}
+                        <div class="commentContent">
+                            <div class="containerAvatar">
+                                <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+                                <div class="commentHeaderContent">
+                                    <p class="authorComment">{{comment.author.pseudo ? comment.author.pseudo : 'Anonyme'}} </p>
+                                    <div class="containerCommentDate">
+                                    {% if comment.createdAt %}
+                                        <span class="commentCreatedDate">Le {{ comment.createdAt|date('d-m-Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
+                                    {% endif %}
+                                    {% if comment.updatedAt != comment.createdAt %}
+                                        <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
+                            <div class="containerCommentManager">
+                                <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
+                                    {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if comment.rate %}
+                                <p class="commentRate"><span class="commentRateLabel">Note: </span>{{ comment.rate }}/5</p>
+                            {% endif %}
+                            <div class="containerContent">
+                                <p class="contentComment">{{ comment.comment }}</p>
                             </div>
                         </div>
-                        {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
-                        <div class="containerCommentManager">
-                            <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
-                                {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
-                            </a>
-                        </div>
-                        {% endif %}
-                        {% if comment.rate %}
-                            <p class="commentRate"><span class="commentRateLabel">Note: </span>{{ comment.rate }}/5</p>
-                        {% endif %}
-                        <div class="containerContent">
-                            <p>{{ comment.comment }}</p>
-                        </div>
+                        {% else %}
+                            <div class="containerCommentSection">
+                                <p>Aucun commentaire pour cet épisode</p>
+                            </div>
+                        {% endfor %}
                     </div>
-                    {% else %}
-                        <div class="containerCommentSection">
-                            <p>Aucun commentaire pour cet épisode</p>
-                        </div>
-                    {% endfor %}
-                </div>
-                <div class="containerBackToListEpisodeShow">
-                    <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des épisodes</a>
+                    <div class="containerBackToListEpisodeShow">
+                        <a class="backToListEpisodeShow" href="{{ path('program_season_show',{seasonId: season.id, programSlug: program.slug}) }}">Retour à la liste des épisodes</a>
+                    </div>
                 </div>
             </div>
         </div>
