@@ -30,6 +30,11 @@ class SeasonController extends AbstractController
      */
     public function admin(SeasonRepository $seasonRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/season.html.twig', [
             'seasons' => $seasonRepository->findAll(),
         ]);

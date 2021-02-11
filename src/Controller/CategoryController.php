@@ -30,6 +30,11 @@ class CategoryController extends AbstractController
      */
     public function admin(CategoryRepository $categoryRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/category.html.twig', [
             'categories' => $categoryRepository->findAll(),
         ]);

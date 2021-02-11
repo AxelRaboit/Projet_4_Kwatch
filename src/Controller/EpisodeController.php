@@ -30,6 +30,11 @@ class EpisodeController extends AbstractController
      */
     public function admin(EpisodeRepository $episodeRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/episode.html.twig', [
             'episodes' => $episodeRepository->findAll(),
         ]);

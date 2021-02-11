@@ -31,6 +31,11 @@ class DirectorController extends AbstractController
      */
     public function admin(DirectorRepository $directorRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/director.html.twig', [
             'directors' => $directorRepository->findAll(),
         ]);

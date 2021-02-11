@@ -31,6 +31,21 @@ class UserController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="user_admin")
+     */
+    public function admin(UserRepository $userRepository): Response
+    {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
+        return $this->render('admin/crud/user.html.twig', [
+            'users' => $userRepository->findAll(),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

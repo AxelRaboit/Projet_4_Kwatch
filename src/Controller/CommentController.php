@@ -35,6 +35,11 @@ class CommentController extends AbstractController
      */
     public function admin(CommentRepository $commentRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/comment.html.twig', [
             'categories' => $commentRepository->findAll(),
         ]);

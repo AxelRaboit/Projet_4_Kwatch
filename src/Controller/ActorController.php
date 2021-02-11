@@ -38,6 +38,11 @@ class ActorController extends AbstractController
      */
     public function admin(ActorRepository $actorRepository): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('program_index');
+        }
+
         return $this->render('admin/crud/actor.html.twig', [
             'actors' => $actorRepository->findAll(),
         ]);
