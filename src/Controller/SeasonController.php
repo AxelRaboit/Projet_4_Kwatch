@@ -45,6 +45,11 @@ class SeasonController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('home_index');
+        }
+
         $season = new Season();
         $form = $this->createForm(SeasonType::class, $season);
         $form->handleRequest($request);

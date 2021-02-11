@@ -46,6 +46,11 @@ class DirectorController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('home_index');
+        }
+
         $director = new Director();
         $form = $this->createForm(DirectorType::class, $director);
         $form->handleRequest($request);

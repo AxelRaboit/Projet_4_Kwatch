@@ -168,7 +168,7 @@ class ProgramController extends AbstractController
     {   
         if(!$this->isGranted('ROLE_ADMIN'))
         {
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('home_index');
         }
 
         $program = new Program();

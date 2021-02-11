@@ -53,6 +53,11 @@ class ActorController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('home_index');
+        }
+
         $actor = new Actor();
         $form = $this->createForm(ActorType::class, $actor);
         $form->handleRequest($request);

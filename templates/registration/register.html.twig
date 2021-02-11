@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
-    <title>{% block title %}S'enregistrer - MovieBox{% endblock %}</title>
+    <title>{% block title %}S'enregistrer - Kwatch{% endblock %}</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
@@ -16,7 +16,7 @@
                 {% for flashError in app.flashes('verify_email_error') %}
                     <div class="alert alert-danger" role="alert">{{ flashError }}</div>
                 {% endfor %}
-                <img class="home-logo-register" src="{{ asset('/build/images/img/logo/moviebox.png') }}" alt="Logo SandBox"/>
+                <img class="home-logo-register" src="{{ asset('/build/images/img/logo/kwatchLogo.png') }}" alt="Logo SandBox"/>
 
                 <h1 class="registerTitle">S'inscrire</h1>
 

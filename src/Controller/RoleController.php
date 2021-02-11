@@ -45,6 +45,11 @@ class RoleController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        if(!$this->isGranted('ROLE_ADMIN'))
+        {
+            return $this->redirectToRoute('home_index');
+        }
+
         $role = new Role();
         $form = $this->createForm(RoleType::class, $role);
         $form->handleRequest($request);
