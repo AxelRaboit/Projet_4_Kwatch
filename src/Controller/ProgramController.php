@@ -194,24 +194,32 @@ class ProgramController extends AbstractController
      */
     public function edit(Request $request, Program $program): Response
     {
-        if(!$this->isGranted('ROLE_ADMIN'))
-        {
-            return $this->redirectToRoute('app_login');
+        $user = $this->getUser();
+
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+
+            $form = $this->createForm(ProgramType::class, $program);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_show', ['slug' => $program->getSlug()]);
+            }
+    
+            return $this->render('program/edit.html.twig', [
+                'program' => $program,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        $form = $this->createForm(ProgramType::class, $program);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('program_show', ['slug' => $program->getSlug()]);
-        }
-
-        return $this->render('program/edit.html.twig', [
-            'program' => $program,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -219,25 +227,39 @@ class ProgramController extends AbstractController
      */
     public function delete(Request $request, Program $program): Response
     {
+
+        $user = $this->getUser();
+
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+
+            if ($this->isCsrfTokenValid('delete'.$program->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($program);
+                $entityManager->flush();
+    
+                if ($program->getPoster() == true) {
+                    $fileToDelete = __DIR__ . '/../../public/uploads/' . $program->getPoster();
+                    if (file_exists($fileToDelete)) {
+                        unlink($fileToDelete);
+                    }
+                }
+            }
+    
+            return $this->redirectToRoute('program_index');
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
+
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('app_login');
         }
-
-        if ($this->isCsrfTokenValid('delete'.$program->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($program);
-            $entityManager->flush();
-
-            if ($program->getPoster() == true) {
-                $fileToDelete = __DIR__ . '/../../public/uploads/' . $program->getPoster();
-                if (file_exists($fileToDelete)) {
-                    unlink($fileToDelete);
-                }
-            }
-        }
-
-        return $this->redirectToRoute('program_index');
     }
 
 }

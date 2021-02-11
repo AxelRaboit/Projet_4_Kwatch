@@ -89,23 +89,32 @@ class SeasonController extends AbstractController
      */
     public function edit(Request $request, Season $season): Response
     {
-        $form = $this->createForm(SeasonType::class, $season);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            //TODO -> REGEX TO TRANSFORM THE YOUTUBE VIDEO WITH THE PREFIX EMBED
+            $form = $this->createForm(SeasonType::class, $season);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {    
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_index');
+            }
+    
+            return $this->render('season/edit.html.twig', [
+                'season' => $season,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
 
-
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('program_index');
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('season/edit.html.twig', [
-            'season' => $season,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -113,12 +122,23 @@ class SeasonController extends AbstractController
      */
     public function delete(Request $request, Season $season): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$season->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($season);
-            $entityManager->flush();
-        }
+        $user = $this->getUser();
 
-        return $this->redirectToRoute('season_index');
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+            if ($this->isCsrfTokenValid('delete'.$season->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($season);
+                $entityManager->flush();
+            }
+            return $this->redirectToRoute('season_index');
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }

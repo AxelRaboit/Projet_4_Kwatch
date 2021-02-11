@@ -73,19 +73,32 @@ class EpisodeController extends AbstractController
      */
     public function edit(Request $request, Episode $episode): Response
     {
-        $form = $this->createForm(EpisodeType::class, $episode);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            return $this->redirectToRoute('program_index');
+            $form = $this->createForm(EpisodeType::class, $episode);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_index');
+            }
+    
+            return $this->render('episode/edit.html.twig', [
+                'episode' => $episode,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('episode/edit.html.twig', [
-            'episode' => $episode,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -93,19 +106,31 @@ class EpisodeController extends AbstractController
      */
     public function delete(Request $request, Episode $episode): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$episode->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($episode);
-            $entityManager->flush();
+        $user = $this->getUser();
 
-            if ($episode->getImage() == true) {
-                $fileToDelete = __DIR__ . '/../../public/uploads/' . $episode->getImage();
-                if (file_exists($fileToDelete)) {
-                    unlink($fileToDelete);
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+
+            if ($this->isCsrfTokenValid('delete'.$episode->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($episode);
+                $entityManager->flush();
+    
+                if ($episode->getImage() == true) {
+                    $fileToDelete = __DIR__ . '/../../public/uploads/' . $episode->getImage();
+                    if (file_exists($fileToDelete)) {
+                        unlink($fileToDelete);
+                    }
                 }
             }
-        }
+            return $this->redirectToRoute('program_index');
+      
+        } else {
 
-        return $this->redirectToRoute('program_index');
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }

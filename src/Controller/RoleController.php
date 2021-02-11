@@ -73,19 +73,32 @@ class RoleController extends AbstractController
      */
     public function edit(Request $request, Role $role): Response
     {
-        $form = $this->createForm(RoleType::class, $role);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            return $this->redirectToRoute('program_index');
+            $form = $this->createForm(RoleType::class, $role);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_index');
+            }
+    
+            return $this->render('role/edit.html.twig', [
+                'role' => $role,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('role/edit.html.twig', [
-            'role' => $role,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -93,12 +106,22 @@ class RoleController extends AbstractController
      */
     public function delete(Request $request, Role $role): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$role->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($role);
-            $entityManager->flush();
-        }
+        $user = $this->getUser();
 
-        return $this->redirectToRoute('program_index');
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+            if ($this->isCsrfTokenValid('delete'.$role->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($role);
+                $entityManager->flush();
+            }
+            return $this->redirectToRoute('program_index');
+      
+        } else {
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }

@@ -76,19 +76,32 @@ class DirectorController extends AbstractController
      */
     public function edit(Request $request, Director $director): Response
     {
-        $form = $this->createForm(DirectorType::class, $director);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            return $this->redirectToRoute('director_show', ['directorSlug' => $director->getSlug()]);
+            $form = $this->createForm(DirectorType::class, $director);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('director_show', ['directorSlug' => $director->getSlug()]);
+            }
+    
+            return $this->render('director/edit.html.twig', [
+                'director' => $director,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('director/edit.html.twig', [
-            'director' => $director,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -96,12 +109,25 @@ class DirectorController extends AbstractController
      */
     public function delete(Request $request, Director $director): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$director->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($director);
-            $entityManager->flush();
-        }
+        $user = $this->getUser();
 
-        return $this->redirectToRoute('program_index');
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+
+            if ($this->isCsrfTokenValid('delete'.$director->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($director);
+                $entityManager->flush();
+            }
+    
+            return $this->redirectToRoute('program_index');
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }

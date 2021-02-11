@@ -53,9 +53,11 @@
                             </div>
                             {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
                             <div class="containerCommentManager">
+                            {# {% if is_granted('EDIT', comment) or is_granted('ROLE_ADMIN', comment) %} #}
                                 <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
                                     {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
                                 </a>
+                            {# {% endif %} #}
                             </div>
                             {% endif %}
                             {% if comment.rate %}
