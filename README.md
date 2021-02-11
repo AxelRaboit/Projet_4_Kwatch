@@ -87,7 +87,7 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107688350-d4c5c080-6ca7-11eb-8c54-9ee8e1d5d976.jpg">
 
 <h4>All Actors / Tout les acteurs: Desktop</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107688409-e313dc80-6ca7-11eb-9219-f66a1dd09f10.jp">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688409-e313dc80-6ca7-11eb-9219-f66a1dd09f10.jpg">
 
 <h4>All Actors / Tout les acteurs: Mobile</h4>
 <img width="300" src="https://user-images.githubusercontent.com/66420167/107688416-e4450980-6ca7-11eb-9444-0cc4525adbd8.jpg">
