@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Season;
 use App\Entity\Comment;
 use App\Entity\Episode;
@@ -80,26 +81,39 @@ class CommentController extends AbstractController
      */
     public function edit(Request $request, Comment $comment, Program $program, Season $season, Episode $episode): Response
     {
-        $form = $this->createForm(CommentType::class, $comment);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($comment->getAuthor() == $user) {
 
-            return $this->redirectToRoute('program_season_episode_show', [
-                'programSlug' => $program->getSlug(),
-                'seasonId' => $season->getId(),
-                'episodeId' => $episode->getId(),
+            $form = $this->createForm(CommentType::class, $comment);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_season_episode_show', [
+                    'programSlug' => $program->getSlug(),
+                    'seasonId' => $season->getId(),
+                    'episodeId' => $episode->getId(),
+                ]);
+            }
+    
+            return $this->render('comment/edit.html.twig', [
+                'program' => $program,
+                'season' => $season,
+                'episode' => $episode,
+                'comment' => $comment,
+                'form' => $form->createView(),
             ]);
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
 
-        return $this->render('comment/edit.html.twig', [
-            'program' => $program,
-            'season' => $season,
-            'episode' => $episode,
-            'comment' => $comment,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -110,17 +124,31 @@ class CommentController extends AbstractController
      */
     public function delete(Request $request, Comment $comment, Program $program, Season $season, Episode $episode): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$comment->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($comment);
-            $entityManager->flush();
+        $user = $this->getUser();
 
-            return $this->redirectToRoute('program_season_episode_show', [
-                'programSlug' => $program->getSlug(),
-                'seasonId' => $season->getId(),
-                'episodeId' => $episode->getId(),
-            ]);
+        if($comment->getAuthor() == $user) {
+
+            if ($this->isCsrfTokenValid('delete'.$comment->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($comment);
+                $entityManager->flush();
+    
+                return $this->redirectToRoute('program_season_episode_show', [
+                    'programSlug' => $program->getSlug(),
+                    'seasonId' => $season->getId(),
+                    'episodeId' => $episode->getId(),
+                ]);
+            }
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
+
 
         return $this->redirectToRoute('program_index');
     }

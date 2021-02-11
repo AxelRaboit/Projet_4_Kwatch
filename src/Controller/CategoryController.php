@@ -73,19 +73,32 @@ class CategoryController extends AbstractController
      */
     public function edit(Request $request, Category $category): Response
     {
-        $form = $this->createForm(CategoryType::class, $category);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            return $this->redirectToRoute('program_index');
+            $form = $this->createForm(CategoryType::class, $category);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('program_index');
+            }
+    
+            return $this->render('category/edit.html.twig', [
+                'category' => $category,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('category/edit.html.twig', [
-            'category' => $category,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -93,12 +106,25 @@ class CategoryController extends AbstractController
      */
     public function delete(Request $request, Category $category): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($category);
-            $entityManager->flush();
-        }
+        $user = $this->getUser();
 
-        return $this->redirectToRoute('program_index');
+        if($user == $this->isGranted('ROLE_ADMIN')) {
+
+            if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($category);
+                $entityManager->flush();
+            }
+
+            return $this->redirectToRoute('program_index');
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }

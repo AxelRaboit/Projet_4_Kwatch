@@ -87,19 +87,32 @@ class ActorController extends AbstractController
      */
     public function edit(Request $request, Actor $actor): Response
     {
-        $form = $this->createForm(ActorType::class, $actor);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-            return $this->redirectToRoute('actor_show', ['actorSlug' => $actor->getSlug()]);
+            $form = $this->createForm(ActorType::class, $actor);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('actor_show', ['actorSlug' => $actor->getSlug()]);
+            }
+    
+            return $this->render('actor/edit.html.twig', [
+                'actor' => $actor,
+                'form' => $form->createView(),
+            ]);
+      
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        return $this->render('actor/edit.html.twig', [
-            'actor' => $actor,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -107,30 +120,38 @@ class ActorController extends AbstractController
      */
     public function delete(Request $request, Actor $actor): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$actor->getId(), $request->request->get('_token'))) {
+        $user = $this->getUser();
 
-            try
-            {
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->remove($actor);
-                $entityManager->flush();
+        if($user == $this->isGranted('ROLE_ADMIN')) {
 
-                if ($actor->getPicture() == true) {
-                    $fileToDelete = __DIR__ . '/../../public/uploads/' . $actor->getPicture();
-                    if (file_exists($fileToDelete)) {
-                        unlink($fileToDelete);
+            if ($this->isCsrfTokenValid('delete'.$actor->getId(), $request->request->get('_token'))) {
+                try
+                {
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->remove($actor);
+                    $entityManager->flush();
+    
+                    if ($actor->getPicture() == true) {
+                        $fileToDelete = __DIR__ . '/../../public/uploads/' . $actor->getPicture();
+                        if (file_exists($fileToDelete)) {
+                            unlink($fileToDelete);
+                        }
                     }
                 }
+                catch (Exception $e) 
+                {
+                    throw new Exception('A role is assigned to this actor, so it is not possible to delete it.');
+                }
             }
-            catch (Exception $e) 
-            {
-                throw new Exception('A role is assigned to this actor, so it is not possible to delete it.');
+            return $this->redirectToRoute('program_index');
+      
+        } else {
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
             }
-
-
         }
-
-        return $this->redirectToRoute('program_index');
     }
 
     /**

@@ -73,14 +73,21 @@ class UserController extends AbstractController
      */
     public function myProfile(User $user): Response
     {
-        if(!$this->isGranted('ROLE_USER'))
-        {
-            return $this->redirectToRoute('program_index');
-        }
+        $currentUser = $this->getUser();
 
-        return $this->render('user/profile.html.twig', [
-            'user' => $user,
-        ]);
+        if($currentUser == $user) {
+            return $this->render('user/profile.html.twig', [
+                'user' => $user,
+            ]);
+
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 
     /**
@@ -93,35 +100,43 @@ class UserController extends AbstractController
         User $user
     ): Response {
 
-        if(!$this->isGranted('ROLE_USER'))
-        {
-            return $this->redirectToRoute('program_index');
-        }
+        $currentUser = $this->getUser();
 
-        $form = $this->createForm(UpdatePasswordType::class, $user);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            if ($passwordEncoder->isPasswordValid($user, $form->get('oldPassword')->getData())) {
-                $user->setPassword(
-                    $passwordEncoder->encodePassword(
-                        $user,
-                        $form->get('plainPassword')->getData()
-                    )
-                );
-                $entityManager->persist($user);
-                $entityManager->flush();
-                $this->addFlash('success', 'Votre mot de passe à bien été changé !');
-                return $this->redirectToRoute('user_profile', ['id' => $user->getId()]);
+        if($currentUser == $user) {
+
+            $form = $this->createForm(UpdatePasswordType::class, $user);
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                if ($passwordEncoder->isPasswordValid($user, $form->get('oldPassword')->getData())) {
+                    $user->setPassword(
+                        $passwordEncoder->encodePassword(
+                            $user,
+                            $form->get('plainPassword')->getData()
+                        )
+                    );
+                    $entityManager->persist($user);
+                    $entityManager->flush();
+                    $this->addFlash('success', 'Votre mot de passe à bien été changé !');
+                    return $this->redirectToRoute('user_profile', ['id' => $user->getId()]);
+                } else {
+                    $form->addError(new FormError('Votre ancien mot de passe est incorrect'));
+                }
+            }
+    
+            return $this->render('user/update_password.html.twig', [
+                'form' => $form->createView(),
+                'user' => $user,
+            ])
+            ;
+
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
             } else {
-                $form->addError(new FormError('Votre ancien mot de passe est incorrect'));
+                return $this->redirectToRoute('app_login');
             }
         }
-
-        return $this->render('user/update_password.html.twig', [
-            'form' => $form->createView(),
-            'user' => $user,
-        ])
-        ;
     }
 
     /**
@@ -129,24 +144,32 @@ class UserController extends AbstractController
      */
     public function edit(Request $request, User $user): Response
     {
-        if(!$this->isGranted('ROLE_USER'))
-        {
-            return $this->redirectToRoute('program_index');
+        $currentUser = $this->getUser();
+
+        if($currentUser == $user) {
+
+            $form = $this->createForm(UserType::class, $user);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
+    
+                return $this->redirectToRoute('user_index');
+            }
+    
+            return $this->render('user/edit.html.twig', [
+                'user' => $user,
+                'form' => $form->createView(),
+            ]);
+
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
         }
-
-        $form = $this->createForm(UserType::class, $user);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('user_index');
-        }
-
-        return $this->render('user/edit.html.twig', [
-            'user' => $user,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -154,17 +177,29 @@ class UserController extends AbstractController
      */
     public function delete(Request $request, User $user): Response
     {
-        if(!$this->isGranted('ROLE_USER'))
-        {
-            return $this->redirectToRoute('program_index');
-        }
+        $currentUser = $this->getUser();
 
-        if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($user);
-            $entityManager->flush();
-        }
+        if($currentUser == $user) {
 
-        return $this->redirectToRoute('user_index');
+            if(!$this->isGranted('ROLE_USER'))
+            {
+                return $this->redirectToRoute('program_index');
+            }
+    
+            if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($user);
+                $entityManager->flush();
+            }
+            return $this->redirectToRoute('user_index');
+
+        } else {
+
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 }
