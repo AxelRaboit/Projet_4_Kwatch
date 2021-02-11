@@ -63,9 +63,19 @@ class UserController extends AbstractController
      */
     public function show(User $user): Response
     {
-        return $this->render('user/show.html.twig', [
-            'user' => $user,
-        ]);
+        $currentUser = $this->getUser();
+
+        if($currentUser == $user) {
+            return $this->render('user/show.html.twig', [
+                'user' => $user,
+            ]);
+        } else {
+            if($this->isGranted('ROLE_USER')) {
+                return $this->redirectToRoute('home_index');
+            } else {
+                return $this->redirectToRoute('app_login');
+            }
+        }
     }
 
     /**
