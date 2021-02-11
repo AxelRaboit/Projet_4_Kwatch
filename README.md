@@ -8,16 +8,12 @@ Ce dépot Github est à but d'entrainement, il me permet d'ameliorer mes compét
 
 Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "uploads" affichant toutes les affiches et images des séries, est ignoré dans les commits pour des raisons de droit d'auteur.
 
-<h2>PROJECT RESOURCES</h2>
-There is a folder in the project nammed 'ressources' a folder with every steps of the project like (mcd/mld/wireframe, etc...)
-https://github.com/AxelRaboit/Projet_4_MovieBox/tree/master/resources
-
 <h2>HOW TO INSTALL THE PROJECT</h2>
 
-- Git Clone this link: https://github.com/AxelRaboit/Projet_4_MovieBox.git
+- Git Clone this link: https://github.com/AxelRaboit/Projet_4_Kwatch.git
 - Open the project with an IDE
 - (The database is not available because of copyright. (if you don't have the .sql and the uploads file, ask to the github owner, and load it in your database and project))
-- Create an .env.local based to the .env file, use the line 30' and comment the 31' tu only use the mysql line, put your id to connect to your mysql, and use the database called "moviebox"
+- Create an .env.local based to the .env file, use the line 30' and comment the 31' tu only use the mysql line, put your id to connect to your mysql, and use the database called "kwatch"
 - Run composer install
 - Run yarn install
 - Run symfony console 'd : d : c' (to create the database)
