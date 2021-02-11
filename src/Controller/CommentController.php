@@ -93,7 +93,7 @@ class CommentController extends AbstractController
     {
         $user = $this->getUser();
 
-        if($comment->getAuthor() == $user) {
+        if($comment->getAuthor() == $user || $user == $this->isGranted('ROLE_ADMIN')) {
 
             $form = $this->createForm(CommentType::class, $comment);
             $form->handleRequest($request);
@@ -136,7 +136,7 @@ class CommentController extends AbstractController
     {
         $user = $this->getUser();
 
-        if($comment->getAuthor() == $user) {
+        if($comment->getAuthor() == $user || $user == $this->isGranted('ROLE_ADMIN')) {
 
             if ($this->isCsrfTokenValid('delete'.$comment->getId(), $request->request->get('_token'))) {
                 $entityManager = $this->getDoctrine()->getManager();
