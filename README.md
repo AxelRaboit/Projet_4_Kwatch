@@ -39,82 +39,79 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <h2>AVANCEMENT DU PROJET</h2>
 
 <h4>Login / Se connecter: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107687519-de9af400-6ca6-11eb-81f5-19753904f477.jpg">
 
 <h4>Login / Se connecter: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107687532-e0fd4e00-6ca6-11eb-970d-29ec4d2919db.jpg">
 
 <h4>Registration / S'enregistrer: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107687611-fd998600-6ca6-11eb-9147-ec8e7a1d6a39.jpg">
 
 <h4>Registration / S'enregistrer: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107687614-fe321c80-6ca6-11eb-9c3d-0c2fd5147dcd.jpg">
 
 <h4>HomePage / Page d'accueil: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107687666-10ac5600-6ca7-11eb-84ac-bc9b2dbcc258.jpg">
 
 <h4>HomePage / Page d'accueil: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107687667-11dd8300-6ca7-11eb-9caf-61ec506f53a8.jpg">
 
 <h4>All Programs / Toutes les séries: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107687719-2457bc80-6ca7-11eb-8b4e-fa5d4dfd9245.jpg">
 
 <h4>All Programs / Toutes les séries: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107687724-24f05300-6ca7-11eb-84eb-b35011ff542d.jpg">
 
 <h4>Program Show / Page de la série: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688010-726cc000-6ca7-11eb-95b7-69645048c189.jpg">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688021-77317400-6ca7-11eb-8bf6-6b7b18447529.png">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688078-87e1ea00-6ca7-11eb-8dcf-1e049a61a7f3.png">
 
 <h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="">
-
-<h4>Program Show / Page de la série: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688082-89131700-6ca7-11eb-9119-7e45f1c7f447.png">
 
 <h4>Season Show / Page de la saison: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688181-a2b45e80-6ca7-11eb-8b25-3e3172a947e7.jpg">
 
 <h4>Season Show / Page de la saison: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688188-a34cf500-6ca7-11eb-9d61-ec622cad49c9.jpg">
 
 <h4>Episode Show / Page des episodes: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688242-b790f200-6ca7-11eb-9d17-c158c3f7df40.jpg">
 
 <h4>Episode Show / Page des episodes: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688350-d4c5c080-6ca7-11eb-8c54-9ee8e1d5d976.jpg">
 
 <h4>All Actors / Tout les acteurs: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688409-e313dc80-6ca7-11eb-9219-f66a1dd09f10.jp">
 
 <h4>All Actors / Tout les acteurs: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688416-e4450980-6ca7-11eb-9444-0cc4525adbd8.jpg">
 
 <h4>Actors Show / Page de l'acteur: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688567-13f41180-6ca8-11eb-952b-84585f14a6fb.jpg">
 
 <h4>Actors Show / Page de l'acteur: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688570-148ca800-6ca8-11eb-9058-0a14848d03a4.jpg">
 
 <h4>Admin Panel / Panneau d'administration: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688679-3423d080-6ca8-11eb-939d-f7e21dc1103e.jpg">
 
 <h4>Admin Panel / Panneau d'administration: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688682-34bc6700-6ca8-11eb-9b8a-d1a30438e326.jpg">
 
 <h4>Easy Admin / Panneau d'administration Easy Admin: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688753-4aca2780-6ca8-11eb-9ba0-e19e5c96f29d.jpg">
 
 <h4>Form / Formulaire: Desktop</h4>
-<img width="800" src="">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107688790-54ec2600-6ca8-11eb-9fc8-f9f315408fa1.jpg">
 
 <h4>Form / Formulaire: Mobile</h4>
-<img width="300" src="">
+<img width="300" src="https://user-images.githubusercontent.com/66420167/107688795-561d5300-6ca8-11eb-81cc-ce1a3c8f1954.jpg">
 
 
 
