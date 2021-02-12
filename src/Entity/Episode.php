@@ -11,6 +11,7 @@ use App\Repository\EpisodeRepository;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=EpisodeRepository::class)
@@ -63,7 +64,14 @@ class Episode
     private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
     private $updatedAt;
 
@@ -156,11 +164,16 @@ class Episode
         return $this->imageFile;
     }
 
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+/*     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
 
         return $this;
+    } */
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
     }
 
     public function getUpdatedAt(): ?\DateTimeInterface
