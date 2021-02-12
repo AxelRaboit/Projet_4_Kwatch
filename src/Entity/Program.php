@@ -59,8 +59,14 @@ class Program
     private $posterFile;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * @var Datetime
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
     private $updatedAt;
 
@@ -151,11 +157,16 @@ class Program
         return $this;
     }
 
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+/*     public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
 
         return $this;
+    } */
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
     }
 
     public function getUpdatedAt(): ?\DateTimeInterface
