@@ -27,10 +27,10 @@ Le theme est sur les séries (tv, netflix, ..) c'est pourquoi le dossier "upload
 <h2>AVANCEMENT DE LA BASE DE DONNÉE</h2>
 
 <h4>MCD</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107151331-4c22e980-6962-11eb-8c92-bff06e442002.png">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107799307-8ecb3400-6d5d-11eb-9ae6-962fbefe1a22.png">
 
 <h4>MLD</h4>
-<img width="800" src="https://user-images.githubusercontent.com/66420167/107151332-4f1dda00-6962-11eb-93b5-dc92b669342f.png">
+<img width="800" src="https://user-images.githubusercontent.com/66420167/107799320-91c62480-6d5d-11eb-8ff7-5746932bcfa0.png">
 
 <h4>ARBORESCENCE</h4>
 <img width="800" src="https://user-images.githubusercontent.com/66420167/107122604-e9b1e680-6898-11eb-8850-9e5f8c77a1c0.png">
