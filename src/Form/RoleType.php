@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class RoleType extends AbstractType
 {
@@ -28,6 +29,13 @@ class RoleType extends AbstractType
                 'label' => 'Série',
                 'class' => Program::class,
                 'choice_label' => 'title',
+            ])
+            ->add('role', ChoiceType::class, [
+                'choices' => [
+                    'Primaire' => 'Primary',
+                    'Secondaire' => 'Secondary',
+                    'Tertiaire' => 'Tertiary'
+                ]
             ])
         ;
     }
