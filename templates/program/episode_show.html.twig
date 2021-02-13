@@ -6,6 +6,35 @@
 
     <div class="containerEpisodeShow">
         <div class="itemEpisodeShow">
+            <div class="containerMessage">
+                {% for message in app.flashes('messageSuccess') %}
+                    <div id="messageSuccess" >
+                        <p class="messageSuccess">{{ message }}</p>
+                    </div>
+                    <script language='javascript'>
+                        temp=document.getElementById('messageSuccess');
+                        setTimeout('temp.style.display="none"',4000);
+                    </script>
+                {% endfor %}
+                {% for message in app.flashes('messageAlert') %}
+                    <div id="messageDeleted" >
+                        <p class="messageDeleted">{{ message }}</p>
+                    </div>
+                    <script language='javascript'>
+                       temp=document.getElementById('messageDeleted');
+                        setTimeout('temp.style.display="none"',4000);
+                    </script>
+                {% endfor %}
+                {% for message in app.flashes('messageUpdated') %}
+                    <div id="messageUpdated" >
+                        <p class="messageUpdated">{{ message }}</p>
+                    </div>
+                    <script language='javascript'>
+                       temp=document.getElementById('messageUpdated');
+                        setTimeout('temp.style.display="none"',4000);
+                    </script>
+                {% endfor %}
+            </div>
             <div class="containerContentEpisodeShow">
                 <div class="containerPosterEpisodeShow">
                     {% if episode.image %}
@@ -25,8 +54,8 @@
                         <div class="episodeShowContent">{{ episode.summary }}</div>
                     </div>
                     {% if app.user %}
-                        <div class="containerFormComment">
-                        {{ include('comment/_form.html.twig') }}
+                        <div class="containerFormComment" id="addComment">
+                            {{ include('comment/_form.html.twig') }}
                         </div>
                     {% endif %}
                 </div>
@@ -35,38 +64,74 @@
                 </div>
                 <div class="containerCommentSection">
                     <div class="containerComment">
-                        {% for comment in episode.comments|reverse %}
-                        <div class="commentContent">
-                            <div class="containerAvatar">
-                                <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
-                                <div class="commentHeaderContent">
-                                    <p class="authorComment">{{comment.author.pseudo ? comment.author.pseudo : 'Anonyme'}} </p>
-                                    <div class="containerCommentDate">
-                                    {% if comment.createdAt %}
-                                        <span class="commentCreatedDate">Le {{ comment.createdAt|date('d-m-Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
+                        {% for comment in episode.comments %}
+                            {% if comment.parent == null %}
+                                <div class="commentContent">
+                                    <div class="containerAvatar">
+                                        <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+                                        <div class="commentHeaderContent">
+                                            <p class="authorComment">{{comment.author.pseudo ? comment.author.pseudo : 'Anonyme'}} </p>
+                                            <div class="containerCommentDate">
+                                            {% if comment.createdAt %}
+                                                <span class="commentCreatedDate">Le {{ comment.createdAt|date('d/m/Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
+                                            {% endif %}
+                                            {% if comment.updatedAt != comment.createdAt %}
+                                                <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
+                                            {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
+                                    <div class="containerCommentManager">
+                                        <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
+                                            {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
+                                        </a>
+                                    </div>
                                     {% endif %}
-                                    {% if comment.updatedAt != comment.createdAt %}
-                                        <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
+                                    {% if comment.rate %}
+                                        <p class="commentRate"><span class="commentRateLabel">Note: </span>{{ comment.rate }}/5</p>
                                     {% endif %}
+                                    <div class="containerContent">
+                                        <p class="contentComment">{{ comment.comment }}</p>
+                                        <div class="containerCommentReply">
+                                            <a class="itemCommentManagerReply" href="#addComment" data-reply data-id="{{ comment.id }}">Répondre</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {% if app.user == comment.author or is_granted("ROLE_ADMIN") %}
-                            <div class="containerCommentManager">
-                            {# {% if is_granted('EDIT', comment) or is_granted('ROLE_ADMIN', comment) %} #}
-                                <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
-                                    {id: comment.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
-                                </a>
-                            {# {% endif %} #}
-                            </div>
+
+                                {% for reply in comment.replies %}
+                                    <div class="replyCommentContent">
+                                        <div class="containerAvatar">
+                                            <img class="accountLogoComment" alt="account logo" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+                                            <div class="commentHeaderContent">
+                                                {# <p class="authorComment">{{reply.comment.author.pseudo ? comment.author.pseudo : 'Anonyme'}} </p> #}
+                                                <p class="authorComment">{{reply.author.pseudo ? reply.author.pseudo : 'Anonyme'}}</p>
+                                                <div class="containerCommentDate">
+                                                {% if comment.createdAt %}
+                                                    <span class="commentCreatedDate">Le {{ comment.createdAt|date('d/m/Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
+                                                {% endif %}
+                                                {% if comment.updatedAt != comment.createdAt %}
+                                                    <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
+                                                {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if app.user == reply.author or is_granted("ROLE_ADMIN") %}
+                                        <div class="containerCommentManager">
+                                            <a class="itemCommentManagerEdit" href="{{ path('comment_edit', 
+                                                {id: reply.id, programSlug: program.slug, episodeId: episode.id, seasonId: season.id}) }}">Modifier le commentaire
+                                            </a>
+                                        </div>
+                                        {% endif %}
+                                        {% if comment.rate %}
+                                            <p class="commentRate"><span class="commentRateLabel">Note: </span>{{ comment.rate }}/5</p>
+                                        {% endif %}
+                                        <div class="containerContent">
+                                            <p class="contentComment">{{ reply.comment }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
                             {% endif %}
-                            {% if comment.rate %}
-                                <p class="commentRate"><span class="commentRateLabel">Note: </span>{{ comment.rate }}/5</p>
-                            {% endif %}
-                            <div class="containerContent">
-                                <p class="contentComment">{{ comment.comment }}</p>
-                            </div>
-                        </div>
                         {% else %}
                             <div class="containerCommentSection">
                                 <p>Aucun commentaire pour cet épisode</p>
@@ -82,5 +147,16 @@
     </div>
     {% include "/includes/_footer.html.twig" %}
 {% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.querySelectorAll("[data-reply]").forEach(element => {
+            element.addEventListener("click", function() {
+                document.querySelector("#comment_parentid").value = this.dataset.id;
+            })
+        });
+    </script>
+{% endblock %}
+
 
 
