@@ -64,7 +64,7 @@
                 </div>
                 <div class="containerCommentSection">
                     <div class="containerComment">
-                        {% for comment in episode.comments %}
+                        {% for comment in episode.comments|reverse %}
                             {% if comment.parent == null %}
                                 <div class="commentContent">
                                     <div class="containerAvatar">
