@@ -108,9 +108,9 @@
                                                 <p class="authorComment">{{reply.author.pseudo ? reply.author.pseudo : 'Anonyme'}}</p>
                                                 <div class="containerCommentDate">
                                                 {% if comment.createdAt %}
-                                                    <span class="commentCreatedDate">Le {{ comment.createdAt|date('d/m/Y') }} à {{ comment.createdAt|date('H:i', "Europe/Paris") }}</span>
+                                                    <span class="commentCreatedDate">Le {{ reply.createdAt|date('d/m/Y') }} à {{ reply.createdAt|date('H:i', "Europe/Paris") }}</span>
                                                 {% endif %}
-                                                {% if comment.updatedAt != comment.createdAt %}
+                                                {% if reply.updatedAt != reply.createdAt %}
                                                     <span class="commentUpdatedDate">(Modifié le {{ comment.updatedAt|date('d-m-Y H:i', "Europe/Paris") }})</span>
                                                 {% endif %}
                                                 </div>
