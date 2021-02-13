@@ -64,7 +64,7 @@ class CommentController extends AbstractController
             $entityManager->persist($comment);
             $entityManager->flush();
 
-            return $this->redirectToRoute('comment_index');
+            return $this->redirectToRoute('program_index');
         }
 
         return $this->render('comment/new.html.twig', [
@@ -100,6 +100,8 @@ class CommentController extends AbstractController
     
             if ($form->isSubmitted() && $form->isValid()) {
                 $this->getDoctrine()->getManager()->flush();
+
+                $this->addFlash('messageUpdated', 'Votre commentaire a bien été modifié !');
     
                 return $this->redirectToRoute('program_season_episode_show', [
                     'programSlug' => $program->getSlug(),
@@ -142,6 +144,8 @@ class CommentController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->remove($comment);
                 $entityManager->flush();
+
+                $this->addFlash('messageAlert', 'Votre commentaire a bien été supprimé');
     
                 return $this->redirectToRoute('program_season_episode_show', [
                     'programSlug' => $program->getSlug(),
@@ -149,6 +153,7 @@ class CommentController extends AbstractController
                     'episodeId' => $episode->getId(),
                 ]);
             }
+
       
         } else {
 

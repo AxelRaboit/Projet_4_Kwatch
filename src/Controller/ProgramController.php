@@ -10,17 +10,17 @@ use App\Form\CommentType;
 use App\Form\ProgramType;
 use App\Repository\RoleRepository;
 use App\Repository\ProgramRepository;
-use Symfony\Component\Serializer\Serializer;
+/* use Symfony\Component\Serializer\Serializer; */
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+/* use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Normalizer\AbstractNormalizer; */
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+/* use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted; */
 
 /**
  * @Route("/program", name="program_")
@@ -122,11 +122,18 @@ class ProgramController extends AbstractController
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $parentid = $form->get("parentid")->getData();
             $entityManager = $this->getDoctrine()->getManager();
+            if ($parentid == true) {
+                $parent = $entityManager->getRepository(Comment::class)->find($parentid);
+                $comment->setParent($parent);
+            }
             $comment->setEpisode($episode);
             $comment->setAuthor($this->getUser());
             $entityManager->persist($comment);
             $entityManager->flush();
+
+            $this->addFlash('messageSuccess', 'Votre commentaire a bien été ajouté !');
             
             /* return $this->redirectToRoute('program_index'); */ // Decomment if you want to be redirected in the program index
         }

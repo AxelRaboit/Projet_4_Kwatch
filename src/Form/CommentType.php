@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class CommentType extends AbstractType
@@ -28,7 +29,10 @@ class CommentType extends AbstractType
                     '4' => 4,
                     '5' => 5,
                 ]
-            ]);
+            ])
+            ->add('parentid', HiddenType::class, [
+                'mapped' => false
+            ])
         ;
     }
 
