@@ -28,6 +28,26 @@ body {
     
 }
 
+//==================================================//
+//PAGINATION
+//==================================================//
+.containerPagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.pagination {
+    background-color: $main-color;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.paginationFirst a, .paginationPrevious a, .paginationPage a, .paginationNext a, .paginationLast a {
+    color: $third-color;
+    text-decoration: none;
+}
+.pagination .current {
+    font-size: 1.5rem;
+}
 
 //==================================================//
 //NAVBAR
@@ -374,6 +394,22 @@ body {
 //==================================================//
 //ALL ACTORS
 //==================================================//
+.containerButtonActorSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.displayAllActorsButton {
+    margin-top: 20px;
+    color: $third-color;
+    background-color: $main-color;
+    display: inline-block;
+    padding: 10px 103px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
 .containerSearchActorsForm {
     margin: 100px 0px 50px 0px;
     display: flex;

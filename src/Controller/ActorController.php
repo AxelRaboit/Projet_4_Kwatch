@@ -7,6 +7,7 @@ use App\Entity\Actor;
 use App\Form\ActorType;
 use App\Repository\RoleRepository;
 use App\Repository\ActorRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,15 +22,23 @@ class ActorController extends AbstractController
     /**
      * @Route("/", name="index", methods={"GET"})
      */
-    public function index(ActorRepository $actorRepository): Response
+    public function index(Request $request, ActorRepository $actorRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_USER'))
         {
             return $this->redirectToRoute('app_login');
         }
 
+        $data = $actorRepository->findBy(array(), array('name' => 'ASC'));
+
+        $actors = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            8
+        );
+
         return $this->render('actor/index.html.twig', [
-            'actors' => $actorRepository->findBy(array(), array('name' => 'ASC')),
+            'actors' => $actors,
         ]);
     }
 
@@ -168,13 +177,28 @@ class ActorController extends AbstractController
      * @Route("/search", name="search", methods={"GET"}, priority=10)
      * @return Response
      */
-    public function search(Request $request, ActorRepository $actorRepository): Response
+    public function search(Request $request, ActorRepository $actorRepository, PaginatorInterface $paginatorInterface): Response
     {
         $query = $request->query->get('q');
 
         if (null !== $query) {
-            $actors = $actorRepository->findByQuery($query);
+            $data = $actorRepository->findByQuery($query);
+
+            $actors = $paginatorInterface->paginate(
+                $data,
+                $request->query->getInt('page', 1),
+                8
+            );
+        } else {
+            $data = $actorRepository->findBy(array(), array('name' => 'ASC'));
+    
+            $actors = $paginatorInterface->paginate(
+                $data,
+                $request->query->getInt('page', 1),
+                8
+            );
         }
+
 
         return $this->render('actor/index.html.twig', [
             'actors' => $actors ?? [],
