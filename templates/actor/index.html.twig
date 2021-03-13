@@ -12,6 +12,9 @@
             </div>
             <button id="submitSearchMobileButton">Chercher</button>
         </form>
+        <div class="containerButtonActorSearch">
+            <a class="displayAllActorsButton" href="{{path('actor_index')}}">Tout afficher</a>
+        </div>
     </div>
     <div class="itemAllActors">
         {% for actor in actors %}
@@ -27,5 +30,9 @@
             </div>
         {% endfor %}
     </div>
+        <div class="containerPagination">
+            {% do actors.setPageRange(2) %}
+            {{ knp_pagination_render(actors, 'pagination.html.twig') }}
+        </div>
 </div>
 {% endblock %}
