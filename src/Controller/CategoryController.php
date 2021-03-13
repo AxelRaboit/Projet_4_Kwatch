@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/category")
@@ -28,15 +29,23 @@ class CategoryController extends AbstractController
     /**
      * @Route("/admin", name="category_admin")
      */
-    public function admin(CategoryRepository $categoryRepository): Response
+    public function admin(Request $request, CategoryRepository $categoryRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $categoryRepository->findAll();
+
+        $roles = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/category.html.twig', [
-            'categories' => $categoryRepository->findAll(),
+            'categories' => $roles,
         ]);
     }
 

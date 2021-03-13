@@ -45,15 +45,23 @@ class ActorController extends AbstractController
     /**
      * @Route("/admin", name="admin")
      */
-    public function admin(ActorRepository $actorRepository): Response
+    public function admin(Request $request, ActorRepository $actorRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $actorRepository->findAll();
+
+        $actors = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/actor.html.twig', [
-            'actors' => $actorRepository->findAll(),
+            'actors' => $actors,
         ]);
     }
 

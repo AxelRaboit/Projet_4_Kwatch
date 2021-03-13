@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Entity\Episode;
 use App\Form\EpisodeType;
 use App\Repository\EpisodeRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/episode")
@@ -28,15 +29,23 @@ class EpisodeController extends AbstractController
     /**
      * @Route("/admin", name="episode_admin")
      */
-    public function admin(EpisodeRepository $episodeRepository): Response
+    public function admin(Request $request, EpisodeRepository $episodeRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $episodeRepository->findAll();
+
+        $episodes = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/episode.html.twig', [
-            'episodes' => $episodeRepository->findAll(),
+            'episodes' => $episodes,
         ]);
     }
 

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Director;
 use App\Form\DirectorType;
 use App\Repository\DirectorRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -29,15 +30,23 @@ class DirectorController extends AbstractController
     /**
      * @Route("/admin", name="director_admin")
      */
-    public function admin(DirectorRepository $directorRepository): Response
+    public function admin(Request $request, DirectorRepository $directorRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $directorRepository->findAll();
+
+        $directors = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/director.html.twig', [
-            'directors' => $directorRepository->findAll(),
+            'directors' => $directors,
         ]);
     }
 

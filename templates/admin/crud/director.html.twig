@@ -45,4 +45,8 @@
             <p>Aucun résultat</p>        
         {% endfor %}
     </div>
+    <div class="containerPagination">
+        {% do directors.setPageRange(2) %}
+        {{ knp_pagination_render(directors, 'pagination.html.twig') }}
+    </div>
 {% endblock %}

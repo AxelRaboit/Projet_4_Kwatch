@@ -10,17 +10,12 @@ use App\Form\CommentType;
 use App\Form\ProgramType;
 use App\Repository\RoleRepository;
 use App\Repository\ProgramRepository;
-/* use Symfony\Component\Serializer\Serializer; */
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-/* use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Normalizer\AbstractNormalizer; */
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-/* use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted; */
 
 /**
  * @Route("/program", name="program_")
@@ -46,15 +41,23 @@ class ProgramController extends AbstractController
     /**
      * @Route("/admin", name="admin")
      */
-    public function admin(ProgramRepository $programRepository): Response
+    public function admin(Request $request, ProgramRepository $programRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $programRepository->findAll();
+
+        $programs = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/program.html.twig', [
-            'programs' => $programRepository->findAll(),
+            'programs' => $programs,
         ]);
     }
 

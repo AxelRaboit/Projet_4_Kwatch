@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Entity\Role;
 use App\Form\RoleType;
 use App\Repository\RoleRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/role")
@@ -28,15 +29,22 @@ class RoleController extends AbstractController
     /**
      * @Route("/admin", name="role_admin")
      */
-    public function admin(RoleRepository $roleRepository): Response
+    public function admin(Request $request, RoleRepository $roleRepository, PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
+        $data = $roleRepository->findAll();
+
+        $roles = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
 
         return $this->render('admin/crud/role.html.twig', [
-            'roles' => $roleRepository->findAll(),
+            'roles' => $roles,
         ]);
     }
 

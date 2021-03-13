@@ -30,6 +30,10 @@
             <p>Aucun résultat</p>
         {% endfor %}
     </div>
+    <div class="containerPagination">
+        {% do roles.setPageRange(2) %}
+        {{ knp_pagination_render(roles, 'pagination.html.twig') }}
+    </div>
 {% endblock %}
 
 

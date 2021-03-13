@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Entity\Season;
 use App\Form\SeasonType;
 use App\Repository\SeasonRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/season")
@@ -28,15 +29,23 @@ class SeasonController extends AbstractController
     /**
      * @Route("/admin", name="season_admin")
      */
-    public function admin(SeasonRepository $seasonRepository): Response
+    public function admin(Request $request, SeasonRepository $seasonRepository , PaginatorInterface $paginatorInterface): Response
     {
         if(!$this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('program_index');
         }
 
+        $data = $seasonRepository->findAll();
+
+        $seasons = $paginatorInterface->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            10
+        );
+
         return $this->render('admin/crud/season.html.twig', [
-            'seasons' => $seasonRepository->findAll(),
+            'seasons' => $seasons,
         ]);
     }
 
